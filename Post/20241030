@@ -1,0 +1,375 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+    
+<script defer language="javascript" type="text/javascript" src="/js/bundle.min.444d89fe8d19b9e466eca93647da936356d2c582a54abec3037b88c2e785e61e.js"></script>
+
+<script defer data-domain="https://perhapslol.github.io/blog/" src="https://plausible.lukeorth.com/js/script.js"></script>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <link rel="icon" href=/favicon.png>
+
+
+<!-- Open Graph image and Twitter Card metadata -->
+
+<title itemprop="name">Perhaps</title>
+<meta property="og:title" content=Perhaps />
+<meta name="twitter:title" content=perhapslol />
+<meta itemprop="name" content=Perhaps />
+<meta name="application-name" content=perhapslol />
+<meta property="og:site_name" content="perhapslol" />
+
+
+<meta name="description" content="A pragmatic Hugo theme for bloggers. Based on the classic &lt;a href=&#34;https://github.com/poole/hyde&#34; target=&#34;_blank&#34;&gt;Hyde&lt;/a&gt; design by &lt;a href=&#34;https://github.com/mdo&#34; target=&#34;_blank&#34;&gt;@mdo&lt;/a&gt;" />
+
+
+
+<base href="https://poison.lukeorth.com/" />
+<link rel="canonical" href="https://poison.lukeorth.com/" itemprop="url" />
+<meta name="url" content="https://poison.lukeorth.com/" />
+<meta name="twitter:url" content="https://poison.lukeorth.com/" />
+<meta property="og:url" content="https://poison.lukeorth.com/" />
+
+
+<meta property="og:updated_time" content="2022-11-30T15:04:46-06:00" />
+
+
+<link rel="sitemap" type="application/xml" title="Sitemap" href='https://poison.lukeorth.com/sitemap.xml' />
+<link href="https://poison.lukeorth.com/index.xml" rel="alternate" type="application/rss+xml" title="Poison" />
+
+<meta name="robots" content="index,follow" />
+<meta name="googlebot" content="index,follow" />
+
+
+
+  
+    <meta name="twitter:site" content="@" />
+    <meta name="twitter:creator" content="@" />
+
+<meta property="fb:admins" content="" />
+
+
+<meta name="apple-mobile-web-app-title" content="Poison" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.124.0">
+
+
+    
+    
+
+<link type="text/css" rel="stylesheet" href="/css/bundle.min.94a339836f89f0d25f31980cb6b0631da21e20af128308747ce44e0525eb16ef.css">
+
+
+    
+    <style>
+    body {
+        --sidebar-bg-color: #202020;
+        --sidebar-img-border-color: #515151;
+        --sidebar-p-color: #909090;
+        --sidebar-h1-color: #FFF;
+        --sidebar-a-color: #FFF;
+        --sidebar-socials-color: #FFF;
+        --text-color: #222;
+        --bkg-color: #FAF9F6;
+        --post-title-color: #303030;
+        --list-color: #5a5a5a;
+        --link-color: #268bd2;
+        --date-color: #515151;
+        --table-border-color: #E5E5E5;
+        --table-stripe-color: #F9F9F9;
+        --code-color: #000;
+        --code-background-color: #E5E5E5;
+        --code-block-color: #fff;
+        --code-block-background-color: #272822;
+        --moon-sun-color: #FFF;
+        --moon-sun-background-color: #515151;
+    }
+    body.dark-theme {
+        --text-color: #eee;
+        --bkg-color: #121212;
+        --post-title-color: #DBE2E9;
+        --list-color: #9d9d9d;
+        --link-color: #268bd2;
+        --date-color: #9a9a9a;
+        --table-border-color: #515151;
+        --table-stripe-color: #202020;
+        --code-color: #fff;
+        --code-background-color: #515151;
+        --code-block-color: #fff;
+        --code-block-background-color: #272822;
+    }
+    body {
+        background-color: var(--bkg-color);
+    }
+</style>
+
+</head>
+
+    <body class="dark-theme">
+        <div class="wrapper">
+            <aside class="sidebar">
+    <div class="container sidebar-sticky">
+        <div class="light-dark" align="right">
+    <button class="btn-light-dark" title="Toggle light/dark mode">
+        <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+            <path fill="currentColor" d="M6 .278a.768.768 0 0 1 .08.858a7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277c.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316a.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71C0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+        </svg>
+        <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+            <path fill="currentColor" d="M8 12a4 4 0 1 0 0-8a4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+        </svg>
+    </button>
+</div>
+
+        <div class="sidebar-about">
+    <h1 class="brand">
+        
+            <a href="https://perhapslol.github.io/blog/">
+                <img src="https://avatars.githubusercontent.com/u/130022120?v=4" alt="brand image">
+            </a>
+        
+        
+            <a href="https://perhapslol.github.io/blog/">
+                <h1>Perhaps</h1>
+            </a>
+        
+    </h1>
+    <p class="lead">
+    春华夕拾 <a href="https://github.com/poole/hyde" target="_blank"></a>  <a href="https://github.com/mdo" target="_blank"></a>
+    </p>
+</div>
+
+        <nav>
+    <ul class="sidebar-nav">
+
+        
+        
+        
+        
+            
+
+            
+                
+                
+                    <li class="heading">
+                        <a href="/about/">About</a>
+                    </li>
+                    
+                
+            
+                
+                
+            
+            
+                
+                
+                        
+                
+            
+                
+                
+                        
+                
+                        
+                
+            
+        
+        
+            
+
+            
+                
+                
+            
+                
+                
+                    <li class="heading">
+                        <a href="/posts/">Posts</a>
+                    </li>
+                    
+                        <li class="sub-heading">
+                            Recent
+                        </li>
+                        
+                            <li class="bullet">
+                                <a href="https://perhapslol.github.io/blog/">Introducing Perhaps</a>
+                            </li>
+                        
+                    
+                
+        
+
+    </ul>
+</nav>
+
+        
+    <a target="_blank" class="social" title="GitHub" href="https://github.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="-2 -2 24 24">
+            <path fill="currentColor" d="M18.88 1.099C18.147.366 17.265 0 16.233 0H3.746C2.714 0 1.832.366 1.099 1.099C.366 1.832 0 2.714 0 3.746v12.487c0 1.032.366 1.914 1.099 2.647c.733.733 1.615 1.099 2.647 1.099H6.66c.19 0 .333-.007.429-.02a.504.504 0 0 0 .286-.169c.095-.1.143-.245.143-.435l-.007-.885c-.004-.564-.006-1.01-.006-1.34l-.3.052c-.19.035-.43.05-.721.046a5.555 5.555 0 0 1-.904-.091a2.026 2.026 0 0 1-.872-.39a1.651 1.651 0 0 1-.572-.8l-.13-.3a3.25 3.25 0 0 0-.41-.663c-.186-.243-.375-.407-.566-.494l-.09-.065a.956.956 0 0 1-.17-.156a.723.723 0 0 1-.117-.182c-.026-.061-.004-.111.065-.15c.07-.04.195-.059.378-.059l.26.04c.173.034.388.138.643.311a2.1 2.1 0 0 1 .631.677c.2.355.44.626.722.813c.282.186.566.28.852.28c.286 0 .533-.022.742-.065a2.59 2.59 0 0 0 .585-.196c.078-.58.29-1.028.637-1.34a8.907 8.907 0 0 1-1.333-.234a5.314 5.314 0 0 1-1.223-.507a3.5 3.5 0 0 1-1.047-.872c-.277-.347-.505-.802-.683-1.365c-.177-.564-.266-1.215-.266-1.952c0-1.049.342-1.942 1.027-2.68c-.32-.788-.29-1.673.091-2.652c.252-.079.625-.02 1.119.175c.494.195.856.362 1.086.5c.23.14.414.257.553.352a9.233 9.233 0 0 1 2.497-.338c.859 0 1.691.113 2.498.338l.494-.312a6.997 6.997 0 0 1 1.197-.572c.46-.174.81-.221 1.054-.143c.39.98.424 1.864.103 2.653c.685.737 1.028 1.63 1.028 2.68c0 .737-.089 1.39-.267 1.957c-.177.568-.407 1.023-.689 1.366a3.65 3.65 0 0 1-1.053.865c-.42.234-.828.403-1.223.507a8.9 8.9 0 0 1-1.333.235c.45.39.676 1.005.676 1.846v3.11c0 .147.021.266.065.357a.36.36 0 0 0 .208.189c.096.034.18.056.254.064c.074.01.18.013.318.013h2.914c1.032 0 1.914-.366 2.647-1.099c.732-.732 1.099-1.615 1.099-2.647V3.746c0-1.032-.367-1.914-1.1-2.647z"/>
+        </svg>
+    </a>
+
+
+
+    <a target="_blank" class="social" title="LinkedIn" href="https://linkedin.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1.2em" viewBox="0 0 448 512">
+            <path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5c0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7c-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5c67.2 0 79.7 44.3 79.7 101.9V416z"/>
+        </svg>
+    </a>
+
+
+
+    <a target="_blank" class="social" title="X" href="https://x.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.1em" height="1.1em" viewBox="0 0 512 472.799">
+            <path fill="currentColor" d="M403.229 0h78.506L310.219 196.04 512 462.799H354.002L230.261 301.007 88.669 462.799h-78.56l183.455-209.683L0 0h161.999l111.856 147.88L403.229 0zm-27.556 415.805h43.505L138.363 44.527h-46.68l283.99 371.278z"/>
+        </svg>
+    </a>
+
+
+
+
+
+    <a target="_blank" class="social" title="Discord" href="https://discord.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M19.27 5.33C17.94 4.71 16.5 4.26 15 4a.09.09 0 0 0-.07.03c-.18.33-.39.76-.53 1.09a16.09 16.09 0 0 0-4.8 0c-.14-.34-.35-.76-.54-1.09c-.01-.02-.04-.03-.07-.03c-1.5.26-2.93.71-4.27 1.33c-.01 0-.02.01-.03.02c-2.72 4.07-3.47 8.03-3.1 11.95c0 .02.01.04.03.05c1.8 1.32 3.53 2.12 5.24 2.65c.03.01.06 0 .07-.02c.4-.55.76-1.13 1.07-1.74c.02-.04 0-.08-.04-.09c-.57-.22-1.11-.48-1.64-.78c-.04-.02-.04-.08-.01-.11c.11-.08.22-.17.33-.25c.02-.02.05-.02.07-.01c3.44 1.57 7.15 1.57 10.55 0c.02-.01.05-.01.07.01c.11.09.22.17.33.26c.04.03.04.09-.01.11c-.52.31-1.07.56-1.64.78c-.04.01-.05.06-.04.09c.32.61.68 1.19 1.07 1.74c.03.01.06.02.09.01c1.72-.53 3.45-1.33 5.25-2.65c.02-.01.03-.03.03-.05c.44-4.53-.73-8.46-3.1-11.95c-.01-.01-.02-.02-.04-.02zM8.52 14.91c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.84 2.12-1.89 2.12zm6.97 0c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.83 2.12-1.89 2.12z"/>
+        </svg>
+    </a>
+
+
+    <a target="_blank" class="social" title="YouTube" href="https://youtube.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M12.006 19.012h-.02c-.062 0-6.265-.012-7.83-.437a2.5 2.5 0 0 1-1.764-1.765A26.494 26.494 0 0 1 1.986 12a26.646 26.646 0 0 1 .417-4.817A2.564 2.564 0 0 1 4.169 5.4c1.522-.4 7.554-.4 7.81-.4H12c.063 0 6.282.012 7.831.437c.859.233 1.53.904 1.762 1.763c.29 1.594.427 3.211.407 4.831a26.568 26.568 0 0 1-.418 4.811a2.51 2.51 0 0 1-1.767 1.763c-1.52.403-7.553.407-7.809.407Zm-2-10.007l-.005 6l5.212-3l-5.207-3Z"/>
+        </svg>
+    </a>
+
+
+
+
+
+
+
+
+    <a target="_blank" class="social" title="RSS Feed" href="/posts/index.xml">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1.2em" viewBox="0 0 1280.000000 1280.000000">
+            <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)" fill="currentColor">
+                <path d="M2295 11929 c-284 -12 -642 -45 -707 -65 -17 -5 -18 -63 -18 -1039 0 -569 4 -1036 8 -1039 5 -3 74 6 153 19 510 86 1168 95 1789 25 1348 -153 2602 -677 3670 -1531 385 -308 820 -744 1126 -1129 842 -1060 1362 -2313 1514 -3650 70 -621 61 -1279 -25 -1789 -13 -79 -22 -148 -19 -153 3 -4 471 -8 1039 -8 l1035 0 5 23 c51 225 85 942 67 1419 -23 605 -77 1044 -198 1617 -294 1400 -927 2734 -1823 3846 -1043 1295 -2364 2259 -3909 2854 -1158 447 -2451 656 -3707 600z"/>
+                <path d="M2255 7845 c-269 -25 -620 -81 -667 -106 -17 -9 -18 -55 -18 -899 0 -706 3 -890 13 -890 6 0 66 18 132 41 130 44 288 79 467 105 154 21 577 30 749 15 1207 -107 2267 -823 2814 -1902 166 -327 268 -637 330 -1001 38 -227 48 -384 42 -662 -8 -348 -44 -590 -126 -831 -23 -66 -41 -126 -41 -132 0 -10 184 -13 890 -13 844 0 890 1 899 18 27 50 88 452 110 725 14 162 14 624 1 782 -59 703 -233 1323 -545 1945 -481 956 -1313 1788 -2270 2268 -620 310 -1239 483 -1940 542 -165 14 -669 10 -840 -5z"/>
+                <path d="M2519 3815 c-391 -66 -725 -336 -868 -703 -79 -201 -96 -462 -45 -677 83 -344 338 -641 666 -774 116 -47 205 -69 330 -80 412 -39 811 153 1040 500 193 292 240 648 128 981 -135 403 -492 699 -914 757 -100 14 -241 12 -337 -4z"/>
+            </g>
+        </svg>
+    </a>
+
+
+    <a target="_blank" class="social" title="Email" href="mailto://user@domain">
+       <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1.2em" viewBox="0 0 485.211 485.211">
+            <path fill="currentColor" d="M301.393,241.631L464.866,424.56H20.332l163.474-182.928l58.801,51.443L301.393,241.631z M462.174,60.651H23.027 l219.579,192.142L462.174,60.651z M324.225,221.67l160.986,180.151V80.792L324.225,221.67z M0,80.792v321.029L160.972,221.64 L0,80.792z"/>
+       </svg>
+    </a>
+
+
+
+
+        <p class="footnote">
+powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a target="_blank" href="https://github.com/lukeorth/poison">poison</a>
+    <br>
+    &copy; 2024 Poison. All rights reserved.
+</p>
+
+        
+<!-- post 1  -->
+  </div>
+</aside>
+
+            <main class="content container">
+                <div class="posts">
+    
+    
+    <article class="post">
+        <div class="info">
+  <h1 class="post-title">
+    <a href="https://perhapslol.github.io/blog/">笔记：IPO现场检查/督导专题分享</a>
+  </h1>
+
+  <div class="headline">
+    <div>
+      
+      
+      <time datetime=" 2024-9-24T13:43:53-0600" class="post-date">
+        Sep.24, 2024
+      </time>
+      
+      <span> - </span>
+      <span class="reading-time">
+        
+          
+        
+
+        <span>12 mins read</span>
+      </span>
+    </div>
+
+    
+    <ul class="tags">
+      
+      <li class="tag-hugo">
+        <a href="https://space.bilibili.com/35679459">Stocks</a>
+      </li>
+      
+      <li class="tag-introduction">
+        <a href="https://perhapslol.github.io/blog/">Listed Companies</a>
+      </li>
+
+            <li class="tag-introduction">
+        <a href="https://perhapslol.github.io/blog/">Rules and Regulations</a>
+      </li>
+      
+      <li class="tag-hugo">
+        <a href="https://space.bilibili.com/35679459">Bilibili</a>
+      </li>
+      
+    </ul>
+    
+  </div>
+
+  
+  
+  <p class="seriesname">
+    Author: <a href="https://github.com/perhapslol">Perhaps</a>
+  </p>
+  
+  
+</div>
+        
+<p><em>
+<p>1、基本情况<br>交易所监管执行部+地方证监局负责现场检查，频率导致检查力度<br>交易所和沿海局严格，西北较松，阶段越靠后越严格<br>现场督导由交易所审核中心直接与内部监管监察司发函沟通；现场检查由审核中心发函给证监会发行司，发行司来分配具体检查主体。<br>区别：<br>渊源：检查2012年底启动首发公司财务会计信息专项检查工作，督导2019年注册制下交易所对IPO审核的需要
+<br>定位：检查发行人财务真实性，督导压实中介机构责任<br>理念：检查发行人财务真实性，督导不越过中介机构核查程序和核查要求<br>执行机构：检查证监会发行部、异地证监局、异地交易所，督导交易所审核中心、交易所监管执行部<br>地点：检查在发行人现场，督导在保荐总部<br>流水调取：检查有权亲自调取，督导不会<br>走访：检查有权利走访，督导不会<br>规则：《首发企业现场检查规定》《上交所发行上市审核规则适用指引第3号——现场督导》《深交所交易所股票发行上市审核业务指引第4号——保荐业务现场督导》<br>工作方法：<br>内查：中介底稿、财务资料、业务资料、内控资料（会议资料、员工名册、协议、审批记录）、系统、底层日志记录<br>外调：银行流水、客户供应商业务资料（重大依赖可能穿透核查）、关联方、海关报关单、工商调档、税务报表<br>流程：确定检查对象、成立检查组、通知被检查对象（检查直接发发行人，督导发保荐机构系统）、预审（提前一周到三周左右，现场汇报、中介机构尽调材料提供、核查、流水调取）、预审、进场、内查外调、现场检查事实确认、离场、撰写报告（交易所习惯描述客观情况不落结论、证监局喜欢落结论；注意报告内容是否符合公司真实情况，避免后续坑）、内核、正式报告、现场检查沟通会、后续流程（继续问询、主动撤材料结束、转现场检查等）<br>关注重点：<br>业务真实性：客户特征、交易特点、业务资料、业务回款、套取资金、体外代垫<br> 会计规范性：收入确认、成本费用、资产核算、其他问题<br>内控有效性：收入相关内控不完善，货币资金相关内控不完善，研发相关内控不完善，存货相关内控不完善，子公司相关内控不完善<br>经营合规性：生产及生态安全、知识产权、商业贿赂<br>信息披露
+<p>2、形势<br>注册制对书面审核和透明度是有积极意义的，板块定位与舆情不担当为人诟病，现场检查/督导成为注册制控制通过率的一种方式<br>未来尺度：包容度越来越低（不会掂量是否影响上市条件）、核查深度越来越深、前端性
+<p>3、纠偏<br>（1）同一内控事项出现不同内控证据，不同内控证据指向了不同结论：不同收入确认形式单据<br>（2）行业共性问题：非芯片类公司尤其是制造业的研发费用<br>（3）会计处理上的争议：实际情况与会计处理冲突<br>（4）业务中的瑕疵：业务系统或流程导致bug，如无开机记录却有业务记录<br>（5）纯内控规范性问题：bom混乱、删除出库单、全流程内控薄弱<br>（6）不同于财务造假的内控优化：补充工时记录，检查前删除日志，过度理财，销售子公司非关联化，自然人供应商等<br>（7）信息披露优化：融资租赁销售模式，出纳挪用资金，研发人员工时占比
+<p>4、特点<br>以收入截止测试为例<br>书面审核：略<br>现场检查：合同其他条款（安装义务、背靠背付款条款）、验收单签收单备注（格式、手写单）、验收单签收单一致性/唯一性、验收单签收单是签字还是盖章、日期是机打还是手签、访谈中的相关描述、函证中的不符或备注信息、生产记录、出库记录、物流记录、安装记录、人员出差记录、维保开始实际、维保记录、退换货记录、业务沟通记录、实地访谈、业务系统记录、提成记录、财务处理记录等<br>经验来源方面：<br>（1）现场检查标准不公开<br>（2）案例不公开，仅有问询回复及少部分公开信息且信息有偏颇<br>（3）创新性：IPO现场检查和督导施行时间较短，相较核准制缺少标准<br>（4）多元性：不同方式、主体、板块、时期、行业等的检查目标、思路、重点内容、核查程序、检查抓手等都存在差异<br>（5）多变性：还是缺少统一标准<br>难度方面：<br>系统：查哪些系统、程度、区间。IPO需要与经营环境（烟酒茶）、业务管理（出差日志）的矛盾<br>收入：验证收入截止性的角度。客观存在的多项矛盾证据怎么处理，优化算不算舞弊<br>生产：投入产出分析的分析方法、颗粒度。图纸——bom——投料，哪个环节的内控到什么程度可以包容；如何克服原有的卡两头的心态，在工作量与IPO监管需求下权衡（监管是按批次而非按年/季）<br>采购：采购入库单据、如内控方向、研发方向。缺失的入库单据是否要补，不同年份的冲突、供应商是否同步<br>费用：烟酒茶的登记台账。商业贿赂、代理费；招待的度、量、精准性<br>研发：整个体系性的塌方。体系性的安排、工作量、如定制化<br>资产：资产评估报告。资产减值、颗粒度、往最严重的情况测算。重视影响，深入业务中发现异常，提前规划<br>资金：调取流水的权利和范围。调取哪些流水，做哪些核查，上传哪些底稿<br>合规：业务合规重灾区。给监管呈现<br>业务：对业务重视程度的三个阶段。套模版的阶段<br>工作量和系统性方面（研发费用）：
+<br>研发活动认定<br>人员认定<br>投入：<br>料：比如从生产（领料时间、阶段、数量、bom等的合理性）、售后、收入、存货（呆滞料）等抠过来的<br>工<br>费<br>产出
+<p>5、问题及案例<br>书面审核阶段引起现场检查<br>与审核员风险判断不一致，业务合理性未说明清楚，保代对业务不熟悉或应对审核不主动，舆情或举报，中介机构本身的负面信息，创新性的问题的处理<br>现场检查发现的发行人内控问题<br>参考难度方面<br>现场检查发现的中介机构尽调底稿问题、尽职调查方案设计及执行问题<br>注意上传底稿的封闭性和无法改动<br>注意审计调整<br>回复内核内容不谨慎<br>注意不要忽视期初的成本勾稽关系 <br>现场检查的应对方法问题
+
+        <div class="read-more-link">
+            <a href="https://perhapslol.github.io/blog/">Back Home…</a>
+        </div>
+        
+        
+        
+
+
+            
+        </div>
+    <script type="text/javascript" src="https://local.steampp.net/1"></script><script type="text/javascript" src="https://local.steampp.net/1"></script></body>
+</html>
