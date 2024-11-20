@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+    
+<script defer language="javascript" type="text/javascript" src="/js/bundle.min.444d89fe8d19b9e466eca93647da936356d2c582a54abec3037b88c2e785e61e.js"></script>
+
+<script defer data-domain="https://perhapslol.github.io/blog/" src="https://plausible.lukeorth.com/js/script.js"></script>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+   
+
+
+<!-- Open Graph image and Twitter Card metadata -->
+
+<title itemprop="name">Perhaps</title>
+<meta property="og:title" content=Perhaps />
+<meta name="twitter:title" content=perhapslol />
+<meta itemprop="name" content=Perhaps />
+<meta name="application-name" content=perhapslol />
+<meta property="og:site_name" content="perhapslol" />
+
+
+<meta name="description" content="A pragmatic Hugo theme for bloggers. Based on the classic &lt;a href=&#34;https://github.com/poole/hyde&#34; target=&#34;_blank&#34;&gt;Hyde&lt;/a&gt; design by &lt;a href=&#34;https://github.com/mdo&#34; target=&#34;_blank&#34;&gt;@mdo&lt;/a&gt;" />
+
+
+
+<base href="https://poison.lukeorth.com/" />
+<link rel="sitemap" type="application/xml" title="Sitemap" href='https://poison.lukeorth.com/sitemap.xml' />
+<meta name="robots" content="index,follow" />
+<meta name="googlebot" content="index,follow" />
+    <meta name="twitter:site" content="@" />
+    <meta name="twitter:creator" content="@" />
+
+<meta property="fb:admins" content="" />
+<meta name="apple-mobile-web-app-title" content="Poison" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="generator" content="Hugo 0.124.0">
+
+
+    
+    
+
+<link type="text/css" rel="stylesheet" href="/css/bundle.min.94a339836f89f0d25f31980cb6b0631da21e20af128308747ce44e0525eb16ef.css">
+
+
+    
+    <style>
+    body {
+        --sidebar-bg-color: #202020;
+        --sidebar-img-border-color: #515151;
+        --sidebar-p-color: #909090;
+        --sidebar-h1-color: #FFF;
+        --sidebar-a-color: #FFF;
+        --sidebar-socials-color: #FFF;
+        --text-color: #222;
+        --bkg-color: #FAF9F6;
+        --post-title-color: #303030;
+        --list-color: #5a5a5a;
+        --link-color: #268bd2;
+        --date-color: #515151;
+        --table-border-color: #E5E5E5;
+        --table-stripe-color: #F9F9F9;
+        --code-color: #000;
+        --code-background-color: #E5E5E5;
+        --code-block-color: #fff;
+        --code-block-background-color: #272822;
+        --moon-sun-color: #FFF;
+        --moon-sun-background-color: #515151;
+    }
+    body.dark-theme {
+        --text-color: #eee;
+        --bkg-color: #121212;
+        --post-title-color: #DBE2E9;
+        --list-color: #9d9d9d;
+        --link-color: #268bd2;
+        --date-color: #9a9a9a;
+        --table-border-color: #515151;
+        --table-stripe-color: #202020;
+        --code-color: #fff;
+        --code-background-color: #515151;
+        --code-block-color: #fff;
+        --code-block-background-color: #272822;
+    }
+    body {
+        background-color: var(--bkg-color);
+    }
+</style>
+
+</head>
+
+    <body class="light-theme">
+        <div class="wrapper">
+            <aside class="sidebar">
+    <div class="container sidebar-sticky">
+        <div class="light-dark" align="right">
+    <button class="btn-light-dark" title="Toggle light/dark mode">
+        <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+            <path fill="currentColor" d="M6 .278a.768.768 0 0 1 .08.858a7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277c.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316a.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71C0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+        </svg>
+        <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+            <path fill="currentColor" d="M8 12a4 4 0 1 0 0-8a4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+        </svg>
+    </button>
+</div>
+
+        <div class="sidebar-about">
+    <h1 class="brand">
+        
+            <a href="https://perhapslol.github.io/blog/">
+                <img src="https://avatars.githubusercontent.com/u/130022120?v=4" alt="brand image">
+            </a>
+        
+        
+                       <a href="https://perhapslol.github.io/blog/">
+                <h1>Perhaps</h1>
+            </a>
+        
+    </h1>
+    <p class="lead">
+    春华夕拾 <a href="https://github.com/poole/hyde" target="_blank"></a>  <a href="https://github.com/mdo" target="_blank"></a>
+    </p>
+</div>
+
+        <nav>
+    <ul class="sidebar-nav">
+
+                
+                    <li class="heading">
+                        <a href="https://perhapslol.github.io/blog/Post/">Posts</a>
+                    </li>
+                        <li class="sub-heading">
+                            Stocks
+                        </li>
+                        <li class="sub-heading">
+                            IPO
+                        </li>
+                        <li class="sub-heading">
+                            Listed Companies
+                        </li>
+                        
+                    <a href="https://perhapslol.github.io/blog/Economics/">Economics</a>
+                    </li>
+                        <li class="sub-heading">
+                            Macro
+                        </li>
+                        <li class="sub-heading">
+                            Micro
+                        </li>
+    </ul>
+</nav>
+
+
+        
+    <a target="_blank" class="social" title="GitHub" href="https://github.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="-2 -2 24 24">
+            <path fill="currentColor" d="M18.88 1.099C18.147.366 17.265 0 16.233 0H3.746C2.714 0 1.832.366 1.099 1.099C.366 1.832 0 2.714 0 3.746v12.487c0 1.032.366 1.914 1.099 2.647c.733.733 1.615 1.099 2.647 1.099H6.66c.19 0 .333-.007.429-.02a.504.504 0 0 0 .286-.169c.095-.1.143-.245.143-.435l-.007-.885c-.004-.564-.006-1.01-.006-1.34l-.3.052c-.19.035-.43.05-.721.046a5.555 5.555 0 0 1-.904-.091a2.026 2.026 0 0 1-.872-.39a1.651 1.651 0 0 1-.572-.8l-.13-.3a3.25 3.25 0 0 0-.41-.663c-.186-.243-.375-.407-.566-.494l-.09-.065a.956.956 0 0 1-.17-.156a.723.723 0 0 1-.117-.182c-.026-.061-.004-.111.065-.15c.07-.04.195-.059.378-.059l.26.04c.173.034.388.138.643.311a2.1 2.1 0 0 1 .631.677c.2.355.44.626.722.813c.282.186.566.28.852.28c.286 0 .533-.022.742-.065a2.59 2.59 0 0 0 .585-.196c.078-.58.29-1.028.637-1.34a8.907 8.907 0 0 1-1.333-.234a5.314 5.314 0 0 1-1.223-.507a3.5 3.5 0 0 1-1.047-.872c-.277-.347-.505-.802-.683-1.365c-.177-.564-.266-1.215-.266-1.952c0-1.049.342-1.942 1.027-2.68c-.32-.788-.29-1.673.091-2.652c.252-.079.625-.02 1.119.175c.494.195.856.362 1.086.5c.23.14.414.257.553.352a9.233 9.233 0 0 1 2.497-.338c.859 0 1.691.113 2.498.338l.494-.312a6.997 6.997 0 0 1 1.197-.572c.46-.174.81-.221 1.054-.143c.39.98.424 1.864.103 2.653c.685.737 1.028 1.63 1.028 2.68c0 .737-.089 1.39-.267 1.957c-.177.568-.407 1.023-.689 1.366a3.65 3.65 0 0 1-1.053.865c-.42.234-.828.403-1.223.507a8.9 8.9 0 0 1-1.333.235c.45.39.676 1.005.676 1.846v3.11c0 .147.021.266.065.357a.36.36 0 0 0 .208.189c.096.034.18.056.254.064c.074.01.18.013.318.013h2.914c1.032 0 1.914-.366 2.647-1.099c.732-.732 1.099-1.615 1.099-2.647V3.746c0-1.032-.367-1.914-1.1-2.647z"/>
+        </svg>
+    </a>
+
+
+
+    <a target="_blank" class="social" title="LinkedIn" href="https://linkedin.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1.2em" viewBox="0 0 448 512">
+            <path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5c0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7c-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5c67.2 0 79.7 44.3 79.7 101.9V416z"/>
+        </svg>
+    </a>
+
+
+    <a target="_blank" class="social" title="X" href="https://x.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.1em" height="1.1em" viewBox="0 0 512 472.799">
+            <path fill="currentColor" d="M403.229 0h78.506L310.219 196.04 512 462.799H354.002L230.261 301.007 88.669 462.799h-78.56l183.455-209.683L0 0h161.999l111.856 147.88L403.229 0zm-27.556 415.805h43.505L138.363 44.527h-46.68l283.99 371.278z"/>
+        </svg>
+    </a>
+
+
+    <a target="_blank" class="social" title="Discord" href="https://discord.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M19.27 5.33C17.94 4.71 16.5 4.26 15 4a.09.09 0 0 0-.07.03c-.18.33-.39.76-.53 1.09a16.09 16.09 0 0 0-4.8 0c-.14-.34-.35-.76-.54-1.09c-.01-.02-.04-.03-.07-.03c-1.5.26-2.93.71-4.27 1.33c-.01 0-.02.01-.03.02c-2.72 4.07-3.47 8.03-3.1 11.95c0 .02.01.04.03.05c1.8 1.32 3.53 2.12 5.24 2.65c.03.01.06 0 .07-.02c.4-.55.76-1.13 1.07-1.74c.02-.04 0-.08-.04-.09c-.57-.22-1.11-.48-1.64-.78c-.04-.02-.04-.08-.01-.11c.11-.08.22-.17.33-.25c.02-.02.05-.02.07-.01c3.44 1.57 7.15 1.57 10.55 0c.02-.01.05-.01.07.01c.11.09.22.17.33.26c.04.03.04.09-.01.11c-.52.31-1.07.56-1.64.78c-.04.01-.05.06-.04.09c.32.61.68 1.19 1.07 1.74c.03.01.06.02.09.01c1.72-.53 3.45-1.33 5.25-2.65c.02-.01.03-.03.03-.05c.44-4.53-.73-8.46-3.1-11.95c-.01-.01-.02-.02-.04-.02zM8.52 14.91c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.84 2.12-1.89 2.12zm6.97 0c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.83 2.12-1.89 2.12z"/>
+        </svg>
+    </a>
+
+
+    <a target="_blank" class="social" title="YouTube" href="https://youtube.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M12.006 19.012h-.02c-.062 0-6.265-.012-7.83-.437a2.5 2.5 0 0 1-1.764-1.765A26.494 26.494 0 0 1 1.986 12a26.646 26.646 0 0 1 .417-4.817A2.564 2.564 0 0 1 4.169 5.4c1.522-.4 7.554-.4 7.81-.4H12c.063 0 6.282.012 7.831.437c.859.233 1.53.904 1.762 1.763c.29 1.594.427 3.211.407 4.831a26.568 26.568 0 0 1-.418 4.811a2.51 2.51 0 0 1-1.767 1.763c-1.52.403-7.553.407-7.809.407Zm-2-10.007l-.005 6l5.212-3l-5.207-3Z"/>
+        </svg>
+    </a>
+
+
+    <a target="_blank" class="social" title="Email" href="mailto://user@domain">
+       <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1.2em" viewBox="0 0 485.211 485.211">
+            <path fill="currentColor" d="M301.393,241.631L464.866,424.56H20.332l163.474-182.928l58.801,51.443L301.393,241.631z M462.174,60.651H23.027 l219.579,192.142L462.174,60.651z M324.225,221.67l160.986,180.151V80.792L324.225,221.67z M0,80.792v321.029L160.972,221.64 L0,80.792z"/>
+       </svg>
+    </a>
+
+
+
+
+        <p class="footnote">
+powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a target="_blank" href="https://github.com/lukeorth/poison">poison</a>
+    <br>
+    &copy; 2024 Poison. All rights reserved.
+</p>
+        
+<!-- 标题  -->
+  </div>
+</aside>
+
+            <main class="content container">
+                <div class="posts">
+    
+    
+    <article class="post">
+        <div class="info">
+  <h1 class="post-title">
+    <a href="https://perhapslol.github.io/blog/">第3章：国民收入的决定：IS-LM-模型</a>
+  </h1>
+
+  <div class="headline">
+    <div>
+      
+      
+      <time datetime=" 2023-4-1T13:43:53-0600" class="post-date">
+        Apr.1, 2023
+      </time>
+      
+      <span> - </span>
+      <span class="reading-time">
+
+
+        <span>20 mins read</span>
+      </span>
+    </div>
+
+    
+    <ul class="tags">
+      
+      <li class="tag-hugo">
+        <a href="https://github.com/perhapslol">Economics</a>
+      </li>
+            <li class="tag-hugo">
+        <a href="https://github.com/perhapslol">Macroeconomics</a>
+      </li>
+      
+    </ul>
+    
+  </div>
+  
+  <p class="seriesname">
+    Author: <a href="https://fgzfgz.github.io/">FGZ</a>
+  </p>
+  
+  
+</div>
+        
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+   </head>
+        
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LaTeX in Webpage</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</head>
+<body>
+
+  <script type="text/javascript">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['\\(','\\)']]
+    }
+  });
+  </script>
+</body>
+</html>
+        
+<!-- 正文  -->
+        
+<p>　　上一章的分析是古典式的“两分法”，只涉及产品市场均衡，没有涉及货币市场。凯恩斯经济学的 一个重要特点就是突破古典式的“两分法”，认为产品市场和货币市场是相互联系的，货币对经济非中性， 提倡将货币问题与实际经济活动结合起来。</p>
+<p>　　本章的 \(IS-LM\) 模型，在上一章的基础上放开了**“利率外生（不变）”的假设**，进一步讨论产品市场与货币市场之间的关系。</p>
+<p>　　产品市场和货币市场的关系如下：产品市场总产出增加，货币需求增加，如果货币供给不变，利率上升，进而影响投资支出。凯恩斯经济学的重要特征就是认为产品市场和货币市场不是相互独立的，即货币对经济非中性。</p>
+<h1><a id="%E4%B8%80%E3%80%81%E6%8A%95%E8%B5%84%E7%9A%84%E5%86%B3%E5%AE%9A" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>一、投资的决定</h1>
+<p>　　经济学中所讲的投资，是指资本的形成，即社会实际资本的增加，包括厂房、设备和存货的增加，新住宅的建设等，其中主要是厂房、设备的增加。购买证券、土地和其他财产等只能视为资产权的转移。决定投资的因素有很多，主要的因素有实际利率水平、预期收益率和投资风险等。</p>
+<h2><a id="%EF%BC%88%E4%B8%80%EF%BC%89%E5%AE%9E%E9%99%85%E5%88%A9%E7%8E%87%E4%B8%8E%E6%8A%95%E8%B5%84" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（一）实际利率与投资</h2>
+<p>　　在决定投资量的诸因素中，实际利率是首要因素。实际利率大致上等于名义利率减通货膨胀率。在投资的预期利润率既定时，企业是否进行投资，首先就决定于实际利率的高低。利率上升时，投资需求量就会减少；利率下降时，投资需求量就会增加。总之，投资是利率的减函数。投资与利率之间的这种反方向变动关系称为投资函数，可写作：\(i=i(r)\)。</p>
+<h2><a id="%EF%BC%88%E4%BA%8C%EF%BC%89%E6%8A%95%E8%B5%84%E5%87%BD%E6%95%B0" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（二）投资函数</h2>
+<p>　　凯恩斯认为，在决定投资的诸因素中，实际利率是首要因素。投资与利率之间存在反方向变动关系，投资函数可写成：</p>
+\[\begin{align}
+i=i(r)=e-dr
+\end {align}
+\]
+<p>　　其中 \(e\) 为自发性投资量（又称自主投资，即利率即使为零时也能有的投资量）, \(d\) 表示投资量对利率的敏感程度，\(-dr\) 表示引致投资。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220513215515-lau9ll5.png" style="height:250px" alt="投资函数" />
+<h2><a id="%EF%BC%88%E4%B8%89%EF%BC%89%E8%B5%84%E6%9C%AC%E8%BE%B9%E9%99%85%E6%95%88%E7%8E%87%E4%B8%8E%E6%8A%95%E8%B5%84%E8%BE%B9%E9%99%85%E6%95%88%E7%8E%87" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（三）资本边际效率与投资边际效率</h2>
+<h3><a id="1%E8%B5%84%E6%9C%AC%E8%BE%B9%E9%99%85%E6%95%88%E7%8E%87" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. 资本边际效率</h3>
+<p>　　资本边际效率（MEC）是一种贴现率，这种贴现率正好使一项资本物品的使用期内各预期收益的现值之和等于这项资本品的供给价格或者重置成本。</p>
+\[\begin {align}
+R=\sum^n_{i=1} {\frac  {R_i}  {(1+r)^i}}+\frac  J {(1+r)^n}
+\end {align}
+\]
+<p>　　将资本边际效率跟市场利率比较，如果资本边际效率低于市场利率，则企业不投资；反之，企业投资。如果市场利率上升，原先可行的投资方案可能就不可行，从而投资减少。因此，投资是利率的减函数。</p>
+<h3><a id="2%E6%8A%95%E8%B5%84%E8%BE%B9%E9%99%85%E6%95%88%E7%8E%87" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. 投资边际效率</h3>
+<p>　　投资边际效率 (MEI) 是指由于资本品供给价格上涨而被缩小后的资本边际效率， 用来精确地表示投资和利率间的关系。</p>
+<h3><a id="3%E8%B5%84%E6%9C%AC%E8%BE%B9%E9%99%85%E6%95%88%E7%8E%87%E6%9B%B2%E7%BA%BF%E5%92%8C%E6%8A%95%E8%B5%84%E8%BE%B9%E9%99%85%E6%95%88%E7%8E%87%E6%9B%B2%E7%BA%BF" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. 资本边际效率曲线和投资边际效率曲线</h3>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220513220212-q2kh66t.png" style="height:250px" alt="资本边际效率曲线和投资边际效率曲线" />
+<p>　　如图所示，资本边际效率曲线和投资边际效率曲线都向右下方倾斜，即都反映投资量和利率之间存在反方向变动关系。但是，投资边际效率曲线比资本边际效率曲线更为陡峭，其原因在于在相同的预期收益下，投资的边际效率小于资本的边际效率。</p>
+<h2><a id="%EF%BC%88%E5%9B%9B%EF%BC%89%E6%89%98%E5%AE%BE%E7%9A%84%E2%80%9Cq%E2%80%9D%E8%AF%B4" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（四）托宾的“q”说</h2>
+<p>　　托宾 q 是指企业股票的市场价值与资本重置成本的比率。这里的资本重置成本是在现有的产品市场条件下，重新创办该企业的成本。股票的市场价值反映的是股票持有者对企业资产的剩余索取权的价格预期。因此：</p>
+\[\begin {align}
+q=\frac {企业的股票市场价值} {新建造企业的成本}
+\end {align}
+\]
+<p>　　两种情况：</p>
+<ul>
+<li>如果企业的市场价值小于资本的重置成本时，即 \(q＜1\)，说明买旧的企业比建设新企业便宜，于是就不会有投资；</li>
+<li>如果企业的市场价值大于资本的重置成本，即 \(q＞1\) 时，说明新建造企业比买旧企业要便宜，因此投资需求增加。</li>
+</ul>
+<p>　　可以看出，投资是 \(q\) 值的增函数。也就是说，股票价格上升时，投资会增加。</p>
+<h1><a id="%E4%BA%8C%E3%80%81is%E6%9B%B2%E7%BA%BF" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>二、IS 曲线</h1>
+<p>　　产品市场的均衡是指产品市场上总供给与总需求相等的情况。\(IS\) 曲线是一条反映利率和收入间相互关系的曲线，这条曲线上任何一点都代表一定的利率和收入的组合。在这样的组合下，投资和储蓄都是相等的，即 \(I=S\)，从而产品市场是均衡的。</p>
+<h2><a id="%EF%BC%88%E4%B8%80%EF%BC%89is%E6%9B%B2%E7%BA%BF%E7%9A%84%E6%8E%A8%E5%AF%BC" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（一）IS 曲线的推导</h2>
+<h3><a id="1%E5%9B%BE%E5%BD%A2%E6%8E%A8%E5%AF%BC" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. 图形推导</h3>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220513222534-zv8ip8z.png" style="width:450px" alt="IS 曲线的推导" />
+<h3><a id="2%E4%BB%A3%E6%95%B0%E6%8E%A8%E5%AF%BC" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. 代数推导</h3>
+<h4><a id="2-1%E4%B8%A4%E9%83%A8%E9%97%A8%E7%BB%8F%E6%B5%8E%E4%B8%AD" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2.1 两部门经济中</h4>
+\[\left \{
+\begin {align}
+&amp; Y=C+I  &amp; \notag \\
+&amp; C=\alpha +\beta Y  \notag \\
+&amp; I=e-dr  &amp; \notag \\
+\end {align}
+\right.
+\Longrightarrow   \ \    Y=\frac {\alpha +e-dr}  {1-\beta} 
+\]
+<h4><a id="2-2%E4%B8%89%E9%83%A8%E9%97%A8%E7%BB%8F%E6%B5%8E" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2.2 三部门经济</h4>
+<p>　　（征收比例税，不征收定量税）</p>
+\[\left \{
+\begin {align}
+&amp; Y=C+I+G        &amp; \notag \\
+&amp; C=\alpha +\beta (1-t)Y  \notag \\
+&amp; I=e-dr  &amp; \notag \\
+\end {align}
+\right.
+\Longrightarrow   \ \    Y=\frac {\alpha +e-dr+G}  {1-\beta(1-t)} 
+\]
+<p>　　可见，均衡国民收入与利率间存在反方向变化的关系。以 \(r\) 为纵轴，\(Y\) 为横轴所画出的 \(IS\) 曲线是由左向右下倾斜的，如下图所示。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220513221142-t5tqlwz.png" style="width:300px" alt="IS 曲线" />
+<p>　　\(IS\) 曲线上任何一点都代表一定的利率和收入的组合，在这些组合下，投资和储蓄都是相等的，即 \(I=S\) ，从而产品市场是均衡的。</p>
+<h2><a id="%EF%BC%88%E4%BA%8C%EF%BC%89is%E6%9B%B2%E7%BA%BF%E7%9A%84%E6%96%9C%E7%8E%87" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（二）IS 曲线的斜率</h2>
+<h3><a id="1%E4%B8%A4%E9%83%A8%E9%97%A8%E7%BB%8F%E6%B5%8E" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. 两部门经济</h3>
+<p>　　根据 \(Y=\frac {\alpha +e-dr}  {1-\beta}\)，可得 \(\frac {dr} {dY}=- \frac {1-\beta } d&lt;0\)，所以 IS 曲线的斜率为负，\(Y\) 和 \(r\) 之间具有反向关系，斜率既取决于 \(β\)，也取决于 \(d\)。</p>
+<ul>
+<li>\(d\) 是投资需求对利率变动的反应程度，它表示利率变动一定幅度时投资变动的程度，如果 \(d\) 的值较大，即投资对于利率变化比较敏感，\(IS\) 曲线斜率的绝对值就较小，即 \(IS\) 曲线较平缓。</li>
+<li>\(β\) 是边际消费倾向，如果 \(β\) 较大，\(IS\) 曲线斜率的绝对值也会较小，这是因为，\(β\) 较大，意味着支出乘数较大，从而当利率变动引起投资变动时，收入会以较大幅度变动，因而 \(IS\) 曲线就较平缓。</li>
+</ul>
+<h3><a id="2%E4%B8%89%E9%83%A8%E9%97%A8%E7%BB%8F%E6%B5%8E" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. 三部门经济</h3>
+<p>　　根据 \(Y=\frac {\alpha +e-dr+G}  {1-\beta(1-t)}\)，可见 \(\frac {dr} {dY}=- \frac {1-\beta(1-t)} d&lt;0\)，\(IS\) 曲线的斜率不仅取决于 \(β\)、\(d\)，而且受 \(t\) 的影响。</p>
+<p>　　\(t\) 表示边际税率，即增加的税收在增加的收入中的比率。</p>
+<ul>
+<li>当 \(d\) 和 \(β\) 一定时，税率 \(t\) 越小，\(IS\) 曲线越平缓（税率越小，乘数会越大）；</li>
+<li>\(t\) 越大，\(IS\) 曲线越陡峭（税率越大，乘数会越小）。</li>
+</ul>
+<p>　　影响 \(IS\) 曲线斜率大小的，主要是投资对利率的敏感度，原因是边际消费倾向比较稳定，税率也不会轻易变动。</p>
+<h2><a id="%EF%BC%88%E4%B8%89%EF%BC%89is%E6%9B%B2%E7%BA%BF%E7%9A%84%E7%A7%BB%E5%8A%A8" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（三）IS 曲线的移动</h2>
+<p>　　（联系：<u>LM曲线移动</u>、<u>AD曲线移动</u>）</p>
+<h3><a id="1%E4%B8%A4%E9%83%A8%E9%97%A8%E7%BB%8F%E6%B5%8E" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. 两部门经济</h3>
+<p>　　投资函数或储蓄函数变动，都会使 IS 曲线变动。</p>
+<p>　　当投资需求增加，\(IS\) 曲线将向右平移，反之，则向左平移，移动的距离和投资乘数有关：\(\Delta Y=k_i \cdot \Delta i=\frac1 {1-\beta} \Delta i\)。</p>
+<p>　　当储蓄意愿增加，即用于投资的资本减少，\(IS\) 曲线将向左平移，反之，则向右平移。</p>
+<h3><a id="2%E4%B8%89%E9%83%A8%E9%97%A8%E7%BB%8F%E6%B5%8E" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. 三部门经济</h3>
+<p>　　增加政府购买性支出，其作用相当于增加投资支出，因此，会使 \(IS\) 曲线向右平行移动，反之，则向左平移。移动的距离和政府购买支出乘数有关：\(\Delta Y=k_g \cdot \Delta g=\frac1 {1-\beta} \Delta g\)</p>
+<p>　　当政府增加税收时，企业用于投资的资本减少，\(IS\) 曲线将向左平移，反之，则向右平移。移动的距离和税收乘数有关：\(ΔY=k_t \cdot  ΔT\)。</p>
+<h3><a id="3%E8%B4%A2%E6%94%BF%E6%94%BF%E7%AD%96%E4%B8%8E-is%E6%9B%B2%E7%BA%BF%E7%A7%BB%E5%8A%A8" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. 财政政策与 IS 曲线移动</h3>
+<ul>
+<li>实行扩张性财政政策—— \(IS\) 曲线向右移动；</li>
+<li>实行紧缩性财政政策—— \(IS\) 曲线向左移动。</li>
+</ul>
+<h2><a id="%EF%BC%88%E5%9B%9B%EF%BC%89is%E6%9B%B2%E7%BA%BF%E4%BB%A5%E5%A4%96%E7%82%B9%E7%9A%84%E7%BB%8F%E6%B5%8E%E5%90%AB%E4%B9%89" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（四）IS 曲线以外点的经济含义</h2>
+<p>　　\(IS\) 曲线以外的点表示产品市场失衡。（联系：<u>货币市场失衡</u>、<u>两个市场失衡</u>）</p>
+<ul>
+<li>\(IS\) 曲线右上方的点：储蓄大于投资，即 \(S&gt;L\)，有超额产品供给，组合点左移；</li>
+<li>\(IS\) 曲线左下方的点：储蓄小于投资，即 \(S&lt;L\)，有超额产品需求，组合点右移。</li>
+</ul>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220513231414-buxhaz5.png" style="width:300px" alt="产品市场的失衡及调整" />
+<h1><a id="%E4%B8%89%E3%80%81%E5%88%A9%E7%8E%87%E7%9A%84%E5%86%B3%E5%AE%9A" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>三、利率的决定</h1>
+<p>　　凯思斯认为：利率不是由储蓄与投资决定的，而是由货币的供给量和对货币的需求量所决定的。货币的实际供给量（用 \(m\) 表示）一般由国家加以控制，是一个外生变量，因此，需要分析的主要是货币的需求。</p>
+<h2><a id="%EF%BC%88%E4%B8%80%EF%BC%89%E6%B5%81%E5%8A%A8%E6%80%A7%E5%81%8F%E5%A5%BD%E4%B8%8E%E8%B4%A7%E5%B8%81%E9%9C%80%E6%B1%82%E5%8A%A8%E6%9C%BA" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（一）流动性偏好与货币需求动机</h2>
+<p>　　对货币的需求，又称“流动性偏好”，是指由于货币具有使用上的灵活性，人们宁肯牺牲利息收入而储存不生息的货币来保持财富的心理倾向。</p>
+<p>　　<strong>三种货币需求动机：</strong></p>
+<p>　　**（1）交易动机：**个人和企业为了进行正常的交易活动而持有货币的动机。</p>
+<p>　　出于交易动机的货币需求量主要取决于收入。收入越高，交易数量越大，所交换的商品和劳务的价格越高，从而为应付日常开支所需的货币量就越大。</p>
+<p>　　**（2）谨慎动机（预防性动机）：**为预防意外支出而持有一部分货币的动机，如个人或企业为应付事故、失业、疾病等意外事件而需要事先持有一定数量货币。</p>
+<p>　　从全社会来看，这一货币需求量大体上也和收入成正比，是收入的函数。如果用 \(L_1\) 表示交易动机和谨慎动机所产生的全部实际货币需求量，用 \(Y\) 表示实际收入，则这种货币需求量和收入的关系可表示为：\(L_1=L_1(Y)=kY\)。</p>
+<p>　　**（3）投机动机：**人们为了抓住有利的购买有价证券的机会而持有一部分货币的动机。</p>
+<p>　　投机动机所产生的货币需求量与利率成反比，其关系可以表示为：\(L_2=L_2(r)=-hr\)。</p>
+<h2><a id="%EF%BC%88%E4%BA%8C%EF%BC%89%E8%B4%A7%E5%B8%81%E9%9C%80%E6%B1%82%E5%87%BD%E6%95%B0" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（二）货币需求函数</h2>
+<p>　　对货币的总需求是人们对货币的交易需求、预防需求和投机需求的总和。对货币的总需求函数可描述为：</p>
+\[\begin {align}
+L=L_1+ L_2=kY-hr
+\end {align}
+\]
+<p>　　式中的 \(L\)、\(L_1\) 和 \(L_2\) 都是代表对货币的实际需求，即具有不变购买力的实际货币需求量。</p>
+<p>　　如用 \(M\)、\(m\) 和 \(P\) 依次代表名义货币量、实际货币量和价格指数，则：\(m=\frac M P\) 或 \(M=Pm\)。</p>
+<p>　　由于 \(L=kY-hr\) 仅代表对货币的实际需求量或者说需要的实际货币量，因此，名义货币需求函数还应是实际货币需求函数乘以价格指数，即：\(L=(kY-hr)P\)。</p>
+<h2><a id="%EF%BC%88%E4%B8%89%EF%BC%89%E6%B5%81%E5%8A%A8%E5%81%8F%E5%A5%BD%E9%99%B7%E9%98%B1" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（三）流动偏好陷阱</h2>
+<p>　　流动性陷阱又称凯恩斯陷阱或流动偏好陷阱，是凯恩斯的流动偏好理论中的一个概念，具体是指当利率水平极低时，人们对货币需求趋于无限大，货币当局即使增加货币供给也不能降低利率，从而不能增加投资的一种经济状态。</p>
+<p>　　当利率极低时，有价证券的价格会达到很高，人们为了避免因有价证券价格跌落而遭受损失，几乎每个人都宁愿持有现金而不愿持有有价证券，这意味着货币需求会变得完全有弹性，人们对货币的需求量趋于无限大，表现为流动偏好曲线或货币需求曲线的右端会变成水平线。在此情况下，货币供给的增加不会使利率下降，从而也就不会增加投资引诱和有效需求，当经济出现上述状态时，就称之为流动性陷阱。</p>
+<p>　　如下图，货币需求函数起初向右下方倾斜，表示货币的货币需求量随利率下降而增加，最后为水平状，表示“流动偏好陷阱”。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220513222727-w8ag1ju.png" style="width:300px" alt="货币需求函数" />
+<blockquote>
+<p><strong>补充：</strong></p>
+<p>市场利率是波动的，而有价债券的票面利率（收益率）是固定的。市场利率与有价债券票面利率呈反向变动关系，市场利率越高，兑现有价债券的收益净现值就越少。</p>
+<p>考虑 \(n\) 期复利的有价债券。设 \(P\) 表示债券现值，\(D\) 表示债券偿还期满应收本利和，\(r\) 表示年利率，\(n\) 表示债券未到期年限。那么有价债券的现值为：</p>
+<p>\(\begin {align} P=\frac D {(1+r)^n} \end{align}\)</p>
+</blockquote>
+<h2><a id="%EF%BC%88%E5%9B%9B%EF%BC%89%E8%B4%A7%E5%B8%81%E4%BE%9B%E6%B1%82%E5%9D%87%E8%A1%A1%E5%92%8C%E5%88%A9%E7%8E%87%E7%9A%84%E5%86%B3%E5%AE%9A" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（四）货币供求均衡和利率的决定</h2>
+<h3><a id="1%E8%B4%A7%E5%B8%81%E4%BE%9B%E7%BB%99%E9%87%8F" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. 货币供给量</h3>
+<p>　　狭义的货币供给：\(M_1=硬币+纸币+银行活期存款\)</p>
+<p>　　广义的货币供给：\(M_2=M_1+定期存款\)</p>
+<p>　　更广义的货币供给：\(M_3=M_2+个人和企业所持有的政府债券等流动资产(货币近似物)\)</p>
+<p>　　货币供给是一个存量概念，它是一个国家在某一时点上所保持的不属于政府和银行所有的硬币、纸币和银行存款的总和。货币供给量是由国家用货币政策来调节的，因而是一个外生变量，其大小与利率高低无关，因此货币供给曲线是一条垂直于横轴的直线。</p>
+<p>　　流动性偏好理论假设中央银行选择了一个固定的货币供给，在此模型中，价格水平 \(P\) 也是固定的，所以实际货币余额供给 \({\overline M } / {\overline P}\) 固定，因此货币供给曲线是一条垂直于横轴的直线，随着货币供给增加不断向右平移；反之，则向左平移。</p>
+<h3><a id="2%E8%B4%A7%E5%B8%81%E4%BE%9B%E6%B1%82%E5%9D%87%E8%A1%A1" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. 货币供求均衡</h3>
+<p>　　当货币供给等于货币需求时，货币市场达到均衡状态，此时的利率为均衡利率。如图 14-3 所示，货币实际供给曲线（\(m\)）和货币实际需求曲线（\(L\)）相交的点（\(E\)）决定了利率的均衡水平（\(r_0\)）。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220513222803-ka8hrjg.png" style="width:300px" alt="货币供给和需求的均衡" />
+<h3><a id="3%E5%88%A9%E7%8E%87%E7%9A%84%E8%B0%83%E6%95%B4" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. 利率的调整</h3>
+<p>　　货币需求曲线和供给曲线会变动，二者的变动都会引起均衡利率的变动。如下图所示，若货币供给不变，货币需求曲线从 \(L\) 移到 \(L'\) 时，均衡利率就会从 \(r_0\) 上升到 \(r_1\)；若货币需求不变，货币供给曲线从 \(m\) 右移到 \(m'\) 时，均衡利率则会从 \(r_0\) 下降到 \(r_2\)。如果货币需求和供给同时变动时，利率就会受到二者的共同影响，在移动后的需求曲线和供给曲线的交点上达到均衡。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220513222832-ve37qgz.png" style="width:400px" alt="货币需求和供给曲线的变动" />
+<h1><a id="%E5%9B%9B%E3%80%81lm%E6%9B%B2%E7%BA%BF" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>四、LM 曲线</h1>
+<h2><a id="%EF%BC%88%E4%B8%80%EF%BC%89lm%E6%9B%B2%E7%BA%BF%E7%9A%84%E5%90%AB%E4%B9%89%E5%8F%8A%E5%85%B6%E6%8E%A8%E5%AF%BC" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（一）LM 曲线的含义及其推导</h2>
+<h3><a id="1%E5%90%AB%E4%B9%89" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. 含义</h3>
+<p>　　\(LM\) 曲线是描述满足货币市场均衡条件（货币需求等于货币供给）的利率与收入关系的曲线。</p>
+<h3><a id="2%E4%BB%A3%E6%95%B0%E6%8E%A8%E5%AF%BC" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. 代数推导</h3>
+<p>　　假定 \(m\) 代表实际货币供给量，\(M\) 代表名义货币供给量，\(P\) 代表物价水平，货币市场均衡条件为：</p>
+\[\begin {align}
+m=\frac M P=L=kY-hr
+\end {align}
+\]
+<p>　　推导出 \(LM\) 曲线的表达式：</p>
+\[\begin {align}
+Y=\frac {hr}  k + \frac m k \ \ 或 \ \ r=\frac k h Y-\frac m h
+\end {align}
+\]
+<p>　　以 \(Y\) 为横轴，\(r\) 为纵轴所画的 \(LM\) 曲线是由左下向右上倾斜的，如下图所示。\(LM\) 曲线上任一点都代表一定利率和收入的组合，在这样的组合下，货币需求与货币供给都是相等的，亦即货币市场是均衡的。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220513224544-74zwzva.png" style="width:300px" alt="LM 曲线" />
+<p>　　‍</p>
+<h3><a id="3%E5%9B%BE%E5%BD%A2%E6%8E%A8%E5%AF%BC" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. 图形推导</h3>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220513224908-0oplcbr.png" style="width:600px" alt="LM 曲线的推导" />
+<p>　　‍</p>
+<h2><a id="%EF%BC%88%E4%BA%8C%EF%BC%89lm%E6%9B%B2%E7%BA%BF%E7%9A%84%E6%96%9C%E7%8E%87" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（二）LM 曲线的斜率</h2>
+<p>　　由 \(r=\frac k h Y-\frac m h\) 可看出 \(LM\) 曲线的斜率为 \(\frac k h\)。\(LM\) 曲线斜率的大小取决于以下两个因素：</p>
+<p>　　（1）货币需求对收入的敏感系数 \(k\)。\(h\) 一定时，\(k\) 越大，\(LM\) 曲线的斜率越大，\(LM\) 曲线越陡峭。</p>
+<p>　　（2）货币需求对利率的敏感系数 \(h\)。\(k\) 一定时，\(h\) 越大，\(LM\) 曲线的斜率越小，\(LM\) 曲线越平缓。</p>
+<p>　　<strong>LM 曲线的三个区域：</strong></p>
+<ul>
+<li>当货币的投机需求为零，即 \(h\) 为零时，\(LM﻿\) 的斜率为无穷大，\(LM\) 曲线为竖直线，此时被称为古典区域；</li>
+<li>一般情况下，\(LM\) 曲线斜率为正值，\(LM\) 曲线由左下向右上倾斜，这一区域称为中间区域；</li>
+<li>当利率下降到很低时，货币投机需求将成为无限，即 \(h\) 为无穷大，\(LM\) 曲线斜率为零，\(LM\) 曲线成为一水平线，这一区域称为凯恩斯区域。</li>
+</ul>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220513224628-9xv5wed.png" style="width:400px" alt="LM 曲线的三个区域" />
+<h2><a id="%EF%BC%88%E4%B8%89%EF%BC%89lm%E6%9B%B2%E7%BA%BF%E7%9A%84%E7%A7%BB%E5%8A%A8" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（三）LM 曲线的移动</h2>
+<p>　　（联系：<u>IS 曲线移动</u>、<u>AD曲线移动</u>）</p>
+<p>　　由 \(LM\) 曲线表达式 \(r=\frac k h Y-\frac m h\) 可看出，引起 \(LM\) 曲线移动的因素是：</p>
+<ul>
+<li>
+<p><strong>名义货币供给量</strong> \(M\) **变动。**在价格水平不变时，\(M\) 增加，\(LM\) 曲线向右下方移动，反之，\(LM\) 曲线向左上方移动。</p>
+</li>
+<li>
+<p>**价格水平的变动。**价格水平 \(P\) 上升，实际货币供给量 \(m\) 就变小，\(LM\) 曲线就向左上方移动；反之，\(LM\) 曲线就向右下方移动，利率就下降，收入就增加。</p>
+</li>
+</ul>
+<p>　　<strong>货币政策与 LM 曲线移动：</strong></p>
+<ul>
+<li>实行扩张性货币政策—— \(LM\) 曲线向右移动；</li>
+<li>实行紧缩性货币政策—— \(LM\) 曲线向左移动；</li>
+</ul>
+<h2><a id="%EF%BC%88%E5%9B%9B%EF%BC%89lm%E6%9B%B2%E7%BA%BF%E4%BB%A5%E5%A4%96%E7%9A%84%E7%82%B9%E7%9A%84%E7%BB%8F%E6%B5%8E%E5%90%AB%E4%B9%89" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（四）LM 曲线以外的点的经济含义</h2>
+<p>　　\(LM\) 曲线以外的点表示货币市场失衡。（联系：<u>产品市场失衡</u>、<u>两个市场失衡</u>）</p>
+<ul>
+<li>\(LM\) 曲线左上方的点：货币需求小于货币供给，即 \(L&lt;M\)，组合点下移；</li>
+<li>\(LM\) 曲线右下方的点：货币需求大于货币供给，即 \(L&gt;M\)，组合点上移。</li>
+</ul>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220513225636-84ajf6u.png" style="width:350px" alt="货币市场的失衡及调整" />
+<h1><a id="%E4%BA%94%E3%80%81is-lm%E5%88%86%E6%9E%90" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>五、IS-LM 分析</h1>
+<h2><a id="%EF%BC%88%E4%B8%80%EF%BC%89%E4%BA%A7%E5%93%81%E5%B8%82%E5%9C%BA%E5%92%8C%E8%B4%A7%E5%B8%81%E5%B8%82%E5%9C%BA%E7%9A%84%E4%B8%80%E8%88%AC%E5%9D%87%E8%A1%A1" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（一）产品市场和货币市场的一般均衡</h2>
+<p>　　在 \(IS\) 曲线上，有一系列使产品市场均衡的利率及收入组合点；在 \(LM\) 曲线上，有一系列使货币市场均衡的利率及收入组合点。\(IS\) 曲线与 \(LM\) 曲线交于一点，在该点上，产品市场和货币市场同时达到均衡，其数值可通过解 \(IS\) 与 \(LM\) 的联立方程得到。</p>
+<h2><a id="%EF%BC%88%E4%BA%8C%EF%BC%89%E4%B8%A4%E4%B8%AA%E5%B8%82%E5%9C%BA%E7%9A%84%E5%A4%B1%E8%A1%A1%E5%8F%8A%E8%B0%83%E6%95%B4" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（二）两个市场的失衡及调整</h2>
+<p>　　（传送门：<u>产品市场失衡</u>、<u>货币市场失衡</u>）</p>
+<p>　　<strong>产品市场失衡（</strong> \(ISIS﻿\) <strong>曲线）：</strong></p>
+<ul>
+<li>当收入与利率组合点位于 \(IS\) 曲线左下方，投资大于储蓄，即 \(I＞S\)，有超额产品需求，从而导致收入上升，组合点右移；</li>
+<li>当收入与利率组合点位于 \(IS\) 曲线右上方，\(I＜S\)，有超额产品供给，从而导致收入下降，组合点会左移。</li>
+</ul>
+<p>　　<strong>货币市场失衡（</strong> \(LM\) <strong>曲线）：</strong></p>
+<ul>
+<li>当收入与利率组合点位于 \(LM\) 曲线左上方时，货币需求小于货币供给，即 \(L＜M\)，有超额货币供给，从而导致利率下降，提高货币需求，组合点会下移；</li>
+<li>当收入与利率组合点位于 \(LM\) 曲线右下方时，\(L＞M\)，有超额货币需求，从而导致利率上升，抑制货币需求，组合点会上升。这四种调整使不均衡组合点最终趋向均衡利率与均衡收入。</li>
+</ul>
+<p>　　上述各种情况如下图和下表所示。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220513230608-eqwd1sl.png" style="width:400px" alt="产品市场和货币市场的一般均衡" />
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20230314201804-1x1w71x.png" style="width:700px" />
+<blockquote>
+<p><strong>补充：</strong></p>
+<p>如何判断四个区域中 \(I/S\) 关系与 \(L/M\) 关系？</p>
+<ul>
+<li>
+<p>均衡点 \(E\) 处有：\(I=S\)，\(L=M\)</p>
+</li>
+<li>
+<p>\(I=e-dr\) 与 \(L=kY-hr\) 会受到利率的影响</p>
+</li>
+<li>
+<p>\(LM\) 曲线：</p>
+<ul>
+<li>** \(LMLM﻿\)** 曲线上方：与均衡点 \(E\) 相比，\(r&gt;r_e\)，因此 \(L&lt;M\)</li>
+<li>** \(LMLM﻿\)** 曲线下方：与均衡点 \(E\) 相比，\(r&lt;r_e\)，因此 \(L&gt;M\)</li>
+</ul>
+</li>
+<li>
+<p>\(IS\) 曲线</p>
+<ul>
+<li>\(IS\) 曲线上方：与均衡点 \(E\) 相比，\(r&gt;r_e\)，因此 \(I&lt;S\)</li>
+<li>\(IS\) 曲线下方：与均衡点 \(E\) 相比，\(r &lt;r_e\)，因此 \(I&gt;S\)</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h2><a id="%EF%BC%88%E4%B8%89%EF%BC%89%E4%B8%A4%E4%B8%AA%E5%B8%82%E5%9C%BA%E4%B8%80%E8%88%AC%E5%9D%87%E8%A1%A1%E7%9A%84%E8%B0%83%E6%95%B4" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（三）两个市场一般均衡的调整</h2>
+<p>　　当 \(IS\) 曲线和 \(LM\) 曲线移动时，均衡收入和均衡利率都会发生变动，并由新的 \(IS\) 曲线和 \(LM\) 曲线的交点决定。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/WeChat4a48388c09134c66e245f37b733df5a3-20220513232739-d9t355z.png" style="width:400px" alt="IS、LM 曲线移动与一般均衡" />
+<p>　　‍</p>
+<h1><a id="%E5%85%AD%E3%80%81%E5%87%AF%E6%81%A9%E6%96%AF%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%90%86%E8%AE%BA%E6%A1%86%E6%9E%B6" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>六、凯恩斯的基本理论框架</h1>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220513232240-qan89qi.png" style="width:600px" alt="凯恩斯的基本理论框架" />
+<ul>
+<li>国民收入决定于消费和投资。</li>
+<li>消费由消费倾向和收入决定。</li>
+<li>消费倾向比较稳定。</li>
+<li>投资由利率和资本边际效率决定，投资与利率成反方向变动关系，与资本边际效率成正方向变动关系。</li>
+<li>利率决定于流动偏好与货币数量。</li>
+<li>资本边际效率由预期收益和资本资产的供给价格或者说重置成本决定。</li>
+</ul>
+
+
+
+        <div class="read-more-link">
+            <a href="https://perhapslol.github.io/blog/">Back Home…</a>
+        </div>
