@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+    
+<script defer language="javascript" type="text/javascript" src="/js/bundle.min.444d89fe8d19b9e466eca93647da936356d2c582a54abec3037b88c2e785e61e.js"></script>
+
+<script defer data-domain="https://perhapslol.github.io/blog/" src="https://plausible.lukeorth.com/js/script.js"></script>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+   
+
+
+<!-- Open Graph image and Twitter Card metadata -->
+
+<title itemprop="name">Perhaps</title>
+<meta property="og:title" content=Perhaps />
+<meta name="twitter:title" content=perhapslol />
+<meta itemprop="name" content=Perhaps />
+<meta name="application-name" content=perhapslol />
+<meta property="og:site_name" content="perhapslol" />
+
+
+<meta name="description" content="A pragmatic Hugo theme for bloggers. Based on the classic &lt;a href=&#34;https://github.com/poole/hyde&#34; target=&#34;_blank&#34;&gt;Hyde&lt;/a&gt; design by &lt;a href=&#34;https://github.com/mdo&#34; target=&#34;_blank&#34;&gt;@mdo&lt;/a&gt;" />
+
+
+
+<base href="https://poison.lukeorth.com/" />
+<link rel="sitemap" type="application/xml" title="Sitemap" href='https://poison.lukeorth.com/sitemap.xml' />
+<meta name="robots" content="index,follow" />
+<meta name="googlebot" content="index,follow" />
+    <meta name="twitter:site" content="@" />
+    <meta name="twitter:creator" content="@" />
+
+<meta property="fb:admins" content="" />
+<meta name="apple-mobile-web-app-title" content="Poison" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="generator" content="Hugo 0.124.0">
+
+
+    
+    
+
+<link type="text/css" rel="stylesheet" href="/css/bundle.min.94a339836f89f0d25f31980cb6b0631da21e20af128308747ce44e0525eb16ef.css">
+
+
+    
+    <style>
+    body {
+        --sidebar-bg-color: #202020;
+        --sidebar-img-border-color: #515151;
+        --sidebar-p-color: #909090;
+        --sidebar-h1-color: #FFF;
+        --sidebar-a-color: #FFF;
+        --sidebar-socials-color: #FFF;
+        --text-color: #222;
+        --bkg-color: #FAF9F6;
+        --post-title-color: #303030;
+        --list-color: #5a5a5a;
+        --link-color: #268bd2;
+        --date-color: #515151;
+        --table-border-color: #E5E5E5;
+        --table-stripe-color: #F9F9F9;
+        --code-color: #000;
+        --code-background-color: #E5E5E5;
+        --code-block-color: #fff;
+        --code-block-background-color: #272822;
+        --moon-sun-color: #FFF;
+        --moon-sun-background-color: #515151;
+    }
+    body.dark-theme {
+        --text-color: #eee;
+        --bkg-color: #121212;
+        --post-title-color: #DBE2E9;
+        --list-color: #9d9d9d;
+        --link-color: #268bd2;
+        --date-color: #9a9a9a;
+        --table-border-color: #515151;
+        --table-stripe-color: #202020;
+        --code-color: #fff;
+        --code-background-color: #515151;
+        --code-block-color: #fff;
+        --code-block-background-color: #272822;
+    }
+    body {
+        background-color: var(--bkg-color);
+    }
+</style>
+
+</head>
+
+    <body class="light-theme">
+        <div class="wrapper">
+            <aside class="sidebar">
+    <div class="container sidebar-sticky">
+        <div class="light-dark" align="right">
+    <button class="btn-light-dark" title="Toggle light/dark mode">
+        <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+            <path fill="currentColor" d="M6 .278a.768.768 0 0 1 .08.858a7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277c.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316a.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71C0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+        </svg>
+        <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+            <path fill="currentColor" d="M8 12a4 4 0 1 0 0-8a4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+        </svg>
+    </button>
+</div>
+
+        <div class="sidebar-about">
+    <h1 class="brand">
+        
+            <a href="https://perhapslol.github.io/blog/">
+                <img src="https://avatars.githubusercontent.com/u/130022120?v=4" alt="brand image">
+            </a>
+        
+        
+                       <a href="https://perhapslol.github.io/blog/">
+                <h1>Perhaps</h1>
+            </a>
+        
+    </h1>
+    <p class="lead">
+    春华夕拾 <a href="https://github.com/poole/hyde" target="_blank"></a>  <a href="https://github.com/mdo" target="_blank"></a>
+    </p>
+</div>
+
+        <nav>
+    <ul class="sidebar-nav">
+
+                
+                    <li class="heading">
+                        <a href="https://perhapslol.github.io/blog/Post/">Posts</a>
+                    </li>
+                        <li class="sub-heading">
+                            Stocks
+                        </li>
+                        <li class="sub-heading">
+                            IPO
+                        </li>
+                        <li class="sub-heading">
+                            Listed Companies
+                        </li>
+                        
+                    <a href="https://perhapslol.github.io/blog/Economics/">Economics</a>
+                    </li>
+                        <li class="sub-heading">
+                            Macro
+                        </li>
+                        <li class="sub-heading">
+                            Micro
+                        </li>
+    </ul>
+</nav>
+
+
+        
+    <a target="_blank" class="social" title="GitHub" href="https://github.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="-2 -2 24 24">
+            <path fill="currentColor" d="M18.88 1.099C18.147.366 17.265 0 16.233 0H3.746C2.714 0 1.832.366 1.099 1.099C.366 1.832 0 2.714 0 3.746v12.487c0 1.032.366 1.914 1.099 2.647c.733.733 1.615 1.099 2.647 1.099H6.66c.19 0 .333-.007.429-.02a.504.504 0 0 0 .286-.169c.095-.1.143-.245.143-.435l-.007-.885c-.004-.564-.006-1.01-.006-1.34l-.3.052c-.19.035-.43.05-.721.046a5.555 5.555 0 0 1-.904-.091a2.026 2.026 0 0 1-.872-.39a1.651 1.651 0 0 1-.572-.8l-.13-.3a3.25 3.25 0 0 0-.41-.663c-.186-.243-.375-.407-.566-.494l-.09-.065a.956.956 0 0 1-.17-.156a.723.723 0 0 1-.117-.182c-.026-.061-.004-.111.065-.15c.07-.04.195-.059.378-.059l.26.04c.173.034.388.138.643.311a2.1 2.1 0 0 1 .631.677c.2.355.44.626.722.813c.282.186.566.28.852.28c.286 0 .533-.022.742-.065a2.59 2.59 0 0 0 .585-.196c.078-.58.29-1.028.637-1.34a8.907 8.907 0 0 1-1.333-.234a5.314 5.314 0 0 1-1.223-.507a3.5 3.5 0 0 1-1.047-.872c-.277-.347-.505-.802-.683-1.365c-.177-.564-.266-1.215-.266-1.952c0-1.049.342-1.942 1.027-2.68c-.32-.788-.29-1.673.091-2.652c.252-.079.625-.02 1.119.175c.494.195.856.362 1.086.5c.23.14.414.257.553.352a9.233 9.233 0 0 1 2.497-.338c.859 0 1.691.113 2.498.338l.494-.312a6.997 6.997 0 0 1 1.197-.572c.46-.174.81-.221 1.054-.143c.39.98.424 1.864.103 2.653c.685.737 1.028 1.63 1.028 2.68c0 .737-.089 1.39-.267 1.957c-.177.568-.407 1.023-.689 1.366a3.65 3.65 0 0 1-1.053.865c-.42.234-.828.403-1.223.507a8.9 8.9 0 0 1-1.333.235c.45.39.676 1.005.676 1.846v3.11c0 .147.021.266.065.357a.36.36 0 0 0 .208.189c.096.034.18.056.254.064c.074.01.18.013.318.013h2.914c1.032 0 1.914-.366 2.647-1.099c.732-.732 1.099-1.615 1.099-2.647V3.746c0-1.032-.367-1.914-1.1-2.647z"/>
+        </svg>
+    </a>
+
+
+
+    <a target="_blank" class="social" title="LinkedIn" href="https://linkedin.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1.2em" viewBox="0 0 448 512">
+            <path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5c0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7c-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5c67.2 0 79.7 44.3 79.7 101.9V416z"/>
+        </svg>
+    </a>
+
+
+    <a target="_blank" class="social" title="X" href="https://x.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.1em" height="1.1em" viewBox="0 0 512 472.799">
+            <path fill="currentColor" d="M403.229 0h78.506L310.219 196.04 512 462.799H354.002L230.261 301.007 88.669 462.799h-78.56l183.455-209.683L0 0h161.999l111.856 147.88L403.229 0zm-27.556 415.805h43.505L138.363 44.527h-46.68l283.99 371.278z"/>
+        </svg>
+    </a>
+
+
+    <a target="_blank" class="social" title="Discord" href="https://discord.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M19.27 5.33C17.94 4.71 16.5 4.26 15 4a.09.09 0 0 0-.07.03c-.18.33-.39.76-.53 1.09a16.09 16.09 0 0 0-4.8 0c-.14-.34-.35-.76-.54-1.09c-.01-.02-.04-.03-.07-.03c-1.5.26-2.93.71-4.27 1.33c-.01 0-.02.01-.03.02c-2.72 4.07-3.47 8.03-3.1 11.95c0 .02.01.04.03.05c1.8 1.32 3.53 2.12 5.24 2.65c.03.01.06 0 .07-.02c.4-.55.76-1.13 1.07-1.74c.02-.04 0-.08-.04-.09c-.57-.22-1.11-.48-1.64-.78c-.04-.02-.04-.08-.01-.11c.11-.08.22-.17.33-.25c.02-.02.05-.02.07-.01c3.44 1.57 7.15 1.57 10.55 0c.02-.01.05-.01.07.01c.11.09.22.17.33.26c.04.03.04.09-.01.11c-.52.31-1.07.56-1.64.78c-.04.01-.05.06-.04.09c.32.61.68 1.19 1.07 1.74c.03.01.06.02.09.01c1.72-.53 3.45-1.33 5.25-2.65c.02-.01.03-.03.03-.05c.44-4.53-.73-8.46-3.1-11.95c-.01-.01-.02-.02-.04-.02zM8.52 14.91c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.84 2.12-1.89 2.12zm6.97 0c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.83 2.12-1.89 2.12z"/>
+        </svg>
+    </a>
+
+
+    <a target="_blank" class="social" title="YouTube" href="https://youtube.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M12.006 19.012h-.02c-.062 0-6.265-.012-7.83-.437a2.5 2.5 0 0 1-1.764-1.765A26.494 26.494 0 0 1 1.986 12a26.646 26.646 0 0 1 .417-4.817A2.564 2.564 0 0 1 4.169 5.4c1.522-.4 7.554-.4 7.81-.4H12c.063 0 6.282.012 7.831.437c.859.233 1.53.904 1.762 1.763c.29 1.594.427 3.211.407 4.831a26.568 26.568 0 0 1-.418 4.811a2.51 2.51 0 0 1-1.767 1.763c-1.52.403-7.553.407-7.809.407Zm-2-10.007l-.005 6l5.212-3l-5.207-3Z"/>
+        </svg>
+    </a>
+
+
+    <a target="_blank" class="social" title="Email" href="mailto://user@domain">
+       <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1.2em" viewBox="0 0 485.211 485.211">
+            <path fill="currentColor" d="M301.393,241.631L464.866,424.56H20.332l163.474-182.928l58.801,51.443L301.393,241.631z M462.174,60.651H23.027 l219.579,192.142L462.174,60.651z M324.225,221.67l160.986,180.151V80.792L324.225,221.67z M0,80.792v321.029L160.972,221.64 L0,80.792z"/>
+       </svg>
+    </a>
+
+
+
+
+        <p class="footnote">
+powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a target="_blank" href="https://github.com/lukeorth/poison">poison</a>
+    <br>
+    &copy; 2024 Poison. All rights reserved.
+</p>
+        
+<!-- 标题  -->
+  </div>
+</aside>
+
+            <main class="content container">
+                <div class="posts">
+    
+    
+    <article class="post">
+        <div class="info">
+  <h1 class="post-title">
+    <a href="https://perhapslol.github.io/blog/">第4章：厂商理论—生产函数</a>
+  </h1>
+
+  <div class="headline">
+    <div>
+      
+      
+      <time datetime=" 2023-4-1T13:43:53-0600" class="post-date">
+        Apr.1, 2023
+      </time>
+      
+      <span> - </span>
+      <span class="reading-time">
+
+
+        <span>20 mins read</span>
+      </span>
+    </div>
+
+    
+    <ul class="tags">
+      
+      <li class="tag-hugo">
+        <a href="https://github.com/perhapslol">Economics</a>
+      </li>
+            <li class="tag-hugo">
+        <a href="https://github.com/perhapslol">Microeconomics</a>
+      </li>
+      
+    </ul>
+    
+  </div>
+  
+  <p class="seriesname">
+    Author: <a href="https://fgzfgz.github.io/">FGZ</a>
+  </p>
+  
+  
+</div>
+        
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+   </head>
+        
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LaTeX in Webpage</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</head>
+<body>
+
+  <script type="text/javascript">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['\\(','\\)']]
+    }
+  });
+  </script>
+</body>
+</html>
+        
+<!-- 正文  -->
+<h1><a id="%E4%B8%80%E3%80%81%E5%8E%82%E5%95%86" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>一、厂商</h1>
+<h2><a id="%EF%BC%88%E4%B8%80%EF%BC%89%E4%BC%81%E4%B8%9A%E7%9A%84%E6%80%A7%E8%B4%A8" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（一）企业的性质</h2>
+<p>　　科斯在论文《企业的性质》中提出了“交易成本”概念。在科斯看来，企业和市场是两种不同的资源配置方式。在企业内，“权威”指导资源的配置；在市场上，价格配置资源。市场的运行是有成本的，通过形成一个组织，并允许某个权威（一个“企业家”）来支配资源，就能节约某些市场运行成本，即企业的性质是价格机制的替代物。</p>
+<p>　　<strong>企业存在的理由：</strong><br />
+21311</p>
+<ul>
+<li>交易活动内部化，降低交易成本；</li>
+<li>带来规模经济；</li>
+<li>促进劳动分工。</li>
+</ul>
+<h2><a id="%EF%BC%88%E4%BA%8C%EF%BC%89%E5%8E%82%E5%95%86%E7%9A%84%E7%9B%AE%E6%A0%87%EF%BC%9A" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（二）厂商的目标：</h2>
+<p>　　在微观经济学中，一般总是假定厂商的目标是利润最大化。这一基本假定是“经济人”假设在生产理论中的具体化。</p>
+<p>　　在现代公司制度中，企业所有者与经营者相分离，这可能导致企业所有者与经营者目标分歧。在<strong>信息不对称</strong>和<strong>信息不完全</strong>的情况下，厂商可能追求个人目标最大化、销售收入最大化或市场销售份额最大化来替代利润最大化，这就偏离了利润最大化的目标。</p>
+<blockquote>
+<p>信息不完全：市场主体不拥有某种经济环境状态的全部知识，其获取的或掌握的信息不足以使市场主体作出理性判断或决策。</p>
+<p>信息不对称：一些人比另外一些人具有更多的有关经济信息，可看作是信息不完全中的特殊情况。</p>
+</blockquote>
+<h1><a id="%E4%BA%8C%E3%80%81%E7%94%9F%E4%BA%A7%E5%87%BD%E6%95%B0" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>二、生产函数</h1>
+<h2><a id="%EF%BC%88%E4%B8%80%EF%BC%89%E7%94%9F%E4%BA%A7%E8%A6%81%E7%B4%A0" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（一）生产要素</h2>
+<h3><a id="1%E7%94%9F%E4%BA%A7%E8%A6%81%E7%B4%A0%E7%9A%84%E6%A6%82%E5%BF%B5" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. 生产要素的概念</h3>
+<p>　　<strong>生产要素</strong>：在生产中投入的各种经济资源，包括劳动、土地和资本等。生产要素一般划分为劳动、土地、资本和企业家才能四种。</p>
+<p>　　<strong>劳动</strong>：人类在生产过程中提供的体力和智力的总和。</p>
+<p>　　<strong>土地</strong>：不仅指土地本身，而且包括地上与地下的一切自然资源。</p>
+<p>　　<strong>资本</strong>：表现为实物形态（资本品或投资品）与货币形态。</p>
+<p>　　<strong>企业家才能</strong>：企业家组织建立和经营管理企业的才能。</p>
+<h3><a id="2%E7%94%9F%E4%BA%A7%E5%87%BD%E6%95%B0" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. 生产函数</h3>
+<h4><a id="2-1%E7%94%9F%E4%BA%A7%E5%87%BD%E6%95%B0%E7%9A%84%E6%A6%82%E5%BF%B5" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2.1 生产函数的概念</h4>
+<p>　　<strong>生产函数</strong>：在一定时期内，在一定技术条件下，生产中所使用的各种生产要素的数量与所能生产的最大产量之间的关系。</p>
+\[\begin {align}
+Q=f(L,K)
+\end {align}
+\]
+<h4><a id="2-2%E7%9F%AD%E6%9C%9F%E7%94%9F%E4%BA%A7%E4%B8%8E%E9%95%BF%E6%9C%9F%E7%94%9F%E4%BA%A7" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2.2 短期生产与长期生产</h4>
+<p>　　在微观经济学中，短期和长期的划分以生产者能否变动全部要素投入的数量作为标准。</p>
+<p>　　<strong>短期</strong>（short run）指生产者来不及调整全部生产要素的数量，至少有一种生产要素的数量是固定不变的时间周期。</p>
+<p>　　短期生产函数可写为：\(Q=f(L,\overline K)=f(L)\)</p>
+<p>　　<strong>长期</strong>（long run）指生产者可以调整全部生产要素的数量的时间周期。</p>
+<p>　　长期生产函数可表示为：\(Q=f(L, K)\)</p>
+<h3><a id="3%E7%9F%AD%E6%9C%9F%E7%94%9F%E4%BA%A7%E5%87%BD%E6%95%B0" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. 短期生产函数</h3>
+<h4><a id="3-1%E6%80%BB%E4%BA%A7%E9%87%8F%E3%80%81%E5%B9%B3%E5%9D%87%E4%BA%A7%E9%87%8F%E5%92%8C%E8%BE%B9%E9%99%85%E4%BA%A7%E9%87%8F" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.1 总产量、平均产量和边际产量</h4>
+<p>　　<strong>劳动的总产量</strong> \(TP_L\) 指与一定的可变要素劳动的投入量相对应的最大产量，即 \(TP_L=f(L,\overline K)\)</p>
+<p>　　<strong>劳动的平均产量</strong> \(AP_L\) 指平均每一单位可变要素劳动的投入量所生产的产量，即 \(AP_L=\frac {TP_L} L\)</p>
+<p>　　<strong>劳动的边际产量</strong> \(MP_L\) 指增加一单位可变要素劳动投入量所增加的产量，即 \(MP_L= \frac {\Delta TP_L} {\Delta L} =  \frac {\partial TP_L} {\partial L}\)</p>
+<h4><a id="3-2%E8%BE%B9%E9%99%85%E6%8A%A5%E9%85%AC%E9%80%92%E5%87%8F%E8%A7%84%E5%BE%8B" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.2 边际报酬递减规律</h4>
+<p>　　在技术水平不变的条件下，在连续等量地把某一种可变生产要素增加到其他一种或几种数量不变的生产要素上去的过程中，当这种可变生产要素的投入量小于某一特定值时，增加该要素投入所带来的边际产量是递增的；当这种可变要素的投入量连续增加并超过这个特定值时，增加该要素投入所带来的边际产量是递减的。</p>
+<p>　　边际报酬递减规律的三个方面注意事项：</p>
+<ul>
+<li>边际报酬递减规律是以技术不变为前提的，如果技术水平提高，边际报酬可以递增。</li>
+<li>边际报酬递减规律是以其他要素不变为前提的。</li>
+<li>它是在某种要素（如劳动）增加达到一定程度之后才出现的。</li>
+</ul>
+<p>　　从理论上讲，边际报酬递减规律成立的原因在于：对于任何产品的短期生产来说，可变要素投入和固定要素投入之间存在着一个最佳的数量组合比例。</p>
+<h4><a id="3-3%E7%9F%AD%E6%9C%9F%E7%94%9F%E4%BA%A7%E7%9A%84%E4%B8%89%E4%B8%AA%E9%98%B6%E6%AE%B5" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.3 短期生产的三个阶段</h4>
+<ul>
+<li><strong>第 Ⅰ 阶段</strong>（\(O \to  L_3\)）：<strong>平均产量递增阶段</strong>。该阶段 \(MP_L&gt;AP_L&gt;0\)，\(TP_L\) 与 \(AP_L\) 不断上升；</li>
+<li><strong>第 Ⅱ 阶段</strong>（\(L_3 \to L_4\)）：<strong>平均产量递减阶段</strong>。该阶段 \(AP_L \gt MP_L \gt 0\)，\(TP_L\) 不断上升，\(AP_L\) 逐渐下降（要素投入最佳区域/经济区域）；</li>
+<li><strong>第 Ⅲ 阶段</strong>（\(L_4 \to \infty\)）：<strong>边际产量为负阶段</strong>。该阶段 \(AP_L \gt 0 \gt MP_L\)，\(TP_L\) 与 \(AP_L\) 逐渐下降。</li>
+</ul>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220428190208-aycv2zx.png" style="height:300px" alt="总产量、平均产量与边际产量的相互关系" />
+<ul>
+<li>B点处，\(MP_L\)最大；</li>
+<li>C点处，\(AP_L\)最大；</li>
+<li>D点处，\(TP_L\)最大。</li>
+</ul>
+<h3><a id="4%E9%95%BF%E6%9C%9F%E7%94%9F%E4%BA%A7%E5%87%BD%E6%95%B0" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>4. 长期生产函数</h3>
+<h4><a id="4-1%E7%AD%89%E4%BA%A7%E9%87%8F%E6%9B%B2%E7%BA%BF" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>4.1 等产量曲线</h4>
+<p>　　等产量曲线（isoquant）是在技术水平不变的条件下，生产同一产量的两种生产要素投入量的所有不同组合的轨迹。与等产量曲线相对应的生产函数为：\(Q=f(L,K)=Q^0\)</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220428192833-05gangt.png" style="height:300px" alt="等产量曲线" />
+<p>　　等产量曲线的性质：</p>
+<ul>
+<li>表示某一生产函数的等产量曲线图中，可以画出无数条等产量曲线，并且任意两条等产量曲线不能相交；</li>
+<li>由于边际技术替代率递减，因此等产量曲线一般都凸向原点。</li>
+</ul>
+<blockquote>
+<p><strong>联系补充：</strong></p>
+<ul>
+<li>
+<p>等产量曲线类似于[&quot;无差异曲线&quot;]。</p>
+</li>
+<li>
+<p>两者区别：</p>
+<ul>
+<li>等产量曲线表示产量，无差异曲线表示效用；</li>
+<li>等产量曲线是客观的，无差异曲线是主观的。</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h4><a id="4-2%E8%BE%B9%E9%99%85%E6%8A%80%E6%9C%AF%E6%9B%BF%E4%BB%A3%E7%8E%87" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>4.2 边际技术替代率</h4>
+<p>　　在维持产量水平不变的条件下，增加一单位某种生产要素投入量时所减少的另一种要素的投入数量， 被称为边际技术替代率（Marginal Rate of Technical Substitution，MRTS）。 劳动对资本的边际替代率的定义公式为：</p>
+\[\begin {align}
+MRTS_{LK} = - \frac {\Delta K} {\Delta L} 
+\end {align}
+\]
+<p>　　等产量曲线上某一点的边际技术替代率是等产量曲线在该点斜率的绝对值。边际技术替代率还可以表示为两种要素的边际产量之比，即\(MRTS_{LK} = - \frac {\Delta K} {\Delta L} = \frac {MP_L}  {MP_K}\)，证明如下：</p>
+<p>　　设生产函数为：\(Q=f(L,K)\)，对生产函数两边都取全微分，有：\(dQ=\frac {\partial f} {\partial L} dL + \frac {\partial f} {\partial K} dK\)</p>
+<p>　　等产量曲线上的产量相同，即\(dQ=0\)，因此：\(MRTS_{LK} = - \frac {d K} {dL} = \frac {\partial f / \partial L} {\partial f / \partial K} = \frac  {MP_L} {MP_K}\)</p>
+<h4><a id="4-3%E8%BE%B9%E9%99%85%E6%8A%80%E6%9C%AF%E6%9B%BF%E4%BB%A3%E7%8E%87%E9%80%92%E5%87%8F%E8%A7%84%E5%BE%8B" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>4.3 边际技术替代率递减规律</h4>
+<p>　　在维持产量不变的前提下，当一种生产要素的投入量不断增加时，每一单位的这种生产要素所能替代的另一种生产要素的数量是递减的。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220428194221-vqpwncx.png" style="height:300px" alt="边际技术替代率递减" />
+<p>　　边际技术替代率递减的主要原因在于：任何一种产品的生产技术都要求各要 素投入之间有适当的比例，这意味着要素之间的替代是有限制的。</p>
+<h3><a id="5%E7%AD%89%E4%BA%A7%E9%87%8F%E6%9B%B2%E7%BA%BF%E7%9A%84%E5%85%B7%E4%BD%93%E5%BD%A2%E7%8A%B6" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>5. 等产量曲线的具体形状</h3>
+<h4><a id="5-1%E5%9B%BA%E5%AE%9A%E6%9B%BF%E4%BB%A3%E6%AF%94%E4%BE%8B%E7%9A%84%E7%94%9F%E4%BA%A7%E5%87%BD%E6%95%B0%EF%BC%88%E7%BA%BF%E6%80%A7%E7%94%9F%E4%BA%A7%E5%87%BD%E6%95%B0%EF%BC%89" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>5.1 固定替代比例的生产函数（线性生产函数）</h4>
+<p>　　固定替代比例的生产函数表示在每一产量水平上任何两种生产要素之间的替代比例都是固定的。生产函数的通常形式为：\(Q=aL+bK\)，相对应的等产量曲线是一条直线。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220428194356-14t4go0.png" style="height:300px" alt="固定替代比例的生产函数" />
+<h4><a id="5-2%E5%9B%BA%E5%AE%9A%E6%8A%95%E5%85%A5%E6%AF%94%E4%BE%8B%E7%9A%84%E7%94%9F%E4%BA%A7%E5%87%BD%E6%95%B0%EF%BC%88%E9%87%8C%E6%98%82%E6%83%95%E5%A4%AB%E7%94%9F%E4%BA%A7%E5%87%BD%E6%95%B0%EF%BC%89" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>5.2 固定投入比例的生产函数（里昂惕夫生产函数）</h4>
+<p>　　固定投入比例生产函数表示在每一个产量水平上任何一对要素投入量之间的比例都是固定的。生产函数的通常形式为：\(Q=\min \left\{ \frac L u, \frac K v \right\}\)，相对应的等产量曲线为 L 型，最优投入要素组合为 L 型的拐点。<br />
+　　<br />
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220428194751-83rju9k.png" style="height:300px" alt="固定投入比例的生产函数" /></p>
+<h4><a id="5-3%E6%9F%AF%E5%B8%83%E9%81%93%E6%A0%BC%E6%8B%89%E6%96%AF%E7%94%9F%E4%BA%A7%E5%87%BD%E6%95%B0%EF%BC%88-c-d%E7%94%9F%E4%BA%A7%E5%87%BD%E6%95%B0%EF%BC%89" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>5.3 柯布-道格拉斯生产函数（C-D 生产函数）</h4>
+<p>　　柯布-道格拉斯生产函数（C-D 生产函数）是最常见的一种生产函数，其一般形式为：\(Q=AL^{\alpha} K^{\beta}\)</p>
+<p>　　<strong>C-D生产函数的主要特征：</strong></p>
+<p>　　<strong>第一</strong>，\(\alpha\)和\(\beta\)分别表示劳动和资本在生产过程中的相对重要性，或者说是表示劳动所得和资本所得在总产量中所占的份额。</p>
+<p>　　\(L \cdot MP_L = L \cdot \alpha A L^{\alpha -1} K^{\beta}=\alpha AL^{\alpha} K^{\beta} = \alpha Q\)，即\(\frac {L \cdot MP_L } {Q}=\alpha\)</p>
+<p>　　\(K \cdot MP_K = K \cdot \beta A L^{\alpha } K^{\beta-1}=\beta AL^{\alpha} K^{\beta} = \beta Q\)，即\(\frac {K \cdot MP_K} {Q}=\beta\)</p>
+<p>　　<strong>第二</strong>，\(A(\lambda L)^{\alpha} (\lambda K)^{\beta}=A \lambda^{\alpha + \beta} L^{\alpha} K^{\beta}\)，\(\lambda \gt 1\)。</p>
+<ul>
+<li>若\(\alpha + \beta  \gt 1\)，为规模报酬递增；</li>
+<li>若\(\alpha + \beta  \lt 1\)，为规模报酬递减；</li>
+<li>若\(\alpha + \beta =1\)，为规模报酬不变。</li>
+</ul>
+<h4><a id="5-4%E8%A7%84%E6%A8%A1%E6%8A%A5%E9%85%AC" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>5.4 规模报酬</h4>
+<h5><a id="5-4-1%E8%A7%84%E6%A8%A1%E6%8A%A5%E9%85%AC%E5%8F%98%E5%8C%96%E7%9A%84%E5%90%AB%E4%B9%89" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>5.4.1 规模报酬变化的含义</h5>
+<p>　　规模报酬变化是指在其他条件不变的情况下，企业内部各种生产要素按相同比例变化时所带来的产量变化。</p>
+<h5><a id="5-4-2%E8%A7%84%E6%A8%A1%E6%8A%A5%E9%85%AC%E7%9A%84%E4%B8%89%E7%A7%8D%E7%B1%BB%E5%9E%8B" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>5.4.2 规模报酬的三种类型</h5>
+<p>　　产量增加的比例大于各种生产要素增加的比例，称之为规模报酬递增，即\(f(\lambda L, \lambda K) \gt \lambda f(L,K)\)；</p>
+<p>　　产量增加的比例等于各种生产要素增加的比例，称之为规模报酬不变，即\(f(\lambda L, \lambda K)=\lambda f(L,K)\)；</p>
+<p>　　产量增加的比例小于各种生产要素增加的比例，称之为规模报酬递减，即\(f(\lambda L, \lambda K) \lt \lambda f(L,K)\)。</p>
+<h5><a id="5-4-3%E7%AD%89%E4%BA%A7%E9%87%8F%E6%9B%B2%E7%BA%BF%E4%B8%8E%E8%A7%84%E6%A8%A1%E6%8A%A5%E9%85%AC" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>5.4.3 等产量曲线与规模报酬</h5>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20230219144333-uebb583.png" style="height:500px" alt="三种规模报酬" />
+<blockquote>
+<p><strong>补充：</strong></p>
+<ul>
+<li>规模报酬不变：从变动比例上看，\(要素投入=产出\)</li>
+<li>规模报酬递减：从变动比例上看，\(要素投入&gt;产出\)</li>
+<li>规模报酬递增：从变动比例上看，\(要素投入&lt;产出\)</li>
+</ul>
+</blockquote>
+<h5><a id="5-4-4%E8%A7%84%E6%A8%A1%E6%8A%A5%E9%85%AC%E5%8F%98%E5%8C%96%E7%9A%84%E8%A7%84%E5%BE%8B" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>5.4.4 规模报酬变化的规律</h5>
+<p>　　当企业从最初的很小的生产规模开始逐步扩大的时候，企业面临的是规模报酬递增的阶段。在企业得到了由生产规模扩大所带来的产量递增的全部好处以后，一般会继续扩大生产规模将生产保持在规模报酬不变的阶段。这个阶段有可能比较长。在这以后，企业若继续扩大生产规模，就会进入一个规模报酬递减的阶段。</p>
+<h4><a id="5-5%E6%89%A9%E5%A4%A7%E7%94%9F%E4%BA%A7%E8%A7%84%E6%A8%A1%E7%9A%84%E6%9C%80%E4%BC%98%E8%B7%AF%E5%BE%84" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>5.5 扩大生产规模的最优路径</h4>
+<p>　　扩展线（expansion curve）——类比[&quot;收入—消费曲线&quot;]</p>
+<p>　　扩展线是：</p>
+<ol>
+<li>不同生产规模下，生产要素最优组合点的轨迹；</li>
+<li>生产规模扩大的最优路径。</li>
+</ol>
+<p>　　对于<strong>不同的等产量曲线与等成本线的切点的连线</strong>（例如：A、B、C），为扩大生产规模的最优路径。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220428202225-orw6b0r.png" style="height:300px" alt="扩大生产规模的最优路径" />
+
+
+
+        <div class="read-more-link">
+            <a href="https://perhapslol.github.io/blog/">Back Home…</a>
+        </div>
