@@ -1,7 +1,32 @@
+<!-- Open Graph image and Twitter Card metadata -->
+
+# [![brand image](https://avatars.githubusercontent.com/u/130022120?v=4)](https://perhapslol.github.io/blog/)[# Perhaps](https://perhapslol.github.io/blog/)
+
+春华夕拾[](https://github.com/poole/hyde)[](https://github.com/mdo)
+
+* [Posts](https://perhapslol.github.io/blog/)
+* Stocks
+* IPO
+* Listed Companies
+* [Economics](https://poison.lukeorth.com/posts/)
+  Macro
+* Micro
+
+[ ](https://github.com/ "GitHub")[ ](https://linkedin.com/ "LinkedIn")[ ](https://x.com/ "X")[ ](https://discord.com/ "Discord")[ ](https://youtube.com/ "YouTube")[ ](https://poison.lukeorth.com/posts/index.xml "RSS Feed")[](mailto://user@domain "Email")
+
+powered by [Hugo](https://gohugo.io/) | themed with [poison](https://github.com/lukeorth/poison)\
+© 2024 Poison. All rights reserved.
 
 
+# [一、宏观经济学的特点](https://perhapslol.github.io/blog/)
 
-# 一、宏观经济学的特点
+Sep.24, 2024 - 10 mins read
+
+* [Economics](https://github.com/perhapslol)
+* [Macroeconomics](https://github.com/perhapslol)
+
+Author: [FGZ](https://fgzfgz.github.io/)
+
 
 ## （一）宏观经济学的研究对象
 
@@ -486,3 +511,4 @@ $$
 * 二者衡量经济中许多价格加总的方法不同，CPI 确定不同物品价格的固定加权数，而 GDP 平减指数确定可变的加权数。也就是说，CPI 使用固定的一篮子物品来计算，而 GDP 折算指数允许一篮子物品随 GDP 组成部分的变动而一直变动。
 
 
+[Back Home…](https://perhapslol.github.io/blog/)
