@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+    
+<script defer language="javascript" type="text/javascript" src="/js/bundle.min.444d89fe8d19b9e466eca93647da936356d2c582a54abec3037b88c2e785e61e.js"></script>
+
+<script defer data-domain="https://perhapslol.github.io/blog/" src="https://plausible.lukeorth.com/js/script.js"></script>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+   
+
+
+<!-- Open Graph image and Twitter Card metadata -->
+
+<title itemprop="name">Perhaps</title>
+<meta property="og:title" content=Perhaps />
+<meta name="twitter:title" content=perhapslol />
+<meta itemprop="name" content=Perhaps />
+<meta name="application-name" content=perhapslol />
+<meta property="og:site_name" content="perhapslol" />
+
+
+<meta name="description" content="A pragmatic Hugo theme for bloggers. Based on the classic &lt;a href=&#34;https://github.com/poole/hyde&#34; target=&#34;_blank&#34;&gt;Hyde&lt;/a&gt; design by &lt;a href=&#34;https://github.com/mdo&#34; target=&#34;_blank&#34;&gt;@mdo&lt;/a&gt;" />
+
+
+
+<base href="https://poison.lukeorth.com/" />
+<link rel="sitemap" type="application/xml" title="Sitemap" href='https://poison.lukeorth.com/sitemap.xml' />
+<meta name="robots" content="index,follow" />
+<meta name="googlebot" content="index,follow" />
+    <meta name="twitter:site" content="@" />
+    <meta name="twitter:creator" content="@" />
+
+<meta property="fb:admins" content="" />
+<meta name="apple-mobile-web-app-title" content="Poison" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="generator" content="Hugo 0.124.0">
+
+
+    
+    
+
+<link type="text/css" rel="stylesheet" href="/css/bundle.min.94a339836f89f0d25f31980cb6b0631da21e20af128308747ce44e0525eb16ef.css">
+
+
+    
+    <style>
+    body {
+        --sidebar-bg-color: #202020;
+        --sidebar-img-border-color: #515151;
+        --sidebar-p-color: #909090;
+        --sidebar-h1-color: #FFF;
+        --sidebar-a-color: #FFF;
+        --sidebar-socials-color: #FFF;
+        --text-color: #222;
+        --bkg-color: #FAF9F6;
+        --post-title-color: #303030;
+        --list-color: #5a5a5a;
+        --link-color: #268bd2;
+        --date-color: #515151;
+        --table-border-color: #E5E5E5;
+        --table-stripe-color: #F9F9F9;
+        --code-color: #000;
+        --code-background-color: #E5E5E5;
+        --code-block-color: #fff;
+        --code-block-background-color: #272822;
+        --moon-sun-color: #FFF;
+        --moon-sun-background-color: #515151;
+    }
+    body.dark-theme {
+        --text-color: #eee;
+        --bkg-color: #121212;
+        --post-title-color: #DBE2E9;
+        --list-color: #9d9d9d;
+        --link-color: #268bd2;
+        --date-color: #9a9a9a;
+        --table-border-color: #515151;
+        --table-stripe-color: #202020;
+        --code-color: #fff;
+        --code-background-color: #515151;
+        --code-block-color: #fff;
+        --code-block-background-color: #272822;
+    }
+    body {
+        background-color: var(--bkg-color);
+    }
+</style>
+
+</head>
+
+    <body class="light-theme">
+        <div class="wrapper">
+            <aside class="sidebar">
+    <div class="container sidebar-sticky">
+        <div class="light-dark" align="right">
+    <button class="btn-light-dark" title="Toggle light/dark mode">
+        <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+            <path fill="currentColor" d="M6 .278a.768.768 0 0 1 .08.858a7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277c.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316a.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71C0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+        </svg>
+        <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+            <path fill="currentColor" d="M8 12a4 4 0 1 0 0-8a4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+        </svg>
+    </button>
+</div>
+
+        <div class="sidebar-about">
+    <h1 class="brand">
+        
+            <a href="https://perhapslol.github.io/blog/">
+                <img src="https://avatars.githubusercontent.com/u/130022120?v=4" alt="brand image">
+            </a>
+        
+        
+                       <a href="https://perhapslol.github.io/blog/">
+                <h1>Perhaps</h1>
+            </a>
+        
+    </h1>
+    <p class="lead">
+    春华夕拾 <a href="https://github.com/poole/hyde" target="_blank"></a>  <a href="https://github.com/mdo" target="_blank"></a>
+    </p>
+</div>
+
+        <nav>
+    <ul class="sidebar-nav">
+
+                
+                    <li class="heading">
+                        <a href="https://perhapslol.github.io/blog/Post/">Posts</a>
+                    </li>
+                        <li class="sub-heading">
+                            Stocks
+                        </li>
+                        <li class="sub-heading">
+                            IPO
+                        </li>
+                        <li class="sub-heading">
+                            Listed Companies
+                        </li>
+                        
+                    <a href="https://perhapslol.github.io/blog/Economics/">Economics</a>
+                    </li>
+                        <li class="sub-heading">
+                            Macro
+                        </li>
+                        <li class="sub-heading">
+                            Micro
+                        </li>
+    </ul>
+</nav>
+
+
+        
+    <a target="_blank" class="social" title="GitHub" href="https://github.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="-2 -2 24 24">
+            <path fill="currentColor" d="M18.88 1.099C18.147.366 17.265 0 16.233 0H3.746C2.714 0 1.832.366 1.099 1.099C.366 1.832 0 2.714 0 3.746v12.487c0 1.032.366 1.914 1.099 2.647c.733.733 1.615 1.099 2.647 1.099H6.66c.19 0 .333-.007.429-.02a.504.504 0 0 0 .286-.169c.095-.1.143-.245.143-.435l-.007-.885c-.004-.564-.006-1.01-.006-1.34l-.3.052c-.19.035-.43.05-.721.046a5.555 5.555 0 0 1-.904-.091a2.026 2.026 0 0 1-.872-.39a1.651 1.651 0 0 1-.572-.8l-.13-.3a3.25 3.25 0 0 0-.41-.663c-.186-.243-.375-.407-.566-.494l-.09-.065a.956.956 0 0 1-.17-.156a.723.723 0 0 1-.117-.182c-.026-.061-.004-.111.065-.15c.07-.04.195-.059.378-.059l.26.04c.173.034.388.138.643.311a2.1 2.1 0 0 1 .631.677c.2.355.44.626.722.813c.282.186.566.28.852.28c.286 0 .533-.022.742-.065a2.59 2.59 0 0 0 .585-.196c.078-.58.29-1.028.637-1.34a8.907 8.907 0 0 1-1.333-.234a5.314 5.314 0 0 1-1.223-.507a3.5 3.5 0 0 1-1.047-.872c-.277-.347-.505-.802-.683-1.365c-.177-.564-.266-1.215-.266-1.952c0-1.049.342-1.942 1.027-2.68c-.32-.788-.29-1.673.091-2.652c.252-.079.625-.02 1.119.175c.494.195.856.362 1.086.5c.23.14.414.257.553.352a9.233 9.233 0 0 1 2.497-.338c.859 0 1.691.113 2.498.338l.494-.312a6.997 6.997 0 0 1 1.197-.572c.46-.174.81-.221 1.054-.143c.39.98.424 1.864.103 2.653c.685.737 1.028 1.63 1.028 2.68c0 .737-.089 1.39-.267 1.957c-.177.568-.407 1.023-.689 1.366a3.65 3.65 0 0 1-1.053.865c-.42.234-.828.403-1.223.507a8.9 8.9 0 0 1-1.333.235c.45.39.676 1.005.676 1.846v3.11c0 .147.021.266.065.357a.36.36 0 0 0 .208.189c.096.034.18.056.254.064c.074.01.18.013.318.013h2.914c1.032 0 1.914-.366 2.647-1.099c.732-.732 1.099-1.615 1.099-2.647V3.746c0-1.032-.367-1.914-1.1-2.647z"/>
+        </svg>
+    </a>
+
+
+
+    <a target="_blank" class="social" title="LinkedIn" href="https://linkedin.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1.2em" viewBox="0 0 448 512">
+            <path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5c0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7c-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5c67.2 0 79.7 44.3 79.7 101.9V416z"/>
+        </svg>
+    </a>
+
+
+    <a target="_blank" class="social" title="X" href="https://x.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.1em" height="1.1em" viewBox="0 0 512 472.799">
+            <path fill="currentColor" d="M403.229 0h78.506L310.219 196.04 512 462.799H354.002L230.261 301.007 88.669 462.799h-78.56l183.455-209.683L0 0h161.999l111.856 147.88L403.229 0zm-27.556 415.805h43.505L138.363 44.527h-46.68l283.99 371.278z"/>
+        </svg>
+    </a>
+
+
+    <a target="_blank" class="social" title="Discord" href="https://discord.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M19.27 5.33C17.94 4.71 16.5 4.26 15 4a.09.09 0 0 0-.07.03c-.18.33-.39.76-.53 1.09a16.09 16.09 0 0 0-4.8 0c-.14-.34-.35-.76-.54-1.09c-.01-.02-.04-.03-.07-.03c-1.5.26-2.93.71-4.27 1.33c-.01 0-.02.01-.03.02c-2.72 4.07-3.47 8.03-3.1 11.95c0 .02.01.04.03.05c1.8 1.32 3.53 2.12 5.24 2.65c.03.01.06 0 .07-.02c.4-.55.76-1.13 1.07-1.74c.02-.04 0-.08-.04-.09c-.57-.22-1.11-.48-1.64-.78c-.04-.02-.04-.08-.01-.11c.11-.08.22-.17.33-.25c.02-.02.05-.02.07-.01c3.44 1.57 7.15 1.57 10.55 0c.02-.01.05-.01.07.01c.11.09.22.17.33.26c.04.03.04.09-.01.11c-.52.31-1.07.56-1.64.78c-.04.01-.05.06-.04.09c.32.61.68 1.19 1.07 1.74c.03.01.06.02.09.01c1.72-.53 3.45-1.33 5.25-2.65c.02-.01.03-.03.03-.05c.44-4.53-.73-8.46-3.1-11.95c-.01-.01-.02-.02-.04-.02zM8.52 14.91c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.84 2.12-1.89 2.12zm6.97 0c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.83 2.12-1.89 2.12z"/>
+        </svg>
+    </a>
+
+
+    <a target="_blank" class="social" title="YouTube" href="https://youtube.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M12.006 19.012h-.02c-.062 0-6.265-.012-7.83-.437a2.5 2.5 0 0 1-1.764-1.765A26.494 26.494 0 0 1 1.986 12a26.646 26.646 0 0 1 .417-4.817A2.564 2.564 0 0 1 4.169 5.4c1.522-.4 7.554-.4 7.81-.4H12c.063 0 6.282.012 7.831.437c.859.233 1.53.904 1.762 1.763c.29 1.594.427 3.211.407 4.831a26.568 26.568 0 0 1-.418 4.811a2.51 2.51 0 0 1-1.767 1.763c-1.52.403-7.553.407-7.809.407Zm-2-10.007l-.005 6l5.212-3l-5.207-3Z"/>
+        </svg>
+    </a>
+
+
+    <a target="_blank" class="social" title="Email" href="mailto://user@domain">
+       <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1.2em" viewBox="0 0 485.211 485.211">
+            <path fill="currentColor" d="M301.393,241.631L464.866,424.56H20.332l163.474-182.928l58.801,51.443L301.393,241.631z M462.174,60.651H23.027 l219.579,192.142L462.174,60.651z M324.225,221.67l160.986,180.151V80.792L324.225,221.67z M0,80.792v321.029L160.972,221.64 L0,80.792z"/>
+       </svg>
+    </a>
+
+
+
+
+        <p class="footnote">
+powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a target="_blank" href="https://github.com/lukeorth/poison">poison</a>
+    <br>
+    &copy; 2024 Poison. All rights reserved.
+</p>
+        
+<!-- post 1  -->
+  </div>
+</aside>
+
+            <main class="content container">
+                <div class="posts">
+    
+    
+    <article class="post">
+        <div class="info">
+  <h1 class="post-title">
+    <a href="https://perhapslol.github.io/blog/">第2章：国民收入的决定：收入—支出模型</a>
+  </h1>
+
+  <div class="headline">
+    <div>
+      
+      
+      <time datetime=" 2023-4-1T13:43:53-0600" class="post-date">
+        Apr.1, 2023
+      </time>
+      
+      <span> - </span>
+      <span class="reading-time">
+
+
+        <span>20 mins read</span>
+      </span>
+    </div>
+
+    
+    <ul class="tags">
+      
+      <li class="tag-hugo">
+        <a href="https://github.com/perhapslol">Economics</a>
+      </li>
+            <li class="tag-hugo">
+        <a href="https://github.com/perhapslol">Macroeconomics</a>
+      </li>
+      
+    </ul>
+    
+  </div>
+  
+  <p class="seriesname">
+    Author: <a href="https://fgzfgz.github.io/">FGZ</a>
+  </p>
+  
+  
+</div>
+        
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+   </head>
+        
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LaTeX in Webpage</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</head>
+<body>
+
+  <script type="text/javascript">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['\\(','\\)']]
+    }
+  });
+  </script>
+</body>
+</html>
+
+<p>　　现代宏观经济学的奠基人凯恩斯的学说的中心内容是国民收入决定理论。凯恩斯主义的全部理论涉及四个市场：产品市场､货币市场､劳动市场和国际市场。仅包括产品市场的国民收入决定理论称为简单的国民收入决定理论，即收入—支出模型。</p>
+<h1><a id="%E4%B8%80%E3%80%81%E5%9D%87%E8%A1%A1%E4%BA%A7%E5%87%BA" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>一、均衡产出</h1>
+<p>　　社会产出水平究竟由社会总需求还是由社会总供给能力决定，这实际上是从凯恩斯开始的现代宏观经济学与凯恩斯以前的古典和新古典传统经济学的分水岭。在 20 世纪 30 年代经济大萧条的背景下（编者注：建议读者结合大萧条的背景来理解凯恩斯学说的理论体系），凯恩斯在名著《就业、利息和货币通论》一书中提出了生产和收入取决于总需求的理论。</p>
+<h2><a id="%EF%BC%88%E4%B8%80%EF%BC%89%E7%9F%AD%E6%9C%9F%E5%88%86%E6%9E%90%E5%81%87%E8%AE%BE%E5%89%8D%E6%8F%90" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（一）短期分析假设前提</h2>
+<h3><a id="1%E7%BB%8F%E6%B5%8E%E4%B8%AD%E5%AD%98%E5%9C%A8%E7%9D%80%E7%94%9F%E4%BA%A7%E8%83%BD%E5%8A%9B%E7%9A%84%E9%97%B2%E7%BD%AE" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. 经济中存在着生产能力的闲置</h3>
+<p>　　生产能力的闲置包括两层含义：</p>
+<ul>
+<li>劳动力资源没有得到充分利用，即存在着失业；</li>
+<li>厂房、机器等资本品没有得到充分利用，即存在着开工率不足。</li>
+</ul>
+<h3><a id="2%E4%BB%B7%E6%A0%BC%E6%B0%B4%E5%B9%B3%E5%9B%BA%E5%AE%9A%E4%B8%8D%E5%8F%98" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. 价格水平固定不变</h3>
+<p>　　凯恩斯认为，在短期内，价格机制是一种僵化的、不易变动的机制，即存在价格刚性。</p>
+<p>　　价格刚性表现为两个方面：</p>
+<ul>
+<li>在劳动力市场，即使存在失业，工资也不会下降；</li>
+<li>在产品市场，即使存在生产过剩，物价也不会下降。</li>
+</ul>
+<h3><a id="3%E5%9C%A8%E6%97%A2%E5%AE%9A%E7%9A%84%E4%BB%B7%E6%A0%BC%E6%B0%B4%E5%B9%B3%E4%B8%8A%EF%BC%8C%E6%80%BB%E4%BE%9B%E7%BB%99%E6%98%AF%E6%97%A0%E9%99%90%E7%9A%84" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. 在既定的价格水平上，总供给是无限的</h3>
+<p>　　在既定的价格水平上，总供给是无限的。反映在图表上，体现为总供给曲线平行于横轴（如下图 \(AE\) 曲线）。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220513164405-1hont5g.png" style="height:250px" alt="均衡产出的决定" />
+<p>　　经济含义：由于存在资源闲置，在固定的价格水平下，要什么有什么，要多少有多少。</p>
+<h3><a id="4%E5%9D%87%E8%A1%A1%E7%9A%84%E5%9B%BD%E6%B0%91%E6%94%B6%E5%85%A5%E7%94%B1%E6%80%BB%E9%9C%80%E6%B1%82%E5%8D%95%E6%96%B9%E9%9D%A2%E5%86%B3%E5%AE%9A" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>4. 均衡的国民收入由总需求单方面决定</h3>
+<p>　　由于总供给无限，所以均衡的国民收入由总需求单方面决定（总需求分析）。</p>
+<p>　　在短期中，国民收入决定于总需求，这是凯恩斯经济学的一个基本原理。产量由总需求决定，是就非充分就业状态而言的，而非充分就业是一种通常的状态。</p>
+<h2><a id="%EF%BC%88%E4%BA%8C%EF%BC%89%E5%9D%87%E8%A1%A1%E4%BA%A7%E5%87%BA%E4%B8%8E%E9%9D%9E%E8%AE%A1%E5%88%92%E5%AD%98%E8%B4%A7%E6%8A%95%E8%B5%84" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（二）均衡产出与非计划存货投资</h2>
+<h3><a id="1%E6%A8%A1%E5%9E%8B%E5%81%87%E8%AE%BE" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. 模型假设</h3>
+<ul>
+<li>**二部门经济：**不存在政府，也不存在对外贸易，经济中只有居民户和厂商，总需求由居民消费和企业投资构成，只企业投资是自发的或外生的，不随利率和产量而变动。</li>
+<li><strong>凯恩斯定律</strong>：假设不论需求量为多少，经济社会均能以不变的价格提供相应的供给量。</li>
+<li><strong>折旧和公司未分配利润为零。</strong></li>
+</ul>
+<h3><a id="2%E5%9D%87%E8%A1%A1%E4%BA%A7%E5%87%BA%E7%9A%84%E6%A6%82%E5%BF%B5" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. 均衡产出的概念</h3>
+<p>　　均衡产出是和总需求相等的产出，即经济社会的总产出或总收入正好等于全体居民和企业想要有的支出。</p>
+<p>　　由于两部门经济假设，均衡产出可以表示为：\(Y=C+I\)</p>
+<p>　　其中，\(C\) 与 \(I\) 分别代表计划消费、计划投资，而不是国民收入构成公式中实际发生的消费和投资。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220513164405-1hont5g.png" style="height:250px" alt="均衡产出的决定" />
+<p>　　经济社会的收入正好等于全体居民和企业想要有的支出时，经济社会达到均衡。在这个模型中，存货在调整过程中起着重要的作用。从上图可以看出，非计划存货投资是一种产量调节机制，而不是古典学派强调的价格调节机制。</p>
+<h3><a id="3%E6%8A%95%E8%B5%84%E7%AD%89%E4%BA%8E%E5%82%A8%E8%93%84" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. 投资等于储蓄</h3>
+<p>　　均衡产出或收入的条件也可用 \(I=S\) 表示。</p>
+<p>　　<strong>推导：</strong></p>
+<p>　　计划支出等于计划消费家投资，即 \(E=C+I\)；</p>
+<p>　　收入等于计划消费加计划储蓄，即 \(Y=C+S\)；</p>
+<p>　　而 \(E=Y\)，于是可得投资等于储蓄，即 \(I=S\)。</p>
+<p>　　<strong>注意：</strong></p>
+<ul>
+<li>国民收入核算中的 \(I=S\) 是指实际发生的投资（包括计划投资和非计划存货投资）始终等于储蓄。</li>
+<li>这里的投资等于储蓄，是指<strong>经济要达到均衡，计划投资必须等于计划储蓄</strong>；而<u>投资—储蓄恒等式</u>中的投资恒等于储蓄，指的实际投资和实际储蓄是根据定义而得到的实际数字，从而必然相等。</li>
+</ul>
+<h1><a id="%E4%BA%8C%E3%80%81%E5%87%AF%E6%81%A9%E6%96%AF%E7%9A%84%E6%B6%88%E8%B4%B9%E7%90%86%E8%AE%BA" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>二、凯恩斯的消费理论</h1>
+<h2><a id="%EF%BC%88%E4%B8%80%EF%BC%89%E6%B6%88%E8%B4%B9%E5%87%BD%E6%95%B0" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（一）消费函数</h2>
+<h3><a id="1%E6%B6%88%E8%B4%B9%E5%87%BD%E6%95%B0" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. 消费函数</h3>
+<p>　　在宏观经济学中，价格水平不变，所以消费数量只是收入水平的函数。消费函数是消费支出与个人可支配收入之间的依存关系。凯恩斯认为：随着收入的增加，消费也会增加，但是消费的增加不及收入增加的多，消费和收入的这种关系称做消费函数或消费倾向，用公式表示是：\(C=C(Y)\)。</p>
+<p>　　若消费与收入之间存在线性关系，则可表示为：</p>
+\[\begin {align}
+C=α+βY
+\end{align}
+\]
+<p>　　其中，\(α\) 为必不可少的自发消费部分，即收入为 0 时举债或动用过去的储蓄也必须要有的基本生活消费；\(β\) 为边际消费倾向，\(βY\) 的乘积表示收入引致的消费。</p>
+<p>　　因此，\(C=α+βY\) 的经济含义是：消费等于自发消费与引致消费之和。当消费和收入之间呈线性关系时，消费函数就是一条向右上方倾斜的直线，消费函数上每一点的斜率都相等，并且大于 0 而小于 1。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220513172235-eumerv7.png" style="height:250px" alt="消费曲线" />
+<h3><a id="2%E8%BE%B9%E9%99%85%E6%B6%88%E8%B4%B9%E5%80%BE%E5%90%91" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. 边际消费倾向</h3>
+<p>　　边际消费倾向（MPC）指增加的消费与增加的收入之比率，也就是增加的 1 单位收入中用于增加消费部分的比率，边际消费倾向的公式是：</p>
+\[\begin {align}
+MPC=\frac {\Delta C} {\Delta Y} =\frac {dC} {dY}
+\end{align}
+\]
+<p>　　MPC 是消费曲线上任一点切线的斜率，不论 MPC 是常量还是变量，它总是一个小于 1 的正数，即 \(0＜MPC＜1\)。</p>
+<p>　　当消费函数为线性函数时， \(MPC=\beta\)。</p>
+<h3><a id="3%E5%B9%B3%E5%9D%87%E6%B6%88%E8%B4%B9%E5%80%BE%E5%90%91" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. 平均消费倾向</h3>
+<h4><a id="3-1%E6%A6%82%E5%BF%B5" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.1 概念</h4>
+<p>　　平均消费倾向（APC）指任一收入水平上消费支出在收入中所占的比率。平均消费倾向的公式是：</p>
+\[\begin {align}
+APC=\frac {C} {Y} 
+\end{align}
+\]
+<h4><a id="3-2%E5%8F%96%E5%80%BC" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.2 取值</h4>
+<p>　　APC 是消费曲线上任一点与原点相连而成的射线的斜率。</p>
+<ul>
+<li>若 \(APC＜1\)，此时消费总量 ＜ 收入总量（产生储蓄）;</li>
+<li>若 \(APC=1\)，此时全部收入都用于消费（储蓄为零）;</li>
+<li>若 \(APC＞1\)，此时消费总量大于收入总量（负债消费，即产生负储蓄）。</li>
+</ul>
+<h4><a id="3-3-apc%E4%B8%8E-mpc%E7%9A%84%E5%85%B3%E7%B3%BB" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.3 APC 与 MPC 的关系</h4>
+<p>　　当消费函数为线性函数时：</p>
+\[\begin {align}
+APC=\frac \alpha Y+\beta
+\end{align}
+\]
+<p>　　即平均消费倾向总是大于边际消费倾向。</p>
+<h2><a id="%EF%BC%88%E4%BA%8C%EF%BC%89%E5%82%A8%E8%93%84%E5%87%BD%E6%95%B0" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（二）储蓄函数</h2>
+<h3><a id="1%E5%82%A8%E8%93%84%E5%87%BD%E6%95%B0" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. 储蓄函数</h3>
+<p>　　储蓄函数是描述储蓄随收入变化而变化的函数，其公式是：</p>
+\[\begin {align}
+S=S(Y)
+\end{align}
+\]
+<p>　　当消费函数为线性函数时：</p>
+\[S=Y-C=Y-(\alpha +\beta Y)=-\alpha+(1-\beta)Y
+\]
+<h3><a id="2%E8%BE%B9%E9%99%85%E5%82%A8%E8%93%84%E5%80%BE%E5%90%91" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. 边际储蓄倾向</h3>
+<p>　　边际储蓄倾向（MPS）是该点上的储蓄增量对收入增量的比率，其公式是：</p>
+\[\begin {align}
+MPS=\frac {\Delta S} {\Delta Y} =\frac {dS} {dY}
+\end{align}
+\]
+<p>　　边际储蓄倾向为储蓄曲线上任一点的斜率。</p>
+<p>　　当储蓄函数为线性函数时，\(MPS= 1-\beta\)。</p>
+<h3><a id="3%E5%B9%B3%E5%9D%87%E5%82%A8%E8%93%84%E5%80%BE%E5%90%91" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. 平均储蓄倾向</h3>
+<p>　　平均储蓄倾向（APS）是指任一收入水平上储蓄在收入中所占的比率，其公式是：</p>
+\[\begin {align}
+APS=\frac S Y
+\end{align}
+\]
+<p>　　平均储蓄倾向是储蓄曲线上任一点与原点相连而成射线的斜率。</p>
+<p>　　当储蓄函数为线性函数时：</p>
+\[\begin{align}
+APS=- \frac {\alpha} {Y}+(1-\beta)
+\end{align}
+\]
+<h2><a id="%EF%BC%88%E4%B8%89%EF%BC%89%E6%B6%88%E8%B4%B9%E5%87%BD%E6%95%B0%E5%92%8C%E5%82%A8%E8%93%84%E5%87%BD%E6%95%B0%E7%9A%84%E5%85%B3%E7%B3%BB" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（三）消费函数和储蓄函数的关系</h2>
+<p>　　由于储蓄被定义为收入和消费之差，因此：</p>
+<ul>
+<li>消费函数和储蓄函数互为补数，二者之和总等于收入，即：\(C+S=Y\)；</li>
+<li>\(APC\) 和 \(MPC\) 都随收入增加而递减，且 \(APC＞MPC\)；</li>
+<li>\(APS\) 和 \(MPS\) 都随收入增加而递增，且 \(APS＜MPS\)；</li>
+<li>\(APC+APS \equiv1\)，\(MPC+MPS \equiv1\)。</li>
+</ul>
+<p>　　消费和储蓄的关系如下图所示：</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220513175817-oy5690x.png" style="width:450px" alt="消费曲线和储蓄曲线的关系" />
+<p>　　‍</p>
+<p>　　消费曲线加投资曲线与 45° 线的交点 E 决定了均衡产出。</p>
+<ul>
+<li>在 E 点左边，需求大于产出（\(E&gt;Y\)）；</li>
+<li>在 E 点右边，需求小于产出（\(E&lt;Y\)）；</li>
+<li>只有在 E 点，需求等于产出（\(E=Y\)）。</li>
+</ul>
+<h2><a id="%EF%BC%88%E5%9B%9B%EF%BC%89%E5%AE%B6%E6%88%B7%E6%B6%88%E8%B4%B9%E5%87%BD%E6%95%B0%E5%92%8C%E7%A4%BE%E4%BC%9A%E6%B6%88%E8%B4%B9%E5%87%BD%E6%95%B0" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（四）家户消费函数和社会消费函数</h2>
+<p>　　社会消费函数并不是家户消费函数的简单加总。从家户消费函数求取社会消费函数时，还要考虑以下一系列限制条件：</p>
+<ul>
+<li>**国民收入的分配：**富者边际消费倾向较低，穷者边际消费倾向较高。国民收入分配越不均等，社会消费曲线就越是向下移动。</li>
+<li>**政府税收政策：**若实行累进个人所得税，将富有者的收入转移给穷人用于消费，则社会消费数量增加，社会消费曲线向上移动。</li>
+<li>**公司未分配利润在利润中所占比例：**所占比例越大，消费越少，社会消费曲线下移；反之，社会消费曲线上移。</li>
+</ul>
+<h2><a id="%EF%BC%88%E4%BA%94%EF%BC%89%E5%BD%B1%E5%93%8D%E6%B6%88%E8%B4%B9%E7%9A%84%E5%85%B6%E4%BB%96%E5%9B%A0%E7%B4%A0" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（五）影响消费的其他因素</h2>
+<ul>
+<li>利率</li>
+<li>价格水平</li>
+<li>收入分配</li>
+<li>社会保障制度</li>
+</ul>
+<h1><a id="%E4%B8%89%E3%80%81%E5%9B%BD%E6%B0%91%E6%94%B6%E5%85%A5%E7%9A%84%E5%86%B3%E5%AE%9A" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>三、国民收入的决定</h1>
+<h2><a id="%EF%BC%88%E4%B8%80%EF%BC%89%E4%B8%A4%E9%83%A8%E9%97%A8%E7%BB%8F%E6%B5%8E" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（一）两部门经济</h2>
+<h3><a id="1%E4%BD%BF%E7%94%A8%E6%B6%88%E8%B4%B9%E5%87%BD%E6%95%B0%E5%86%B3%E5%AE%9A%E6%94%B6%E5%85%A5" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. 使用消费函数决定收入</h3>
+<p>　　在两部门经济中，不存在政府部门，也不存在国外部门。由于不存在政府部门，因此可支配收入 \(Y_D=Y\)。</p>
+<p>　　<strong>假定：</strong></p>
+<ul>
+<li>只有家庭部门与企业部门；</li>
+<li>投资是外生变量，投资不变。</li>
+</ul>
+<p>　　总支出 \(AE=C+I_0= \alpha + \beta Y + I_0\)，结合产品市场均衡条件 \(AE=Y\)，可得：</p>
+\[\begin {align}
+Y= \alpha + \beta Y + I_0
+\end{align}
+\]
+<p>　　由上式可以解得均衡产出水平为：</p>
+\[\begin {align}
+Y_0= \frac 1 {1-\beta}(\alpha + I_0)
+\end{align}
+\]
+<h3><a id="2%E4%BD%BF%E7%94%A8%E5%82%A8%E8%93%84%E5%87%BD%E6%95%B0%E5%86%B3%E5%AE%9A%E6%94%B6%E5%85%A5" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. 使用储蓄函数决定收入</h3>
+\[\left \{
+\begin {align}
+&amp; I_0=S=Y-C    \notag  \\
+&amp; S=-\alpha+(1-\beta)Y  \notag  
+\end {align}
+\right.
+\]
+<p>　　由上式可以解得均衡产出水平为：</p>
+\[\begin {align}
+Y_0= \frac 1 {1-\beta}(\alpha + I_0)
+\end{align}
+\]
+<p>　　用计划投资等于计划储蓄的方法决定收入，也可以用下图表示：</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220513164618-uvslkk0.png" style="width:400px" alt="储蓄曲线和投资曲线相交决定收入" />
+<p>　　‍</p>
+<h2><a id="%EF%BC%88%E4%BA%8C%EF%BC%89%E4%B8%89%E9%83%A8%E9%97%A8%E7%BB%8F%E6%B5%8E" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（二）三部门经济</h2>
+<p>　　三部门经济，即在两部门经济的基础上加入政府部门，需考虑政府购买、税收和转移支付等政府行为因素。政府的收入主要来自税收，税收包括两种：一种是定量税，税收量不随收入而变动；另一种是比例所得税，税收量随收入的增加而增加。政府购买与转移支付一般为某一确定的值，是个外生变量。</p>
+<h3><a id="1%E5%BE%81%E6%94%B6%E5%AE%9A%E9%87%8F%E7%A8%8E" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. 征收定量税</h3>
+<p>　　假定投资为 \(I_0\)，政府支出为 \(G_0\) ， 税收为 \(T_0\) ， 转移支付为 \(T_r\)。消费取决于可支配收入，则有：</p>
+\[\left \{
+\begin {align}
+&amp; Y_D=Y-  T_0  + T_r          \notag  \\
+&amp; C=\alpha +\beta Y_D   \notag  \\
+&amp; AE=C+ I_0  + G_0           \notag  \\
+&amp; AE=Y                                   \notag  \\
+\end {align}
+\right.
+\]
+<p>　　由上式可以解得均衡产出水平为：</p>
+\[\begin {align}
+Y_0= \frac 1 {1-\beta}  \Big[\alpha -\beta ( T_0  - T_r)+ I_0  +  G_0  \Big]
+\end{align}
+\]
+<h3><a id="2%E5%BE%81%E6%94%B6%E6%AF%94%E4%BE%8B%E7%A8%8E" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. 征收比例税</h3>
+<p>　　假定投资为 \(I_0\)，政府支出为 \(G_0\) ， 同时征收固定税 \(T_0\) 与比利税（税率为 \(t\)），转移支付为 \(T_r\)。消费取决于可支配收入，则有：</p>
+\[\left \{
+\begin {align}
+&amp; Y_D=Y-  T  + T_r               \notag  \\
+&amp; C=\alpha +\beta Y_D     \notag  \\
+&amp; T=T_0 + tY                          \notag  \\
+&amp; AE=C+ I_0  + G_0             \notag  \\
+&amp; AE=Y                                     \notag  \\
+\end {align}
+\right.
+\]
+<p>　　由上式可以解得均衡产出水平为：</p>
+\[\begin {align}
+Y_0= \frac 1 {1-\beta(1-t)}  \Big[\alpha -\beta ( T_0  - T_r)+ I_0  +  G_0  \Big]
+\end{align}
+\]
+<p>　　其中：令 \(k= \frac 1 {1-\beta(1-t)}  &gt;1\)，且 \(0&lt;t, \ \beta &lt;1\)。\(k\) 则为<strong>封闭经济乘数</strong>。</p>
+<h2><a id="%EF%BC%88%E4%B8%89%EF%BC%89%E5%9B%9B%E9%83%A8%E9%97%A8%E7%BB%8F%E6%B5%8E" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（三）四部门经济</h2>
+<h3><a id="1%E6%8E%A8%E5%AF%BC%E4%B8%8E%E6%B1%82%E8%A7%A3" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. 推导与求解</h3>
+<p>　　四部门经济即在三部门的基础上加入净出口一项。其中，进口函数是收入的线性函数，不是可支配收入的函数，因为包括政府的进口。出口是由外国的购买力和购买愿望决定的，本国一般难以影响。所以，出口一般假定为一个外生变量。</p>
+\[\begin {align}
+NX=X_0-(m_0+\gamma Y)  
+\end {align}
+\]
+<p>　　其中，\(X_0\) 表示出口量，为外生变量；\(m_0\) 为自发进口；\(\gamma\) 为边际进口倾向，且 \(0&lt;\gamma &lt;1\)。</p>
+<p>　　假定在<u>征收比例税三部门经济</u>的基础上，加入对外贸易部门，则可以列出下面方程：</p>
+\[\left \{
+\begin {align}
+&amp; NX=X_0-(m_0+\gamma Y)  \notag  \\
+&amp; Y_D=Y-  T  + T_r                       \notag  \\
+&amp; C=\alpha +\beta Y_D            \notag  \\
+&amp; T=T_0 + tY                                 \notag  \\
+&amp; AE=C+ I_0  + G_0 +NX           \notag  \\
+&amp; AE=Y                                            \notag  \\
+\end {align}
+\right.
+\]
+<p>　　由上式可以解得均衡产出水平为：</p>
+\[\begin {align}
+Y_0= \frac 1 {(1+\gamma )-\beta(1-t)}  \Big[\alpha -\beta ( T_0  - T_r)+ I_0  +  G_0 + X_0-m_o\Big]
+\end{align}
+\]
+<p>　　其中：令 \(k=\frac 1 {(1+\gamma)-\beta(1-t)}\)，则 \(k\) 为开放经济乘数，也称作对外贸易乘数。</p>
+<h3><a id="2%E5%B0%81%E9%97%AD%E7%BB%8F%E6%B5%8E%E4%B9%98%E6%95%B0%E4%B8%8E%E5%BC%80%E6%94%BE%E7%BB%8F%E6%B5%8E%E4%B9%98%E6%95%B0%E7%9A%84%E6%AF%94%E8%BE%83" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. 封闭经济乘数与开放经济乘数的比较</h3>
+<p>　　由三部门经济均衡产出可得，在征收比例税的前提下，<u>封闭经济乘数</u>为：</p>
+\[\begin {align}
+k= \frac 1 {1-\beta(1-t)}  
+\end {align}
+\]
+<p>　　由四部门经济均衡产出可得，在征收比例税的前提下，<u>开放经济乘数</u>为：</p>
+\[\begin {align}
+k=\frac 1 {(1+\gamma)-\beta(1-t)}  
+\end {align}
+\]
+<p>　　比较两个乘数：</p>
+\[\begin {align}
+ \frac 1 {1-\beta(1-t)}  \gt \frac 1 {(1+\gamma)-\beta(1-t)}  
+\end {align}
+\]
+<p>　　即：\(开放经济乘数&gt;封闭经济乘数\)，这是因为增加的收入的一部分被用于购买进口商品。</p>
+<h1><a id="%E5%9B%9B%E3%80%81%E4%B9%98%E6%95%B0%E8%AE%BA" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>四、乘数论</h1>
+<p>　　乘数（Multiplier）是宏观经济学的一个术语，是<u>指每单位外生变量的变化所带来的引致变量的变化情况</u>。其原因是，各经济部门是相互关联的，某一部门的一笔投资（或收入变动）不仅会影响本部门的收入，而且会在国民经济其他部门中引起连锁反应，从而影响这些部门的投资与收入。</p>
+<h2><a id="%EF%BC%88%E4%B8%80%EF%BC%89%E4%B9%98%E6%95%B0%E7%90%86%E8%AE%BA" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（一）乘数理论</h2>
+<h3><a id="1%E6%8E%A8%E5%AF%BC" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. 推导</h3>
+<p>　　假设增加自主支出 \(\Delta {\overline A}\)，则产出（或者总支出）的增加量为：</p>
+\[\begin {align}
+\Delta AE=(1+β+β^2+…+β^{n-1})  \Delta {\overline A} =\frac 1 {1-\beta} \Delta {\overline A} \equiv  \Delta Y_0
+\end {align}
+\]
+<p>　　其中，倍数 \(\frac 1 {1-\beta}\) 称为乘数（multiplier），即自主性总支出增加 1 单位时，均衡产出的变动量。可以看出，边际消费倾向越大，乘数也越大。</p>
+<h3><a id="2%E5%9B%BE%E8%A7%A3" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. 图解</h3>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220513203221-e6xubbj.png" style="width:500px" alt="乘数的图形推导" />
+<p>　　如上图所示，起始的均衡点为 \(E\)，对应的均衡收入水平 \(Y_ 0\)。自主支出从 \(\overline A\) 增加到 \(\overline {A'}\)，使得总支出曲线 \(AE\) 平行向上移位到 \(AE'\)，达到新的均衡点 \(E'\)，对应的均衡收入水平 \(Y'_0\)。显然，\(\Delta {\overline A} &lt; \Delta Y_0\)。</p>
+<h2><a id="%EF%BC%88%E4%BA%8C%EF%BC%89%E4%B8%A4%E9%83%A8%E9%97%A8%E7%BB%8F%E6%B5%8E" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（二）两部门经济</h2>
+<p>　　**投资乘数/凯恩斯乘数：**收入的变化与带来这种变化的投资支出的变化的比率。</p>
+<p>　　<strong>原理：</strong>\(I\uparrow   \Longrightarrow AE \uparrow \Longrightarrow Y\uparrow   (AE=Y)\)</p>
+<p>　　由上可知，两部门经济的均衡产出为：\(Y_0= \frac 1 {1-\beta}(\alpha + I_0)\)，因此投资乘数为：\(k_I=\frac 1 {1-\beta}\)。自发支出 \(α\) 的乘数同样也是 \(k_{\alpha}=\frac 1 {1-\beta}\)。</p>
+<blockquote>
+<p><strong>推导补充：</strong></p>
+<p><strong>方法一：数学推导</strong></p>
+<p>新增投资 \(\Delta I\) 对经济的拉动作用包括以下几个步骤：</p>
+<p>第一轮：增加的投资 \(ΔI\) 使得国民收入 \(Y\) 第一轮直接增加 \(ΔI\)</p>
+<p>第二轮：第一轮拉动的国民收入 \(Y\)，会在第二轮拉动消费增长 \(\beta \Delta I\)</p>
+<p>第三轮：第二轮消费拉动的国民收入增加 \(\beta \Delta I\)，会在第三轮拉动消费增长 \({\beta}^2 \Delta I\)</p>
+<p>......</p>
+<p>第 n 轮：第 n-1 期拉动的国民收入增加 \({\beta}^{n-2} \Delta I\)，会在第 n 轮拉动消费增长 \({\beta}^{n-1} \Delta I\)</p>
+<p>当 \(n \to \infty\) 时，新增投资 \(\Delta I\) 会使得国民经济增长 \(ΔY=ΔI(1+β+β^2+…+β^{n-1}) = \frac 1 {1-\beta} \Delta I\)，即投资乘数为 \(k_I=\frac {\Delta Y} {\Delta I}=\frac 1 {1-\beta}\)</p>
+<p>上面计算过程使用了<a href="https://zhuanlan.zhihu.com/p/436636916">无穷级数求和公式</a>，\(0&lt;\beta&lt;1\)，\(\sum_{n=0}^{\infty} { \beta^{n} }=\frac 1 {1-\beta}\)。</p>
+<p><strong>方法二：均衡分析</strong></p>
+<p>均衡时收入=支出，那么当投资变化时，从一个均衡转化为另一个均衡，必然存在收入的变化量 \(ΔY\) 等于支出变化量。如果把支出变化量分解成投资引起的直接需求 \(ΔI\) 和收入变化带来的消费变化 \(βΔY\)，则有 \(ΔY=ΔI+βΔY\)，从而推出 \(\frac {\Delta Y} {\Delta I}=\frac 1 {1-\beta}=k_I\)。</p>
+<p><strong>方法三：微分</strong></p>
+<p>根据消费函数决定的国民收入公式 \(Y= \frac {\alpha + I} {1-\beta}\)，当增加 \(ΔI\) 时，\(Y'= \frac {\alpha + I+ \Delta I} {1-\beta}\)，则 \(\Delta Y=Y'-Y= \frac { \Delta I} {1-\beta}\)，即 \(\frac {\Delta Y} {\Delta I}=\frac 1 {1-\beta}=k_I\)。另外，也可以直接求微分 \(k_I=\frac {\Delta Y} {\Delta I}=\frac 1 {1-\beta}\)。</p>
+</blockquote>
+<h2><a id="%EF%BC%88%E4%B8%89%EF%BC%89%E4%B8%89%E9%83%A8%E9%97%A8%E7%BB%8F%E6%B5%8E" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（三）三部门经济</h2>
+<h3><a id="1%E5%BE%81%E6%94%B6%E5%AE%9A%E9%87%8F%E7%A8%8E" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. 征收定量税</h3>
+<p>　　在三部门经济中，征收定量税时的<u>均衡产出水平</u>是：</p>
+\[\begin {align}
+Y_0= \frac 1 {1-\beta}  \Big[\alpha -\beta ( T_0  - T_r)+ I_0  +  G_0  \Big]
+\end{align}
+\]
+<p>　　**政府购买支出乘数：**收入变动对引起这种变动的政府购买支出变动的比率，可表示为：\(k_g=\frac 1{1-\beta}\)</p>
+<p>　　**税收乘数：**收入变动对引起这种变动的税收变动的比率，可表示为：\(k_t=\frac {- \beta}{1-\beta}\)，负号表示增税将导致国民收入下降。</p>
+<p>　　\(T_0\downarrow  \Longrightarrow Y_D \uparrow  \Longrightarrow C \uparrow   \Longrightarrow  AE \uparrow  \Longrightarrow  Y \uparrow    (AE=Y)\)</p>
+<p>　　**政府转移支付乘数：**收入变动对引起这种变动的政府转移支付变动的比率，可表示为：\(k_{t_r}=\frac { \beta}{1-\beta}\)。</p>
+<blockquote>
+<p><strong>补充：</strong></p>
+<p>从绝对值来看，$\left| k_t \right| = \left| k_{t_r} \right|  &lt;  \left| k_g \right|$</p>
+<p>原因：政府购买直接增加了总支出，而减税或者政府转移支付只会使可支配收入增加相应的数额，增加的可支配收入只有一部分用于消费支出。正是因为政府购买支出乘数大于税收乘数，因此，如果政府购买支出和税收等额增加，国民收入仍将增加。</p>
+</blockquote>
+<p>　　**平衡预算乘数：**政府收入和支出同时以相等数量增加或减少时，国民收入变动与政府收支变动的比率，即：\(k_b=1\)</p>
+<p>　　**平衡预算乘数推导：**因为 \(ΔG=ΔT\)，由上式可得，\(\Delta Y=\frac 1{1-\beta}ΔG+\frac {- \beta}{1-\beta}ΔT=\Delta Y\)，因此 \(k_b=k_g+k_t=1\)</p>
+<h3><a id="2%E5%BE%81%E6%94%B6%E6%AF%94%E4%BE%8B%E7%A8%8E" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. 征收比例税</h3>
+<p>　　在三部门经济中，如果征收比例税，<u>均衡产出水平</u>为：</p>
+\[\begin {align}
+Y_0= \frac 1 {1-\beta(1-t)}  \Big[\alpha -\beta ( T_0  - T_r)+ I_0  +  G_0  \Big]
+\end{align}
+\]
+<p>　　此时：</p>
+<p>　　政府购买支出乘数：\(k_g=\frac 1{1-\beta(1-t)}\)</p>
+<p>　　税收乘数：\(k_t=\frac {- \beta(1-t)}{1-\beta(1-t)}\)</p>
+<p>　　政府转移支付乘数：\(k_{t_r}=\frac {\beta (1-t)}{1-\beta(1-t)}\)</p>
+<p>　　平衡预算乘数：\(k_b=k_g+k_t=1\) 仍然成立。</p>
+<p>　　即不论是征收定量税还是比例税，平衡预算乘数均为 \(k_b=1\)。</p>
+<blockquote>
+<p><strong>数学补充：</strong></p>
+<p>税收与政府转移支付会直接影响居民的可支配收入，税收会降低可支配收入，政府转移支付则会提高可支配收入，两者的乘数相同，但符号相反。</p>
+<p>**推导过程：**以征收比例税 \(\Delta T= t \cdot Y\) 为例：</p>
+<p>第一轮：可支配收入变为\(Y_D=(1-t)Y_0\)，因此消费变化\(\Delta C_1=-\beta (1-t) \Delta T\)，消费的降低直接导致均衡产出减少\(\Delta Y_1=\Delta C_1\)；</p>
+<p>第二轮：第一轮均衡产出下降导致可支配收入下降，此时消费变化\(\Delta C_2=-\beta^2 (1-t)^2  \Delta T\)，导致均衡产出下降\(\Delta Y_2=\Delta C_2\)；</p>
+<p>......</p>
+<p>第 n 轮：第 n-1 轮均衡产出下降导致可支配收入下降，此时消费变化\(\Delta C_n=-\beta^n (1-t)^n  \Delta T\)，导致均衡产出下降\(\Delta Y_n=\Delta C_n\)。</p>
+<p>当 \(n \to \infty\) 时，征收比例税 \(\Delta T=tY\) 会使得均衡产出变化：</p>
+<p>\(\begin{align} \Delta Y  &amp; = \sum^{\infty}_{n=1} {\Delta Y_n} =  \sum^{\infty}_{n=1} {\Delta C_n}  \notag \\ &amp; =  \sum^{\infty}_{n=1} \Big[-\beta^n (1-t)^n  \Delta T \Big]   \notag \\ &amp; = - \beta (1-t) \cdot  \sum^{\infty}_{n=0} \Big[-\beta^n (1-t)^n  \Delta T \Big]   \notag \\ &amp; = \frac {-\beta (1-t)}  {1-\beta(1-t)}  \Delta T \end{align}\)</p>
+<p>因此，税收乘数为：\(k_t=\frac {- \beta(1-t)}{1-\beta(1-t)}\)。</p>
+<p>这里使用了<a href="https://zhuanlan.zhihu.com/p/436636916">无穷级数求和公式</a>来进行计算。\(0&lt;\beta&lt;1\)，\(\sum_{n=0}^{\infty} { \beta^{n} }=\frac 1 {1-\beta}\)。</p>
+<p>**注意：**征收比例税情况下的税收乘数要区别于自发性税收乘数（总税收中的定量税部分），自发性税收乘数为\(k_{t_0} = \frac {- \beta} {1-\beta}\)，与<u>三部门经济中征收定量税的税收乘数</u>相同。</p>
+<p>参考资料：<a href="https://kns.cnki.net/kcms2/article/abstract?v=3uoqIhG8C44YLTlOAiTRKjw8pKedNdX5_mkCYmAjR9xs52jAq_-oHl4Q7cS0n91xAHcRkSqeaoo7oBq9o54dVj-SIaVzIqSA&amp;uniplatform=NZKPT">比例税制下的税收乘数及平衡预算乘数探讨</a></p>
+</blockquote>
+<h2><a id="%EF%BC%88%E5%9B%9B%EF%BC%89%E5%9B%9B%E9%83%A8%E9%97%A8%E7%BB%8F%E6%B5%8E" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（四）四部门经济</h2>
+<p>　　**对外贸易乘数：**收入变动对引起这种变动的出口变动的比率，公式为：</p>
+\[\begin {align}
+k_x = \frac 1 {(1 + \gamma) -\beta(1-t) }
+\end {align}
+\]
+<p>　　注意：在四部门经济假设下，收入决定公式为：</p>
+\[\begin {align}
+Y_0= \frac 1 {(1+\gamma )-\beta(1-t)}  \Big[\alpha -\beta ( T_0  - T_r)+ I_0  +  G_0 + X_0-m_o\Big]
+\end{align}
+\]
+<p>　　因此不仅 \(k_x = \frac 1 {(1 + \gamma) -\beta(1-t) }\)，自发支出乘数、投资乘数和政府购买支出乘数也都等于 \(\frac 1 {(1 + \gamma) -\beta(1-t) }\)。</p>
+<p>　　因为 0 \(＜γ＜1\)，可见开放经济条件下的乘数小于封闭经济条件下的乘数，原因在于由出口导致增加的收入中的一部分用于进口。</p>
+
+
+
+
+        <div class="read-more-link">
+            <a href="https://perhapslol.github.io/blog/">Back Home…</a>
+        </div>
