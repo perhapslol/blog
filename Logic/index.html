@@ -92,11 +92,14 @@
        </li>
        <li class="sub-heading">Macro</li>
        <li class="sub-heading">Micro</li>
+
       <a href="https://perhapslol.github.io/blog/Math/">Math</a></li>
          <li class="sub-heading">Basic mathematics</li>
       <a href="https://perhapslol.github.io/blog/English/">English</a></li>
          <li class="sub-heading">Grammar</li>
          <li class="sub-heading">Words</li>
+      <a href="https://perhapslol.github.io/blog/Logic/">Logic</a>
+       </li>
     </ul></nav>
 
 <!-- 社交图标 -->     
@@ -133,7 +136,7 @@
 powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a target="_blank" href="https://github.com/lukeorth/poison">poison</a><br>&copy; 2024 Poison. All rights reserved.</p>
 
         
-<!-- post 1  -->
+<!-- 正文  -->
     </div>
     </aside>
      <main class="content container">
@@ -161,10 +164,140 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
     </p>
     </div>
     <p><em>
-    123
-    </p>
+<p><strong>一、翻译推理</strong><p>
+<p>1.假言翻译<p>
+<p>如果s，那么p （s→p）<p>
+<p>只有s，才p（p→s）<p>  
+<p>除非s，否则p（非s→p）<p>
+<p>2.直言翻译<p>
+<p>所有s都是p（s→p）<p>
+<p>有的s是p（有的s→p）<p>  
+<p>3.推理规则<p>
+<p>肯前→肯后<p>
+<p>否后→否前<p>
+<p>递推<p>
+<p>4.等价定理<p>
+<p>逆否等价：s→p = 非p→非s<p>
+<p>德摩根律：<p>
+<li>非（s且p）= 非s或非p
+<li>非（s或p）= 非s且非p<p>
+<p>假言选言联言：s→p = 非s或p = 非（s且非p）<p>
+<p>5.二难推理  <p>
+<p>一般：s→p + r→q<p>
+<li>s或r → p或q<p>
+<li>非p或非q → 非s或非r<p> 
+<p>变形：<p>
+<li>s→p + 非s→p，p<p>
+<li>s→p + s→非p，非s<p>
+<p>6.换位：有的s是p=有的p是s
 
+<p><strong>二、真假推理</strong>
+<table>
+  <tbody>
+    <tr><td>这个s是p</td><td>这个s不是p</td></tr>
+    <tr><td>所有s都是p</td><td>所有s都不是p</td></tr>
+    <tr><td>有的s是p</td><td>所有s都不是p</td></tr>
+    <tr><td>必然p</td><td>可能非p</td></tr>
+    <tr><td>可能p</td><td>必然非p</td></tr>
+    <tr><td>p且q</td><td>非p或非q</td></tr>
+    <tr><td>p或q</td><td>非p且非q</td></tr>
+    <tr><td>要么p要么q</td><td>（p且q）或（非p或非q）</td>
+    </tr><tr><td>p→q</td><td>p且非q</td></tr>
+  </tbody>
+  <colgroup><col style="width: 50%;"><col style="width: 50%;"></colgroup>
+</table>
+<img src="https://pic.imgdb.cn/item/673dd219d29ded1a8cff275e.jpg">
+<p>1.必有一假：“所有S都是P”与“某个S不是P”，“所有S不是P”与“某个S是P”。
+<p>2.必有一真：“有些S是P”与“某个S不是P”，“有些S不是P”与“某个S是P”。
+<p>3.矛盾关系推出：
+<p>所有s都是p → 并非（所有s都是p）→有的s不是p
+<p>有的s是p → 并非（有的s是p）→所有s都不是p
+<p>这个s是p → 并非（这个s是p）→这个s不是p
+<p>4.充分关系推出：
+<p>所有s是p → 有的s是p
+<p>所有s是p → 这个s是p
+<p>这个s是p → 有的s是p
+<p>p → 可能p
+<p>s且p → s或p<p>
+<a>要么s要么p → s或p<p>
+<a>s且p → s<p>
+<a>s → s或p<p>
+<a>非s → （s→p）<p>
+<a>p → （s→p）<p>
+<a>s → p，只要s为假或p为真则推理恒为真</a>
+<p><a>5.判断*</a>
+<table>
+  <tbody>
+    <tr><td>s</td><td>p</td><td>s且p</td><td>s或p</td><td>s/p</td><td>s→p</td><td>p→s</td><td>s当且仅当p</td></tr>
+    <tr><td>真</td><td>真</td><td>真</td><td>真</td><td>假</td><td>真</td><td>真</td><td>真</td></tr>
+    <tr><td>真</td><td>假</td><td>假</td><td>真</td><td>真</td><td>假</td><td>真</td><td>假</td></tr>
+    <tr><td>假</td><td>真</td><td>假</td><td>真</td><td>真</td><td>真</td><td>假</td><td>假</td></tr>
+    <tr><td>假</td><td>假</td><td>假</td><td>假</td><td>假</td><td>真</td><td>真</td><td>真</td></tr>
+  </tbody>
+  <colgroup><col style="width: 8%;"><col style="width: 8%;"><col style="width: 15%;"><col style="width: 15%;"><col style="width: 8%;"><col style="width: 10%;"><col style="width: 10%;"><col style="width: 26%;"></colgroup>
+</table>
+<p><a>6.模态*</a>
+<p>不可能=必然不是，可能p=必然非p
+<p>不可能不=必然，可能非p=必然p
+<p>不必然=可能不，必然p=可能非p
+<p>不必然不=可能，必然非p=可能p
 
+<p><strong>三、分析推理</strong>
+<p>1.找确定信息、最大信息、特殊信息
+<p>2.图表法、假设法、综合分析法
+
+<p><strong>四、加强削弱</strong>
+<p>1. 因果联系的基本特点
+<p>①客观普遍性；
+<p>②先后性；
+<p>③确定性。
+<p>2.分析因果联系容易出现的错误
+<p>①主观性；
+<p>②以先后为因果；
+<p>③因果倒置。
+<li>削弱因果关系（A是B的因）的先后顺序：</li><p>
+<p>①B才是A的原因（因果倒置）；
+<p>②C才是B的原因（否定题干中的原因）：
+<p>③A不是B的原因（否定题干中的原因）；
+<p>④C也是B的原因（还有更根本的原因）
+<li>加强</li><p>
+<p>①加强论点：直接加强或举例
+<p>②加强论证
+<table>
+  <tbody>
+    <tr><td><strong>论证特点</td><td><strong>加强方式</td></tr>
+    <tr><td>论点与论据存在跳跃</td><td>“搭桥”建立联系</td></tr>
+    <tr><td>涉及数据</td><td>样本有代表性，数据可比</td></tr>
+    <tr><td>涉及因果</td><td>有因有果、无因有果、排除他因</td></tr>
+    <tr><td>涉及类比</td><td>相似度高或本质相同</td></tr>
+    <tr><td>提出方法</td><td>方法可行</td></tr>
+  </tbody>
+  <colgroup><col style="width: 50%;"><col style="width: 50%;"></colgroup>
+</table>
+<p>③加强论据
+<li>循环论证
+<li>自相矛盾
+<li>以偏概全
+<li>定义模糊</li><p>
+
+<p><strong>五、相似比较</strong>
+<p>1.结构相似：关注顺序、关注性质、不关注推理是否成立
+<p>2.方法相似：演绎推理、归纳推理、类比推理
+<p>3.谬误相似：形式、非形式
+
+<p><strong>六、原因解释</strong>
+<p>找矛盾点，围绕矛盾找差异
+<p>首先，正确选项必须能够解释题干现象或矛盾发生的原因；
+<p>其次，正确选项必须与题干现象或矛盾相关，不能否定或无视题干事实；
+<p>再次，正确选项必须能够包容题干所述的矛盾双方，且与人们的常识相符。
+
+<p><strong>七、论证评价</strong>
+<img src="https://pic.imgdb.cn/item/673de4d1d29ded1a8c0e0247.png" alt="17632726_ae3d1bbf-b7e0-4f85-ea32-cba65855d2e5.png">
+<p><strong>八、理解推断</strong></p>
+<a href="https://perhapslol.github.io/blog/Logic/mistakes.html"><strong>九、错题集*</strong></p>
+
+        
+        
         <div class="read-more-link">
             <a href="https://perhapslol.github.io/blog/">Back Home…</a>
         </div>
