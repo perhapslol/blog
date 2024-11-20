@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+    
+<script defer language="javascript" type="text/javascript" src="/js/bundle.min.444d89fe8d19b9e466eca93647da936356d2c582a54abec3037b88c2e785e61e.js"></script>
+
+<script defer data-domain="https://perhapslol.github.io/blog/" src="https://plausible.lukeorth.com/js/script.js"></script>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+   
+
+
+<!-- Open Graph image and Twitter Card metadata -->
+
+<title itemprop="name">Perhaps</title>
+<meta property="og:title" content=Perhaps />
+<meta name="twitter:title" content=perhapslol />
+<meta itemprop="name" content=Perhaps />
+<meta name="application-name" content=perhapslol />
+<meta property="og:site_name" content="perhapslol" />
+
+
+<meta name="description" content="A pragmatic Hugo theme for bloggers. Based on the classic &lt;a href=&#34;https://github.com/poole/hyde&#34; target=&#34;_blank&#34;&gt;Hyde&lt;/a&gt; design by &lt;a href=&#34;https://github.com/mdo&#34; target=&#34;_blank&#34;&gt;@mdo&lt;/a&gt;" />
+
+
+
+<base href="https://poison.lukeorth.com/" />
+<link rel="sitemap" type="application/xml" title="Sitemap" href='https://poison.lukeorth.com/sitemap.xml' />
+<meta name="robots" content="index,follow" />
+<meta name="googlebot" content="index,follow" />
+    <meta name="twitter:site" content="@" />
+    <meta name="twitter:creator" content="@" />
+
+<meta property="fb:admins" content="" />
+<meta name="apple-mobile-web-app-title" content="Poison" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="generator" content="Hugo 0.124.0">
+
+
+    
+    
+
+<link type="text/css" rel="stylesheet" href="/css/bundle.min.94a339836f89f0d25f31980cb6b0631da21e20af128308747ce44e0525eb16ef.css">
+
+
+    
+    <style>
+    body {
+        --sidebar-bg-color: #202020;
+        --sidebar-img-border-color: #515151;
+        --sidebar-p-color: #909090;
+        --sidebar-h1-color: #FFF;
+        --sidebar-a-color: #FFF;
+        --sidebar-socials-color: #FFF;
+        --text-color: #222;
+        --bkg-color: #FAF9F6;
+        --post-title-color: #303030;
+        --list-color: #5a5a5a;
+        --link-color: #268bd2;
+        --date-color: #515151;
+        --table-border-color: #E5E5E5;
+        --table-stripe-color: #F9F9F9;
+        --code-color: #000;
+        --code-background-color: #E5E5E5;
+        --code-block-color: #fff;
+        --code-block-background-color: #272822;
+        --moon-sun-color: #FFF;
+        --moon-sun-background-color: #515151;
+    }
+    body.dark-theme {
+        --text-color: #eee;
+        --bkg-color: #121212;
+        --post-title-color: #DBE2E9;
+        --list-color: #9d9d9d;
+        --link-color: #268bd2;
+        --date-color: #9a9a9a;
+        --table-border-color: #515151;
+        --table-stripe-color: #202020;
+        --code-color: #fff;
+        --code-background-color: #515151;
+        --code-block-color: #fff;
+        --code-block-background-color: #272822;
+    }
+    body {
+        background-color: var(--bkg-color);
+    }
+</style>
+
+</head>
+
+    <body class="light-theme">
+        <div class="wrapper">
+            <aside class="sidebar">
+    <div class="container sidebar-sticky">
+        <div class="light-dark" align="right">
+    <button class="btn-light-dark" title="Toggle light/dark mode">
+        <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+            <path fill="currentColor" d="M6 .278a.768.768 0 0 1 .08.858a7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277c.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316a.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71C0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+        </svg>
+        <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+            <path fill="currentColor" d="M8 12a4 4 0 1 0 0-8a4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+        </svg>
+    </button>
+</div>
+
+        <div class="sidebar-about">
+    <h1 class="brand">
+        
+            <a href="https://perhapslol.github.io/blog/">
+                <img src="https://avatars.githubusercontent.com/u/130022120?v=4" alt="brand image">
+            </a>
+        
+        
+                       <a href="https://perhapslol.github.io/blog/">
+                <h1>Perhaps</h1>
+            </a>
+        
+    </h1>
+    <p class="lead">
+    春华夕拾 <a href="https://github.com/poole/hyde" target="_blank"></a>  <a href="https://github.com/mdo" target="_blank"></a>
+    </p>
+</div>
+
+        <nav>
+    <ul class="sidebar-nav">
+
+                
+                    <li class="heading">
+                        <a href="https://perhapslol.github.io/blog/Post/">Posts</a>
+                    </li>
+                        <li class="sub-heading">
+                            Stocks
+                        </li>
+                        <li class="sub-heading">
+                            IPO
+                        </li>
+                        <li class="sub-heading">
+                            Listed Companies
+                        </li>
+                        
+                    <a href="https://perhapslol.github.io/blog/Economics/">Economics</a>
+                    </li>
+                        <li class="sub-heading">
+                            Macro
+                        </li>
+                        <li class="sub-heading">
+                            Micro
+                        </li>
+    </ul>
+</nav>
+
+
+        
+    <a target="_blank" class="social" title="GitHub" href="https://github.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="-2 -2 24 24">
+            <path fill="currentColor" d="M18.88 1.099C18.147.366 17.265 0 16.233 0H3.746C2.714 0 1.832.366 1.099 1.099C.366 1.832 0 2.714 0 3.746v12.487c0 1.032.366 1.914 1.099 2.647c.733.733 1.615 1.099 2.647 1.099H6.66c.19 0 .333-.007.429-.02a.504.504 0 0 0 .286-.169c.095-.1.143-.245.143-.435l-.007-.885c-.004-.564-.006-1.01-.006-1.34l-.3.052c-.19.035-.43.05-.721.046a5.555 5.555 0 0 1-.904-.091a2.026 2.026 0 0 1-.872-.39a1.651 1.651 0 0 1-.572-.8l-.13-.3a3.25 3.25 0 0 0-.41-.663c-.186-.243-.375-.407-.566-.494l-.09-.065a.956.956 0 0 1-.17-.156a.723.723 0 0 1-.117-.182c-.026-.061-.004-.111.065-.15c.07-.04.195-.059.378-.059l.26.04c.173.034.388.138.643.311a2.1 2.1 0 0 1 .631.677c.2.355.44.626.722.813c.282.186.566.28.852.28c.286 0 .533-.022.742-.065a2.59 2.59 0 0 0 .585-.196c.078-.58.29-1.028.637-1.34a8.907 8.907 0 0 1-1.333-.234a5.314 5.314 0 0 1-1.223-.507a3.5 3.5 0 0 1-1.047-.872c-.277-.347-.505-.802-.683-1.365c-.177-.564-.266-1.215-.266-1.952c0-1.049.342-1.942 1.027-2.68c-.32-.788-.29-1.673.091-2.652c.252-.079.625-.02 1.119.175c.494.195.856.362 1.086.5c.23.14.414.257.553.352a9.233 9.233 0 0 1 2.497-.338c.859 0 1.691.113 2.498.338l.494-.312a6.997 6.997 0 0 1 1.197-.572c.46-.174.81-.221 1.054-.143c.39.98.424 1.864.103 2.653c.685.737 1.028 1.63 1.028 2.68c0 .737-.089 1.39-.267 1.957c-.177.568-.407 1.023-.689 1.366a3.65 3.65 0 0 1-1.053.865c-.42.234-.828.403-1.223.507a8.9 8.9 0 0 1-1.333.235c.45.39.676 1.005.676 1.846v3.11c0 .147.021.266.065.357a.36.36 0 0 0 .208.189c.096.034.18.056.254.064c.074.01.18.013.318.013h2.914c1.032 0 1.914-.366 2.647-1.099c.732-.732 1.099-1.615 1.099-2.647V3.746c0-1.032-.367-1.914-1.1-2.647z"/>
+        </svg>
+    </a>
+
+
+
+    <a target="_blank" class="social" title="LinkedIn" href="https://linkedin.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1.2em" viewBox="0 0 448 512">
+            <path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5c0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7c-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5c67.2 0 79.7 44.3 79.7 101.9V416z"/>
+        </svg>
+    </a>
+
+
+    <a target="_blank" class="social" title="X" href="https://x.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.1em" height="1.1em" viewBox="0 0 512 472.799">
+            <path fill="currentColor" d="M403.229 0h78.506L310.219 196.04 512 462.799H354.002L230.261 301.007 88.669 462.799h-78.56l183.455-209.683L0 0h161.999l111.856 147.88L403.229 0zm-27.556 415.805h43.505L138.363 44.527h-46.68l283.99 371.278z"/>
+        </svg>
+    </a>
+
+
+    <a target="_blank" class="social" title="Discord" href="https://discord.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M19.27 5.33C17.94 4.71 16.5 4.26 15 4a.09.09 0 0 0-.07.03c-.18.33-.39.76-.53 1.09a16.09 16.09 0 0 0-4.8 0c-.14-.34-.35-.76-.54-1.09c-.01-.02-.04-.03-.07-.03c-1.5.26-2.93.71-4.27 1.33c-.01 0-.02.01-.03.02c-2.72 4.07-3.47 8.03-3.1 11.95c0 .02.01.04.03.05c1.8 1.32 3.53 2.12 5.24 2.65c.03.01.06 0 .07-.02c.4-.55.76-1.13 1.07-1.74c.02-.04 0-.08-.04-.09c-.57-.22-1.11-.48-1.64-.78c-.04-.02-.04-.08-.01-.11c.11-.08.22-.17.33-.25c.02-.02.05-.02.07-.01c3.44 1.57 7.15 1.57 10.55 0c.02-.01.05-.01.07.01c.11.09.22.17.33.26c.04.03.04.09-.01.11c-.52.31-1.07.56-1.64.78c-.04.01-.05.06-.04.09c.32.61.68 1.19 1.07 1.74c.03.01.06.02.09.01c1.72-.53 3.45-1.33 5.25-2.65c.02-.01.03-.03.03-.05c.44-4.53-.73-8.46-3.1-11.95c-.01-.01-.02-.02-.04-.02zM8.52 14.91c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.84 2.12-1.89 2.12zm6.97 0c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.83 2.12-1.89 2.12z"/>
+        </svg>
+    </a>
+
+
+    <a target="_blank" class="social" title="YouTube" href="https://youtube.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M12.006 19.012h-.02c-.062 0-6.265-.012-7.83-.437a2.5 2.5 0 0 1-1.764-1.765A26.494 26.494 0 0 1 1.986 12a26.646 26.646 0 0 1 .417-4.817A2.564 2.564 0 0 1 4.169 5.4c1.522-.4 7.554-.4 7.81-.4H12c.063 0 6.282.012 7.831.437c.859.233 1.53.904 1.762 1.763c.29 1.594.427 3.211.407 4.831a26.568 26.568 0 0 1-.418 4.811a2.51 2.51 0 0 1-1.767 1.763c-1.52.403-7.553.407-7.809.407Zm-2-10.007l-.005 6l5.212-3l-5.207-3Z"/>
+        </svg>
+    </a>
+
+
+    <a target="_blank" class="social" title="Email" href="mailto://user@domain">
+       <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1.2em" viewBox="0 0 485.211 485.211">
+            <path fill="currentColor" d="M301.393,241.631L464.866,424.56H20.332l163.474-182.928l58.801,51.443L301.393,241.631z M462.174,60.651H23.027 l219.579,192.142L462.174,60.651z M324.225,221.67l160.986,180.151V80.792L324.225,221.67z M0,80.792v321.029L160.972,221.64 L0,80.792z"/>
+       </svg>
+    </a>
+
+
+
+
+        <p class="footnote">
+powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a target="_blank" href="https://github.com/lukeorth/poison">poison</a>
+    <br>
+    &copy; 2024 Poison. All rights reserved.
+</p>
+        
+<!-- 标题  -->
+  </div>
+</aside>
+
+            <main class="content container">
+                <div class="posts">
+    
+    
+    <article class="post">
+        <div class="info">
+  <h1 class="post-title">
+    <a href="https://perhapslol.github.io/blog/">第8章：要素市场理论—生产要素的价格决定</a>
+  </h1>
+
+  <div class="headline">
+    <div>
+      
+      
+      <time datetime=" 2023-4-1T13:43:53-0600" class="post-date">
+        Apr.1, 2023
+      </time>
+      
+      <span> - </span>
+      <span class="reading-time">
+
+
+        <span>20 mins read</span>
+      </span>
+    </div>
+
+    
+    <ul class="tags">
+      
+      <li class="tag-hugo">
+        <a href="https://github.com/perhapslol">Economics</a>
+      </li>
+            <li class="tag-hugo">
+        <a href="https://github.com/perhapslol">Microeconomics</a>
+      </li>
+      
+    </ul>
+    
+  </div>
+  
+  <p class="seriesname">
+    Author: <a href="https://fgzfgz.github.io/">FGZ</a>
+  </p>
+  
+  
+</div>
+        
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+   </head>
+        
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LaTeX in Webpage</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</head>
+<body>
+
+  <script type="text/javascript">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['\\(','\\)']]
+    }
+  });
+  </script>
+</body>
+</html>
+        
+<!-- 正文  -->
+<h1><a id="%E4%B8%80%E3%80%81%E4%BA%A7%E5%93%81%E5%B8%82%E5%9C%BA%E4%B8%8E%E8%A6%81%E7%B4%A0%E5%B8%82%E5%9C%BA" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>一、产品市场与要素市场</h1>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220511150420-8djoa3c.png" style="width:600px" alt="产品市场和要素市场的关系" />
+<blockquote>
+<p><strong>补充：</strong></p>
+<ul>
+<li>消费者：产品市场-商品需求主体，要素市场-要素供给主体</li>
+<li>厂商：产品市场-商品供给主体，要素市场-要素需求主体</li>
+</ul>
+</blockquote>
+<h1><a id="%E4%BA%8C%E3%80%81%E7%94%9F%E4%BA%A7%E8%A6%81%E7%B4%A0%E7%9A%84%E9%9C%80%E6%B1%82" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>二、生产要素的需求</h1>
+<h2><a id="%EF%BC%88%E4%B8%80%EF%BC%89%E5%BC%95%E8%87%B4%E9%9C%80%E6%B1%82%E4%B8%8E%E8%81%94%E5%90%88%E9%9C%80%E6%B1%82" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（一）引致需求与联合需求</h2>
+<h3><a id="1%E5%BC%95%E8%87%B4%E9%9C%80%E6%B1%82" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. 引致需求</h3>
+<p>　　对生产要素的需求产生于对利润最大化的需求；</p>
+<p>　　对生产要素的需求受到消费者对产品需求的影响。</p>
+<p>　　具体来看：</p>
+<ul>
+<li>第一，在生产要素市场上，需求不是来自消费者，而是来自厂商。从这个意义上来说，对生产要素的需求不是直接需求，而是“间接”需求。</li>
+<li>第二，厂商通过购买生产要素进行生产并从中获得收益，部分地要取决于消费者对其所生产的产品的需求。从这个意义上说，生产要素的需求又是所谓“派生”需求或“引致”需求。</li>
+<li>第三，对生产要素的需求还有个特点，就是所谓“共同性”，即对生产要素的需求是共同的、相互依赖的需求。</li>
+</ul>
+<h3><a id="2%E8%81%94%E5%90%88%E9%9C%80%E6%B1%82" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. 联合需求</h3>
+<p>　　对生产要素的需求是共同的、相互依赖的；</p>
+<p>　　对生产要素的需求往往取决于多种生产要素的价格。</p>
+<h2><a id="%EF%BC%88%E4%BA%8C%EF%BC%89%E7%94%9F%E4%BA%A7%E8%A6%81%E7%B4%A0%E4%BB%B7%E6%A0%BC%E5%86%B3%E5%AE%9A%E7%9A%84%E9%9C%80%E6%B1%82%E6%96%B9%E9%9D%A2" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（二）生产要素价格决定的需求方面</h2>
+<h3><a id="1%E5%8E%82%E5%95%86%E8%A6%81%E7%B4%A0%E9%9C%80%E6%B1%82%E4%B8%80%E8%88%AC%E5%8E%9F%E5%88%99" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. 厂商要素需求一般原则</h3>
+<h4><a id="1-1%E4%B8%BB%E8%A6%81%E5%81%87%E5%AE%9A" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1.1 主要假定</h4>
+<p>　　假定：每个厂商使用一种生产要素，生产单一产品，追求最大限度的利润。</p>
+<h4><a id="1-2%E8%BE%B9%E9%99%85%E6%94%B6%E7%9B%8A%E4%BA%A7%E5%93%81%E8%BE%B9%E9%99%85%E8%A6%81%E7%B4%A0%E6%94%B6%E7%9B%8A" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1.2 边际收益产品 (边际要素收益)</h4>
+<p>　　设厂商只使用一种可变要素 \(X\)。 若增加的要素量为 \(\Delta X\)，由此带来的收益增量为 \(\Delta R\)，得要素的边际收益产品 \(MRP\) (marginal revenue product) 为：</p>
+\[\begin {align}
+\frac {dR} {dX}=\lim_{\Delta X \to 0} \frac {\Delta  R } {\Delta X}
+\end {align}
+\]
+<p>　　<strong>要素的边际收益产品等于要素的边际产品和产品的边际收益的乘积</strong>，即：</p>
+\[\begin {align}
+\frac {dR} {dX}=\frac {dR} {dQ} \cdot \frac {dQ} {dX}
+\end {align}
+\]
+<p>　　或者表示为：</p>
+\[\begin {align}
+MRP=MR \cdot MP
+\end {align}
+\]
+<h4><a id="1-3%E8%BE%B9%E9%99%85%E8%A6%81%E7%B4%A0%E6%88%90%E6%9C%AC" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1.3 边际要素成本</h4>
+<p>　　用 \(\Delta  X\) 表示要素增量，由此引起的成本增量用 \(\Delta  C\) 表示，那么边际要素成本 \(MFC\) 为：</p>
+\[\begin {align}
+\frac {dC} {dX}=\lim_{\Delta X \to 0} \frac {\Delta  C } {\Delta X}
+\end {align}
+\]
+<p>　　类似于产品市场，要素价格是要素供给量的函数，用 \(W\) 表示要素价格，那么要素供给函数为 \(W(X)\)，则成本函数为 \(W(X) \cdot X\)，于是边际要素成本为：</p>
+\[MFC=\frac {d \big[W(X) \cdot X \big]} {dX}=W(X)+X \cdot \frac {d \big[W(X)  \big]} {dX}
+\]
+<p>　　边际要素成本还可以写成：</p>
+\[\begin {align}
+MFC=MC \cdot MP
+\end {align}
+\]
+<blockquote>
+<p><strong>数学补充：</strong></p>
+<p>\(\begin{align} MFC  &amp;  =\frac {d \big[W X \big]} {dX}  = \frac {d \big[W X \big]} {dQ} \cdot \frac {d Q} {dX}   \notag \\ &amp;  = MC \cdot MP   \end{align}\)</p>
+<p>其中：\(\frac {d Q} {dX}\) 为要素的边际产出 \(MP\)；\(\frac {d \big[W X \big]} {dQ}\) 为成本函数对产量的导数，即为边际成本 \(MC\)。</p>
+<p>**经济含义：**边际要素成本表示在其他要素投入不变的前提下，某一要素的投入量发生变化带来的成本增量。考虑到要素投入是用于生产，这部分成本可以分解为要素的边际产出 \(MP\) 与生产商品的边际成本 \(MC\) 两个部分，即增加某一要素投入导致的边际产出发生变动，这部分产出变动对应的边际成本（相乘）就是增加要素投入的边际成本 \(MFC\)。</p>
+</blockquote>
+<h4><a id="1-4%E4%B8%80%E7%A7%8D%E5%8F%AF%E5%8F%98%E8%A6%81%E7%B4%A0%E6%83%85%E5%86%B5%E4%B8%8B%E8%A6%81%E7%B4%A0%E9%9C%80%E6%B1%82%E5%8E%9F%E5%88%99" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1.4 一种可变要素情况下要素需求原则</h4>
+<p>　　厂商使用要素的原则是要素的边际收益产品等于边际要素成本，即：\(MRP=MFC\)，即要素投入的边际成本等于其带来的边际收益。</p>
+<p>　　利润函数为：\(\pi (X)=R \big[Q(X) \big]-C \big[Q(X) \big]\)</p>
+<p>　　利润最大化条件为：</p>
+\[\begin {align}
+\frac {d \pi (X)} {d X} = \frac {dR} {dQ} \cdot \frac {dQ} {dX}  -  \frac {dC} {dQ} \cdot \frac {dQ} {dX} =0
+\end {align}
+\]
+<p>　　即：\(MR \cdot MP=MC \cdot MP  \ \ \  \Longrightarrow  \ \ \   MR=MC\)</p>
+<p>　　由此可见，厂商使用要素的原则与利润最大化产量的条件实质上是一回事。</p>
+<h4><a id="1-5%E5%BB%B6%E4%BC%B8%EF%BC%9A%E5%85%B3%E4%BA%8E-mrp%E4%B8%8E-vmp" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1.5 延伸：关于 MRP 与 VMP</h4>
+<h5><a id="1-5-1%E6%A6%82%E5%BF%B5%EF%BC%9A" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1.5.1 概念：</h5>
+<p>　　边际收益产品 \(MRP\)：增加一单位要素使用所增加的总收益。</p>
+\[\begin {align}
+MRP_L=\frac {\Delta TR } {\Delta L } = MR \times MP_L
+\end {align}
+\]
+<p>　　边际产品价值 \(VMP\)：增加一单位要素使用所增加的产品的市场价值。</p>
+\[\begin {align}
+VMP_L=\frac {\Delta V} {\Delta L } = P \times MP_L
+\end {align}
+\]
+<h5><a id="1-5-2%E4%BA%A7%E5%93%81%E4%BB%B7%E6%A0%BC%E5%8F%98%E5%8A%A8%E7%9A%84%E5%BD%B1%E5%93%8D" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1.5.2 产品价格变动的影响</h5>
+<p>　　（1）若产品价格是不变的（产品市场完全竞争），则：\(MRP=VMP\)</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220511154634-rpwo3pb.png" style="height:250px" alt="产品价格不变: MRP 与 VMP 重合" />
+<p>　　（2）若产品价格随着销量的增加而下降（产品市场不完全竞争），则：\(MRP&lt;VMP\)</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/WeChat34d807b1e7b99226d2de917bd00edf48-20220511161425-vbr9tni.png" style="height:250px" alt="产品价格变化: MRP 与 VMP 不重合" />
+<h5><a id="1-5-3%E8%A6%81%E7%B4%A0%E4%BB%B7%E6%A0%BC%E5%8F%98%E5%8A%A8%EF%BC%88%E4%BB%A5%E5%8A%B3%E5%8A%A8%E5%B8%82%E5%9C%BA%E4%B8%BA%E4%BE%8B%EF%BC%89" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1.5.3 要素价格变动（以劳动市场为例）</h5>
+<p>　　（1）要素价格是不变的（要素市场完全竞争），则：\(MFC=W\)</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/WeChat0fa9ecba6ef61b26a3af408de927b80e-20220511170759-rxzbiqj.png" style="width:500px" alt="要素价格不变: MFC 与 W 重合" />
+<p>　　（2）要素价格随使用量增加而增加（要素市场不完全竞争），则：\(MFC&gt;W\)</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/WeChat15ca7f30a018e941caa794915249507c-20220511170933-ur3xmke.png" style="width:450px" alt="要素价格变化: MFC 与 W 不重合" />
+<h3><a id="2%E5%8E%82%E5%95%86%E8%A6%81%E7%B4%A0%E9%9C%80%E6%B1%82%E5%8E%9F%E5%88%99%E7%9A%84%E7%AE%80%E5%8C%96" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. 厂商要素需求原则的简化</h3>
+<p>　　厂商使用生产要素，遵循<strong>增加单位要素使用所增加的总收益等于所增加的成本</strong>，即：</p>
+\[\begin {align}
+MRP=MFC
+\end {align}
+\]
+<p>　　<strong>三种情况：</strong></p>
+<ul>
+<li>对于<strong>完全竞争厂商</strong>，要素需求原则为：\(P \cdot MP=W\)</li>
+<li>对于<strong>卖方垄断厂商</strong>，要素需求原则为：\(MR \cdot MP=W\)</li>
+<li>对于<strong>买方垄断厂商</strong>，要素需求原则为：\(P \cdot MP = MC \cdot MP\)</li>
+</ul>
+<h3><a id="3%E5%AE%8C%E5%85%A8%E7%AB%9E%E4%BA%89%E3%80%81%E5%8D%96%E6%96%B9%E5%9E%84%E6%96%AD%E3%80%81%E4%B9%B0%E6%96%B9%E5%9E%84%E6%96%AD%E5%8E%82%E5%95%86%E8%A6%81%E7%B4%A0%E9%9C%80%E6%B1%82%E5%8E%9F%E5%88%99%E6%AF%94%E8%BE%83" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. 完全竞争、卖方垄断、买方垄断厂商要素需求原则比较</h3>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20230314193358-o7xyakx.png" style="width:750px" alt="要素需求原则" />
+<blockquote>
+<p><strong>==上面表格的第二列存在疑问==</strong></p>
+</blockquote>
+<h2><a id="%EF%BC%88%E4%B8%89%EF%BC%89%E5%AE%8C%E5%85%A8%E7%AB%9E%E4%BA%89%E5%8E%82%E5%95%86%E7%9A%84%E8%A6%81%E7%B4%A0%E9%9C%80%E6%B1%82" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（三）完全竞争厂商的要素需求</h2>
+<p>　　<strong>产品市场与要素市场都是完全竞争的</strong>，此时：\(MRP=VMP\)，\(MFC=W\)</p>
+<h3><a id="1%E5%AE%8C%E5%85%A8%E7%AB%9E%E4%BA%89%E8%A6%81%E7%B4%A0%E5%B8%82%E5%9C%BA%E7%9A%84%E6%9E%84%E6%88%90%E6%9D%A1%E4%BB%B6" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. 完全竞争要素市场的构成条件</h3>
+<ul>
+<li>要素的供求双方的数量很多（都是价格接受者）;</li>
+<li>生产要素之间没有区别（可替代性）；</li>
+<li>要素可以自由流动。</li>
+</ul>
+<p>　　类比：[&quot;产品市场完全竞争的条件&quot;]</p>
+<p>　　\(\Longrightarrow  \ \ \ MFC=AFC=W\)</p>
+<h3><a id="2%E7%AB%9E%E4%BA%89%E6%80%A7%E5%8E%82%E5%95%86%E8%A6%81%E7%B4%A0%E9%9C%80%E6%B1%82%E5%8E%9F%E5%88%99%E7%9A%84%E6%95%B0%E5%AD%A6%E6%8E%A8%E5%AF%BC" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. 竞争性厂商要素需求原则的数学推导</h3>
+<p>　　完全竞争厂商利润函数为：\(\pi (L)=P \cdot Q(L) - W \cdot L\)</p>
+<p>　　利润最大化一阶条件为：\(\frac {d \pi (L)} {d L} = P \cdot \frac {dQ(L)} {dL} -  W=0\)</p>
+<p>　　即：\(P \cdot  MP_L -  W=0   \ \ \  \Longrightarrow \ \ \  VMP=W\)</p>
+<h3><a id="3%E5%AE%8C%E5%85%A8%E7%AB%9E%E4%BA%89%E5%8E%82%E5%95%86%E5%AF%B9%E7%94%9F%E4%BA%A7%E8%A6%81%E7%B4%A0%E7%9A%84%E9%9C%80%E6%B1%82%E6%9B%B2%E7%BA%BF" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. 完全竞争厂商对生产要素的需求曲线</h3>
+<p>　　完全竞争厂商对生产要素 \(L\) 的需求函数反映的是：在其他条件不变时，完全竞争厂商对要素 \(L\) 的需求量与要素价格 \(W\) 之间的关系。要素需求函数可表示为：</p>
+\[\begin {align}
+P \cdot  MP_L = W
+\end {align}
+\]
+<p>　　上式确定了从要素价格 \(W\) 到要素使用量 \(L\) 的一个函数关系，即确定了完全竞争厂商对要素的一个需求函数。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220511174334-3qv0s3h.png" style="width:450px" alt="完全竞争厂商的要素需求" />
+<p>　　如图所示，在完全竞争的产品市场与要素市场中，由 \(VMP=W\) 可以确定在工资水平 \(W_1\) 下的劳动供需均衡点为 \(A\) 点，当劳动价格（工资水平）由 \(W_1\) 下降至 \(W_2\) 时，厂商若仍然雇佣 \(L_1\) 数量的劳动，边际产品价值 \(VMP&gt;W_2\)，其差额 \(VMP-W_2\)（图示红色箭头）为厂商使用的生产要素净利益，追求利润最大化的厂商会增加劳动雇佣数量至 \(L_2\)。</p>
+<p>　　由于厂商的劳动雇佣增加，产出的产品数量也增加，对于同质化的其他完全竞争厂商也会增加劳动雇佣进而增加产出，因此市场产品总供给会上升，导致产品的市场价格由 \(P_1\) 下降至 \(P_2\)，对于价格接受者的完全竞争厂商，其 \(VMP=P \times MP_L\) 也会由 \(VMP_1\) 下降至 \(VMP_2\)，与 \(W_2\) 曲线相交于 \(B'\) 点，此时 \(L'_2&lt;L_2\)。</p>
+<p>　　因此：</p>
+<ul>
+<li>若不考虑其他厂商反应：产品价格 \(P\) 保持不变，\((L_1,W_1)   \ \ \to \ \ (L_2,W_2)\)</li>
+<li>若考虑其他厂商反应：产品价格 \(P\) 随 \(W\) 下降，\((L_1,W_1)   \ \ \to \ \ (L'_2,W_2)\)</li>
+</ul>
+<p>　　<strong>对于完全竞争厂商，真实的劳动力需求曲线是图中的</strong> \(D_LDL﻿\) <strong>曲线。</strong>\(D_LDL﻿\)市场需求曲线即为所有厂商 \(D_L\) 曲线的加总。</p>
+<p>　　根据边际生产力递减的性质，可得出以下结论：完全竞争厂商的要素需求曲线与边际产品价值曲线完全重合，向右下方倾斜。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220511154634-rpwo3pb.png" style="width:400px" alt="完全竞争厂商的要素需求曲线" />
+<h3><a id="4%E5%B8%82%E5%9C%BA%E9%9C%80%E6%B1%82%E6%9B%B2%E7%BA%BF" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>4. 市场需求曲线</h3>
+<p>　　为了得到总的市场需求曲线，必须首先决定每个行业对劳动的需求，然后水平地把行业的需求曲线（行业调整曲线）加总。核心在于第一步，即决定行业需求曲线，要考虑到随着投入要素价格的变动，厂商生产的产出水平及其产品价格的变动。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220511154721-f6ev4ux.png" style="width:500px" alt="行业的劳动需求" />
+<h2><a id="%EF%BC%88%E5%9B%9B%EF%BC%89%E5%8D%96%E6%96%B9%E5%9E%84%E6%96%AD%E5%8E%82%E5%95%86%E7%9A%84%E8%A6%81%E7%B4%A0%E9%9C%80%E6%B1%82" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（四）卖方垄断厂商的要素需求</h2>
+<p>　　<strong>卖方垄断厂商面临不完全竞争的产品市场、完全竞争的要素市场</strong>，此时：\(MRP&lt;VMP\)，\(MFC=W\)。</p>
+<p>　　根据 \(MRP=MFC\) 的要素需求原则，厂商面临工资水平 \(W=W_1\) 为常数，因此劳动雇佣数量为 \(L=L_2\)，小于完全竞争市场的劳动雇佣数量 \(L_1\)。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220511181747-bepqr78.png" style="width:450px" alt="卖方垄断厂商的要素需求" />
+<h2><a id="%EF%BC%88%E4%BA%94%EF%BC%89%E4%B9%B0%E6%96%B9%E5%9E%84%E6%96%AD%E5%8E%82%E5%95%86%E7%9A%84%E8%A6%81%E7%B4%A0%E9%9C%80%E6%B1%82" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（五）买方垄断厂商的要素需求</h2>
+<p>　　<strong>买方垄断厂商面临完全竞争的产品市场、不完全竞争的要素市场</strong>，此时：\(MRP=VMP\)，\(MFC&gt;W\)。</p>
+<h3><a id="1%E4%B9%B0%E6%96%B9%E5%9E%84%E6%96%AD%E7%9A%84%E7%89%B9%E7%82%B9" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. 买方垄断的特点</h3>
+<ul>
+<li>厂商具有要素价格决定权；</li>
+<li>厂商对要素价格的决定收到要素供给曲线的制约；</li>
+<li>要素价格越高，要素供给量也越高；</li>
+<li>边际要素成本大于要素价格：\(MFC&gt;W\)</li>
+</ul>
+<h3><a id="2%E4%B9%B0%E6%96%B9%E5%9E%84%E6%96%AD%E5%8E%82%E5%95%86%E7%9A%84%E8%A6%81%E7%B4%A0%E9%9C%80%E6%B1%82" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. 买方垄断厂商的要素需求</h3>
+<p>　　如图所示，根据 \(MRP=MFC\) 的要素需求原则，厂商在 \(A\) 点雇佣劳动数量为 \(L_1\)，此时工资水平为 \(W_1\)。买方垄断（厂商垄断）要素市场时，厂商只支付劳动力最低能接受的工资水平 \(W_1\)（\(B\) 点）。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220511182039-pzy61mp.png" style="width:450px" alt="买方垄断厂商的要素需求" />
+<h2><a id="%EF%BC%88%E5%85%AD%EF%BC%89%E4%B9%B0%E5%8D%96%E5%9E%84%E6%96%AD%E5%8E%82%E5%95%86%E4%BD%BF%E7%94%A8%E7%9A%84%E8%A6%81%E7%B4%A0%E9%9C%80%E6%B1%82" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（六）买卖垄断厂商使用的要素需求</h2>
+<p>　　<strong>买卖垄断厂商面临不完全竞争的产品市场与要素市场</strong>，此时：\(MRP&lt;VMP\)，\(MFC&gt;W\)。</p>
+<p>　　如图所示，根据 \(MRP=MFC\) 的要素需求原则，确定 \(A'\) 点的劳动雇佣数量为 \(L_2\)，此时工资水平为 \(W_2\)。厂商垄断产品市场与要素市场时，只愿意支付最低能接受的工资水平 \(W_2\)（\(B'\) 点）。</p>
+<p>　　与[&quot;完全竞争厂商&quot;]的均衡点 \(A\) 点 \(L_1\) 的劳动雇佣数量与 \(W_1\) 的工资水平相比，\(L_2  &lt;  L_1\)，\(W_2  &lt;  W_1\)。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220511181846-7h3eqe3.png" style="width:450px" alt="买卖垄断厂商的要素需求" />
+<h1><a id="%E4%B8%89%E3%80%81%E7%94%9F%E4%BA%A7%E8%A6%81%E7%B4%A0%E7%9A%84%E4%BE%9B%E7%BB%99" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>三、生产要素的供给</h1>
+<p>　　在此关于要素供给的讨论完全局限于要素所有者为消费者、其行为目的为效用最大化这一范围之内，即是从消费者的效用最大化行为出发来建立其要素供给量与要素价格之间关系的理论。</p>
+<h2><a id="%EF%BC%88%E4%B8%80%EF%BC%89%E8%A6%81%E7%B4%A0%E4%BE%9B%E7%BB%99%E7%9A%84%E7%89%B9%E7%82%B9%E4%B8%8E%E5%8E%9F%E5%88%99" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（一）要素供给的特点与原则</h2>
+<h3><a id="1%E8%A6%81%E7%B4%A0%E4%BE%9B%E7%BB%99%E7%9A%84%E7%89%B9%E7%82%B9" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. 要素供给的特点</h3>
+<ul>
+<li>生产要素供给有限</li>
+<li>供给量取决于机会成本</li>
+</ul>
+<h3><a id="2%E8%A6%81%E7%B4%A0%E4%BE%9B%E7%BB%99%E7%9A%84%E5%8E%9F%E5%88%99%EF%BC%9A%E6%95%88%E7%94%A8%E6%9C%80%E5%A4%A7%E5%8C%96" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. 要素供给的原则：效用最大化</h3>
+<h4><a id="2-1%E6%95%88%E7%94%A8%E6%9C%80%E5%A4%A7%E5%8C%96" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2.1 效用最大化</h4>
+<p>　　在一定时期，要素的所有者所拥有的全部生产要素的数量是一定的，要素供给可以看成是“要素供给”和“保留自用”两种用途上进行分配以获得最大效用。要想效用最大化，就是使供给要素的边际效用和保留自用的边际效用相等。</p>
+<h4><a id="2-2%E8%A6%81%E7%B4%A0%E4%BE%9B%E7%BB%99%E7%9A%84%E8%BE%B9%E9%99%85%E6%95%88%E7%94%A8" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2.2 要素供给的边际效用</h4>
+<p>　　生产要素对消费者的效用属于“间接效用”，它是通过收入而与效用相联系：</p>
+\[\begin {align}
+\frac {d U} {dL}=\frac {dU} {dY}   \cdot   \frac {dY} {\Delta L} 
+\end {align}
+\]
+<p>　　考虑到完全竞争的要素市场，要素的边际收入等于要素的价格，因此：</p>
+\[\begin {align}
+\frac {d U} {dL}=\frac {dU} {dY}   \cdot  W
+\end {align}
+\]
+<h4><a id="2-3%E8%87%AA%E7%94%A8%E8%B5%84%E6%BA%90%E7%9A%84%E8%BE%B9%E9%99%85%E6%95%88%E7%94%A8" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2.3 自用资源的边际效用</h4>
+<p>　　为了使分析简单化，假定自用资源的效用都是直接的。若用 \(l\) 表示自用资源数量，则自用资源的边际效用为 \(\frac {d U} {dl}\)，它表示增加一单位自用资源所带来的效用增量。</p>
+<p>　　对于劳动力供给而言，如果劳动力在闲暇与工作之间分配劳动时间，那么：</p>
+<ul>
+<li>闲暇的边际效用：\(MU_H= \frac {\partial U} {\partial H}\)，表示每增加一单位闲暇时间所增加的总效用；</li>
+<li>工作的边际效用：\(MU_Y = \frac {\partial U} {\partial Y}\)，表示每增加一单位工作时间所增加的总效用。</li>
+</ul>
+<h4><a id="2-4%E8%A6%81%E7%B4%A0%E4%BE%9B%E7%BB%99%E5%8E%9F%E5%88%99" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2.4 要素供给原则</h4>
+<p>　　对于消费者而言，要素供给的目的是实现效用最大化。</p>
+<p>　　借助于要素供给的间接效用和自用资源的直接效用概念以及所谓“收入的价格”\(W_y\)，效用最大化条件表示为：</p>
+\[\begin{align}
+\frac {dU/dl} {dU/dY}=\frac W {W_y}
+\end{align}
+\]
+<p>　　要素供给原则也可以用数学方法予以推导，约束条件为：</p>
+\[\begin{align}
+Y+W \cdot l = W \cdot {\overline L}
+\end{align}
+\]
+<p>　　效用函数为 \(U=U(Y,l)\) 最大化，可构造拉格朗日辅助函数为：</p>
+\[\begin{align}
+f = U(Y,l) + \lambda \big (Y+W \cdot l - W \cdot {\overline L} \big)
+\end{align}
+\]
+<h3><a id="3%E6%97%A0%E5%B7%AE%E5%BC%82%E6%9B%B2%E7%BA%BF%E5%88%86%E6%9E%90" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. 无差异曲线分析</h3>
+<p>　　消费者现在的问题是：在预算约束之下选择最优（效用最大）的收入 \(Y\) 和自用资源 \(l\) 的组合。这个最优组合是预算线与无差异曲线 \(U_1\) 的切点 \(G^*\)，满足 \(\frac {dU}  {dl}=W\)。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220511191936-agv07pp.png" style="width:400px" alt="要素供给的原则: 无差异曲线分析" />
+<h3><a id="4%E8%A6%81%E7%B4%A0%E4%BE%9B%E7%BB%99%E9%97%AE%E9%A2%98" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>4. 要素供给问题</h3>
+<p>　　如下图所示，随着要素价格的变动，可得价格扩展线 \(PEP\)。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220511192015-72iskzk.png" style="height:300px" alt="价格扩展线" />
+<p>　　由上图可以推导出下图的要素供给曲线。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220511192135-yxtlik0.png" style="width:450px" alt="要素供给曲线" />
+<p>　　一般情况下，要素供给曲线具有向右上方倾斜的正斜率性质。但是，并不是所有的要素供给曲线都总是向右上方倾斜的，要素供给曲线与要素的特点息息相关，呈现出不同的形状。</p>
+<h2><a id="%EF%BC%88%E4%BA%8C%EF%BC%89%E5%8A%B3%E5%8A%A8%E4%BE%9B%E7%BB%99%E6%9B%B2%E7%BA%BF%E5%92%8C%E5%B7%A5%E8%B5%84%E7%8E%87%E7%9A%84%E5%86%B3%E5%AE%9A" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（二）劳动供给曲线和工资率的决定</h2>
+<h3><a id="1%E5%8A%B3%E5%8A%A8%E4%BE%9B%E7%BB%99%E6%9B%B2%E7%BA%BF" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. 劳动供给曲线</h3>
+<p>　　劳动供给曲线呈现向后弯曲的特点。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220511192301-va9irlo.png" style="height:300px" alt="时间资源在闲暇和劳动供给之间的分配" />
+<p>　　让工资连续变化 \(W_0  \to  W_1  \to  W_2 \to …\)， 便得到下图的劳动供给曲线，具有向后弯曲的特点。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220511192538-nomcp70.png" style="width:450px" alt="消费者的劳动供给曲线" />
+<h3><a id="2%E6%9B%BF%E4%BB%A3%E6%95%88%E5%BA%94%E5%92%8C%E6%94%B6%E5%85%A5%E6%95%88%E5%BA%94" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. 替代效应和收入效应</h3>
+<p>　　<strong>假定工资上涨：</strong></p>
+<ul>
+<li>**替代效应：**由于工资上涨，闲暇变得更加“昂贵”，消费者会减少对它的“购买”，从而提供的劳动数量增加。</li>
+<li>**收入效应：**由于工资上涨，意味着实际收入上升。随着实际收入上升，消费者会增加对闲暇需求，从而提供的劳动数量减少。</li>
+<li>当收入效应小于替代效应时，劳动供给则会随着工资率的提高而增加，劳动供给曲线向右上方倾斜，即曲线斜率为正值。当收入效应大于替代效应时，劳动供给量则可能随着工资率的提高而减少，劳动供给曲线向左上方倾斜，即曲线斜率为负值。</li>
+<li>工资率较低时，替代效应大于收入效应；工资率很高时，收入效应大于替代效应。随着工资率的提高，劳动供给曲线会从向右上方倾斜转为向左上方倾斜。</li>
+</ul>
+<h3><a id="3%E5%8A%B3%E5%8A%A8%E7%9A%84%E5%B8%82%E5%9C%BA%E4%BE%9B%E7%BB%99%E6%9B%B2%E7%BA%BF%E5%92%8C%E5%9D%87%E8%A1%A1%E5%B7%A5%E8%B5%84%E7%9A%84%E5%86%B3%E5%AE%9A" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. 劳动的市场供给曲线和均衡工资的决定</h3>
+<p>　　市场劳动供给曲线向右上方倾斜。向右下方倾斜的劳动需求曲线和向右上方 倾斜的劳动供给曲线决定均衡工资水平。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220511200656-r7jzwpl.png" style="height:270px" alt="均衡工资的决定" />
+<h2><a id="%EF%BC%88%E4%B8%89%EF%BC%89%E8%B5%84%E6%9C%AC%E7%9A%84%E4%BE%9B%E7%BB%99%E6%9B%B2%E7%BA%BF" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（三）资本的供给曲线</h2>
+<h3><a id="1%E8%B5%84%E6%9C%AC%E4%BE%9B%E7%BB%99%E6%9B%B2%E7%BA%BF" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. 资本供给曲线</h3>
+<p>　　资本的供给量指家庭储蓄的那部分资金。</p>
+<p>　　资本的供给曲线是储蓄量与利率之间关系的曲线，随着利率的不断升高，资本供给量先升高后降低。</p>
+<h3><a id="2%E5%BD%A2%E6%88%90%E5%8E%9F%E5%9B%A0" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. 形成原因</h3>
+<p>　　消费者的跨期选择的结果</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220511203229-6k7sa9n.png" style="width:450px" alt="资本供给与跨期选择" />
+<h3><a id="3%E5%88%A9%E7%8E%87%E5%AF%B9%E8%B5%84%E6%9C%AC%E4%BE%9B%E7%BB%99%E7%9A%84%E5%BD%B1%E5%93%8D" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. 利率对资本供给的影响</h3>
+<p>　　上图的斜率为 \(k=1+r\)，因此：</p>
+<ul>
+<li>当利率升高（\(A \to B\)）时，本期消费 \(C_1\) 升高，未来消费（储蓄/资本供给）\(C_2\) 下降，但由于利率 \(r\) 升高，导致未来的实际消费会上升。</li>
+<li>利率可以看作为现期消费的价格。</li>
+</ul>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220511203441-5ct5dfy.png" style="width:300px" alt="资本供给与利率的关系" />
+<h2><a id="%EF%BC%88%E5%9B%9B%EF%BC%89%E5%9C%9F%E5%9C%B0%E7%9A%84%E4%BE%9B%E7%BB%99%E6%9B%B2%E7%BA%BF%E5%92%8C%E5%9C%B0%E7%A7%9F%E7%9A%84%E5%86%B3%E5%AE%9A" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（四）土地的供给曲线和地租的决定</h2>
+<h3><a id="1%E5%9C%9F%E5%9C%B0%E4%BE%9B%E7%BB%99%E6%9B%B2%E7%BA%BF" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. 土地供给曲线</h3>
+<p>　　与劳动力一样，土地所有者实际上是在土地供给所可能带来的收入与自用土地之间进行选择，其效用函数可以写为：\(U=U(Y,q)\)。由于通常土地的消费性使用可以忽略不计，故效用只取决于土地收入而与自用土地数量大小无关。</p>
+<p>　　因此，土地所有者为了获得最大效用就必须使土地收入达到最大，而要土地收入最大则必须要求尽可能地多供给土地。由于土地所有者拥有的土地为既定的，单个土地供给者提供的土地通常只有一种用途，从而土地供给无弹性，在图形中表现为一条垂直于横轴的直线。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220511200920-psyf9g9.png" style="width:350px" alt="土地的供给曲线" />
+<h3><a id="2%E5%9C%B0%E7%A7%9F%E7%9A%84%E5%86%B3%E5%AE%9A" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. 地租的决定</h3>
+<p>　　向右下方倾斜的土地市场需求曲线与土地供给曲线结合起来可决定土地的均衡价格即地租。而且，地租完全由土地的需求曲线决定。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220511200943-rqfsmgs.png" style="height:250px" alt="地租及决定因素" />
+<h2><a id="%EF%BC%88%E4%BA%94%EF%BC%89%E7%A7%9F%E9%87%91%E3%80%81%E5%87%86%E7%A7%9F%E9%87%91%E5%92%8C%E7%BB%8F%E6%B5%8E%E7%A7%9F%E9%87%91" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（五）租金、准租金和经济租金</h2>
+<p>　　[&quot;不同成本、利润之间的关系&quot;]</p>
+<h3><a id="1%E7%A7%9F%E9%87%91%EF%BC%88-rent%EF%BC%89" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. 租金（Rent）</h3>
+<p>　　供给数量同样固定不变的一般资源，如某些人的天赋才能，其服务价格称之为租金。换句话说，地租是当所考虑的资源为土地时的租金，而租金则是一般化的地租。</p>
+<h3><a id="2%E5%87%86%E7%A7%9F%E9%87%91%EF%BC%88-quasi-rent%EF%BC%89" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. 准租金（Quasi-rent）</h3>
+<p>　　准租金是对供给量暂时固定的生产要素的支付，即固定生产要素的收益。因此，准租金属于短期分析。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220511201230-v57d1xy.png" style="height:300px" alt="准租金" />
+<p>　　可变成本为面积 \(OGBQ_0\)，它代表了厂商对为生产 \(Q_0\) 所需的可变生产要素量而必须作出的支付。固定要素得到的则是剩余部分 \(GP_0CB\)。这就是准租金，等于总收益减去总可变成本。</p>
+<p>　　如果从准租金 \(GP_0CB\) 中减去固定总成本 \(GDEB\)，则得到经济利润 \(GP_0CE\)。可见，准租金为固定总成本与经济利润之和。当经济利润为 0 时，准租金便等于固定总成本。当厂商有经济亏损时，准租金也可能小于固定总成本。准租金可表示为：（[&quot;生产者剩余&quot;]）</p>
+\[\begin {align}
+TR-TVC=TFC+经济利润=TFC-经济损失
+\end{align}
+\]
+<h3><a id="3%E7%BB%8F%E6%B5%8E%E7%A7%9F%E9%87%91%EF%BC%88-economic-rent%EF%BC%89" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. 经济租金（Economic Rent）</h3>
+<p>　　相对而言，经济租金属于长期分析。如图所示，要素供给曲线 \(S\) 以上、要素价格 \(R_0\) 以下的阴影区域 \(AR_0E\) 为经济租金。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220511201753-yrmpbwx.png" style="height:300px" alt="经济租金" />
+<p>　　事实上，经济租金也可以这样来定义，即支付给生产要素的报酬超出为获得该要素而必须支付的最低报酬的部分。</p>
+<p>　　可以发现，如果供给是完全有弹性的，经济租金将是零。只有在供给多少缺乏弹性时，经济租金才出现。在供给完全无弹性时，所有向生产要素支付的进入都是经济租金。因此，租金实际上是经济租金的一种特例。</p>
+<h1><a id="%E5%9B%9B%E3%80%81%E6%B4%9B%E4%BC%A6%E5%85%B9%E6%9B%B2%E7%BA%BF%E5%92%8C%E5%9F%BA%E5%B0%BC%E7%B3%BB%E6%95%B0" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>四、洛伦兹曲线和基尼系数</h1>
+<p>　　[&quot;收入-消费曲线和恩格尔系数&quot;]</p>
+<h2><a id="%EF%BC%88%E4%B8%80%EF%BC%89%E6%B4%9B%E4%BC%A6%E5%85%B9%E6%9B%B2%E7%BA%BF" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（一）洛伦兹曲线</h2>
+<p>　　将一国总人口按收入由低到高进行排序，考虑收入最低的任意百分比人口所得到的收入百分比，将人口累计百分比和收入累计百分比的对应关系描绘在图形上，就是洛伦兹曲线。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220511204540-ec4g72h.png" style="height:250px" alt="洛伦兹曲线" />
+<p>　　洛伦兹曲线反映了收入分配的不平等程度。曲线弯曲程度越大，收入分配程度越不平等；反之亦然。</p>
+<h2><a id="%EF%BC%88%E4%BA%8C%EF%BC%89%E5%9F%BA%E5%B0%BC%E7%B3%BB%E6%95%B0" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（二）基尼系数</h2>
+<p>　　在洛伦兹曲线图中，不平等面积与完全不平等面积之比，称为基尼系数，是衡量一个国家贫富差距的标准。若设 \(G\) 为基尼系数，则：\(G= \frac A {A+B}\) 。</p>
+<p>　　显然，基尼系数不会大于 1， 也不会小于零，即有：\(0 \le G \le1\)。</p>
+
+
+
+
+        <div class="read-more-link">
+            <a href="https://perhapslol.github.io/blog/">Back Home…</a>
+        </div>
