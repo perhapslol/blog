@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+    
+<script defer language="javascript" type="text/javascript" src="/js/bundle.min.444d89fe8d19b9e466eca93647da936356d2c582a54abec3037b88c2e785e61e.js"></script>
+
+<script defer data-domain="https://perhapslol.github.io/blog/" src="https://plausible.lukeorth.com/js/script.js"></script>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+   
+
+
+<!-- Open Graph image and Twitter Card metadata -->
+
+<title itemprop="name">Perhaps</title>
+<meta property="og:title" content=Perhaps />
+<meta name="twitter:title" content=perhapslol />
+<meta itemprop="name" content=Perhaps />
+<meta name="application-name" content=perhapslol />
+<meta property="og:site_name" content="perhapslol" />
+
+
+<meta name="description" content="A pragmatic Hugo theme for bloggers. Based on the classic &lt;a href=&#34;https://github.com/poole/hyde&#34; target=&#34;_blank&#34;&gt;Hyde&lt;/a&gt; design by &lt;a href=&#34;https://github.com/mdo&#34; target=&#34;_blank&#34;&gt;@mdo&lt;/a&gt;" />
+
+
+
+<base href="https://poison.lukeorth.com/" />
+<link rel="sitemap" type="application/xml" title="Sitemap" href='https://poison.lukeorth.com/sitemap.xml' />
+<meta name="robots" content="index,follow" />
+<meta name="googlebot" content="index,follow" />
+    <meta name="twitter:site" content="@" />
+    <meta name="twitter:creator" content="@" />
+
+<meta property="fb:admins" content="" />
+<meta name="apple-mobile-web-app-title" content="Poison" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="generator" content="Hugo 0.124.0">
+
+
+    
+    
+
+<link type="text/css" rel="stylesheet" href="/css/bundle.min.94a339836f89f0d25f31980cb6b0631da21e20af128308747ce44e0525eb16ef.css">
+
+
+    
+    <style>
+    body {
+        --sidebar-bg-color: #202020;
+        --sidebar-img-border-color: #515151;
+        --sidebar-p-color: #909090;
+        --sidebar-h1-color: #FFF;
+        --sidebar-a-color: #FFF;
+        --sidebar-socials-color: #FFF;
+        --text-color: #222;
+        --bkg-color: #FAF9F6;
+        --post-title-color: #303030;
+        --list-color: #5a5a5a;
+        --link-color: #268bd2;
+        --date-color: #515151;
+        --table-border-color: #E5E5E5;
+        --table-stripe-color: #F9F9F9;
+        --code-color: #000;
+        --code-background-color: #E5E5E5;
+        --code-block-color: #fff;
+        --code-block-background-color: #272822;
+        --moon-sun-color: #FFF;
+        --moon-sun-background-color: #515151;
+    }
+    body.dark-theme {
+        --text-color: #eee;
+        --bkg-color: #121212;
+        --post-title-color: #DBE2E9;
+        --list-color: #9d9d9d;
+        --link-color: #268bd2;
+        --date-color: #9a9a9a;
+        --table-border-color: #515151;
+        --table-stripe-color: #202020;
+        --code-color: #fff;
+        --code-background-color: #515151;
+        --code-block-color: #fff;
+        --code-block-background-color: #272822;
+    }
+    body {
+        background-color: var(--bkg-color);
+    }
+</style>
+
+</head>
+
+    <body class="light-theme">
+        <div class="wrapper">
+            <aside class="sidebar">
+    <div class="container sidebar-sticky">
+        <div class="light-dark" align="right">
+    <button class="btn-light-dark" title="Toggle light/dark mode">
+        <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+            <path fill="currentColor" d="M6 .278a.768.768 0 0 1 .08.858a7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277c.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316a.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71C0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+        </svg>
+        <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+            <path fill="currentColor" d="M8 12a4 4 0 1 0 0-8a4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+        </svg>
+    </button>
+</div>
+
+        <div class="sidebar-about">
+    <h1 class="brand">
+        
+            <a href="https://perhapslol.github.io/blog/">
+                <img src="https://avatars.githubusercontent.com/u/130022120?v=4" alt="brand image">
+            </a>
+        
+        
+                       <a href="https://perhapslol.github.io/blog/">
+                <h1>Perhaps</h1>
+            </a>
+        
+    </h1>
+    <p class="lead">
+    春华夕拾 <a href="https://github.com/poole/hyde" target="_blank"></a>  <a href="https://github.com/mdo" target="_blank"></a>
+    </p>
+</div>
+
+        <nav>
+    <ul class="sidebar-nav">
+
+                
+                    <li class="heading">
+                        <a href="https://perhapslol.github.io/blog/Post/">Posts</a>
+                    </li>
+                        <li class="sub-heading">
+                            Stocks
+                        </li>
+                        <li class="sub-heading">
+                            IPO
+                        </li>
+                        <li class="sub-heading">
+                            Listed Companies
+                        </li>
+                        
+                    <a href="https://perhapslol.github.io/blog/Economics/">Economics</a>
+                    </li>
+                        <li class="sub-heading">
+                            Macro
+                        </li>
+                        <li class="sub-heading">
+                            Micro
+                        </li>
+    </ul>
+</nav>
+
+
+        
+    <a target="_blank" class="social" title="GitHub" href="https://github.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="-2 -2 24 24">
+            <path fill="currentColor" d="M18.88 1.099C18.147.366 17.265 0 16.233 0H3.746C2.714 0 1.832.366 1.099 1.099C.366 1.832 0 2.714 0 3.746v12.487c0 1.032.366 1.914 1.099 2.647c.733.733 1.615 1.099 2.647 1.099H6.66c.19 0 .333-.007.429-.02a.504.504 0 0 0 .286-.169c.095-.1.143-.245.143-.435l-.007-.885c-.004-.564-.006-1.01-.006-1.34l-.3.052c-.19.035-.43.05-.721.046a5.555 5.555 0 0 1-.904-.091a2.026 2.026 0 0 1-.872-.39a1.651 1.651 0 0 1-.572-.8l-.13-.3a3.25 3.25 0 0 0-.41-.663c-.186-.243-.375-.407-.566-.494l-.09-.065a.956.956 0 0 1-.17-.156a.723.723 0 0 1-.117-.182c-.026-.061-.004-.111.065-.15c.07-.04.195-.059.378-.059l.26.04c.173.034.388.138.643.311a2.1 2.1 0 0 1 .631.677c.2.355.44.626.722.813c.282.186.566.28.852.28c.286 0 .533-.022.742-.065a2.59 2.59 0 0 0 .585-.196c.078-.58.29-1.028.637-1.34a8.907 8.907 0 0 1-1.333-.234a5.314 5.314 0 0 1-1.223-.507a3.5 3.5 0 0 1-1.047-.872c-.277-.347-.505-.802-.683-1.365c-.177-.564-.266-1.215-.266-1.952c0-1.049.342-1.942 1.027-2.68c-.32-.788-.29-1.673.091-2.652c.252-.079.625-.02 1.119.175c.494.195.856.362 1.086.5c.23.14.414.257.553.352a9.233 9.233 0 0 1 2.497-.338c.859 0 1.691.113 2.498.338l.494-.312a6.997 6.997 0 0 1 1.197-.572c.46-.174.81-.221 1.054-.143c.39.98.424 1.864.103 2.653c.685.737 1.028 1.63 1.028 2.68c0 .737-.089 1.39-.267 1.957c-.177.568-.407 1.023-.689 1.366a3.65 3.65 0 0 1-1.053.865c-.42.234-.828.403-1.223.507a8.9 8.9 0 0 1-1.333.235c.45.39.676 1.005.676 1.846v3.11c0 .147.021.266.065.357a.36.36 0 0 0 .208.189c.096.034.18.056.254.064c.074.01.18.013.318.013h2.914c1.032 0 1.914-.366 2.647-1.099c.732-.732 1.099-1.615 1.099-2.647V3.746c0-1.032-.367-1.914-1.1-2.647z"/>
+        </svg>
+    </a>
+
+
+
+    <a target="_blank" class="social" title="LinkedIn" href="https://linkedin.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1.2em" viewBox="0 0 448 512">
+            <path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5c0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7c-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5c67.2 0 79.7 44.3 79.7 101.9V416z"/>
+        </svg>
+    </a>
+
+
+    <a target="_blank" class="social" title="X" href="https://x.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.1em" height="1.1em" viewBox="0 0 512 472.799">
+            <path fill="currentColor" d="M403.229 0h78.506L310.219 196.04 512 462.799H354.002L230.261 301.007 88.669 462.799h-78.56l183.455-209.683L0 0h161.999l111.856 147.88L403.229 0zm-27.556 415.805h43.505L138.363 44.527h-46.68l283.99 371.278z"/>
+        </svg>
+    </a>
+
+
+    <a target="_blank" class="social" title="Discord" href="https://discord.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M19.27 5.33C17.94 4.71 16.5 4.26 15 4a.09.09 0 0 0-.07.03c-.18.33-.39.76-.53 1.09a16.09 16.09 0 0 0-4.8 0c-.14-.34-.35-.76-.54-1.09c-.01-.02-.04-.03-.07-.03c-1.5.26-2.93.71-4.27 1.33c-.01 0-.02.01-.03.02c-2.72 4.07-3.47 8.03-3.1 11.95c0 .02.01.04.03.05c1.8 1.32 3.53 2.12 5.24 2.65c.03.01.06 0 .07-.02c.4-.55.76-1.13 1.07-1.74c.02-.04 0-.08-.04-.09c-.57-.22-1.11-.48-1.64-.78c-.04-.02-.04-.08-.01-.11c.11-.08.22-.17.33-.25c.02-.02.05-.02.07-.01c3.44 1.57 7.15 1.57 10.55 0c.02-.01.05-.01.07.01c.11.09.22.17.33.26c.04.03.04.09-.01.11c-.52.31-1.07.56-1.64.78c-.04.01-.05.06-.04.09c.32.61.68 1.19 1.07 1.74c.03.01.06.02.09.01c1.72-.53 3.45-1.33 5.25-2.65c.02-.01.03-.03.03-.05c.44-4.53-.73-8.46-3.1-11.95c-.01-.01-.02-.02-.04-.02zM8.52 14.91c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.84 2.12-1.89 2.12zm6.97 0c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.83 2.12-1.89 2.12z"/>
+        </svg>
+    </a>
+
+
+    <a target="_blank" class="social" title="YouTube" href="https://youtube.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M12.006 19.012h-.02c-.062 0-6.265-.012-7.83-.437a2.5 2.5 0 0 1-1.764-1.765A26.494 26.494 0 0 1 1.986 12a26.646 26.646 0 0 1 .417-4.817A2.564 2.564 0 0 1 4.169 5.4c1.522-.4 7.554-.4 7.81-.4H12c.063 0 6.282.012 7.831.437c.859.233 1.53.904 1.762 1.763c.29 1.594.427 3.211.407 4.831a26.568 26.568 0 0 1-.418 4.811a2.51 2.51 0 0 1-1.767 1.763c-1.52.403-7.553.407-7.809.407Zm-2-10.007l-.005 6l5.212-3l-5.207-3Z"/>
+        </svg>
+    </a>
+
+
+    <a target="_blank" class="social" title="Email" href="mailto://user@domain">
+       <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1.2em" viewBox="0 0 485.211 485.211">
+            <path fill="currentColor" d="M301.393,241.631L464.866,424.56H20.332l163.474-182.928l58.801,51.443L301.393,241.631z M462.174,60.651H23.027 l219.579,192.142L462.174,60.651z M324.225,221.67l160.986,180.151V80.792L324.225,221.67z M0,80.792v321.029L160.972,221.64 L0,80.792z"/>
+       </svg>
+    </a>
+
+
+
+
+        <p class="footnote">
+powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a target="_blank" href="https://github.com/lukeorth/poison">poison</a>
+    <br>
+    &copy; 2024 Poison. All rights reserved.
+</p>
+        
+<!-- 标题  -->
+  </div>
+</aside>
+
+            <main class="content container">
+                <div class="posts">
+    
+    
+    <article class="post">
+        <div class="info">
+  <h1 class="post-title">
+    <a href="https://perhapslol.github.io/blog/">第2章：均衡价格理论（局部均衡）</a>
+  </h1>
+
+  <div class="headline">
+    <div>
+      
+      
+      <time datetime=" 2023-4-1T13:43:53-0600" class="post-date">
+        Apr.1, 2023
+      </time>
+      
+      <span> - </span>
+      <span class="reading-time">
+
+
+        <span>20 mins read</span>
+      </span>
+    </div>
+
+    
+    <ul class="tags">
+      
+      <li class="tag-hugo">
+        <a href="https://github.com/perhapslol">Economics</a>
+      </li>
+            <li class="tag-hugo">
+        <a href="https://github.com/perhapslol">Microeconomics</a>
+      </li>
+      
+    </ul>
+    
+  </div>
+  
+  <p class="seriesname">
+    Author: <a href="https://fgzfgz.github.io/">FGZ</a>
+  </p>
+  
+  
+</div>
+        
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+   </head>
+        
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LaTeX in Webpage</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</head>
+<body>
+
+  <script type="text/javascript">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['\\(','\\)']]
+    }
+  });
+  </script>
+</body>
+</html>
+        
+<!-- 正文  -->
+<h1><a id="%E4%B8%80%E3%80%81%E9%9C%80%E6%B1%82%E7%90%86%E8%AE%BA%E4%B8%8E%E4%BE%9B%E7%BB%99%E7%90%86%E8%AE%BA" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>一、需求理论与供给理论</h1>
+<h2><a id="%EF%BC%88%E4%B8%80%EF%BC%89%E9%9C%80%E6%B1%82%E7%90%86%E8%AE%BA" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（一）需求理论</h2>
+<h3><a id="1%E9%9C%80%E6%B1%82%E9%87%8F%E4%B8%8E%E9%9C%80%E6%B1%82%E5%AE%9A%E7%90%86" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. 需求量与需求定理</h3>
+<p>　　<strong>需求量</strong>：<strong>在给定价格水平下</strong>，<strong>愿意</strong>并<strong>能够购买</strong>的该商品数量。</p>
+<p>　　<strong>需求定理</strong>：其他因素不变时，需求量随价格反方向变动。</p>
+<h3><a id="2%E9%9C%80%E6%B1%82%E4%B8%8E%E5%BD%B1%E5%93%8D%E5%9B%A0%E7%B4%A0" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. 需求与影响因素</h3>
+<p>　　<strong>需求</strong>：消费者在一定时期内<u>在各种可能的价格水平下</u><strong>愿意</strong>而且<strong>能够购买</strong>的该商品数量。==&gt; 有效需求：有购买意愿且有支付能力</p>
+<p>　　需求的影响因素：</p>
+<ul>
+<li>该商品的价格</li>
+<li>消费者收入</li>
+<li>其他相关商品价格</li>
+<li>消费者偏好</li>
+<li>预期的未来价格</li>
+</ul>
+<h3><a id="3%E9%9C%80%E6%B1%82%E5%87%BD%E6%95%B0%E4%B8%8E%E9%9C%80%E6%B1%82%E6%9B%B2%E7%BA%BF" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. 需求函数与需求曲线</h3>
+<p>　　需求函数：\(Q_d=f(p_d,p_o,I,p_e,p_r)\)</p>
+<p>　　\(p_d\)：该商品的价格</p>
+<p>　　\(p_o\)：其他相关商品价格</p>
+<p>　　\(I\)：消费者收入</p>
+<p>　　\(p_e\)：消费者预期未来价格</p>
+<p>　　\(p_r\)：消费者偏好</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220428001925-hy2scmf.png" style="height:300px" alt="需求曲线" />
+<h3><a id="4%E9%9C%80%E6%B1%82%E9%9C%80%E6%B1%82%E9%87%8F%E7%9A%84%E5%8F%98%E5%8A%A8" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>4. 需求/需求量的变动</h3>
+<p>　　<strong>需求的变动</strong>：非价格因素（\(p_0,I,p_e,p_r\)）导致的变动，体现为需求曲线的水平移动，如 \(D_1\) 曲线移动至 \(D_2\) 或者 \(D_3\)。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220428002020-2xv82kd.png" style="height:300px" alt="需求的变动" />
+<p>　　<strong>需求量的变动</strong>：该商品价格变化导致的变化，体现为点在需求曲线上的移动，即 \(Q_d=f(p_d)\)，如 \(A\) 点移动到 \(B\) 点。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220428002322-ogoyk8m.png" style="height:300px" alt="需求量的变动" />
+<h2><a id="%EF%BC%88%E4%BA%8C%EF%BC%89%E4%BE%9B%E7%BB%99%E7%90%86%E8%AE%BA" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（二）供给理论</h2>
+<h3><a id="1%E4%BE%9B%E7%BB%99%E9%87%8F%E4%B8%8E%E4%BE%9B%E7%BB%99%E5%AE%9A%E7%90%86" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. 供给量与供给定理</h3>
+<p>　　<strong>供给量</strong>：在给定价格水平下，愿意而且能够生产的产品数量。</p>
+<p>　　<strong>供给定理</strong>：其他不变时，供给量随价格同方向变动。</p>
+<h3><a id="2%E4%BE%9B%E7%BB%99%E4%B8%8E%E5%BD%B1%E5%93%8D%E5%9B%A0%E7%B4%A0" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. 供给与影响因素</h3>
+<p>　　<strong>供给</strong>：生产者在一定时期内在各种可能的价格下愿意而且能够提供出售的该种商品数量。==&gt; 有效供给：有生产欲望且有供给能力</p>
+<p>　　供给的影响因素：</p>
+<ul>
+<li>该商品的价格</li>
+<li>生产成本</li>
+<li>生产技术水平</li>
+<li>其他相关商品价格</li>
+<li>生产者对未来的预期</li>
+</ul>
+<h3><a id="3%E4%BE%9B%E7%BB%99%E5%87%BD%E6%95%B0%E4%B8%8E%E4%BE%9B%E7%BB%99%E6%9B%B2%E7%BA%BF" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. 供给函数与供给曲线</h3>
+<p>　　供给函数：\(Q_s=f(p_s,T,p_o,p_e,w,r,...)\)</p>
+<p>　　\(p_s\)：该商品的价格</p>
+<p>　　\(T\)：生产技术水平</p>
+<p>　　\(p_o\)：其他相关商品价格</p>
+<p>　　\(p_e\)：生产者预期未来价格</p>
+<p>　　\(w\)：工人工资</p>
+<p>　　\(r\)：利率</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20230303194337-zxcbzbd.png" style="height:300px" alt="供给曲线" />
+<h3><a id="4%E4%BE%9B%E7%BB%99%E4%BE%9B%E7%BB%99%E9%87%8F%E7%9A%84%E5%8F%98%E5%8A%A8" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>4. 供给/供给量的变动</h3>
+<p>　　供给<strong>的变动</strong>：非价格因素（\(T,p_o,p_e,w,r,...\)）导致的变动，体现为供给曲线的水平移动，如 \(S_1\) 曲线移动至 \(S_2\) 或者 \(S_3\)。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220428003843-cljzscv.png" style="height:300px" alt="供给的变动" />
+<p>　　<strong>供给量的变动</strong>：该商品价格变化导致的变化，体现为点在供给曲线上的移动，即 \(Q_s=f(p_s)\)，如 \(A\) 点移动到 \(B\) 点。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220428003732-1bc4v0m.png" style="height:300px" alt="供给量的变动" />
+<h1><a id="%E4%BA%8C%E3%80%81%E5%9D%87%E8%A1%A1%E4%BB%B7%E6%A0%BC%E4%B8%8E%E5%BC%B9%E6%80%A7%E7%90%86%E8%AE%BA" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>二、均衡价格与弹性理论</h1>
+<h2><a id="%EF%BC%88%E4%B8%80%EF%BC%89%E5%9D%87%E8%A1%A1%E4%BB%B7%E6%A0%BC" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（一）均衡价格</h2>
+<h3><a id="1%E5%90%AB%E4%B9%89" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. 含义</h3>
+<p>　　均衡价格为需求量与供给量相等时的价格水平。假设需求量为 \(Q_d=-\alpha+\beta P\)，供给量为 \(Q_s=-\delta+\gamma P\)，那么由 \(Q_d=Q_s\) 可以计算出均衡价格。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220428004732-8og5fdq.png" style="height:400px" alt="均衡价格的决定" />
+<h3><a id="2%E5%BA%94%E7%94%A8" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. 应用</h3>
+<h4><a id="2-1%E6%94%AF%E6%8C%81%E4%BB%B7%E6%A0%BC%E6%9C%80%E4%BD%8E%E9%99%90%E4%BB%B7" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2.1 支持价格/最低限价</h4>
+<p>　　定义：政府为了扶持某一行业的生产而规定的该行业产品的最低价格。支持价格一般高于市场决定的均衡价格。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220428021306-13olgyn.png" style="height:300px" alt="最低限价示意图" />
+<p>　　目的：通常是为了扶持某些行业的发展（如农业）。</p>
+<p>　　为维持支持价格可以采取的措施：</p>
+<ul>
+<li>收购过剩商品</li>
+<li>对该商品的生产实行产量限制</li>
+<li>对购买者给予补贴</li>
+</ul>
+<h4><a id="2-2%E9%99%90%E5%88%B6%E4%BB%B7%E6%A0%BC" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2.2 限制价格</h4>
+<p>　　定义：政府为了限制某些商品的价格而规定的低于市场均衡价格的最高价格。（[&quot;最高限价的无谓损失&quot;]）</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220428021522-6j4594k.png" style="height:300px" alt="限制价格示意图" />
+<p>　　**目的：**抑制某些产品的价格上涨，尤其是为了应对通货膨胀。</p>
+<p>　　不良影响：</p>
+<ul>
+<li>供不应求会导致消费者排队抢购和黑市交易盛行；</li>
+<li>生产者可能粗制滥造，降低产品质量。</li>
+</ul>
+<p>　　为限制价格政府需要采取的措施：</p>
+<ul>
+<li>通过配给制等方式控制需求量（如：生产配额）</li>
+<li>限定消费者购买数量（如：粮票、肉票、布票）</li>
+</ul>
+<h4><a id="2-3%E2%80%9C%E8%B0%B7%E8%B4%B1%E4%BC%A4%E5%86%9C%E2%80%9D%E7%9A%84%E7%BB%8F%E6%B5%8E%E5%AD%A6%E8%A7%A3%E9%87%8A" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2.3 “谷贱伤农”的经济学解释</h4>
+<p>　　在农业生产活动中，存在着一种经济现象：在丰收的年份，农民的收入反而减少了，这种现象在我国民间被形象地概括为“谷贱伤农”。</p>
+<p>　　造成“谷贱伤农”这种经济现象的根本原因在于：农产品的需求量变动带来的收入增加无法弥补价格下降导致的收入减少损失，其需求价格弹性往往小于 1 。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220428021651-fs1e1h4.png" style="height:300px" alt="缺乏弹性的需求曲线与谷贱伤农" />
+<h2><a id="%EF%BC%88%E4%BA%8C%EF%BC%89%E5%BC%B9%E6%80%A7%E7%90%86%E8%AE%BA" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（二）弹性理论</h2>
+<h3><a id="1%E5%BC%B9%E6%80%A7%E7%9A%84%E5%90%AB%E4%B9%89" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. 弹性的含义</h3>
+<p>　　因变量对自变量变动的反应程度/敏感程度，一般可以定义为：</p>
+\[\begin{align}
+弹性系数=\frac {因变量的变动比例} {自变量的变动比例}
+\end{align}
+\]
+<p>　　也可以写作：</p>
+\[\begin {align}
+e=\frac {\Delta Y /Y} {\Delta X /X}  =\frac {\Delta Y} {\Delta X} \times  \frac X Y
+\end {align}
+\]
+<p>　　弧弹性的公式：\(e  =\frac {\Delta Y} {\Delta X} \times  \frac X Y\)</p>
+<p>　　弧弹性的中点公式：\(e  =\frac {\Delta Y} {\Delta X} \times  \frac {(X_1 + X_2)/2}  {(Y_1 + Y_2)/2}\)（使用中点值替代端点值）</p>
+<p>　　点弹性的公式：\(e =\frac {d Y} {d X} \times  \frac X Y\)</p>
+<h3><a id="2%E9%9C%80%E6%B1%82%E4%BB%B7%E6%A0%BC%E5%BC%B9%E6%80%A7" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. 需求价格弹性</h3>
+<h4><a id="2-1%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2.1 计算方法</h4>
+<p>　　需求量与价格之间往往呈反比关系，因此在需求价格弹性取了负号。</p>
+<p>　　需求价格弧弹性：\(e_d  =- \frac {\Delta Q_d} {\Delta P} \times  \frac {(P_1 + P_2)/2}  {(Q_{d1} + Q_{d2})/2}\)</p>
+<p>　　需求价格点弹性：\(e_d =- \frac {d Q_d} {d P} \times  \frac P {Q_d}\)</p>
+<h4><a id="2-2%E9%9C%80%E6%B1%82%E4%BB%B7%E6%A0%BC%E5%BC%A7%E5%BC%B9%E6%80%A7%E7%9A%84%E5%88%86%E7%B1%BB" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2.2 需求价格弧弹性的分类</h4>
+<p>　　根据弧弹性的大小，可以将商品的需求量与价格的关系分为以下 5 类：</p>
+<ul>
+<li>富有弹性：$|e_d|&gt;1$，需求量变化的幅度比价格变化的幅度更大，需求弹性比较平缓</li>
+<li>单位弹性：$|e_d|=1$，需求曲线为双曲线 \(Q=\frac a P\) 的情况下，弧弹性处处相等且均为 1</li>
+<li>缺乏弹性：$0&lt;|e_d|&lt;1$，需求量变化的幅度比价格变化的幅度更小，需求曲线比较陡峭</li>
+<li>完全弹性：$|e_d| =  \infty$，在给定价格下，需求量源源不断</li>
+<li>完全无弹性：$|e_d| = 0$，价格变动对需求量没有影响</li>
+</ul>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220428010826-8ak3sea.png" style="width:700px" alt="需求价格弧弹性的 5 种类型" />
+<h4><a id="2-3%E7%BA%BF%E6%80%A7%E9%9C%80%E6%B1%82%E6%9B%B2%E7%BA%BF%E7%9A%84%E9%9C%80%E6%B1%82%E4%BB%B7%E6%A0%BC%E5%BC%B9%E6%80%A7" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2.3 线性需求曲线的需求价格弹性</h4>
+<p>　　假设线性需求函数为：\(Q_d=a-bP\)，那么需求曲线的斜率为 \(-\frac 1 b\)。</p>
+<p>　　我们关注需求价格弹性的绝对数值，因此不再考虑负号（区别于[&quot;需求收入弹性&quot;]），上述线性需求函数的需求价格点弹性为：</p>
+\[\begin {align}
+e_d= b \times \frac P Q= \frac {bP }   {a-bP}
+\end {align}
+\]
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220428011904-4t2mxog.png" style="width:400px" alt="线性需求函数点弹性的 5 种类型" />
+<p>　　当 \(e_d=1\) 时，\(bP=a-bP\)，可以算出此时 \(P=\frac a {2b},Q=\frac a 2\)，即需求函数的 \(C\) 点为单位弹性，也就是说：</p>
+<ul>
+<li>在中点 \(C\) 点（线段中点）处，需求价格弹性为 \(e_d=1\)；</li>
+<li>在中点 \(C\) 点的下方，\(A\) 点与 \(B\) 点的需求价格弹性 \(e_d&lt;1\)；</li>
+<li>在中点 \(C\) 点的上方，\(D\) 点与 \(E\) 点的需求价格弹性 \(e_d&gt;1\)。</li>
+</ul>
+<blockquote>
+<p><strong>理解补充：</strong></p>
+<p>在线性需求函数中，可以从以下方面理解点的位置与点弹性大小的关系：</p>
+<ul>
+<li>线性需求函数上，价格和需求量呈线性变化关系。</li>
+<li>线段 \(AC\)：价格 \(P\) 较小，需求量 \(Q\) 较大，此时价格下降 1 单位，价格变动的比例相对较大，需求量变动比例相对较小（即弹性公式 \(e=\frac {\Delta Q / Q} {\Delta P /P}\) 的<u>分母更大</u>），因此弹性小于 1；</li>
+<li>线段 \(CE\)：价格 \(P\) 较大，需求量 \(Q\) 较小，此时价格下降 1 单位，价格变动的比例相对较小，需求量变动比例相对较大（即弹性公式 \(e=\frac {\Delta Q / Q} {\Delta P /P}\) 的<u>分子更大</u>），因此弹性大于 1。</li>
+</ul>
+</blockquote>
+<h4><a id="2-4%E9%9C%80%E6%B1%82%E4%BB%B7%E6%A0%BC%E5%BC%B9%E6%80%A7%E7%9A%84%E5%BD%B1%E5%93%8D%E5%9B%A0%E7%B4%A0" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2.4 需求价格弹性的影响因素</h4>
+<ul>
+<li>商品的可替代性</li>
+<li>商品用途的广泛性</li>
+<li>商品对消费者生活的重要程度</li>
+<li>商品的消费支出在消费者预算总支出中所占的比重</li>
+<li>所考察的消费者调节需求量的时间</li>
+</ul>
+<h3><a id="3%E9%9C%80%E6%B1%82%E6%94%B6%E5%85%A5%E5%BC%B9%E6%80%A7" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. 需求收入弹性</h3>
+<h4><a id="3-1%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.1 计算方法</h4>
+<p>　　需求量与收入之间一般呈正相关系，因此不取负号（区别于[&quot;需求价格弹性&quot;]）。</p>
+<p>　　需求收入弹性的计算方式：\(e_M=\frac {\Delta Q} {\Delta M} \times  \frac M Q\)，或者写成点弹性：\(e_M =\frac {d Q} {d M} \times  \frac  M Q\)</p>
+<h4><a id="3-2%E5%95%86%E5%93%81%E5%88%86%E7%B1%BB" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.2 商品分类</h4>
+<ul>
+<li>
+<p><strong>正常品</strong>：\(e_M&gt;0\)，随着收入的增加，消费者对正常商品的需求量会上升</p>
+<ul>
+<li><strong>奢侈品/高档品</strong>：\(e_M&gt;1\)，属于<strong>富有弹性</strong>（需求收入弹性）的商品</li>
+<li><strong>必需品</strong>：\(0&lt;e_M&lt;1\)，属于<strong>缺乏弹性</strong>（需求收入弹性）的商品，如食品消费</li>
+</ul>
+</li>
+<li>
+<p><strong>劣等品</strong>：\(e_M&lt;0\)，随着收入的增加，消费者对劣等商品的需求量会下降</p>
+</li>
+</ul>
+<p>　　<strong>恩格尔定律</strong>：在一个家庭或一个国家中，食品支出在收入中所占的比例随着收入的上升而下降，即国家或家庭越富裕，食品支出的收入弹性就越小。</p>
+<h3><a id="4%E9%9C%80%E6%B1%82%E4%BA%A4%E5%8F%89%E5%BC%B9%E6%80%A7" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>4. 需求交叉弹性</h3>
+<h4><a id="4-1%E5%AE%9A%E4%B9%89%E4%B8%8E%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>4.1 定义与计算方法</h4>
+<p>　　定义：在一定时期内，一种商品的需求量变动对于它的相关商品的价格变动的反应程度。</p>
+<p>　　商品 X 的需求量与商品 Y 的价格相关，设 \(Q_X=f(P_Y)\)，那么：</p>
+<p>　　需求交叉价格的弧弹性公式：\(e_{XY}=\frac {\Delta Q_X} {\Delta P_Y} \times  \frac  {P_Y} {Q_X}\)</p>
+<p>　　需求交叉价格的点弹性公式：\(e_{XY}=\frac {d Q_X} {d P_Y} \times  \frac  {P_Y} {Q_X}\)</p>
+<h4><a id="4-2%E9%9C%80%E6%B1%82%E4%BA%A4%E5%8F%89%E5%BC%B9%E6%80%A7%E4%B8%8E%E5%95%86%E5%93%81%E5%88%86%E7%B1%BB" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>4.2 需求交叉弹性与商品分类</h4>
+<p>　　根据需求交叉弹性，两种商品的关系可以分为以下三种类型：</p>
+<ul>
+<li><strong>替代品</strong>：\(e_{XY}&gt;0\)，表示提高商品 Y 的价格能提高商品 X 的需求量，$|e_{XY}|$ 越大，替代性越强；</li>
+<li><strong>互补品</strong>：\(e_{XY}&lt;0\)，表示提高商品 Y 的价格会降低商品 X 的需求量，$|e_{XY}|$ 越大，互补性越强；</li>
+<li><strong>不相关商品</strong>：\(e_{XY}=0\)，表示商品 X、商品 Y 是相对独立的两种商品。</li>
+</ul>
+<h3><a id="5%E4%BE%9B%E7%BB%99%E4%BB%B7%E6%A0%BC%E5%BC%B9%E6%80%A7" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>5. 供给价格弹性</h3>
+<h4><a id="5-1%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>5.1 计算方法</h4>
+<p>　　供给量与价格之间往往呈正比关系。</p>
+<p>　　供给价格弧弹性：\(e_s  =\frac {\Delta Q_s} {\Delta P} \times  \frac P  {Q_s}\)</p>
+<p>　　供给价格点弹性：\(e_s = \frac {d Q_s} {d P} \times  \frac P {Q_s}\)</p>
+<h4><a id="5-2%E4%BE%9B%E7%BB%99%E4%BB%B7%E6%A0%BC%E5%BC%B9%E6%80%A7%E7%9A%84%E5%88%86%E7%B1%BB" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>5.2 供给价格弹性的分类</h4>
+<p>　　根据供给价格弹性的大小，可以将商品的供给量与价格的关系分为以下 5 类：</p>
+<ul>
+<li>富有弹性：\(e_s&gt;1\)，供给量变化的幅度比价格变化的幅度更大</li>
+<li>缺乏弹性：\(0&lt;e_s&lt;1\)，供给量变化的幅度比价格变化的幅度更小</li>
+<li>单位弹性：\(e_s=1\)，供给量变化幅度与价格变动程度相等，是一种<u>极端情况</u></li>
+<li>完全弹性：\(e_s =  \infty\)，供给曲线为一条水平线，这是<u>商品出现严重过剩</u>时的情况</li>
+<li>完全无弹性：\(e_s = 0\)，供给曲线为一条垂直线，价格变动对供给量没有影响，一般是<u>极其稀缺、珍贵或无法复制的商品</u>。</li>
+</ul>
+<h4><a id="5-3%E4%BE%9B%E7%BB%99%E4%BB%B7%E6%A0%BC%E5%BC%B9%E6%80%A7%E7%9A%84%E5%BD%B1%E5%93%8D%E5%9B%A0%E7%B4%A0" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>5.3 供给价格弹性的影响因素</h4>
+<ul>
+<li>生产的难易程度</li>
+<li>生产规模与规模变化的难易程度</li>
+<li>成本的变化</li>
+<li>时间的差异、厂商的生产能力、对未来价格的预期</li>
+</ul>
+<h3><a id="6%E8%9B%9B%E7%BD%91%E6%A8%A1%E5%9E%8B" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>6. 蛛网模型</h3>
+<h4><a id="6-1%E7%AE%80%E4%BB%8B" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>6.1 简介</h4>
+<p>　　蛛网模型运用弹性原理解释某些生产周期较长的商品在失去均衡时发生的不同波动情况的一种动态分析理论。</p>
+<p>　　<strong>基本假设：</strong></p>
+<ul>
+<li><strong>供给有时滞</strong>：商品的本期产量取决于前一期的价格，即供给函数为：\(Q_t^s=f(P_{t-1})\)</li>
+<li><strong>需求无时滞</strong>：商品本期的需求量取决于本期的价格，即供给函数为：\(Q_t^d=f(P_{t})\)</li>
+</ul>
+<p>　　使用方程表示：</p>
+<ul>
+<li>
+<p>供给有时滞：\(Q_t^s=-\delta+\gamma P_{t-1}\)</p>
+</li>
+<li>
+<p>需求无时滞：\(Q_t^d=\alpha-\beta P_t\)</p>
+</li>
+<li>
+<p>本期供需均衡：\(Q_t^s=Q_t^d\)</p>
+</li>
+</ul>
+<p>　　因此，可以求得 \(P_t\) 与 \(P_{t-1}\) 的关系：</p>
+\[\begin{align}
+P_t = - \frac \gamma \beta  P_{t-1}    +   \frac { \alpha + \delta } {\beta}
+\end{align}
+\]
+<p>　　令期初价格为 \(P_0\)，那么：</p>
+\[\begin {equation}
+\begin {split}
+P_t &amp; = \left( - \frac {\gamma} {\beta }  \right) ^ t  \cdot  P_0  + \left\{ \frac { \alpha + \delta } {\beta} \left[ 1+ \left(- \frac {\gamma} {\beta } \right)^1 + \left(- \frac {\gamma} {\beta } \right)^2+ ...+\left(- \frac {\gamma} {\beta } \right)^{t-1} \right] \right\} \\\\
+    &amp; = \left( - \frac {\gamma} {\beta }  \right) ^ t  \cdot  P_0  + f
+\end {split}
+\end {equation}
+\]
+<p>　　我们将上式花括号设为 \(f\) 单独计算。其中，方括号内为一个首项为 \(a_0=1\)、公比为 \(q=- \frac {\gamma} {\beta}\) 的等比数列，可以使用等比数列的求和公式求解。</p>
+<blockquote>
+<p><strong>数学补充：等比数列求和公式</strong></p>
+<p>假设一个等比数列 \(A_n\) 的公比为 \(\frac {a_n} { a_{n-1} }=q\)，如果 \(a_n \neq 0\) 且 \(q \neq 1\)，则其前 \(n\) 项之和为：</p>
+<p>\(S_n=a_1 \cdot \frac {1-q^n} {1-q}\)</p>
+</blockquote>
+<p>　　因此上式第一行花括号内的式子可以写作：</p>
+\[\begin{align}
+\begin {split}
+f &amp; =  \frac { \alpha + \delta } {\beta} \left[ 1+ \left(- \frac {\gamma} {\beta } \right)^1 + \left(- \frac {\gamma} {\beta } \right)^2+ ...+\left(- \frac {\gamma} {\beta } \right)^{t-1} \right]   \\
+  &amp; =  \frac { \alpha + \delta } {\beta} \left [ 1 \cdot \frac {1- (-\frac {\gamma} {\beta} )^t} {1- (-\frac {\gamma} {\beta} )} \right]      \\
+  &amp; =  \frac { \alpha + \delta } {\beta} \cdot \frac {1- (-\frac {\gamma} {\beta} )^t} {(\gamma + \beta) / {\beta} }     \\
+  &amp; =  \frac { \alpha + \delta } {\gamma + \beta}  \left[ 1- \left(-\frac {\gamma} {\beta} \right)^t \right]  
+\end{split}
+\end{align}
+\]
+<p>　　计算过程中上式的第四行分母消去了 \(\beta\)。因此，[&quot;原式&quot;]的 \(P_t\) 即可表示为：</p>
+\[\begin {align}
+P_t &amp; = \left( - \frac {\gamma} {\beta }  \right) ^ t  \cdot  P_0  + f  \notag \\
+      &amp; =  \left( - \frac {\gamma} {\beta }  \right) ^ t  \cdot  P_0  + \frac { \alpha + \delta } {\gamma + \beta}  \left[ 1- (-\frac {\gamma} {\beta} )^t \right]   \notag \\
+     &amp; = \left( P_0 - \frac { \alpha + \delta } {\gamma + \beta}  \right ) \cdot  \left ( - \frac {\gamma} {\beta }  \right) ^ t  + \frac { \alpha + \delta } {\gamma + \beta}    \notag \\
+\end {align}
+\]
+<p>　　考虑到均衡价格为 \(P_e = P_t = P_{t-1}\)，因此 \(P_e=\frac {\alpha + \delta}  {\beta + \gamma}\)，代入上式可得：</p>
+\[\begin {align}
+P_t=(P_0- P_e)   \left (- \frac \gamma \beta \right)^t  +  P_e
+\end {align}
+\]
+<p>　　因此，蛛网模型主要包括三种情况。</p>
+<h4><a id="6-2%E8%9B%9B%E7%BD%91%E6%A8%A1%E5%9E%8B%E7%9A%84-3%E7%A7%8D%E6%83%85%E5%86%B5" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>6.2 蛛网模型的 3 种情况</h4>
+<p>　　对于某一种商品，供给价格弹性与需求价格弹性的相对大小关系不同，商品的价格均衡情况会有所不同。</p>
+<h5><a id="6-2-1%E6%94%B6%E6%95%9B%E5%9E%8B%E8%9B%9B%E7%BD%91%EF%BC%9A%E4%BE%9B%E7%BB%99%E5%BC%B9%E6%80%A7%E5%B0%8F%E4%BA%8E%E9%9C%80%E6%B1%82%E5%BC%B9%E6%80%A7" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>6.2.1 收敛型蛛网：供给弹性小于需求弹性</h5>
+<p>　　当 \(t \to \infty\)，如果 \(\frac \gamma \beta&lt;1\)，那么 \(P_t \to P_e\)，也就是说随着时间 \(t\) 的增加，若 \(\gamma &lt; \beta\)，供给曲线比需求曲线更陡峭（斜率更大），供给弹性小于需求弹性。此时，供给变动对价格变动的反应程度小于需求变动对价格变动的反应程度，此时，价格最后自发地趋向于均衡水平。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20230218235841-4cd0hy2.png" style="height:300px" alt="收敛型蛛网" />
+<blockquote>
+<p><strong>理解补充：</strong></p>
+<ul>
+<li>
+<p>需求价格弹性：\(e_d =- \frac {d Q_d} {d P} \times  \frac P {Q_d}\)</p>
+</li>
+<li>
+<p>供给价格弹性：\(e_s = \frac {d Q_s} {d P} \times  \frac P {Q_s}\)</p>
+</li>
+<li>
+<p>斜率公式：\(k=\frac {dP} {dQ}\)，需求曲线斜率为\(k_d=\frac {dP} {dQ_d}\)，供给曲线斜率为\(k_s=\frac {dP} {dQ_s}\)</p>
+</li>
+<li>
+<p>需求价格弹性与供给价格弹性都与曲线斜率绝对值呈负相关，因此\(e_s &lt; e_d\)意味着供给函数曲线更加陡峭；</p>
+</li>
+<li>
+<p>画图方向：逆时针旋转，箭头方向为时间变化方向表明供给有时滞，需求无时滞。</p>
+<ul>
+<li>在\(t=1\)时期，企业供给按照价格\(P_0\)供给商品\(Q_1\)，市场实际价格为\(P_1\)；</li>
+<li>在\(t=2\)时期，企业按照上一期价格\(P_1\)供给商品\(Q_2\)，市场实际价格为\(P_2\)；</li>
+<li>...</li>
+<li>企业生产决策的价格与市场实际价格的差异越来越小，最终向市场均衡价格\(P_e\)收敛。</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h5><a id="6-2-2%E5%8F%91%E6%95%A3%E5%9E%8B%E8%9B%9B%E7%BD%91%EF%BC%9A%E4%BE%9B%E7%BB%99%E5%BC%B9%E6%80%A7%E5%A4%A7%E4%BA%8E%E9%9C%80%E6%B1%82%E5%BC%B9%E6%80%A7" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>6.2.2 发散型蛛网：供给弹性大于需求弹性</h5>
+<p>　　当 \(t \to \infty\)，如果 \(\frac \gamma \beta&gt;1\)，那么 \(P_t \to  \infty\)，也就是说随着时间 \(t\) 的增加，若 \(\gamma &gt; \beta\)，供给曲线比需求曲线更平坦（斜率更小），供给弹性大于需求弹性。此时，供给变动对价格变动的反应程度要大于需求变动对价格变动的反应程度，此时，价格波动对产量的影响越来越强，最后离均衡越来越远。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20230219000711-mxvo1g6.png" style="height:300px" alt="发散型蛛网" />
+<blockquote>
+<p><strong>理解补充：</strong></p>
+<ul>
+<li>
+<p>\(e_s &gt; e_d\)，意味着供给函数曲线更加平坦，需求曲线更加陡峭；</p>
+</li>
+<li>
+<p>画图方向：逆时针旋转，箭头方向为时间变化方向表明供给有时滞，需求无时滞。</p>
+<ul>
+<li>在\(t=1\)时期，企业供给按照价格\(P_0\)供给商品\(Q_1\)，市场实际价格为\(P_1\)；</li>
+<li>在\(t=2\)时期，企业按照上一期价格\(P_1\)供给商品\(Q_2\)，市场实际价格为\(P_2\)；</li>
+<li>...</li>
+<li>企业生产决策的价格与市场实际价格的差异越来越大，最终会偏离市场均衡价格\(P_e\)越来越远。</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h5><a id="6-2-3%E5%B0%81%E9%97%AD%E5%9E%8B%E8%9B%9B%E7%BD%91%EF%BC%9A%E4%BE%9B%E7%BB%99%E5%BC%B9%E6%80%A7%E7%AD%89%E4%BA%8E%E9%9C%80%E6%B1%82%E5%BC%B9%E6%80%A7" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>6.2.3 封闭型蛛网：供给弹性等于需求弹性</h5>
+<p>　　当 \(t \to \infty\)，如果 \(\frac \gamma \beta =1\)，那么 \(P_t\) 为一个常数，也就是说随着时间 \(t\) 的增加，若 \(\gamma = \beta\)，供给曲线与需求曲线斜率相等，供给弹性等于需求弹性。此时，供给变动对价格变动的反应程度与需求变动对价格变动的反应程度相等，即价格与产量的波动始终保持相同的程度。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220428023350-fxpa7fm.png" style="height:300px" alt="封闭型蛛网" />
+<blockquote>
+<p><strong>理解补充：</strong></p>
+<ul>
+<li>
+<p>\(e_s = e_d\)，意味着供给函数与需求函数的曲线一样平坦；</p>
+</li>
+<li>
+<p>画图方向：逆时针旋转，箭头方向为时间变化方向表明供给有时滞，需求无时滞。</p>
+<ul>
+<li>在\(t=1\)时期，企业供给按照价格\(P_0=P_2\)供给商品\(Q_1\)，市场实际价格为\(P_1\)；</li>
+<li>在\(t=2\)时期，企业按照上一期价格\(P_1\)供给商品\(Q_2\)，市场实际价格为\(P_2\)；</li>
+<li>...</li>
+<li>企业生产决策的价格只会在\(P_2\)、\(P_1\)之间变化，市场无法自发达到均衡，也不会偏离均衡。</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+
+        <div class="read-more-link">
+            <a href="https://perhapslol.github.io/blog/">Back Home…</a>
+        </div>
