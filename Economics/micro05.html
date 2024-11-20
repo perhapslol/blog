@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+    
+<script defer language="javascript" type="text/javascript" src="/js/bundle.min.444d89fe8d19b9e466eca93647da936356d2c582a54abec3037b88c2e785e61e.js"></script>
+
+<script defer data-domain="https://perhapslol.github.io/blog/" src="https://plausible.lukeorth.com/js/script.js"></script>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+   
+
+
+<!-- Open Graph image and Twitter Card metadata -->
+
+<title itemprop="name">Perhaps</title>
+<meta property="og:title" content=Perhaps />
+<meta name="twitter:title" content=perhapslol />
+<meta itemprop="name" content=Perhaps />
+<meta name="application-name" content=perhapslol />
+<meta property="og:site_name" content="perhapslol" />
+
+
+<meta name="description" content="A pragmatic Hugo theme for bloggers. Based on the classic &lt;a href=&#34;https://github.com/poole/hyde&#34; target=&#34;_blank&#34;&gt;Hyde&lt;/a&gt; design by &lt;a href=&#34;https://github.com/mdo&#34; target=&#34;_blank&#34;&gt;@mdo&lt;/a&gt;" />
+
+
+
+<base href="https://poison.lukeorth.com/" />
+<link rel="sitemap" type="application/xml" title="Sitemap" href='https://poison.lukeorth.com/sitemap.xml' />
+<meta name="robots" content="index,follow" />
+<meta name="googlebot" content="index,follow" />
+    <meta name="twitter:site" content="@" />
+    <meta name="twitter:creator" content="@" />
+
+<meta property="fb:admins" content="" />
+<meta name="apple-mobile-web-app-title" content="Poison" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="generator" content="Hugo 0.124.0">
+
+
+    
+    
+
+<link type="text/css" rel="stylesheet" href="/css/bundle.min.94a339836f89f0d25f31980cb6b0631da21e20af128308747ce44e0525eb16ef.css">
+
+
+    
+    <style>
+    body {
+        --sidebar-bg-color: #202020;
+        --sidebar-img-border-color: #515151;
+        --sidebar-p-color: #909090;
+        --sidebar-h1-color: #FFF;
+        --sidebar-a-color: #FFF;
+        --sidebar-socials-color: #FFF;
+        --text-color: #222;
+        --bkg-color: #FAF9F6;
+        --post-title-color: #303030;
+        --list-color: #5a5a5a;
+        --link-color: #268bd2;
+        --date-color: #515151;
+        --table-border-color: #E5E5E5;
+        --table-stripe-color: #F9F9F9;
+        --code-color: #000;
+        --code-background-color: #E5E5E5;
+        --code-block-color: #fff;
+        --code-block-background-color: #272822;
+        --moon-sun-color: #FFF;
+        --moon-sun-background-color: #515151;
+    }
+    body.dark-theme {
+        --text-color: #eee;
+        --bkg-color: #121212;
+        --post-title-color: #DBE2E9;
+        --list-color: #9d9d9d;
+        --link-color: #268bd2;
+        --date-color: #9a9a9a;
+        --table-border-color: #515151;
+        --table-stripe-color: #202020;
+        --code-color: #fff;
+        --code-background-color: #515151;
+        --code-block-color: #fff;
+        --code-block-background-color: #272822;
+    }
+    body {
+        background-color: var(--bkg-color);
+    }
+</style>
+
+</head>
+
+    <body class="light-theme">
+        <div class="wrapper">
+            <aside class="sidebar">
+    <div class="container sidebar-sticky">
+        <div class="light-dark" align="right">
+    <button class="btn-light-dark" title="Toggle light/dark mode">
+        <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+            <path fill="currentColor" d="M6 .278a.768.768 0 0 1 .08.858a7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277c.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316a.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71C0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+        </svg>
+        <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+            <path fill="currentColor" d="M8 12a4 4 0 1 0 0-8a4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+        </svg>
+    </button>
+</div>
+
+        <div class="sidebar-about">
+    <h1 class="brand">
+        
+            <a href="https://perhapslol.github.io/blog/">
+                <img src="https://avatars.githubusercontent.com/u/130022120?v=4" alt="brand image">
+            </a>
+        
+        
+                       <a href="https://perhapslol.github.io/blog/">
+                <h1>Perhaps</h1>
+            </a>
+        
+    </h1>
+    <p class="lead">
+    春华夕拾 <a href="https://github.com/poole/hyde" target="_blank"></a>  <a href="https://github.com/mdo" target="_blank"></a>
+    </p>
+</div>
+
+        <nav>
+    <ul class="sidebar-nav">
+
+                
+                    <li class="heading">
+                        <a href="https://perhapslol.github.io/blog/Post/">Posts</a>
+                    </li>
+                        <li class="sub-heading">
+                            Stocks
+                        </li>
+                        <li class="sub-heading">
+                            IPO
+                        </li>
+                        <li class="sub-heading">
+                            Listed Companies
+                        </li>
+                        
+                    <a href="https://perhapslol.github.io/blog/Economics/">Economics</a>
+                    </li>
+                        <li class="sub-heading">
+                            Macro
+                        </li>
+                        <li class="sub-heading">
+                            Micro
+                        </li>
+    </ul>
+</nav>
+
+
+        
+    <a target="_blank" class="social" title="GitHub" href="https://github.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="-2 -2 24 24">
+            <path fill="currentColor" d="M18.88 1.099C18.147.366 17.265 0 16.233 0H3.746C2.714 0 1.832.366 1.099 1.099C.366 1.832 0 2.714 0 3.746v12.487c0 1.032.366 1.914 1.099 2.647c.733.733 1.615 1.099 2.647 1.099H6.66c.19 0 .333-.007.429-.02a.504.504 0 0 0 .286-.169c.095-.1.143-.245.143-.435l-.007-.885c-.004-.564-.006-1.01-.006-1.34l-.3.052c-.19.035-.43.05-.721.046a5.555 5.555 0 0 1-.904-.091a2.026 2.026 0 0 1-.872-.39a1.651 1.651 0 0 1-.572-.8l-.13-.3a3.25 3.25 0 0 0-.41-.663c-.186-.243-.375-.407-.566-.494l-.09-.065a.956.956 0 0 1-.17-.156a.723.723 0 0 1-.117-.182c-.026-.061-.004-.111.065-.15c.07-.04.195-.059.378-.059l.26.04c.173.034.388.138.643.311a2.1 2.1 0 0 1 .631.677c.2.355.44.626.722.813c.282.186.566.28.852.28c.286 0 .533-.022.742-.065a2.59 2.59 0 0 0 .585-.196c.078-.58.29-1.028.637-1.34a8.907 8.907 0 0 1-1.333-.234a5.314 5.314 0 0 1-1.223-.507a3.5 3.5 0 0 1-1.047-.872c-.277-.347-.505-.802-.683-1.365c-.177-.564-.266-1.215-.266-1.952c0-1.049.342-1.942 1.027-2.68c-.32-.788-.29-1.673.091-2.652c.252-.079.625-.02 1.119.175c.494.195.856.362 1.086.5c.23.14.414.257.553.352a9.233 9.233 0 0 1 2.497-.338c.859 0 1.691.113 2.498.338l.494-.312a6.997 6.997 0 0 1 1.197-.572c.46-.174.81-.221 1.054-.143c.39.98.424 1.864.103 2.653c.685.737 1.028 1.63 1.028 2.68c0 .737-.089 1.39-.267 1.957c-.177.568-.407 1.023-.689 1.366a3.65 3.65 0 0 1-1.053.865c-.42.234-.828.403-1.223.507a8.9 8.9 0 0 1-1.333.235c.45.39.676 1.005.676 1.846v3.11c0 .147.021.266.065.357a.36.36 0 0 0 .208.189c.096.034.18.056.254.064c.074.01.18.013.318.013h2.914c1.032 0 1.914-.366 2.647-1.099c.732-.732 1.099-1.615 1.099-2.647V3.746c0-1.032-.367-1.914-1.1-2.647z"/>
+        </svg>
+    </a>
+
+
+
+    <a target="_blank" class="social" title="LinkedIn" href="https://linkedin.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1.2em" viewBox="0 0 448 512">
+            <path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5c0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7c-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5c67.2 0 79.7 44.3 79.7 101.9V416z"/>
+        </svg>
+    </a>
+
+
+    <a target="_blank" class="social" title="X" href="https://x.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.1em" height="1.1em" viewBox="0 0 512 472.799">
+            <path fill="currentColor" d="M403.229 0h78.506L310.219 196.04 512 462.799H354.002L230.261 301.007 88.669 462.799h-78.56l183.455-209.683L0 0h161.999l111.856 147.88L403.229 0zm-27.556 415.805h43.505L138.363 44.527h-46.68l283.99 371.278z"/>
+        </svg>
+    </a>
+
+
+    <a target="_blank" class="social" title="Discord" href="https://discord.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M19.27 5.33C17.94 4.71 16.5 4.26 15 4a.09.09 0 0 0-.07.03c-.18.33-.39.76-.53 1.09a16.09 16.09 0 0 0-4.8 0c-.14-.34-.35-.76-.54-1.09c-.01-.02-.04-.03-.07-.03c-1.5.26-2.93.71-4.27 1.33c-.01 0-.02.01-.03.02c-2.72 4.07-3.47 8.03-3.1 11.95c0 .02.01.04.03.05c1.8 1.32 3.53 2.12 5.24 2.65c.03.01.06 0 .07-.02c.4-.55.76-1.13 1.07-1.74c.02-.04 0-.08-.04-.09c-.57-.22-1.11-.48-1.64-.78c-.04-.02-.04-.08-.01-.11c.11-.08.22-.17.33-.25c.02-.02.05-.02.07-.01c3.44 1.57 7.15 1.57 10.55 0c.02-.01.05-.01.07.01c.11.09.22.17.33.26c.04.03.04.09-.01.11c-.52.31-1.07.56-1.64.78c-.04.01-.05.06-.04.09c.32.61.68 1.19 1.07 1.74c.03.01.06.02.09.01c1.72-.53 3.45-1.33 5.25-2.65c.02-.01.03-.03.03-.05c.44-4.53-.73-8.46-3.1-11.95c-.01-.01-.02-.02-.04-.02zM8.52 14.91c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.84 2.12-1.89 2.12zm6.97 0c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.83 2.12-1.89 2.12z"/>
+        </svg>
+    </a>
+
+
+    <a target="_blank" class="social" title="YouTube" href="https://youtube.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M12.006 19.012h-.02c-.062 0-6.265-.012-7.83-.437a2.5 2.5 0 0 1-1.764-1.765A26.494 26.494 0 0 1 1.986 12a26.646 26.646 0 0 1 .417-4.817A2.564 2.564 0 0 1 4.169 5.4c1.522-.4 7.554-.4 7.81-.4H12c.063 0 6.282.012 7.831.437c.859.233 1.53.904 1.762 1.763c.29 1.594.427 3.211.407 4.831a26.568 26.568 0 0 1-.418 4.811a2.51 2.51 0 0 1-1.767 1.763c-1.52.403-7.553.407-7.809.407Zm-2-10.007l-.005 6l5.212-3l-5.207-3Z"/>
+        </svg>
+    </a>
+
+
+    <a target="_blank" class="social" title="Email" href="mailto://user@domain">
+       <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1.2em" viewBox="0 0 485.211 485.211">
+            <path fill="currentColor" d="M301.393,241.631L464.866,424.56H20.332l163.474-182.928l58.801,51.443L301.393,241.631z M462.174,60.651H23.027 l219.579,192.142L462.174,60.651z M324.225,221.67l160.986,180.151V80.792L324.225,221.67z M0,80.792v321.029L160.972,221.64 L0,80.792z"/>
+       </svg>
+    </a>
+
+
+
+
+        <p class="footnote">
+powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a target="_blank" href="https://github.com/lukeorth/poison">poison</a>
+    <br>
+    &copy; 2024 Poison. All rights reserved.
+</p>
+        
+<!-- 标题  -->
+  </div>
+</aside>
+
+            <main class="content container">
+                <div class="posts">
+    
+    
+    <article class="post">
+        <div class="info">
+  <h1 class="post-title">
+    <a href="https://perhapslol.github.io/blog/">第5章：厂商理论—成本理论</a>
+  </h1>
+
+  <div class="headline">
+    <div>
+      
+      
+      <time datetime=" 2023-4-1T13:43:53-0600" class="post-date">
+        Apr.1, 2023
+      </time>
+      
+      <span> - </span>
+      <span class="reading-time">
+
+
+        <span>20 mins read</span>
+      </span>
+    </div>
+
+    
+    <ul class="tags">
+      
+      <li class="tag-hugo">
+        <a href="https://github.com/perhapslol">Economics</a>
+      </li>
+            <li class="tag-hugo">
+        <a href="https://github.com/perhapslol">Microeconomics</a>
+      </li>
+      
+    </ul>
+    
+  </div>
+  
+  <p class="seriesname">
+    Author: <a href="https://fgzfgz.github.io/">FGZ</a>
+  </p>
+  
+  
+</div>
+        
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+   </head>
+        
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LaTeX in Webpage</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</head>
+<body>
+
+  <script type="text/javascript">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['\\(','\\)']]
+    }
+  });
+  </script>
+</body>
+</html>
+        
+<!-- 正文  -->
+<h1><a id="%E4%B8%80%E3%80%81%E6%88%90%E6%9C%AC%E4%B8%8E%E5%88%A9%E6%B6%A6" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>一、成本与利润</h1>
+<p>　　在经济分析中，成本（cost）被看成是企业对所购买的生产要素的货币支出。</p>
+<h2><a id="%EF%BC%88%E4%B8%80%EF%BC%89%E6%88%90%E6%9C%AC" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（一）成本</h2>
+<h3><a id="1%E6%9C%BA%E4%BC%9A%E6%88%90%E6%9C%AC" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. 机会成本</h3>
+<p>　　<strong>机会成本</strong>：生产一单位的某种商品的机会成本是指生产者所放弃的使用相同的生产要素在其他生产用途中所能获得的最高收入。</p>
+<p>　　使用资源的机会成本：资源在其他用途中可能得到的最大收益。</p>
+<p>　　<strong>理解机会成本：</strong></p>
+<ul>
+<li>机会成本不等于实际成本，是一种观念上的成本或损失；</li>
+<li>机会成本是作出一种选择时所放弃的其他若干种可能的选择中最好的一种，是用于其他选择所能得到的最高收入；</li>
+<li>机会成本并不全是由个人选择所引起的。</li>
+</ul>
+<p>　　<strong>机会成本的存在需要三个前提条件：</strong></p>
+<ul>
+<li>资源是稀缺的；</li>
+<li>资源具有多种生产用途；</li>
+<li>资源的投向不受限制。</li>
+</ul>
+<h3><a id="2%E6%98%BE%E6%88%90%E6%9C%AC%E4%B8%8E%E9%9A%90%E6%88%90%E6%9C%AC" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. 显成本与隐成本</h3>
+<p>　　<strong>显成本</strong>是指厂商在生产要素市场上购买或租用他人所拥有的生产要素的实际支出（有支付行为），通常包括：雇佣工人、贷款、租用土地的费用等。</p>
+<p>　　<strong>隐成本</strong>是指厂商本身自己所拥有的且被用于该企业生产过程的那些生产要素的总价格（无支付行为），通常包括：亲自管理企业、使用自己的资金、使用自己的土地等的成本。</p>
+<p>　　在经济学中考察生产成本时，应将隐成本包括在内。企业的所有的显成本和隐成本之和构成总成本。</p>
+<h2><a id="%EF%BC%88%E4%BA%8C%EF%BC%89%E5%88%A9%E6%B6%A6" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（二）利润</h2>
+<p>　　经济学上的利润指的是<strong>经济利润</strong>（economic profit）或称<strong>超额利润</strong>，等于总收益减总成本（含显成本和隐成本）。</p>
+<p>　　正常利润（normal profit）是指厂商对自己所提供的企业家才能的报酬支付，包含在隐成本中。</p>
+<p>　　会计利润（accounting profit）是指厂商的总收益减去显成本以后的余额。</p>
+<h2><a id="%EF%BC%88%E4%B8%89%EF%BC%89%E4%B8%8D%E5%90%8C%E6%88%90%E6%9C%AC%E3%80%81%E5%88%A9%E6%B6%A6%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（三）不同成本、利润之间的关系</h2>
+<ul>
+<li>显成本=会计成本</li>
+<li>隐成本包含正常利润</li>
+<li>经济成本=机会成本=显成本 + 隐成本</li>
+<li>经济利润=总收益-经济成本=总收益-机会成本=总收益-（显成本 + 隐成本）</li>
+<li>会计利润=总收益-显成本</li>
+</ul>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220428211801-t4vst21.png" style="height:220px" alt="相互关系" />
+<blockquote>
+<p><strong>补充：</strong></p>
+<ul>
+<li>在通常情况下，除企业家才能外，企业的其他生产要素都从市场上购买。此时，正常利润=隐成本。</li>
+<li>当存在除企业家才能外的自有生产要素时，正常利润 &lt; 隐成本。</li>
+</ul>
+</blockquote>
+<h1><a id="%E4%BA%8C%E3%80%81%E6%88%90%E6%9C%AC%E6%9B%B2%E7%BA%BF" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>二、成本曲线</h1>
+<h2><a id="%EF%BC%88%E4%B8%80%EF%BC%89%E7%AD%89%E6%88%90%E6%9C%AC%E7%BA%BF" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（一）等成本线</h2>
+<p>　　等成本线（Equal-Cost Lines）是在既定的成本和既定生产要素价格条件下，生产者可以购买到的两种生产要素的各种不同数量组合的轨迹。</p>
+<p>　　成本方程：\(C=wL+rK\)</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220428212812-ehibqbe.png" style="height:250px" alt="等成本线" />
+<blockquote>
+<p><strong>理解补充：</strong></p>
+<p>类比[&quot;预算约束线&quot;]，等成本线两侧表示不同的含义：</p>
+<ul>
+<li>等成本线内（例如 \(A\) 点）：要素组合的可行域</li>
+<li>等成本线外（例如 \(B\) 点）：企业无法或不愿意负担的要素组合。</li>
+</ul>
+</blockquote>
+<h2><a id="%EF%BC%88%E4%BA%8C%EF%BC%89%E6%9C%80%E4%BC%98%E8%A6%81%E7%B4%A0%E6%AF%94%E4%BE%8B%E7%9A%84%E5%86%B3%E5%AE%9A" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（二）最优要素比例的决定</h2>
+<p>　　与消费者理论中的[&quot;消费者均衡&quot;]类似，厂商理论中也有生产者均衡，目标函数为收益最大化，约束条件为成本约束。</p>
+<p>　　<strong>在完全竞争市场中，厂商的</strong><u><strong>利润最大化问题</strong></u><strong>等效于</strong>[&quot;既定产量的成本最小化&quot;]<strong>或</strong>[&quot;既定成本的产量最大化&quot;]<strong>问题。</strong></p>
+<h3><a id="1%E6%97%A2%E5%AE%9A%E4%BA%A7%E9%87%8F%E6%9D%A1%E4%BB%B6%E4%B8%8B%E7%9A%84%E6%88%90%E6%9C%AC%E6%9C%80%E5%B0%8F%E5%8C%96" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. 既定产量条件下的成本最小化</h3>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220428212913-c12wt66.png" style="height:350px" alt="既定产量条件下成本最小的要素组合" />
+<p>　　成本最小化与产量约束：</p>
+\[\begin {align}
+&amp; \min_{L,K}  {\ TC(L,K)}=\min_{L,K}  {\ wL+rK}  \\
+&amp; s.t. \ f(L,K)=f_0
+\end {align}
+\]
+<p>　　构造拉格朗日函数：</p>
+\[\begin {align}
+\Lambda=wL+rK+\lambda \big [\ f(L,K)-f_0 \big]
+\end {align}
+\]
+<p>　　在生产均衡点 \(E\) 有：\(MRTS_{LK}=  \frac {MP_L}  {MP_K} = \frac w r\)</p>
+<blockquote>
+<p><strong>理解补充：</strong></p>
+<p>在不变的技术水平下，厂商有明确的产量目标，此时要实现成本最小化，最优生产要素投入为等产量线与等成本线的切点 \(E\)。</p>
+<ul>
+<li>技术水平不变：多条等成本线平行；</li>
+<li>既定产量：仅有一条等产量线 \(Q\)；</li>
+<li>成本最小化：在多条等成本线中，选择与等产量线相切的等成本线 \(A'B'\)。</li>
+</ul>
+</blockquote>
+<h3><a id="2%E6%97%A2%E5%AE%9A%E6%88%90%E6%9C%AC%E6%9D%A1%E4%BB%B6%E4%B8%8B%E7%9A%84%E4%BA%A7%E9%87%8F%E6%9C%80%E5%A4%A7%E5%8C%96" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. 既定成本条件下的产量最大化</h3>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220428213020-4ktdysk.png" style="height:300px" alt="既定成本条件下产量最大的要素组合" />
+<p>　　产量最大化与成本约束：</p>
+\[\begin {align}
+&amp; \max_{L,K}  \ f(L,K)  \\
+&amp; s.t. \ wL+rK=C
+\end {align}
+\]
+<p>　　构造拉格朗日函数：</p>
+\[\begin {align}
+\Lambda=f(L,K)+\lambda(C-wL-rK)
+\end {align}
+\]
+<p>　　由此可以解得：\(MRTS_{LK}=  \frac {MP_L}  {MP_K} = \frac w r\)</p>
+<blockquote>
+<p><strong>理解补充：</strong></p>
+<p>在不变的技术水平下，厂商有明确的成本约束，此时要实现产量最大化，最优生产要素投入为等产量线与等成本线的切点 \(E\)。</p>
+<ul>
+<li>既定成本：仅有一条等成本线 \(AB\)；</li>
+<li>产量最大化：在多条等产量线中，选择与等成本线相切的等产量线 \(Q_2\)。</li>
+</ul>
+</blockquote>
+<h3><a id="3%E5%B0%8F%E7%BB%93" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. 小结</h3>
+<p>　　不论是既定产量条件下的成本最小化，还是既定成本条件下的产量最大化，在厂商大到均衡时，均有：</p>
+\[MRTS_{LK}=  \frac {MP_L}  {MP_K} = \frac w r
+\]
+<p>　　因此，<strong>在完全竞争市场中，厂商的</strong><u><strong>利润最大化问题</strong></u><strong>等效于</strong><u><strong>既定产量的成本最小化</strong></u><strong>或</strong><u><strong>既定成本的产量最大化</strong></u><strong>问题。</strong></p>
+<h2><a id="%EF%BC%88%E4%BA%8C%EF%BC%89%E6%89%A9%E5%B1%95%E6%80%A7%E5%92%8C%E7%94%9F%E4%BA%A7%E6%80%BB%E6%88%90%E6%9C%AC" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（二）扩展性和生产总成本</h2>
+<h3><a id="1%E6%89%A9%E5%B1%95%E7%BA%BF" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. 扩展线</h3>
+<p>　　在生产要素的价格、生产技术和其他条件不变时，如果企业改变成本，等成本线就会发生平移；如果企业改变产量，等产量曲线就会发生平移。这些不同的等产量曲线将与不同的等成本线相切，形成一系列不同的生产均衡点。这些生产均衡点的轨迹就是[&quot;扩展线&quot;]（expansion path）。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220428214307-tzk2dc6.png" style="height:300px" alt="扩展线" />
+<p>　　扩展线表示在要素价格不变，技术水平不变的条件下，厂商在长期中，为扩大规模，所可能使用的最佳要素组合所形成的轨迹。</p>
+<p>　　扩展线概念的注意事项：</p>
+<ul>
+<li>扩展线上所有的点均是生产要素最优组合点，即必须满足 \(\frac {MP_L}  {MP_K} = \frac w r\) 条件；</li>
+<li>扩展线的形状取决于生产函数的形式，不同的生产函数有不同的扩展线。</li>
+</ul>
+<h3><a id="2%E5%88%A9%E6%B6%A6%E6%9C%80%E5%A4%A7%E5%8C%96%E5%92%8C%E6%89%A9%E5%B1%95%E6%80%A7" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. 利润最大化和扩展性</h3>
+<p>　　在完全竞争条件下，厂商在追求最大利润的过程中，可以实现扩展性这一长期生产的最优路径的。</p>
+<p>　　在完全竞争条件下，厂商的利润函数为：\(\pi (L,K)= P \cdot f(L,K)-(wL+rK)\)</p>
+<p>　　利润最大化时，一阶条件为：</p>
+\[\left \{
+\begin {align}
+\frac {\partial \pi} {\partial L}=P \cdot \frac {\partial f} {\partial L}-w=0      \notag \\ 
+ \frac {\partial \pi} {\partial K}=P \cdot \frac {\partial f} {\partial K}-r=0   \notag
+\end {align}
+ \right.
+\]
+<p>　　可以解得：\(\frac {\partial \pi /\partial L}  {\partial \pi /\partial K}  = \frac {MP_L}  {MP_K} = \frac w r\)</p>
+<h3><a id="3%E6%89%A9%E5%B1%95%E6%80%A7%E4%B8%8E%E6%80%BB%E6%88%90%E6%9C%AC" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. 扩展性与总成本</h3>
+<p>　　长期总成本表示在每一个产量水平上的最小的生产成本。</p>
+<p>　　利用扩展性可以推导得出短期生产总成本。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220428215727-thb7lv2.png" style="height:300px" alt="扩展性和短期总成本" />
+<h2><a id="%EF%BC%88%E4%B8%89%EF%BC%89%E7%9F%AD%E6%9C%9F%E6%88%90%E6%9C%AC" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（三）短期成本</h2>
+<h3><a id="1%E7%94%B1%E7%9F%AD%E6%9C%9F%E7%94%9F%E4%BA%A7%E5%87%BD%E6%95%B0%E5%88%B0%E7%9F%AD%E6%9C%9F%E6%80%BB%E6%88%90%E6%9C%AC%E5%87%BD%E6%95%B0" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. 由短期生产函数到短期总成本函数</h3>
+<p>　　短期总成本函数为：\(STC(Q)= w \cdot L(Q) + r\cdot \overline K\)</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220428220110-pdg038g.png" style="height:300px" alt="短期总成本曲线" />
+<h3><a id="2%E7%9F%AD%E6%9C%9F%E6%88%90%E6%9C%AC%E7%9A%84%E5%88%86%E7%B1%BB" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. 短期成本的分类</h3>
+<p>　　在短期，厂商的成本有不变成本部分和可变成本部分之分，具体而言，短期成本有七种。其中，最重要的是边际成本 \(MC\)，因为其他成本曲线的形状都是由 \(MC\) 曲线形状来决定的。</p>
+<p>　　<strong>总固定成本</strong>（\(TFC\)）：厂商在短期内为生产一定数量的产品对不变生产要素所支付的总成本。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220428220323-3anf46r.png" style="height:200px" alt="总固定成本曲线" />
+<p>　　<strong>总可变成本</strong>（\(TVC\)）：厂商在短期内生产一定数量的产品对可变生产要素支付的总成本。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220428220510-dh4n0jc.png" style="height:200px" alt="总可变成本曲线" />
+<p>　　<strong>总成本</strong>（\(TC\)）：厂商在短期内为生产一定数量的产品对全部生产要素所支出的总成本。\(TC=TFC+TVC\)，总成本曲线是从纵轴上相当于总固定成本 TFC 高度的点出发的一条向右上方倾斜的曲线。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220428220525-awiw9pi.png" style="height:200px" alt="总成本曲线" />
+<p>　　<strong>平均固定成本</strong>（\(AFC\)）：是厂商在短期内平均每生产一单位产品所消耗的不变成本。平均固定成本曲线表示在总固定成本不变的前提下，随着产量的增加，平均固定成本会越来越小。\(AFC=\frac {TFC} Q\)</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220428220647-wxx7cnu.png" style="height:200px" alt="平均固定成本曲线" />
+<p>　　<strong>平均可变成本</strong>（\(AVC\)）：厂商在短期内平均每生产一单位产品所消耗的可变成本。\(AVC=\frac {TVC(Q)} Q\)</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220428220747-3qxr0hp.png" style="height:200px" alt="平均可变成本曲线" />
+<p>　　<strong>平均总成本</strong>（\(AC\)）：厂商在短期内平均每生产一单位产品所消耗的全部成本，等于平均不变成本和平均可变成本之和。\(AC(Q)=\frac {TC(Q)} Q=AVC(Q)+AFC(Q)\)</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220428221127-sqfljru.png" style="height:200px" alt="平均总成本曲线" />
+<p>　　<strong>边际际成本</strong>（\(MC\)）：厂商在短期内增加一单位产量时所增加的总成本。在每一个产量水平上的边际成本 MC 值就是相应的总成本曲线的斜率。边际成本曲线呈现出先下降后上升的特征。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220428221200-lbbvncf.png" style="height:200px" alt="边际成本曲线" />
+<h3><a id="3%E7%9F%AD%E6%9C%9F%E6%88%90%E6%9C%AC%E6%9B%B2%E7%BA%BF%E7%9A%84%E7%BB%BC%E5%90%88%E5%9B%BE" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. 短期成本曲线的综合图</h3>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220428221317-r1jqhht.png" style="height:500px" alt="短期成本曲线" />
+<blockquote>
+<p><strong>绘图技巧：</strong></p>
+<ol>
+<li>先绘制边际成本曲线 \(MC\)；</li>
+<li>绘制平均成本 \(AC\) 与平均可变成本 \(AVC\)，\(AC\) 与 \(AVC\) 最低点在边际成本 \(MC\) 曲线上，且 \(AC \geq AVC\)；</li>
+<li>绘制呈递减趋势的平均固定成本 \(AFC\)，且 \(AC &gt;AFC\)。</li>
+</ol>
+</blockquote>
+<h3><a id="4%E7%9F%AD%E6%9C%9F%E6%88%90%E6%9C%AC%E5%8F%98%E5%8A%A8%E7%9A%84%E5%86%B3%E5%AE%9A%E5%9B%A0%E7%B4%A0%EF%BC%9A%E8%BE%B9%E9%99%85%E6%8A%A5%E9%85%AC%E9%80%92%E5%87%8F%E8%A7%84%E5%BE%8B" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>4. 短期成本变动的决定因素：边际报酬递减规律</h3>
+<p>　　在短期生产中，边际产量的递增阶段对应的是边际成本的递减阶段，边际产量的递减阶段对应的是边际成本的递增阶段，与边际产量的最大值相对应的是边际成本 的最小值。正因为如此，在边际报酬递减规律作用下的边际成本曲线表现出先降后升的 \(U\) 形特征，\(AVC\) 曲线和 \(AC\) 曲线也必定有先降后升的 \(U\) 形特征。而且， \(MC\) 曲线必定会分别与 \(AVC\) 曲线相交于 \(AVC\) 曲线的最低点，与 \(AC\) 曲线相交于 \(AC\) 曲线的最低点。</p>
+<h4><a id="4-1%E8%BE%B9%E9%99%85%E4%BA%A7%E9%87%8F%E5%92%8C%E8%BE%B9%E9%99%85%E6%88%90%E6%9C%AC%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>4.1 边际产量和边际成本之间的关系</h4>
+<p>　　短期生产函数：\(Q=f(L,\overline K)\)</p>
+<p>　　短期成本函数：\(STC(Q)=w \cdot L(Q) + TFC\)</p>
+<p>　　因此：\(MC=\frac w { {MP} _L }\)，即边际成本 \(MC\) 和边际产量 \({MP} _L\) 两者的变动方向是相反的。</p>
+<blockquote>
+<p><strong>数学补充：</strong></p>
+<p>短期成本函数计算过程中涉及反函数的导数求解，反函数的导数是原函数导数的倒数，因此：</p>
+<p>\(\begin{align} SMC=\frac {\partial STC} {\partial Q}  = w \cdot \frac {\partial L(Q)} {\partial Q}  = w \cdot \Bigg[ \frac {\partial Q(L,\overline K)} {\partial L} \Bigg] ^{-1}  = \frac w { {MP} _L} \end{align}\)</p>
+</blockquote>
+<h4><a id="4-2%E5%B9%B3%E5%9D%87%E4%BA%A7%E9%87%8F%E5%92%8C%E5%B9%B3%E5%9D%87%E5%8F%AF%E5%8F%98%E6%88%90%E6%9C%AC%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>4.2 平均产量和平均可变成本之间的关系</h4>
+<p>　　短期成本函数：\(TVC(Q)=w \cdot L(Q)\)</p>
+<p>　　平均可变成本函数：\(AVC= \frac {TVC(Q)} {Q} = \frac {w} { {AP}_L} \)</p>
+<p>　　因此：</p>
+<ul>
+<li>平均可变成本 \(AVC\) 和平均产量 \(AP_L\) 两者的变动方向是相反的。</li>
+<li>\(MC\) 曲线和 \(AVC\) 曲线的交点与 \(MP_L\) 曲线和 \(AP_L\) 曲线的交点是对应的。</li>
+</ul>
+<blockquote>
+<p><strong>数学补充：</strong></p>
+<p>平均产量\(AP_L\)与平均可变成本\(AVC\)关系的推导：</p>
+<p>\(\begin{align} AVC=\frac {SVC} {Q}  = \frac {SVC} {L}  \cdot \frac {L} {Q}  = \frac w {AP_L} \end{align}\)</p>
+<p>上式中，使用 \(AP_L = Q / L\) 进行了替换。</p>
+<p>在短期内，资本 \(\overline K\) 为固定量，可变生产要素仅有劳动 \(L\)，因此 \(SVC=w \cdot L\)。</p>
+</blockquote>
+<h2><a id="%EF%BC%88%E5%9B%9B%EF%BC%89%E9%95%BF%E6%9C%9F%E6%88%90%E6%9C%AC" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（四）长期成本</h2>
+<h3><a id="1%E4%B8%8E%E7%9F%AD%E6%9C%9F%E6%88%90%E6%9C%AC%E5%87%BD%E6%95%B0%E7%9A%84%E6%AF%94%E8%BE%83" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. 与短期成本函数的比较</h3>
+<p>　　短期成本问题表述为：</p>
+\[\begin {align}
+STC(Q)=\min_{L} \ \{wL+r  \overline K\}
+\end {align}
+\]
+<p>　　短期生产函数为：\(Q=f(L, \overline K)\)，要素价格给定的情况下，成本是产量的函数。</p>
+<p>　　此时短期利润为：\(\pi = PQ-STC(Q)\)，厂商追求利润最大化，一阶条件为：</p>
+\[\begin{align}
+\frac {d\pi} {Q}=P-SMC(Q)=0
+\end{align}
+\]
+<p>　　也就是说，当 \(P=SMC(Q)\) 时，短期要素配置达到最优。</p>
+<h3><a id="2%E9%95%BF%E6%9C%9F%E6%88%90%E6%9C%AC%E5%87%BD%E6%95%B0" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. 长期成本函数</h3>
+<p>　　长期成本问题表述为：</p>
+\[\begin {align}
+
+LTC(Q)=\min_{L,K} \ \{wL+rK\}
+
+\end {align}
+\]
+<p>　　长期生产函数为：\(Q=f(L,K)\)</p>
+<p>　　可得最优要素组合条件为：\(L=L(w,r,Q)\)；\(K=K(w,r,Q)\)</p>
+<p>　　长期成本函数为：\(LTC=wL(w,r,Q)+rK(w,r,Q)\)</p>
+<blockquote>
+<p><strong>数学补充：</strong></p>
+<p>长期边际成本 \(LMC\) 为：</p>
+<p>\(\begin{align} LMC &amp; = \frac {\partial LTC} {\partial Q} = w \frac {\partial L} {\partial Q} + r \frac  {\partial K} {\partial Q}  \notag \\ &amp; = \frac w {MP_L} + \frac r {MP_K} \end{align}\)</p>
+</blockquote>
+<h3><a id="3%E9%95%BF%E6%9C%9F%E6%88%90%E6%9C%AC%E6%9B%B2%E7%BA%BF" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. 长期成本曲线</h3>
+<p>　　长期总成本 \(LTC\) 是指厂商在长期中在每一个产量水平上通过选择最优的生产规模所能达到的最低总成本。</p>
+<p>　　在要素价格给定的条件下，长期成本曲线为 \(LTC=LTC(Q)\)。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220428224300-fe89hpf.png" style="height:250px" alt="最优生产规模的选择和长期总成本曲线" />
+<p>　　<strong>长期总成本曲线是无数条短期总成本曲线的包络线。</strong></p>
+<p>　　长期总成本曲线的特征有：</p>
+<ul>
+<li>长期总成本曲线从原点出发向右上方倾斜。当产量为零时，长期总成本为零，以后随着产量的增加，长期总成本是增加的。</li>
+<li>与短期总成本曲线相似的是，长期总成本曲线也是先以递减速率上升，经拐点后以递增的速率上升。</li>
+</ul>
+<h3><a id="4%E9%95%BF%E6%9C%9F%E5%B9%B3%E5%9D%87%E6%88%90%E6%9C%AC%E5%87%BD%E6%95%B0%E5%92%8C%E9%95%BF%E6%9C%9F%E5%B9%B3%E5%9D%87%E6%88%90%E6%9C%AC%E6%9B%B2%E7%BA%BF" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>4. 长期平均成本函数和长期平均成本曲线</h3>
+<p>　　长期平均成本 \(LAC\) 表示厂商在长期内按产量平均计算的最低总成本。它是厂商在长期内在每一个产量水平上可以实现的最小的平均成本。用数学公式表示为：\(LAC(Q)=\frac {LTC(Q)} {Q}\)</p>
+<h4><a id="4-1%E9%95%BF%E6%9C%9F%E5%B9%B3%E5%9D%87%E6%88%90%E6%9C%AC%E6%9B%B2%E7%BA%BF%E7%9A%84%E5%BD%A2%E7%8A%B6" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>4.1 长期平均成本曲线的形状</h4>
+<p>　　长期平均成本曲线是无数条短期平均成本曲线的包络线。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220428224615-h23j7xm.png" style="height:300px" alt="长期平均成本曲线" />
+<h4><a id="4-2%E8%A7%84%E6%A8%A1%E7%BB%8F%E6%B5%8E%E4%B8%8E%E8%A7%84%E6%A8%A1%E4%B8%8D%E7%BB%8F%E6%B5%8E" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>4.2 规模经济与规模不经济</h4>
+<p>　　<strong>规模经济</strong>也被称作为<strong>内在经济</strong>，即在企业生产扩张的开始阶段，厂商由于扩大生产规模而使经济效益得到提高。或者说，厂商产量增加的倍数大于成本增加的倍数，为规模经济。产生规模经济的主要原因有劳动分工与专业化，以及技术因素。</p>
+<p>　　<strong>规模不经济</strong>也被称作为<strong>内在不经济</strong>，即当生产扩张到一定的规模以后，厂商继续扩大生产规模，就会使经济效益下降。或者说，厂商产量增加的倍数小于成本增加的倍数，为规模不经济。</p>
+<p>　　正是由于规模经济和规模不经济的作用，决定了长期平均成本曲线表现出先下降后上升的 \(U\) 形特征。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220428225007-utlip0b.png" style="height:300px" alt="规模经济与规模不经济" />
+<h4><a id="4-3%E5%A4%96%E5%9C%A8%E7%BB%8F%E6%B5%8E%E4%B8%8E%E5%A4%96%E5%9C%A8%E4%B8%8D%E7%BB%8F%E6%B5%8E%EF%BC%88%E9%95%BF%E6%9C%9F%E5%B9%B3%E5%9D%87%E6%88%90%E6%9C%AC%E6%9B%B2%E7%BA%BF%E7%9A%84%E4%BD%8D%E7%BD%AE%E7%A7%BB%E5%8A%A8%EF%BC%89" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>4.3 外在经济与外在不经济（长期平均成本曲线的位置移动）</h4>
+<p>　　长期平均成本 \(LAC\) 曲线的位置的变化原因可以用企业的外在经济与外在不经济的概念来解释。</p>
+<p>　　<strong>外在经济</strong>是由于厂商的生产活动所依赖的外界环境得到改善而产生的，<strong>外在不经济</strong>是由于厂商的生产活动所依赖的外界环境恶化而产生的。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220428225202-8uejps0.png" style="height:200px" alt="长期平均成本曲线的位置移动" />
+<h4><a id="4-4%E9%95%BF%E6%9C%9F%E8%BE%B9%E9%99%85%E6%88%90%E6%9C%AC%E5%87%BD%E6%95%B0%E5%92%8C%E9%95%BF%E6%9C%9F%E8%BE%B9%E9%99%85%E6%88%90%E6%9C%AC%E6%9B%B2%E7%BA%BF" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>4.4 长期边际成本函数和长期边际成本曲线</h4>
+<p>　　长期边际成本 \(LMC\) 表示厂商在长期内增加一单位产量所引起的最低总成本的增量。</p>
+\[\begin {align}
+LMC(Q)=\frac {\Delta LTC(Q)} {\Delta Q}=\frac {\partial LTC(Q)} {\partial Q}
+\end {align}
+\]
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220428225408-m9gl7c8.png" style="height:300px" alt="长期边际成本曲线" />
+<p>　　长期边际成本曲线呈 \(U\) 形，它与长期平均成本曲线相交于长期平均成本曲线的最低点。</p>
+<blockquote>
+<p><strong>理解补充：</strong></p>
+<ul>
+<li>
+<p>长期平均成本 \(LAC\) 是短期平均成本 \(SAC\) 的包络线；</p>
+</li>
+<li>
+<p>不论是长期还是短期：</p>
+<ul>
+<li>平均成本 \(AC\) 均为先降低后升高；</li>
+<li>边际成本 \(MC\) 过平均成本 \(AC\) 的最低点；</li>
+</ul>
+</li>
+<li>
+<p>\(LAC\)、\(LMC\)、\(SMC\)、\(SAC\) 四条曲线相交于 \(LAC\) 最低点。</p>
+</li>
+</ul>
+</blockquote>
+<h3><a id="5%E5%B9%B2%E4%B8%AD%E5%AD%A6%EF%BC%9A%E9%99%8D%E4%BD%8E%E9%95%BF%E6%9C%9F%E6%88%90%E6%9C%AC" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>5. 干中学：降低长期成本</h3>
+<h4><a id="5-1%E5%AD%A6%E4%B9%A0%E6%9B%B2%E7%BA%BF" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>5.1 学习曲线</h4>
+<p>　　学习曲线反映了工人经验对生产成本的影响，描绘了企业累积产出与企业生产单位产出所需投入数量之间的关系。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220428225521-aen76de.png" style="height:250px" alt="学习曲线" />
+<p>　　学习曲线表示，随着累计的生产批次的增加，生产每批机器设备所投入的劳动量是递减的，即每批次生产的平均成本是下降的。</p>
+<p>　　学习效应用公式表示为：\(L=A+BN^{-\beta}\)</p>
+<h4><a id="5-2%E5%AD%A6%E4%B9%A0%E6%95%88%E5%BA%94%E4%B8%8E%E8%A7%84%E6%A8%A1%E6%95%88%E5%BA%94" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>5.2 学习效应与规模效应</h4>
+<p>　　当存在着规模经济时（\(LAC_1\) 曲线上由 A 到 B 的移动），平均成本因销售量的增加而逐渐下降，或者平均成本由于学习曲线的存在而chan l z z z z</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220428225833-10kp4b6.png" style="height:300px" alt="学习效应和规模经济" />
+<h2><a id="%EF%BC%88%E4%BA%94%EF%BC%89%E7%9F%AD%E6%9C%9F%E6%88%90%E6%9C%AC%E6%9B%B2%E7%BA%BF%E4%B8%8E%E9%95%BF%E6%9C%9F%E6%88%90%E6%9C%AC%E6%9B%B2%E7%BA%BF%E7%9A%84%E5%85%B3%E7%B3%BB" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（五）短期成本曲线与长期成本曲线的关系</h2>
+<p>　　规模经济或规模不经济的情况下，短期成本与长期成本在每一产量水平，都有以下特征：</p>
+<ol>
+<li>总成本：\(LTC\) 曲线与代表最优生产规模的唯一一条 \(STC\) 曲线相切（\(R\)点）；</li>
+<li>平均成本：\(LAC\) 曲线与代表最优生产规模的唯一一条 \(SAC\) 曲线相切（\(R\)点）；</li>
+<li>边际成本：\(LMC\) 曲线与代表最优生产规模的唯一一条 \(SMC\) 曲线相交（\(R\)点）；</li>
+<li>\(LTC\) 曲线的拐点与 \(LMC\) 曲线的最低点相对应；</li>
+<li>\(SMC\) 曲线与 \(SAC\) 曲线相交于 \(SAC\) 曲线的最低点；</li>
+<li>\(LMC\) 曲线与 \(LAC\) 曲线相交于 \(LAC\) 曲线的最低点；</li>
+<li>存在一条从原点出发的直线与 \(LTC\) 曲线相切，其切点与 \(LAC\) 曲线的最低点相呼应（[&quot;数学证明&quot;]；</li>
+<li>在 \(LAC\) 曲线的最低点，\(LAC\) 曲线与代表最优生产规模的 \(SAC\) 曲线恰好相切于两者的最低点，\(LMC\) 曲线与代表最优生产规模的 \(SMC\) 曲线也恰好相交于这一点。</li>
+</ol>
+<blockquote>
+<p><strong>数学补充：</strong></p>
+<p>在长期总成本\(LTC\)曲线中，过原点的直线与\(LTC\)相切，因此在切点处，斜率相等：</p>
+<p>\(\begin{align} \frac {LTC} {Q} = \frac {\partial LTC } {\partial Q} \end{align}\)</p>
+<p>其中：左边为直线斜率，右边为长期总成本\(LTC\)斜率。上式可以改写为：</p>
+<p>\(\begin{align} LAC = LMC \end{align}\)</p>
+<p>因此该点正好位于\(LAC\)与\(LMC\)的交点处，此时为\(LAC\)的最低点。</p>
+</blockquote>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220428225408-m9gl7c8.png" style="height:300px" alt="长期边际成本曲线" />
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220428224300-fe89hpf.png" style="height:250px" alt="最优生产规模的选择和长期总成本曲线" />
+
+
+
+        <div class="read-more-link">
+            <a href="https://perhapslol.github.io/blog/">Back Home…</a>
+        </div>
