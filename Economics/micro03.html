@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+    
+<script defer language="javascript" type="text/javascript" src="/js/bundle.min.444d89fe8d19b9e466eca93647da936356d2c582a54abec3037b88c2e785e61e.js"></script>
+
+<script defer data-domain="https://perhapslol.github.io/blog/" src="https://plausible.lukeorth.com/js/script.js"></script>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+   
+
+
+<!-- Open Graph image and Twitter Card metadata -->
+
+<title itemprop="name">Perhaps</title>
+<meta property="og:title" content=Perhaps />
+<meta name="twitter:title" content=perhapslol />
+<meta itemprop="name" content=Perhaps />
+<meta name="application-name" content=perhapslol />
+<meta property="og:site_name" content="perhapslol" />
+
+
+<meta name="description" content="A pragmatic Hugo theme for bloggers. Based on the classic &lt;a href=&#34;https://github.com/poole/hyde&#34; target=&#34;_blank&#34;&gt;Hyde&lt;/a&gt; design by &lt;a href=&#34;https://github.com/mdo&#34; target=&#34;_blank&#34;&gt;@mdo&lt;/a&gt;" />
+
+
+
+<base href="https://poison.lukeorth.com/" />
+<link rel="sitemap" type="application/xml" title="Sitemap" href='https://poison.lukeorth.com/sitemap.xml' />
+<meta name="robots" content="index,follow" />
+<meta name="googlebot" content="index,follow" />
+    <meta name="twitter:site" content="@" />
+    <meta name="twitter:creator" content="@" />
+
+<meta property="fb:admins" content="" />
+<meta name="apple-mobile-web-app-title" content="Poison" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="generator" content="Hugo 0.124.0">
+
+
+    
+    
+
+<link type="text/css" rel="stylesheet" href="/css/bundle.min.94a339836f89f0d25f31980cb6b0631da21e20af128308747ce44e0525eb16ef.css">
+
+
+    
+    <style>
+    body {
+        --sidebar-bg-color: #202020;
+        --sidebar-img-border-color: #515151;
+        --sidebar-p-color: #909090;
+        --sidebar-h1-color: #FFF;
+        --sidebar-a-color: #FFF;
+        --sidebar-socials-color: #FFF;
+        --text-color: #222;
+        --bkg-color: #FAF9F6;
+        --post-title-color: #303030;
+        --list-color: #5a5a5a;
+        --link-color: #268bd2;
+        --date-color: #515151;
+        --table-border-color: #E5E5E5;
+        --table-stripe-color: #F9F9F9;
+        --code-color: #000;
+        --code-background-color: #E5E5E5;
+        --code-block-color: #fff;
+        --code-block-background-color: #272822;
+        --moon-sun-color: #FFF;
+        --moon-sun-background-color: #515151;
+    }
+    body.dark-theme {
+        --text-color: #eee;
+        --bkg-color: #121212;
+        --post-title-color: #DBE2E9;
+        --list-color: #9d9d9d;
+        --link-color: #268bd2;
+        --date-color: #9a9a9a;
+        --table-border-color: #515151;
+        --table-stripe-color: #202020;
+        --code-color: #fff;
+        --code-background-color: #515151;
+        --code-block-color: #fff;
+        --code-block-background-color: #272822;
+    }
+    body {
+        background-color: var(--bkg-color);
+    }
+</style>
+
+</head>
+
+    <body class="light-theme">
+        <div class="wrapper">
+            <aside class="sidebar">
+    <div class="container sidebar-sticky">
+        <div class="light-dark" align="right">
+    <button class="btn-light-dark" title="Toggle light/dark mode">
+        <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+            <path fill="currentColor" d="M6 .278a.768.768 0 0 1 .08.858a7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277c.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316a.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71C0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+        </svg>
+        <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+            <path fill="currentColor" d="M8 12a4 4 0 1 0 0-8a4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+        </svg>
+    </button>
+</div>
+
+        <div class="sidebar-about">
+    <h1 class="brand">
+        
+            <a href="https://perhapslol.github.io/blog/">
+                <img src="https://avatars.githubusercontent.com/u/130022120?v=4" alt="brand image">
+            </a>
+        
+        
+                       <a href="https://perhapslol.github.io/blog/">
+                <h1>Perhaps</h1>
+            </a>
+        
+    </h1>
+    <p class="lead">
+    春华夕拾 <a href="https://github.com/poole/hyde" target="_blank"></a>  <a href="https://github.com/mdo" target="_blank"></a>
+    </p>
+</div>
+
+        <nav>
+    <ul class="sidebar-nav">
+
+                
+                    <li class="heading">
+                        <a href="https://perhapslol.github.io/blog/Post/">Posts</a>
+                    </li>
+                        <li class="sub-heading">
+                            Stocks
+                        </li>
+                        <li class="sub-heading">
+                            IPO
+                        </li>
+                        <li class="sub-heading">
+                            Listed Companies
+                        </li>
+                        
+                    <a href="https://perhapslol.github.io/blog/Economics/">Economics</a>
+                    </li>
+                        <li class="sub-heading">
+                            Macro
+                        </li>
+                        <li class="sub-heading">
+                            Micro
+                        </li>
+    </ul>
+</nav>
+
+
+        
+    <a target="_blank" class="social" title="GitHub" href="https://github.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="-2 -2 24 24">
+            <path fill="currentColor" d="M18.88 1.099C18.147.366 17.265 0 16.233 0H3.746C2.714 0 1.832.366 1.099 1.099C.366 1.832 0 2.714 0 3.746v12.487c0 1.032.366 1.914 1.099 2.647c.733.733 1.615 1.099 2.647 1.099H6.66c.19 0 .333-.007.429-.02a.504.504 0 0 0 .286-.169c.095-.1.143-.245.143-.435l-.007-.885c-.004-.564-.006-1.01-.006-1.34l-.3.052c-.19.035-.43.05-.721.046a5.555 5.555 0 0 1-.904-.091a2.026 2.026 0 0 1-.872-.39a1.651 1.651 0 0 1-.572-.8l-.13-.3a3.25 3.25 0 0 0-.41-.663c-.186-.243-.375-.407-.566-.494l-.09-.065a.956.956 0 0 1-.17-.156a.723.723 0 0 1-.117-.182c-.026-.061-.004-.111.065-.15c.07-.04.195-.059.378-.059l.26.04c.173.034.388.138.643.311a2.1 2.1 0 0 1 .631.677c.2.355.44.626.722.813c.282.186.566.28.852.28c.286 0 .533-.022.742-.065a2.59 2.59 0 0 0 .585-.196c.078-.58.29-1.028.637-1.34a8.907 8.907 0 0 1-1.333-.234a5.314 5.314 0 0 1-1.223-.507a3.5 3.5 0 0 1-1.047-.872c-.277-.347-.505-.802-.683-1.365c-.177-.564-.266-1.215-.266-1.952c0-1.049.342-1.942 1.027-2.68c-.32-.788-.29-1.673.091-2.652c.252-.079.625-.02 1.119.175c.494.195.856.362 1.086.5c.23.14.414.257.553.352a9.233 9.233 0 0 1 2.497-.338c.859 0 1.691.113 2.498.338l.494-.312a6.997 6.997 0 0 1 1.197-.572c.46-.174.81-.221 1.054-.143c.39.98.424 1.864.103 2.653c.685.737 1.028 1.63 1.028 2.68c0 .737-.089 1.39-.267 1.957c-.177.568-.407 1.023-.689 1.366a3.65 3.65 0 0 1-1.053.865c-.42.234-.828.403-1.223.507a8.9 8.9 0 0 1-1.333.235c.45.39.676 1.005.676 1.846v3.11c0 .147.021.266.065.357a.36.36 0 0 0 .208.189c.096.034.18.056.254.064c.074.01.18.013.318.013h2.914c1.032 0 1.914-.366 2.647-1.099c.732-.732 1.099-1.615 1.099-2.647V3.746c0-1.032-.367-1.914-1.1-2.647z"/>
+        </svg>
+    </a>
+
+
+
+    <a target="_blank" class="social" title="LinkedIn" href="https://linkedin.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1.2em" viewBox="0 0 448 512">
+            <path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5c0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7c-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5c67.2 0 79.7 44.3 79.7 101.9V416z"/>
+        </svg>
+    </a>
+
+
+    <a target="_blank" class="social" title="X" href="https://x.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.1em" height="1.1em" viewBox="0 0 512 472.799">
+            <path fill="currentColor" d="M403.229 0h78.506L310.219 196.04 512 462.799H354.002L230.261 301.007 88.669 462.799h-78.56l183.455-209.683L0 0h161.999l111.856 147.88L403.229 0zm-27.556 415.805h43.505L138.363 44.527h-46.68l283.99 371.278z"/>
+        </svg>
+    </a>
+
+
+    <a target="_blank" class="social" title="Discord" href="https://discord.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M19.27 5.33C17.94 4.71 16.5 4.26 15 4a.09.09 0 0 0-.07.03c-.18.33-.39.76-.53 1.09a16.09 16.09 0 0 0-4.8 0c-.14-.34-.35-.76-.54-1.09c-.01-.02-.04-.03-.07-.03c-1.5.26-2.93.71-4.27 1.33c-.01 0-.02.01-.03.02c-2.72 4.07-3.47 8.03-3.1 11.95c0 .02.01.04.03.05c1.8 1.32 3.53 2.12 5.24 2.65c.03.01.06 0 .07-.02c.4-.55.76-1.13 1.07-1.74c.02-.04 0-.08-.04-.09c-.57-.22-1.11-.48-1.64-.78c-.04-.02-.04-.08-.01-.11c.11-.08.22-.17.33-.25c.02-.02.05-.02.07-.01c3.44 1.57 7.15 1.57 10.55 0c.02-.01.05-.01.07.01c.11.09.22.17.33.26c.04.03.04.09-.01.11c-.52.31-1.07.56-1.64.78c-.04.01-.05.06-.04.09c.32.61.68 1.19 1.07 1.74c.03.01.06.02.09.01c1.72-.53 3.45-1.33 5.25-2.65c.02-.01.03-.03.03-.05c.44-4.53-.73-8.46-3.1-11.95c-.01-.01-.02-.02-.04-.02zM8.52 14.91c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.84 2.12-1.89 2.12zm6.97 0c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.83 2.12-1.89 2.12z"/>
+        </svg>
+    </a>
+
+
+    <a target="_blank" class="social" title="YouTube" href="https://youtube.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M12.006 19.012h-.02c-.062 0-6.265-.012-7.83-.437a2.5 2.5 0 0 1-1.764-1.765A26.494 26.494 0 0 1 1.986 12a26.646 26.646 0 0 1 .417-4.817A2.564 2.564 0 0 1 4.169 5.4c1.522-.4 7.554-.4 7.81-.4H12c.063 0 6.282.012 7.831.437c.859.233 1.53.904 1.762 1.763c.29 1.594.427 3.211.407 4.831a26.568 26.568 0 0 1-.418 4.811a2.51 2.51 0 0 1-1.767 1.763c-1.52.403-7.553.407-7.809.407Zm-2-10.007l-.005 6l5.212-3l-5.207-3Z"/>
+        </svg>
+    </a>
+
+
+    <a target="_blank" class="social" title="Email" href="mailto://user@domain">
+       <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1.2em" viewBox="0 0 485.211 485.211">
+            <path fill="currentColor" d="M301.393,241.631L464.866,424.56H20.332l163.474-182.928l58.801,51.443L301.393,241.631z M462.174,60.651H23.027 l219.579,192.142L462.174,60.651z M324.225,221.67l160.986,180.151V80.792L324.225,221.67z M0,80.792v321.029L160.972,221.64 L0,80.792z"/>
+       </svg>
+    </a>
+
+
+
+
+        <p class="footnote">
+powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a target="_blank" href="https://github.com/lukeorth/poison">poison</a>
+    <br>
+    &copy; 2024 Poison. All rights reserved.
+</p>
+        
+<!-- 标题  -->
+  </div>
+</aside>
+
+            <main class="content container">
+                <div class="posts">
+    
+    
+    <article class="post">
+        <div class="info">
+  <h1 class="post-title">
+    <a href="https://perhapslol.github.io/blog/">第3章：消费者理论</a>
+  </h1>
+
+  <div class="headline">
+    <div>
+      
+      
+      <time datetime=" 2023-4-1T13:43:53-0600" class="post-date">
+        Apr.1, 2023
+      </time>
+      
+      <span> - </span>
+      <span class="reading-time">
+
+
+        <span>20 mins read</span>
+      </span>
+    </div>
+
+    
+    <ul class="tags">
+      
+      <li class="tag-hugo">
+        <a href="https://github.com/perhapslol">Economics</a>
+      </li>
+            <li class="tag-hugo">
+        <a href="https://github.com/perhapslol">Microeconomics</a>
+      </li>
+      
+    </ul>
+    
+  </div>
+  
+  <p class="seriesname">
+    Author: <a href="https://fgzfgz.github.io/">FGZ</a>
+  </p>
+  
+  
+</div>
+        
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+   </head>
+        
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LaTeX in Webpage</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</head>
+<body>
+
+  <script type="text/javascript">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['\\(','\\)']]
+    }
+  });
+  </script>
+</body>
+</html>
+        
+<!-- 正文  -->
+<h1><a id="%E4%B8%80%E3%80%81%E6%95%88%E7%94%A8%E4%B8%8E%E6%95%88%E7%94%A8%E8%AE%BA" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>一、效用与效用论</h1>
+<h2><a id="%EF%BC%88%E4%B8%80%EF%BC%89%E6%95%88%E7%94%A8%E7%9A%84%E6%A6%82%E5%BF%B5" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（一）效用的概念</h2>
+<p>　　效用是指商品满足人的欲望的能力评价，即消费者在消费商品时所感受到的满足程度。</p>
+<h2><a id="%EF%BC%88%E4%BA%8C%EF%BC%89%E5%9F%BA%E6%95%B0%E6%95%88%E7%94%A8%E8%AE%BA%E4%B8%8E%E5%BA%8F%E6%95%B0%E6%95%88%E7%94%A8%E8%AE%BA" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（二）基数效用论与序数效用论</h2>
+<p>　　效用可分为基数效用和序数效用：</p>
+<ul>
+<li>
+<p>基数效用论：</p>
+<ul>
+<li>假设效用可以用基数数字来测量人们消费商品所获取的主观上的满足程度；</li>
+<li>使用[&quot;边际效用法分析&quot;]；</li>
+<li>均衡条件下满足：\(MU_i / P_i  =\lambda\)</li>
+</ul>
+</li>
+<li>
+<p>序数效用论：</p>
+<ul>
+<li>认为效用是无法以数字来测量的，只能根据满足程度的大小按顺序排列；</li>
+<li>使用[&quot;无差异曲线&quot;]作为分析工具；</li>
+<li>均衡条件下满足：\(MRS _ {XY}= MU_ X / MU_ Y = P_ X /P_ Y\)（其中\(MRS _ {XY}\) 是[&quot;边际替代率&quot;]，两种商品消费数量的替代关系）</li>
+</ul>
+</li>
+</ul>
+<h1><a id="%E4%BA%8C%E3%80%81%E5%9F%BA%E6%95%B0%E6%95%88%E7%94%A8%E8%AE%BA%EF%BC%88%E8%BE%B9%E9%99%85%E6%95%88%E7%94%A8%E5%88%86%E6%9E%90%EF%BC%89" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>二、基数效用论（边际效用分析）</h1>
+<h2><a id="%EF%BC%88%E4%B8%80%EF%BC%89%E8%BE%B9%E9%99%85%E6%95%88%E7%94%A8" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（一）边际效用</h2>
+<h3><a id="1%E5%AE%9A%E4%B9%89" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. 定义</h3>
+<p>　　<strong>边际效用</strong>：消费者在一定时间内增加一单位商品的消费所得到的效用量的增量。</p>
+<p>　　定义总效用为：\(TU=f(Q)\)，那么边际效用为：\(MU=\frac {dTU(Q)}  {dQ}\)</p>
+<h3><a id="2%E8%BE%B9%E9%99%85%E6%95%88%E7%94%A8%E9%80%92%E5%87%8F%E8%A7%84%E5%BE%8B" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. 边际效用递减规律</h3>
+<p>　　在一定时间内，在其他商品的消费数量保持不变的条件下，随着消费者对某种商品消费量的增加，消费者从该商品连续增加的每一消费单位中所得到的效用增量即边际效用是递减的。</p>
+<p>　　<strong>边际效用递减满足两个条件：</strong></p>
+<ul>
+<li>一阶条件：\(\frac {\partial TU(x)}  {\partial  x}&gt;0\)，总效用是增函数</li>
+<li>二阶条件：\(\frac {\partial^2 TU(x)}  {\partial  x^2}&lt;0\)，边际效用为减函数</li>
+</ul>
+<p>　　<strong>边际效用递减的原因：</strong></p>
+<ul>
+<li>一是因为生理或心理的原因，人的欲望虽然多种多样，永无止境，但生理等因素的限制，就每个具体的欲望满足来说则是有限的。</li>
+<li>二是设想物品有多种多样的用途，并且各种用途的重要程度不同，人们总会把它先用于最重要用途，然后才是次要的用途，故后一单位的物品给消费者带来的满足或提供的效用一定小于前一单位。</li>
+</ul>
+<h3><a id="3%E8%B4%A7%E5%B8%81%E7%9A%84%E8%BE%B9%E9%99%85%E6%95%88%E7%94%A8" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. 货币的边际效用</h3>
+<p>　　基数效用论认为，货币如同商品，也具有效用，商品的边际效用递减规律对货币同样适用，但在分析消费者行为时，基数效用论通常假定货币的边际效用不变。</p>
+<h3><a id="4%E6%B6%88%E8%B4%B9%E8%80%85%E5%9D%87%E8%A1%A1" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>4. 消费者均衡</h3>
+<h4><a id="4-1%E5%AE%9A%E4%B9%89" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>4.1 定义</h4>
+<p>　　消费者均衡是研究单个消费者如何把有限的货币收入分配在各种商品的购买中以获得最大的效用。消费者在实现最大化效用时，不想增加/减少任何商品购买数量的一种相对静止的状态。</p>
+<h4><a id="4-2%E5%9D%87%E8%A1%A1%E6%9D%A1%E4%BB%B6" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>4.2 均衡条件</h4>
+<p>　　最大化效用：\(\max  \  {U(x_i)}\)</p>
+<p>　　约束条件（预算约束）：\(\sum P_i Q_i =I\)</p>
+<p>　　使用拉格朗日法可以解出，消费者均衡条件为（假设 \(\lambda\) 为不变的货币边际效用）：</p>
+\[\begin {align}
+
+\frac {MU_1} {P_1} = \frac {MU_2} {P_2}= \dots = \frac {MU_n} {P_n} = \lambda
+
+\end {align}
+\]
+<blockquote>
+<p>**数学补充：**拉格朗日乘子法计算过程</p>
+<p>设 \(n\) 种商品的效用函数为 \(U(Q_1, Q_2, ... , Q_n)\)，预算约束为 \(\sum^n_{i=1} P_i Q_i  = I\)</p>
+<p>令拉格朗日函数：\(\Lambda (Q_1, Q_2, \dots , Q_n, \lambda) = U(Q_1, Q_2,  \dots , Q_n) + \lambda \big ( I - \sum^n_{i=1} P_i Q_i \big)\)</p>
+<p>因此，当效用最大化时，应当满足一下条件：</p>
+<p>\(\begin{cases} \frac {\partial \Lambda} {\partial Q_1} = \frac {\partial U} {\partial Q_1} - \lambda P_1 = 0   \notag \\ \frac {\partial \Lambda} {\partial Q_2} = \frac {\partial U} {\partial Q_2} - \lambda P_2 = 0   \notag \\  \ \ \ \ \  \ \ \ \ \ \ \ \  \dots  \\ \frac {\partial \Lambda} {\partial Q_n} = \frac {\partial U} {\partial Q_n} - \lambda P_n = 0   \notag \\ \frac {\partial \Lambda} {\partial \lambda} = I - \sum^n_{i=1} P_i Q_i =0  \notag \\ \end{cases}\)</p>
+<p>其中 \(\frac {\partial U} {\partial Q_i}=MU_i\)，因此可以解得：</p>
+<p>``<br />
+\begin {align}</p>
+<p>\frac {MU_1} {P_1} = \frac {MU_2} {P_2}= ... = \frac {MU_n} {P_n} = \lambda  \notag</p>
+<p>\end {align}<br />
+``</p>
+</blockquote>
+<h3><a id="5%E9%9C%80%E6%B1%82%E6%9B%B2%E7%BA%BF%E6%8E%A8%E5%AF%BC" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>5. 需求曲线推导</h3>
+<p>　　基数效用论者认为，商品的需求价格取决于商品的边际效用，消费者愿意支付的购买价格与商品的边际效用成正比关系。</p>
+<p>　　购买某种商品的效用最大化条件：\(\frac {MU} {P} = \lambda\)（\(\lambda\) 为不变的货币边际效用）。</p>
+<p>　　当消费量增加时，根据边际效用递减规律，所得到的边际效用 \(MU\) 不断递减，消费者愿意支付的价格即需求价格也是递减的。为保证均衡条件的实现，在货币边际效用 \(\lambda\) 不变的前提下，商品的需求价格 \(P\) 与边际效用 \(MU\) 同比例递减，因此建立在边际效用递减规律上的需求曲线是向右下方倾斜的。</p>
+<h1><a id="%E4%B8%89%E3%80%81%E5%BA%8F%E6%95%B0%E6%95%88%E7%94%A8%E8%AE%BA%EF%BC%88%E6%97%A0%E5%B7%AE%E5%BC%82%E6%9B%B2%E7%BA%BF%E5%88%86%E6%9E%90%EF%BC%89" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>三、序数效用论（无差异曲线分析）</h1>
+<h2><a id="%EF%BC%88%E4%B8%80%EF%BC%89%E5%81%8F%E5%A5%BD" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（一）偏好</h2>
+<h3><a id="1%E5%81%8F%E5%A5%BD%E7%9A%84%E5%81%87%E5%AE%9A" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. 偏好的假定</h3>
+<p>　　偏好是指消费者对任意两个商品组合所做的一个排序。</p>
+<p>　　序数效用论者提出了关于消费者偏好的以下五个基本的假定：</p>
+<ul>
+<li><strong>完全性</strong>：消费者总是可以比较和排列所给出的不同商品组合；</li>
+<li><strong>可传递性</strong>：如果消费者对 A 的偏好大于 B，且对 B 的偏好大于 C，那么对 A 的偏好就大于 C；</li>
+<li><strong>局部非饱和性 (局部非厌足性)</strong>：如果两个商品组合的区别仅在于其中一种商品的数量不同，则消费者总是偏好于含有这种商品数量较多的商品组合；</li>
+<li><strong>单调性</strong>：如果一个消费组合所包含的每种商品的数量至少同另一个消费组合一样多，那么这个消费组合至少同另一个消费组合一样好；</li>
+<li><strong>凸性</strong>：无差异曲线凸向原点。（因为多数情况下各种商品是搭配消费的，消费者总是会愿意用一种商品去换取另外的商品，最终消费多样的商品，而非单独一种商品。</li>
+</ul>
+<blockquote>
+<p>**补充：**经济学里曲线的凹凸性，参考数学分析中的函数凹凸性，而非高等数学的曲线凹凸性。</p>
+<p>可以使用二次导数来判别凹函数与凸函数：</p>
+<ul>
+<li>凸函数：\(f''(x)&gt;0\)</li>
+<li>凹函数：\(f''(x)&lt;0\)</li>
+</ul>
+</blockquote>
+<p>　　偏好与偏好假定为借助无差异曲线分析消费者行为提供了条件。</p>
+<h3><a id="2%E6%97%A0%E5%B7%AE%E5%BC%82%E6%9B%B2%E7%BA%BF" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. 无差异曲线</h3>
+<h4><a id="2-1%E5%90%AB%E4%B9%89" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2.1 含义</h4>
+<p>　　无差异曲线（Indifference curve）表示能够给消费者带来相同的效用水平或满足程度的两种商品的所有组合的曲线。在同一条无差异曲线上的点，代表消费者认为无差异的所有可能的消费组合。</p>
+<p>　　与无差异曲线相对应的效用函数：\(U=f(X_1,X_2)=U_0\)</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220428153029-iljki3m.png" style="height:300px" alt="无差异曲线" />
+<h4><a id="2-2%E6%97%A0%E5%B7%AE%E5%BC%82%E6%9B%B2%E7%BA%BF%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%89%B9%E5%BE%81%EF%BC%9A" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2.2 无差异曲线的基本特征：</h4>
+<ul>
+<li>无差异曲线上的点代表的商品组合，给消费者带来的效用相同</li>
+<li>在同一坐标平面上的任何两条无差异曲线之间可以有无数条无差异曲线（远离原点则效用越大）；</li>
+<li>在同一坐标平面图上的任何两条无差异曲线不会相交；</li>
+<li>无差异曲线凸向原点，体现了[&quot;边际替代率递减规律&quot;]（斜率绝对值减小）。</li>
+</ul>
+<h4><a id="2-3%E6%97%A0%E5%B7%AE%E5%BC%82%E6%9B%B2%E7%BA%BF%E7%9A%84%E7%89%B9%E6%AE%8A%E6%83%85%E5%86%B5" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2.3 无差异曲线的特殊情况</h4>
+<h5><a id="%E6%83%85%E5%86%B5%E4%B8%80%EF%BC%9A%E6%96%9C%E7%8E%87%E4%B8%8D%E6%BB%A1%E8%B6%B3%E8%B4%9F%E6%95%B0%E7%9A%84%E7%89%B9%E5%BE%81" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>情况一：斜率不满足负数的特征</h5>
+<p>　　如果不满足偏好的局部非饱和性，即 \(MU&gt;0\)，那么无差异曲线的斜率可能是正数。例如：对于风险偏好者，利率越高（纵轴），风险往往越大（横轴），但风险偏好者的效用会更大。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220428154743-1xchc6f.png"  style="height:300px" />
+<h5><a id="%E6%83%85%E5%86%B5%E4%BA%8C%EF%BC%9A%E4%B8%A4%E4%B8%AA%E4%B8%8D%E5%90%8C%E6%B6%88%E8%B4%B9%E8%80%85%E7%9A%84%E6%97%A0%E5%B7%AE%E5%BC%82%E6%9B%B2%E7%BA%BF%E5%8F%AF%E8%83%BD%E7%9B%B8%E4%BA%A4" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>情况二：两个不同消费者的无差异曲线可能相交</h5>
+<p>　　将两个不同消费者的无差异曲线放在同一坐标轴中，两条无差异曲线<strong>可能相交</strong>。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220428154105-qr50ga9.png" style="height:300px" alt="两个不同消费者的无差异曲线"/>
+<p>　　**无差异曲线越陡峭，表明消费者越喜欢横轴商品。**如图，消费者 1 更喜欢商品 \(X_1\)，消费者 2 更喜欢商品 \(X_2\)。</p>
+<blockquote>
+<p><strong>理解补充：</strong></p>
+<p>对于消费者 1，a 点于 d 点商品组合无差异；对于消费者 2，a 点于 c 点商品组合无差异。两个消费者增加的商品 \(X_1\) 数量相同，但消费者 2 减少的商品 \(X_2\) 数量更少，表明与消费者 1 相比，消费者 2 更偏好商品 \(X_2\)。</p>
+</blockquote>
+<h4><a id="3%E8%BE%B9%E9%99%85%E6%9B%BF%E4%BB%A3%E7%8E%87%E5%8F%8A%E5%85%B6%E9%80%92%E5%87%8F%E8%A7%84%E5%BE%8B" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. 边际替代率及其递减规律</h4>
+<h5><a id="3-1%E8%BE%B9%E9%99%85%E6%9B%BF%E4%BB%A3%E7%8E%87" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.1 边际替代率</h5>
+<p>　　商品的边际替代率（marginal rate of substitution，MRS）是指在维持效用水平不变的前提下，消费者增加一单位某种商品的消费数量时所需要放弃的另一种商品的消费数量。商品 1 对商品 2 的边际替代率的定义公式为：\(MRS_{XY} = - \frac {\Delta Y} {\Delta X} = \frac {MU_X}  {MU_Y}\)</p>
+<p>　　证明过程：在无差异曲线上，效用不变，即 \(dU=0\)，对效用函数进行全微分，可以得到：</p>
+\[\begin {align}
+dU= \frac {\partial U} {\partial X} \cdot dX +  \frac {\partial U} {\partial Y} \cdot dY=0
+\end{align}
+\]
+<p>　　因此：\(\frac {MU_X } {MU_Y } = - \frac {dY} {dX}\)，即 \(MRS_{XY } = \frac {MU_X }  {MU_Y } \)</p>
+<p>　　边际替代率为无差异曲线该点的斜率绝对值。</p>
+<h5><a id="3-2%E8%BE%B9%E9%99%85%E6%9B%BF%E4%BB%A3%E7%8E%87%E9%80%92%E5%87%8F%E8%A7%84%E5%BE%8B" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.2 边际替代率递减规律</h5>
+<p>　　在维持效用水平不变的前提下，随着一种商品的消费数量的连续增加，消费者为得到每一单位的这种商品所需要放弃的另一种商品的消费数量是递减的。</p>
+<p>　　边际替代率递减规律决定了无差异曲线的斜率的绝对值是递减的，即无差异曲线是凸向原点的。</p>
+<h4><a id="4%E6%97%A0%E5%B7%AE%E5%BC%82%E6%9B%B2%E7%BA%BF%E7%9A%84%E7%89%B9%E6%AE%8A%E5%BD%A2%E7%8A%B6" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>4. 无差异曲线的特殊形状</h4>
+<h5><a id="4-1%E5%AE%8C%E5%85%A8%E6%9B%BF%E4%BB%A3%E5%93%81" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>4.1 完全替代品</h5>
+<p>　　完全替代品指两种商品之间的替代比例是固定不变的情况。在完全替代的情况下，两种商品之间的边际替代率 \(MRS_{12}\) 为常数，相应的无差异曲线是一条向下倾斜，斜率不变的直线。</p>
+<p>　　此时，两种商品相应的效用函数为：\(U(x_1,x_2) = ax_1 + bx_2\)</p>
+<p>　　对于完全替代品，边际替代率为：\(MRS_{12}=a\)（\(a\) 是常数）</p>
+<p>　　例如：可口可乐与百事可乐，不同品牌的汽油</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20230219011840-4y4933k.png" style="height:300px" alt="完全替代品" />
+<h5><a id="4-2%E5%AE%8C%E5%85%A8%E4%BA%92%E8%A1%A5%E5%93%81" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>4.2 完全互补品</h5>
+<p>　　完全互补品指两种商品必须按固定不变的比例同时被使用的情况。在完全互补的情况下，相应的无差异曲线为直角形状，且最优消费点为拐点。两种商品相应的效用函数为：\(U(x_1,x_2) =\min(ax_1 , bx_2)\)</p>
+<p>　　对于完全互补品，边际替代率为：\(MRS_{12} =\frac 1 { MRS_{21} }\)</p>
+<p>　　例如：眼镜片与眼镜架，左鞋与右鞋</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20230219011744-5ip2rsj.png" style="height:300px" alt="完全互补品" />
+<h5><a id="4-3%E5%8E%8C%E6%81%B6%E5%93%81" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>4.3 厌恶品</h5>
+<p>　　厌恶品（Bads）就是消费者不喜欢的商品。假设消费者消费的两种商品，一个是喜欢的，一个是厌恶的，当消费者要增加对厌恶品的消费时，若要保持偏好不变，必须要增加对喜欢品的消费，即对消费者进行补偿。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220428162336-4z8gv9g.png" style="height:250px" alt="厌恶品的无差异曲线" />
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20230219012115-nl1nhtq.png" style="height:300px" alt="厌恶品例子" />
+<h5><a id="4-4%E4%B8%AD%E6%80%A7%E5%95%86%E5%93%81" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>4.4 中性商品</h5>
+<p>　　中性商品是消费者无论从哪方面说都不在乎的商品。中性商品的无差异曲线为垂直于横轴的直线。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220428162517-tj36muv.png" style="height:250px" alt="中性商品的无差异曲线"/>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20230219012229-xpjyg2v.png" style="height:300px" alt="中性商品例子"/>
+<h1><a id="%E5%9B%9B%E3%80%81%E9%A2%84%E7%AE%97%E7%BA%A6%E6%9D%9F%E7%BA%BF" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>四、预算约束线</h1>
+<h2><a id="%EF%BC%88%E4%B8%80%EF%BC%89%E6%A6%82%E5%BF%B5" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（一）概念</h2>
+<p>　　预算约束线（budget line）又称为预算线、消费可能线和价格线， 表示在消费者的收入和商品的价格给定的条件下，消费者的全部收入所能购买到的两种商品的各种组合。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220428163017-5s74dk0.png" style="height:300px" alt="预算约束线"/>
+<p>　　预算方程式为： \(P_1 X_1 + P_2 X_2  = I\)</p>
+<p>　　预算约束线以内的区域\(\Delta O Y_{max} X_{max}\)为可行域（灰色部分），为消费者可以负担得起的消费集合。预算约束线外的区域是消费者无法负担的商品组合。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20230219012638-oxhtbzs.png" style="height:300px" alt="预算约束线与可行域"/>
+<h2><a id="%EF%BC%88%E4%BA%8C%EF%BC%89%E9%A2%84%E7%AE%97%E7%BA%BF%E7%9A%84%E5%8F%98%E5%8A%A8" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（二）预算线的变动</h2>
+<h3><a id="1%E6%94%B6%E5%85%A5%E7%9A%84%E5%8F%98%E5%8A%A8%EF%BC%88%E5%9B%BE%E5%83%8F%E5%B9%B3%E7%A7%BB%E5%8F%98%E5%8C%96%EF%BC%89" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. 收入的变动（图像平移变化）</h3>
+<p>　　增加（减少）收入并不会使预算线的斜率发生变化，只会使预算线向外（内）平移。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220428163216-6awa6km.png" style="height:300px" alt="收入变化对预算线的影响"/>
+<h3><a id="2%E4%BB%B7%E6%A0%BC%E7%9A%84%E5%8F%98%E5%8A%A8%EF%BC%88%E5%9B%BE%E5%83%8F%E6%97%8B%E8%BD%AC%E5%8F%98%E5%8C%96%EF%BC%89" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. 价格的变动（图像旋转变化）</h3>
+<p>　　如果商品 1 的价格上升（下降），商品 2 价格不变，纵截距不会发生变化，横截距会变小（变大），从而预算线变得更加陡峭（平坦）。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220428163355-8zt4to8.png" style="height:300px" alt="商品 1 的价格变化对预算线的影响"/>
+<p>　　如果消费者的收入、商品 1 与商品 2 的价格发生同比例同方向的变动，预算约束线不发生变化，消费者花全部收入购买任何一种商品的数量未发生改变。</p>
+<h1><a id="%E4%BA%94%E3%80%81%E6%95%88%E7%94%A8%E6%9C%80%E5%A4%A7%E5%8C%96%E4%B8%8E%E6%B6%88%E8%B4%B9%E8%80%85%E9%80%89%E6%8B%A9" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>五、效用最大化与消费者选择</h1>
+<h2><a id="%EF%BC%88%E4%B8%80%EF%BC%89%E6%B6%88%E8%B4%B9%E8%80%85%E5%9D%87%E8%A1%A1" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（一）消费者均衡</h2>
+<p>　　在一定的预算约束下，为了实现最大的效用，消费者应该选择最优的商品组合，使得两种商品的边际替代率等于两种商品的价格之比。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220428164039-gx45ed4.png" style="height:300px" alt="消费者选择" />
+<p>　　如图，直线 \(AB\) 为预算约束线，\(\Delta OAB\) 为可行消费束，直线 \(AB\) 上方为不可行的消费束；预算约束线 \(AB\) 与无差异曲线 \(U_2\) 相切于 E 点，在 E 点处达到消费者均衡（消费者效用最大化），\(U_2\) 上方为更受偏好的消费束。</p>
+<p>　　无差异曲线与预算线相切时（无差异曲线为标准形式），消费者实现效用最大化。在均衡点有：</p>
+\[\begin {align}
+MRS_{12}=- \frac {P_1} {P_2}
+\end {align}
+\]
+<p>　　等式左边表示消费者的替换意愿，等式右边表示市场的替换意愿。</p>
+<blockquote>
+<p><strong>数学补充：</strong></p>
+<p>使用拉格朗日乘子法证明，过程如下：</p>
+<p>第一步，将经济问题转化成数学模型，即：在约束条件 \(P_1 X_1 + P_2 X_2  = I\) 下，求 \(U(x_1,x_2)\) 的最大值。</p>
+<p>第二步，数学求解。拉格朗日函数：\(\Lambda(x_1,x_2, \lambda) =U(x_1,x_2) + \lambda (I - P_1 X_1 - P_2 X_2 )\)，根据一阶条件求解：</p>
+<p>\(\begin {cases} \frac {\partial \Lambda} {\partial X_1} = \frac {\partial U(x_1,x_2) } {\partial X_1} - \lambda P_1=0     \\ \frac {\partial \Lambda} {\partial X_2} = \frac {\partial U(x_1,x_2) } {\partial X_2} - \lambda P_2=0   \\ \frac {\partial \Lambda} {\partial \lambda} = I - P_1 X_1 - P_2 X_2=0    \\ \end {cases}\)</p>
+<p>可以解得：\(MRS_{12}=- \frac {P_1} {P_2}\)，证毕。</p>
+</blockquote>
+<h2><a id="%EF%BC%88%E4%BA%8C%EF%BC%89%E4%BB%B7%E6%A0%BC%E4%B8%8E%E6%94%B6%E5%85%A5%E5%8F%98%E5%8C%96%E5%AF%B9%E6%B6%88%E8%B4%B9%E8%80%85%E5%9D%87%E8%A1%A1%E7%9A%84%E5%BD%B1%E5%93%8D" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（二）价格与收入变化对消费者均衡的影响</h2>
+<h3><a id="1%E4%BB%B7%E6%A0%BC%E6%B6%88%E8%B4%B9%E6%9B%B2%E7%BA%BF%E5%92%8C%E9%9C%80%E6%B1%82%E6%9B%B2%E7%BA%BF" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. 价格-消费曲线和需求曲线</h3>
+<p>　　价格-消费曲线表示在消费者的偏好、收入以及其他商品价格不变的条件下，与某一种商品的不同价格水平相联系的消费者效用最大化的均衡点的轨迹。</p>
+<p>　　需求曲线是描述商品的需求量和价格关系的曲线，为点 \((X_1 , P_1)\) 的移动轨迹。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/未标题-1-20220428170625-yxyeb5y.png" style="height:750px" alt="价格—消费曲线和需求曲线" />
+<blockquote>
+<p><strong>理解补充：</strong></p>
+<p>商品\(X_1\)价格变动会导致预算约束线\(AB\)围绕\(A\)点发生旋转变动，与不同无差异曲线\(U\)的切点连成的曲线即为价格-消费曲线，表明商品\(X_1\)的价格变动与消费量的关系，由此可以推导出消费者对商品\(X_1\)的需求曲线。</p>
+</blockquote>
+<h3><a id="2%E6%94%B6%E5%85%A5%E6%B6%88%E8%B4%B9%E6%9B%B2%E7%BA%BF%E5%92%8C%E6%81%A9%E6%A0%BC%E5%B0%94%E6%9B%B2%E7%BA%BF" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. 收入-消费曲线和恩格尔曲线</h3>
+<p>　　收入-消费曲线是在消费者的偏好和商品的价格不变的条件下，与消费者的不同收入水平相联系的消费者效用最大化的均衡点的轨迹。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220428170753-7l66mz7.png" style="height:300px" alt="收入—消费曲线"/>
+<p>　　恩格尔曲线（Engel curve）表示消费者在每一收入水平对某商品的需求量。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220428170831-q7rz71t.png" style="height:300px" alt="恩格尔曲线"/>
+<blockquote>
+<p><strong>理解补充：</strong></p>
+<p>消费者收入的变动会导致预算约束线\(AB\)发生平移变化，与不同无差异曲线\(U\)的切点连成的曲线即为收入-消费曲线，由此可以推导出消费者对商品\(X_1\)的恩格尔曲线，反映收入变动与商品\(X_1\)消费量的关系。</p>
+</blockquote>
+<p>　　如果将恩格尔曲线中的商品\(X_1\)指定为食品，那么可以计算出恩格尔系数。</p>
+<p>　　**恩格尔系数：**食品支出总额占个人消费支出总额的比重。</p>
+<ul>
+<li>对于家庭：家庭收入越低，家庭收入中（或总支出中）购买食物支出的占比（占家庭总收入/总支出的比例）往往越大；随着家庭收入的增加，食物支出占比则会下降。</li>
+<li>对于国家：国家越穷，国民收入中用于食物支出的比重往往越大，随着国家的富裕，这个比例呈下降趋势。</li>
+</ul>
+<h1><a id="%E5%85%AD%E3%80%81%E6%B6%88%E8%B4%B9%E8%80%85%E5%89%A9%E4%BD%99" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>六、消费者剩余</h1>
+<h2><a id="%EF%BC%88%E4%B8%80%EF%BC%89%E6%A6%82%E5%BF%B5" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（一）概念</h2>
+<p>　　消费者剩余是指消费者在购买一定数量的某种商品时愿意支付的最高总价格和实际支付的总价格之间的差额。</p>
+<p>　　消费者剩余可以用消费者需求曲线以下、市场价格线之上的面积来表示（下图中的阴影部分面积）。</p>
+<p>　　消费者剩余的数学表达：\(CS= \int_0^{Q_0} f(Q)dQ-P_0 Q_0\)</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220428171007-dj8bkq1.png" style="height:300px" alt="消费者剩余"/>
+<h2><a id="%EF%BC%88%E4%BA%8C%EF%BC%89%E5%B8%82%E5%9C%BA%E7%9A%84%E6%B6%88%E8%B4%B9%E8%80%85%E5%89%A9%E4%BD%99" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（二）市场的消费者剩余</h2>
+<p>　　市场的消费者剩余可以用市场需求曲线以下，市场价格线以上的面积来表示。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220428171216-gpmr41u.png" style="height:300px" alt="市场的消费者剩余"/>
+<h1><a id="%E4%B8%83%E3%80%81%E6%9B%BF%E4%BB%A3%E6%95%88%E5%BA%94%E4%B8%8E%E6%94%B6%E5%85%A5%E6%95%88%E5%BA%94" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>七、替代效应与收入效应</h1>
+<h2><a id="%EF%BC%88%E4%B8%80%EF%BC%89%E6%A6%82%E5%BF%B5" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（一）概念</h2>
+<p>　　一种商品价格变动会对消费者产生两方面的影响，一是使商品的相对价格发生变动，二是使消费者的收入相对于以前发生变动。</p>
+<p>　　<strong>替代效应</strong>：由于一种商品价格变动而引起的商品的相对价格发生变动，从而导致消费者在保持效用不变的条件下对商品需求量的改变， 称为价格变动的替代效应（substitute effect）。</p>
+<p>　　<strong>收入效应</strong>：由于一种商品价格变动而引起的消费者实际收入发生变动，从而导致消费者对商品需求量的改变，称为价格变动的收入效应（income effect）。</p>
+<p>　　\(总效应=替代效应＋收入效应\)</p>
+<p>　　其中，收入效应表示消费者的效用水平发生变化，替代效应则不改变消费者的效用水平。</p>
+<h2><a id="%EF%BC%88%E4%BA%8C%EF%BC%89%E4%B8%8D%E5%90%8C%E5%95%86%E5%93%81%E7%9A%84%E6%9B%BF%E4%BB%A3%E6%95%88%E5%BA%94%E4%B8%8E%E6%94%B6%E5%85%A5%E6%95%88%E5%BA%94" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（二）不同商品的替代效应与收入效应</h2>
+<h3><a id="1%E6%AD%A3%E5%B8%B8%E5%93%81" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. 正常品</h3>
+<p>　　对于正常品来说，替代效应与价格呈反方向的变动。收入效应也与价格呈反方向的变动，在它们的共同作用下，总效应必定与价格呈反方向的变动。正常品的需求曲线向右下方倾斜。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220428171628-bw03ock.png" style="height:300px" alt="正常品的替代效应和收入效应"/>
+<p>　　如果商品 \(X_1\) 降价，商品 \(X_2\) 价格不变，此时替代效应 \(\Delta X_1&gt;0\)，收入效应 \(\Delta X_2&gt;0\)，因此总效应 \(\Delta X = \Delta X_1 + \Delta X_2&gt;0\)。</p>
+<h3><a id="2%E5%8A%A3%E7%AD%89%E5%93%81" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. 劣等品</h3>
+<p>　　对于劣等品来说，替代效应与价格呈反方向的变动，收入效应与价格呈同方向的变动，而且，在大多数的场合，收入效应的作用小于替代效应的作用，所以，总效应与价格呈反方向的变动，相应的需求曲线向右下方倾斜。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220428171842-tabr73d.png" style="height:300px" alt="劣等品的替代效应和收入效应"/>
+<p>　　如果商品 \(X_1\) 降价，商品 \(X_2\) 价格不变，此时替代效应 \(\Delta X_1&gt;0\)，收入效应 \(\Delta X_2&lt;0\)，且 $|\Delta X_1| &gt; |\Delta X_2|$，因此总效应 \(\Delta X = \Delta X_1 + \Delta X_2&gt;0\)。</p>
+<h3><a id="3%E5%90%89%E8%8A%AC%E5%95%86%E5%93%81" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. 吉芬商品</h3>
+<p>　　19 世纪，英国统计学家罗伯特·吉芬发现一个现象， 1845 年爱尔兰发生灾荒，导致土豆价格上升，但居民对土豆的需求量却反而增加了，而这无法用传统的经济学理论进行解释，故此现象称为“吉芬难题”，并将需求量与价格同方向变动的物品称之为“吉芬品”。</p>
+<p>　　吉芬商品不符合[&quot;需求定理&quot;]。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220428172644-mku716l.png" style="height:300px" alt="吉芬品的替代效应和收入效应"/>
+<p>　　**吉芬商品是一种特殊的劣等品。**作为劣等品，吉芬品的替代效应与价格呈反方向的变动，收入效应则与价格呈同方向的变动。吉芬品的特殊性就在于：它的收入效应的作用很大，以至于超过了替代效应的作用，从而使得总效应与价格呈同方向的变动。这也就是吉芬品的需求曲线呈现出向右上方倾斜的特殊形状的原因。</p>
+<p>　　如果商品 \(X_1\) 降价，商品 \(X_2\) 价格不变，此时替代效应 \(\Delta X_1&gt;0\)，收入效应 \(\Delta X_2&lt;0\)，且 $|\Delta X_1| &lt; |\Delta X_2|$，因此总效应 \(\Delta X = \Delta X_1 + \Delta X_2&lt;0\)。</p>
+<h1><a id="%E5%85%AB%E3%80%81%E4%BB%8E%E5%8D%95%E4%B8%AA%E6%B6%88%E8%B4%B9%E8%80%85%E7%9A%84%E9%9C%80%E6%B1%82%E6%9B%B2%E7%BA%BF%E5%88%B0%E5%B8%82%E5%9C%BA%E9%9C%80%E6%B1%82%E6%9B%B2%E7%BA%BF" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>八、从单个消费者的需求曲线到市场需求曲线</h1>
+<p>　　一种商品的市场需求是指在一定时期内在各种不同的价格下市场中所有消费者对某种商品的需求数量。假定在某一商品市场上有 n 个消费者，他们都具有不同的个人需求函数 \(Q_i^d =f_i(P)\)，则该商品市场的需求函数为：\(Q^d = \sum _{i=1} ^ n f_i(P) =  F(P)\)</p>
+<p>　　即一种商品的市场需求量是每一个价格水平上的该商品的所有个人需求量的水平加总。</p>
+<p>　　由于市场需求曲线是所有消费者的需求曲线的加总，因此可能会出现弯折。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220515164837-gnmpm7i.png" style="height:300px" alt="从单个消费者的需求曲线到市场需求曲线" />
+<h1><a id="%E4%B9%9D%E3%80%81%E4%B8%8D%E7%A1%AE%E5%AE%9A%E6%80%A7%E5%92%8C%E9%80%89%E6%8B%A9" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>九、不确定性和选择</h1>
+<h2><a id="%EF%BC%88%E4%B8%80%EF%BC%89%E4%B8%8D%E7%A1%AE%E5%AE%9A%E6%80%A7%E4%B8%8E%E9%A3%8E%E9%99%A9" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（一）不确定性与风险</h2>
+<p>　　<strong>不确定性</strong>：经济行为者在事先不能准确地知道自己的某种决策的结果。或者说，只要经济行为者的一种决策的可能结果不止一种，就会产生不确定性。</p>
+<p>　　<strong>风险</strong>：在消费者知道自己某种行为决策的各种可能的结果同时，如果消费者还知道各种可能的结果发生的概率，则可以称这种不确定的情况为风险。</p>
+<h2><a id="%EF%BC%88%E4%BA%8C%EF%BC%89%E6%9C%9F%E6%9C%9B%E6%95%88%E7%94%A8%E5%92%8C%E6%9C%9F%E6%9C%9B%E5%80%BC%E7%9A%84%E6%95%88%E7%94%A8" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（二）期望效用和期望值的效用</h2>
+<h3><a id="1%E6%9C%9F%E6%9C%9B%E6%95%88%E7%94%A8%E5%87%BD%E6%95%B0" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. 期望效用函数</h3>
+<p>　　从不确定性出发，考虑消费者的偏好与效用函数就得引进概率。含概率的效用函数表达式称之为期望效用函数。期望效用函数的形式为：</p>
+\[\begin {align}
+E[U(W_1,W_2)]=pU(W_1)+(1-p)U(W_2)
+\end {align}
+\]
+<p>　　将上述这种特殊形式的效用函数称为期望效用函数（expected utility function），或称为冯·诺依曼-摩根斯顿效用函数（VNM）。</p>
+<h3><a id="2%E6%9C%9F%E6%9C%9B%E5%80%BC%E7%9A%84%E6%95%88%E7%94%A8" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. 期望值的效用</h3>
+<p>　　对于一张彩票 \(L=L(p,W_1,W_2)\) 来说，期望值为：\(pW_1+(1-p)W_2\)</p>
+<p>　　彩票期望值的效用为：\(U[pW_1+(1-p)W_2]\)</p>
+<h3><a id="3%E6%B6%88%E8%B4%B9%E8%80%85%E5%AF%B9%E9%A3%8E%E9%99%A9%E7%9A%84%E6%80%81%E5%BA%A6" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. 消费者对风险的态度</h3>
+<p>　　根据个人面对风险的态度不同，把人们对风险的态度分为三类：风险回避者、风险爱好者和风险中立者。</p>
+<h4><a id="3-1%E9%A3%8E%E9%99%A9%E8%A7%84%E9%81%BF%E8%80%85" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.1 风险规避者</h4>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220428182511-o2jzkcv.png" style="height:300px" alt="风险回避者的效用函数"/>
+<p>　　风险规避者的效用函数是<strong>严格凹性</strong>的，用数学语言表示为：\(U'(W)&gt;0\)，\(U''(W)&lt;0\)，他们的财富的期望效用小于财富的期望值效用。</p>
+<blockquote>
+<p><strong>理解补充：</strong></p>
+<p>风险规避者的效用曲线逐渐趋于平缓，这表明随着风险的升高，他们需要更多的风险补偿才能够让其效用水平有较大幅度的上升。当风险超过一定风险后，不论风险补偿的金额有多高（例如\(W_2\)点以后），消费者的效用也不会有明显上升。</p>
+</blockquote>
+<h4><a id="3-2%E9%A3%8E%E9%99%A9%E7%88%B1%E5%A5%BD%E8%80%85" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.2 风险爱好者</h4>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220428154743-1xchc6f.png" style="height:300px" alt="风险爱好者的效用函数"/>
+<p>　　风险爱好者的效用函数是<strong>严格凸性</strong>的，用数学语言表示为：\(U'(W)&gt;0\)，\(U''(W)&gt;0\)，他们的财富的期望效用大于财富的期望值效用。</p>
+<blockquote>
+<p><strong>理解补充：</strong></p>
+<p>风险爱好者的效用曲线不断上升，这表明随着风险的升高，他们仅需要增加一点风险补偿，就可以让其效用水平有较大幅度的上升。考虑到曲线的斜率不断变大，风险带来的效用会来越大。</p>
+</blockquote>
+<h4><a id="3-3%E9%A3%8E%E9%99%A9%E4%B8%AD%E7%AB%8B%E8%80%85" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.3 风险中立者</h4>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220428182855-zl73fsq.png" style="height:300px" alt="风险中立者的效用函数"/>
+<p>　　风险中立者的效用函数是<strong>线性</strong>的， 用数学语言表示为：\(U'(W)&gt;0\)，\(U''(W)=0\)，他们的财富的期望效用等于财富的期望值效用。</p>
+<blockquote>
+<p><strong>理解补充：</strong></p>
+<p>风险中立者的效用曲线为一条直线，这表明对风险是完全理性的，风险补偿的提高可以使得他们的效用按照线性增加。</p>
+</blockquote>
+<h3><a id="4%E9%99%8D%E4%BD%8E%E9%A3%8E%E9%99%A9%E7%9A%84%E6%96%B9%E5%BC%8F" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>4. 降低风险的方式</h3>
+<ul>
+<li><strong>多样化选择</strong>：消费者在计划未来一段时间内的某项带有风险的经济活动时，可以采取多样化的行动，以降低风险。</li>
+<li><strong>风险分散</strong>：投资者通过投资许多项目或者持有许多公司的股票而分散风险以这种一多种形式持有资产的方式，可以一定程度避免持有单一资产而发生的风险，投资报酬会更加确定。</li>
+<li><strong>保险</strong>：在消费者面临风险时，风险规避者会愿意放弃一部分收入去购买保险。如果保险的价格等于预期损失，风险规避者会购买足够的保险，以使他们从任何可能遭受的损失中得到全额补偿，与存在无损失时高收入、有损失时低收入的情况相比，确定收入给他们带来的效用更高。</li>
+<li>此外，消费者可以自保，一是采取祖产多元化组合，如购买共同互助基金；二是向某些基金存放资金，以抵消未来损失或收入降低。</li>
+</ul>
+
+
+        <div class="read-more-link">
+            <a href="https://perhapslol.github.io/blog/">Back Home…</a>
+        </div>
