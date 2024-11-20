@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+    
+<script defer language="javascript" type="text/javascript" src="/js/bundle.min.444d89fe8d19b9e466eca93647da936356d2c582a54abec3037b88c2e785e61e.js"></script>
+
+<script defer data-domain="https://perhapslol.github.io/blog/" src="https://plausible.lukeorth.com/js/script.js"></script>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+   
+
+
+<!-- Open Graph image and Twitter Card metadata -->
+
+<title itemprop="name">Perhaps</title>
+<meta property="og:title" content=Perhaps />
+<meta name="twitter:title" content=perhapslol />
+<meta itemprop="name" content=Perhaps />
+<meta name="application-name" content=perhapslol />
+<meta property="og:site_name" content="perhapslol" />
+
+
+<meta name="description" content="A pragmatic Hugo theme for bloggers. Based on the classic &lt;a href=&#34;https://github.com/poole/hyde&#34; target=&#34;_blank&#34;&gt;Hyde&lt;/a&gt; design by &lt;a href=&#34;https://github.com/mdo&#34; target=&#34;_blank&#34;&gt;@mdo&lt;/a&gt;" />
+
+
+
+<base href="https://poison.lukeorth.com/" />
+<link rel="sitemap" type="application/xml" title="Sitemap" href='https://poison.lukeorth.com/sitemap.xml' />
+<meta name="robots" content="index,follow" />
+<meta name="googlebot" content="index,follow" />
+    <meta name="twitter:site" content="@" />
+    <meta name="twitter:creator" content="@" />
+
+<meta property="fb:admins" content="" />
+<meta name="apple-mobile-web-app-title" content="Poison" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="generator" content="Hugo 0.124.0">
+
+
+    
+    
+
+<link type="text/css" rel="stylesheet" href="/css/bundle.min.94a339836f89f0d25f31980cb6b0631da21e20af128308747ce44e0525eb16ef.css">
+
+
+    
+    <style>
+    body {
+        --sidebar-bg-color: #202020;
+        --sidebar-img-border-color: #515151;
+        --sidebar-p-color: #909090;
+        --sidebar-h1-color: #FFF;
+        --sidebar-a-color: #FFF;
+        --sidebar-socials-color: #FFF;
+        --text-color: #222;
+        --bkg-color: #FAF9F6;
+        --post-title-color: #303030;
+        --list-color: #5a5a5a;
+        --link-color: #268bd2;
+        --date-color: #515151;
+        --table-border-color: #E5E5E5;
+        --table-stripe-color: #F9F9F9;
+        --code-color: #000;
+        --code-background-color: #E5E5E5;
+        --code-block-color: #fff;
+        --code-block-background-color: #272822;
+        --moon-sun-color: #FFF;
+        --moon-sun-background-color: #515151;
+    }
+    body.dark-theme {
+        --text-color: #eee;
+        --bkg-color: #121212;
+        --post-title-color: #DBE2E9;
+        --list-color: #9d9d9d;
+        --link-color: #268bd2;
+        --date-color: #9a9a9a;
+        --table-border-color: #515151;
+        --table-stripe-color: #202020;
+        --code-color: #fff;
+        --code-background-color: #515151;
+        --code-block-color: #fff;
+        --code-block-background-color: #272822;
+    }
+    body {
+        background-color: var(--bkg-color);
+    }
+</style>
+
+</head>
+
+    <body class="light-theme">
+        <div class="wrapper">
+            <aside class="sidebar">
+    <div class="container sidebar-sticky">
+        <div class="light-dark" align="right">
+    <button class="btn-light-dark" title="Toggle light/dark mode">
+        <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+            <path fill="currentColor" d="M6 .278a.768.768 0 0 1 .08.858a7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277c.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316a.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71C0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+        </svg>
+        <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+            <path fill="currentColor" d="M8 12a4 4 0 1 0 0-8a4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+        </svg>
+    </button>
+</div>
+
+        <div class="sidebar-about">
+    <h1 class="brand">
+        
+            <a href="https://perhapslol.github.io/blog/">
+                <img src="https://avatars.githubusercontent.com/u/130022120?v=4" alt="brand image">
+            </a>
+        
+        
+                       <a href="https://perhapslol.github.io/blog/">
+                <h1>Perhaps</h1>
+            </a>
+        
+    </h1>
+    <p class="lead">
+    春华夕拾 <a href="https://github.com/poole/hyde" target="_blank"></a>  <a href="https://github.com/mdo" target="_blank"></a>
+    </p>
+</div>
+
+        <nav>
+    <ul class="sidebar-nav">
+
+                
+                    <li class="heading">
+                        <a href="https://perhapslol.github.io/blog/Post/">Posts</a>
+                    </li>
+                        <li class="sub-heading">
+                            Stocks
+                        </li>
+                        <li class="sub-heading">
+                            IPO
+                        </li>
+                        <li class="sub-heading">
+                            Listed Companies
+                        </li>
+                        
+                    <a href="https://perhapslol.github.io/blog/Economics/">Economics</a>
+                    </li>
+                        <li class="sub-heading">
+                            Macro
+                        </li>
+                        <li class="sub-heading">
+                            Micro
+                        </li>
+    </ul>
+</nav>
+
+
+        
+    <a target="_blank" class="social" title="GitHub" href="https://github.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="-2 -2 24 24">
+            <path fill="currentColor" d="M18.88 1.099C18.147.366 17.265 0 16.233 0H3.746C2.714 0 1.832.366 1.099 1.099C.366 1.832 0 2.714 0 3.746v12.487c0 1.032.366 1.914 1.099 2.647c.733.733 1.615 1.099 2.647 1.099H6.66c.19 0 .333-.007.429-.02a.504.504 0 0 0 .286-.169c.095-.1.143-.245.143-.435l-.007-.885c-.004-.564-.006-1.01-.006-1.34l-.3.052c-.19.035-.43.05-.721.046a5.555 5.555 0 0 1-.904-.091a2.026 2.026 0 0 1-.872-.39a1.651 1.651 0 0 1-.572-.8l-.13-.3a3.25 3.25 0 0 0-.41-.663c-.186-.243-.375-.407-.566-.494l-.09-.065a.956.956 0 0 1-.17-.156a.723.723 0 0 1-.117-.182c-.026-.061-.004-.111.065-.15c.07-.04.195-.059.378-.059l.26.04c.173.034.388.138.643.311a2.1 2.1 0 0 1 .631.677c.2.355.44.626.722.813c.282.186.566.28.852.28c.286 0 .533-.022.742-.065a2.59 2.59 0 0 0 .585-.196c.078-.58.29-1.028.637-1.34a8.907 8.907 0 0 1-1.333-.234a5.314 5.314 0 0 1-1.223-.507a3.5 3.5 0 0 1-1.047-.872c-.277-.347-.505-.802-.683-1.365c-.177-.564-.266-1.215-.266-1.952c0-1.049.342-1.942 1.027-2.68c-.32-.788-.29-1.673.091-2.652c.252-.079.625-.02 1.119.175c.494.195.856.362 1.086.5c.23.14.414.257.553.352a9.233 9.233 0 0 1 2.497-.338c.859 0 1.691.113 2.498.338l.494-.312a6.997 6.997 0 0 1 1.197-.572c.46-.174.81-.221 1.054-.143c.39.98.424 1.864.103 2.653c.685.737 1.028 1.63 1.028 2.68c0 .737-.089 1.39-.267 1.957c-.177.568-.407 1.023-.689 1.366a3.65 3.65 0 0 1-1.053.865c-.42.234-.828.403-1.223.507a8.9 8.9 0 0 1-1.333.235c.45.39.676 1.005.676 1.846v3.11c0 .147.021.266.065.357a.36.36 0 0 0 .208.189c.096.034.18.056.254.064c.074.01.18.013.318.013h2.914c1.032 0 1.914-.366 2.647-1.099c.732-.732 1.099-1.615 1.099-2.647V3.746c0-1.032-.367-1.914-1.1-2.647z"/>
+        </svg>
+    </a>
+
+
+
+    <a target="_blank" class="social" title="LinkedIn" href="https://linkedin.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1.2em" viewBox="0 0 448 512">
+            <path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5c0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7c-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5c67.2 0 79.7 44.3 79.7 101.9V416z"/>
+        </svg>
+    </a>
+
+
+    <a target="_blank" class="social" title="X" href="https://x.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.1em" height="1.1em" viewBox="0 0 512 472.799">
+            <path fill="currentColor" d="M403.229 0h78.506L310.219 196.04 512 462.799H354.002L230.261 301.007 88.669 462.799h-78.56l183.455-209.683L0 0h161.999l111.856 147.88L403.229 0zm-27.556 415.805h43.505L138.363 44.527h-46.68l283.99 371.278z"/>
+        </svg>
+    </a>
+
+
+    <a target="_blank" class="social" title="Discord" href="https://discord.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M19.27 5.33C17.94 4.71 16.5 4.26 15 4a.09.09 0 0 0-.07.03c-.18.33-.39.76-.53 1.09a16.09 16.09 0 0 0-4.8 0c-.14-.34-.35-.76-.54-1.09c-.01-.02-.04-.03-.07-.03c-1.5.26-2.93.71-4.27 1.33c-.01 0-.02.01-.03.02c-2.72 4.07-3.47 8.03-3.1 11.95c0 .02.01.04.03.05c1.8 1.32 3.53 2.12 5.24 2.65c.03.01.06 0 .07-.02c.4-.55.76-1.13 1.07-1.74c.02-.04 0-.08-.04-.09c-.57-.22-1.11-.48-1.64-.78c-.04-.02-.04-.08-.01-.11c.11-.08.22-.17.33-.25c.02-.02.05-.02.07-.01c3.44 1.57 7.15 1.57 10.55 0c.02-.01.05-.01.07.01c.11.09.22.17.33.26c.04.03.04.09-.01.11c-.52.31-1.07.56-1.64.78c-.04.01-.05.06-.04.09c.32.61.68 1.19 1.07 1.74c.03.01.06.02.09.01c1.72-.53 3.45-1.33 5.25-2.65c.02-.01.03-.03.03-.05c.44-4.53-.73-8.46-3.1-11.95c-.01-.01-.02-.02-.04-.02zM8.52 14.91c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.84 2.12-1.89 2.12zm6.97 0c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.83 2.12-1.89 2.12z"/>
+        </svg>
+    </a>
+
+
+    <a target="_blank" class="social" title="YouTube" href="https://youtube.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M12.006 19.012h-.02c-.062 0-6.265-.012-7.83-.437a2.5 2.5 0 0 1-1.764-1.765A26.494 26.494 0 0 1 1.986 12a26.646 26.646 0 0 1 .417-4.817A2.564 2.564 0 0 1 4.169 5.4c1.522-.4 7.554-.4 7.81-.4H12c.063 0 6.282.012 7.831.437c.859.233 1.53.904 1.762 1.763c.29 1.594.427 3.211.407 4.831a26.568 26.568 0 0 1-.418 4.811a2.51 2.51 0 0 1-1.767 1.763c-1.52.403-7.553.407-7.809.407Zm-2-10.007l-.005 6l5.212-3l-5.207-3Z"/>
+        </svg>
+    </a>
+
+
+    <a target="_blank" class="social" title="Email" href="mailto://user@domain">
+       <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1.2em" viewBox="0 0 485.211 485.211">
+            <path fill="currentColor" d="M301.393,241.631L464.866,424.56H20.332l163.474-182.928l58.801,51.443L301.393,241.631z M462.174,60.651H23.027 l219.579,192.142L462.174,60.651z M324.225,221.67l160.986,180.151V80.792L324.225,221.67z M0,80.792v321.029L160.972,221.64 L0,80.792z"/>
+       </svg>
+    </a>
+
+
+
+
+        <p class="footnote">
+powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a target="_blank" href="https://github.com/lukeorth/poison">poison</a>
+    <br>
+    &copy; 2024 Poison. All rights reserved.
+</p>
+        
+<!-- 标题  -->
+  </div>
+</aside>
+
+            <main class="content container">
+                <div class="posts">
+    
+    
+    <article class="post">
+        <div class="info">
+  <h1 class="post-title">
+    <a href="https://perhapslol.github.io/blog/">第6章：产品市场理论—完全竞争市场</a>
+  </h1>
+
+  <div class="headline">
+    <div>
+      
+      
+      <time datetime=" 2023-4-1T13:43:53-0600" class="post-date">
+        Apr.1, 2023
+      </time>
+      
+      <span> - </span>
+      <span class="reading-time">
+
+
+        <span>20 mins read</span>
+      </span>
+    </div>
+
+    
+    <ul class="tags">
+      
+      <li class="tag-hugo">
+        <a href="https://github.com/perhapslol">Economics</a>
+      </li>
+            <li class="tag-hugo">
+        <a href="https://github.com/perhapslol">Microeconomics</a>
+      </li>
+      
+    </ul>
+    
+  </div>
+  
+  <p class="seriesname">
+    Author: <a href="https://fgzfgz.github.io/">FGZ</a>
+  </p>
+  
+  
+</div>
+        
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+   </head>
+        
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LaTeX in Webpage</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</head>
+<body>
+
+  <script type="text/javascript">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['\\(','\\)']]
+    }
+  });
+  </script>
+</body>
+</html>
+        
+<!-- 正文  -->
+<h1><a id="%E4%B8%80%E3%80%81%E5%B8%82%E5%9C%BA%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%88%92%E5%88%86" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>一、市场类型的划分</h1>
+<p>　　在经济分析中，根据不同的市场结构的特征，市场可分为[&quot;完全竞争市场&quot;]、[&quot;垄断竞争市场&quot;]、[&quot;寡头垄断市场&quot;]和[&quot;垄断市场&quot;]四种类型。</p>
+<p>　　市场划分依据：</p>
+<ul>
+<li>市场上厂商数量；</li>
+<li>商场生产产品的差别程度；</li>
+<li>单个厂商对价格的控制程度；</li>
+<li>厂商进入或退出行业的难易程度。</li>
+</ul>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20230314163057-vu0krhx.png" alt="不同市场的比较" />
+<h1><a id="%E4%BA%8C%E3%80%81%E5%8E%82%E5%95%86%E7%9A%84%E6%94%B6%E7%9B%8A%E4%B8%8E%E5%88%A9%E6%B6%A6" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>二、厂商的收益与利润</h1>
+<h2><a id="%EF%BC%88%E4%B8%80%EF%BC%89%E5%8E%82%E5%95%86%E7%9A%84%E6%94%B6%E7%9B%8A" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（一）厂商的收益</h2>
+<p>　　厂商的收益是厂商的销售收入：</p>
+<p>　　<strong>总收益</strong>（\(TR\)）：厂商按一定价格出售一定数量产品时获得的全部收入。\(TR(Q)=P \cdot Q\)</p>
+<p>　　<strong>平均收益</strong>（\(AR\)）：厂商在平均每一单位产品销售上所获得的收入。\(AR(Q)=\frac {TR(Q)} Q\)</p>
+<p>　　<strong>边际收益</strong>（\(MR\)）：厂商增加一单位产品销售所获得的总收入的增量。\(MR(Q)=\frac {\Delta TR(Q)}  {\Delta Q} = \frac {d TR(Q)}  {dQ}\)</p>
+<h2><a id="%EF%BC%88%E4%BA%8C%EF%BC%89%E5%88%A9%E6%B6%A6%E5%87%BD%E6%95%B0%E4%B8%8E%E5%88%A9%E6%B6%A6%E6%9C%80%E5%A4%A7%E5%8C%96%E6%9D%A1%E4%BB%B6" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（二）利润函数与利润最大化条件</h2>
+<p>　　利润函数：\(\pi (Q)=TR(Q)-TC(Q)\)</p>
+<p>　　不论对哪种类型的厂商，利润最大化的条件都是 \(MR=MC\)。在短期生产中：</p>
+<ul>
+<li>只要 \(MR&gt;MC\)，厂商扩大生产就有利可图，会选择增加产量；</li>
+<li>只要 \(MR&lt;MC\)，厂商扩大生产就会减少利润，会选择减少产量；</li>
+<li>当 \(MR=MC\) 时，厂商的利润达到最大（或亏损最小），不会选择增加或减少产量。</li>
+</ul>
+<blockquote>
+<p><strong>数学补充：</strong></p>
+<p>证明：厂商的利润最大化条件是 \(MR=MC\)</p>
+<p>利润函数：\(\pi (Q)=TR(Q)-TC(Q)\)</p>
+<p>将上式两边对产量 \(Q\) 求导数，可得一阶条件：\(\frac {d \pi (Q)} {dQ}=\frac {d TR(Q) } {dQ}- \frac {d TC(Q)} {dQ}=MR(Q)-MC(Q)\)</p>
+<p>当 \(\frac {d \pi (Q)} {dQ}=0\) 时，厂商的利润最大，或亏损最小，此时：\(MR(Q)=MC(Q)\)</p>
+<p>二阶条件即充分条件为：\(\frac {d \pi ^2 (Q)} {dQ^2} = {MR}'(Q)-{MC}'(Q) &lt; 0\)，即 \({MR}'(Q)&lt;{MC}'(Q)\)</p>
+<p>注：当 \(MR=MC\) 时，厂商不一定能获得利润，而是保证厂商处于由既定的成本状况与收益状况所决定的最好情况之中，此时厂商的可以获得最大利润或最小亏损。</p>
+</blockquote>
+<h1><a id="%E4%B8%89%E3%80%81%E5%AE%8C%E5%85%A8%E7%AB%9E%E4%BA%89%E5%B8%82%E5%9C%BA" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>三、完全竞争市场</h1>
+<h2><a id="%EF%BC%88%E4%B8%80%EF%BC%89%E5%AE%8C%E5%85%A8%E7%AB%9E%E4%BA%89%E5%B8%82%E5%9C%BA%E7%9A%84%E6%9D%A1%E4%BB%B6" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（一）完全竞争市场的条件</h2>
+<ul>
+<li><strong>厂商没有定价权</strong>：市场上有大量的买者和卖者，买者和卖者都是价格的接受者，单个买者与卖者不能影响市场交易价格与交易数量；</li>
+<li><strong>商品无差异</strong>：市场上每一个厂商提供的商品都是完全同质的，所有厂商提供的同类产品完全可替代；</li>
+<li><strong>产品与要素自由流通</strong>：所有的资源具有完全的流动性</li>
+<li><strong>完全信息</strong>：不存在信息不对称或信息不完全，每个消费者与生产者掌握所有与自己的经济决策相关的信息。</li>
+</ul>
+<h2><a id="%EF%BC%88%E4%BA%8C%EF%BC%89%E5%AE%8C%E5%85%A8%E7%AB%9E%E4%BA%89%E5%8E%82%E5%95%86%E7%9A%84%E9%9C%80%E6%B1%82%E6%9B%B2%E7%BA%BF" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（二）完全竞争厂商的需求曲线</h2>
+<p>　　市场需求曲线是一条向右下方倾斜的曲线，单个企业所面临的需求曲线是一条由既定市场价格水平出发的水平线。</p>
+<p>　　完全竞争市场的需求与供给决定价格，厂商根据价格作出生产决策（决定生产数量）。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220429000557-2a2tbzg.png" style="height:300px" alt="完全竞争厂商的需求曲线" />
+<p>　　<strong>消费者收入变化</strong>、<strong>新技术推广应用</strong>、<strong>政府相关政策</strong>等会影响完全竞争市场的供需关系，进而影响市场价格与厂商的生产决策。</p>
+<p>　　完全竞争市场的需求曲线为该行业所有厂商的需求曲线之和。</p>
+<h2><a id="%EF%BC%88%E4%B8%89%EF%BC%89%E5%AE%8C%E5%85%A8%E7%AB%9E%E4%BA%89%E5%8E%82%E5%95%86%E7%9A%84%E6%94%B6%E7%9B%8A%E6%9B%B2%E7%BA%BF" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（三）完全竞争厂商的收益曲线</h2>
+<h3><a id="1%E5%AE%8C%E5%85%A8%E7%AB%9E%E4%BA%89%E5%8E%82%E5%95%86%E7%9A%84%E6%94%B6%E7%9B%8A%E6%9B%B2%E7%BA%BF" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. 完全竞争厂商的收益曲线</h3>
+<p>　　总收益 \(TR\)，当价格对于单个企业为常数（他是价格接受者）时，\(MR=\frac {dTR} {dQ}=\frac {d(P\cdot Q)} {dQ}=P\)</p>
+<p>　　对于任何一个厂商来说，平均收益总是等于价格。因此，完全竞争厂商的需求曲线、平均收益和边际收益曲线三线合一，即 \(AR=MR=P\)，都从同一价格水平出发。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220429001302-qewojid.png" style="height:300px" alt="完全竞争厂商的各条收益曲线" />
+<p>　　\(AR=P\) 在任何市场中都存在，但由于 \(MR=AR\) 仅有在完全竞争市场才可以成立，因此 \(AR=MR=P\) 三线合一仅有在完全竞争市场才会出现。</p>
+<h3><a id="2%E5%88%A9%E6%B6%A6%E6%9C%80%E5%A4%A7%E5%8C%96%E7%9A%84%E7%9F%AD%E6%9C%9F%E5%9D%87%E8%A1%A1%E6%9D%A1%E4%BB%B6" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. 利润最大化的短期均衡条件</h3>
+<p>　　厂商的[&quot;利润最大化条件&quot;]（短期均衡）为 \(MC=MR\)，由于完全竞争厂商 \(AR=MR=P\)，因此，短期内 \(P=MC(Q)\)。</p>
+<p>　　对于完全竞争厂商来说，市场价格水平是给定的，单个厂商只能通过调整自身产量，使自身实现利润最大化。</p>
+<h3><a id="3%E7%9F%AD%E6%9C%9F%E5%9D%87%E8%A1%A1%E7%9A%84%E5%87%A0%E7%A7%8D%E6%83%85%E5%86%B5" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. 短期均衡的几种情况</h3>
+<p>　　在短期内，\(K=\overline K\)，生产规模固定不变，因此厂商通过调整产量实现 \(MR=SMC\) 的利润最大化均衡条件。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220429002206-y6tr0iz.png" style="height:300px" alt="完全竞争厂商短期均衡的各种情况" />
+<p>　　**情况 1：经济利润大于零的短期均衡。**价格为 \(P_1\) 时，\(MR\) 与 \(MC\) 相交于 \(A\) 点，此时 \(P_1&gt;AC\)，若按照产量 \(Q_1\) 生产，厂商可以获得矩形 \(ABP_1G\) 的超额利润。</p>
+<p>　　**情况 2：经济利润等于零的短期均衡。**价格为 \(P_2\) 时，\(MR\) 与 \(MC\) 相交于 \(C\) 点，由于 \(C\) 点恰好是厂商 \(MC\) 与 \(AC\) 的交点，此时 \(P_2=AC\)，若按照产量 \(Q_2\) 生产，厂商不能获得超额利润，但可以获得[&quot;正常利润&quot;]。</p>
+<p>　　**情况 3：亏损但继续生产经营的短期均衡。**价格为 \(P_3\) 时，\(MR\) 与 \(MC\) 相交于 \(D\) 点，由于 \(D\) 点处 \(P_3=MR&lt;AC\)，若按照产量 \(Q_3\) 生产，厂商将会亏损，但由于 \(P_3&gt;AVC\)，此时继续生产可以在支付可变成本的同时收回部分固定成本，可以减少亏损的金额（若不生产，将会亏损所有的固定成本），因此厂商会按照产量 \(Q_3\) 进行生产，此时厂商亏损最小。</p>
+<p>　　**情况 4：亏损并停止生产经营的短期均衡（停止营业点）。**价格为 \(P_4\) 时，\(MR\) 与 \(MC\) 相交于 \(E\) 点，此时 \(E\) 点处 \(P_4=MR=AVC&lt;AC\)，厂商如果不生产，会亏损掉所有的固定成本，如果生产，按照产量 \(Q_4\) 生产的亏损最小，亏损额也是固定成本。因此厂商生产或不生产的亏损额度相同，厂商可以选择停止生产。</p>
+<p>　　**情况 5：停止生产经营的短期均衡。**价格低于 \(P_4\) 时，厂商进行生产的 \(MR&lt;AVC\)，此时厂商如果选择不生产，将会亏损掉所有固定成本，如果生产，最小的亏损额度也超过固定成本。为追求亏损最少，厂商会选择不生产。</p>
+<p>　　由此可以见，对于完全竞争厂商，\(MR=P\)，完全竞争厂商生产由 \(MC=MR\) 确定的产量，是否有经济利润取决于平均成本 \(AC\) 与平均收益 \(AR\)（\(P=AR\)）的大小比较；厂商是否选择停产，取决于生产的最小亏损是否小于固定成本，即价格 \(P\) 是否低于平均可变成本 \(AVC\)。</p>
+<blockquote>
+<p><strong>补充：</strong></p>
+<p>短期内，完全竞争厂商的经营决策依据：</p>
+<ol>
+<li>确定产量：\(MR\) 与 \(MC\) 比较</li>
+<li>是否盈利：\(AR\) 与 \(AC\) 比较</li>
+<li>停产决策：\(MR\) 与 \(AVC\) 比较</li>
+</ol>
+</blockquote>
+<h2><a id="%EF%BC%88%E5%9B%9B%EF%BC%89%E7%9F%AD%E6%9C%9F%E4%BE%9B%E7%BB%99%E4%B8%8E%E7%9F%AD%E6%9C%9F%E5%9D%87%E8%A1%A1" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（四）短期供给与短期均衡</h2>
+<h3><a id="1%E5%AE%8C%E5%85%A8%E7%AB%9E%E4%BA%89%E5%8E%82%E5%95%86%E7%9A%84%E7%9F%AD%E6%9C%9F%E4%BE%9B%E7%BB%99%E6%9B%B2%E7%BA%BF" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. 完全竞争厂商的短期供给曲线</h3>
+<p>　　根据上面 5 中情况的分析，可以推导出完全竞争厂商的短期供给曲线，为 SMC 曲线上大于和等于 AVC 曲线最低点的部分，即用 SMC 曲线大于和等于停止营业点的部分来表示。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220429004706-dmllz9i.png" style="height:300px" alt="完全竞争厂商的短期供给曲线" />
+<p>　　完全竞争厂商的短期供给曲线是向右上方倾斜的，它表示了商品的价格和供给量之间同方向变化的关系。==<strong>完全竞争厂商的短期供给曲线表示厂商在每一个价格水平的供给量都是能够给他带来最大利润或最小亏损的最优产量。</strong>==</p>
+<h3><a id="2%E5%AE%8C%E5%85%A8%E7%AB%9E%E4%BA%89%E5%B8%82%E5%9C%BA%E7%9A%84%E7%9F%AD%E6%9C%9F%E4%BE%9B%E7%BB%99%E6%9B%B2%E7%BA%BF" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. 完全竞争市场的短期供给曲线</h3>
+<p>　　一个行业的短期供给曲线由该行业内所有厂商的短期供给曲线的水平加总而得到。行业的短期供给曲线也是向右上方倾斜的。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220429005004-mny1jee.png" style="height:300px" alt="完全竞争行业的短期供给曲线" />
+<p>　　厂商的短期供给函数和行业的短期供给函数之间的关系用公式表示为：</p>
+\[\begin {align}
+
+S(P)=\sum^n_{i=1}S_i(P)
+
+\end {align}
+\]
+<h3><a id="3%E7%9F%AD%E6%9C%9F%E7%94%9F%E4%BA%A7%E8%80%85%E5%89%A9%E4%BD%99" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. 短期生产者剩余</h3>
+<h4><a id="3-1%E5%8E%82%E5%95%86%E7%9A%84%E7%9F%AD%E6%9C%9F%E7%94%9F%E4%BA%A7%E8%80%85%E5%89%A9%E4%BD%99" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.1 厂商的短期生产者剩余</h4>
+<p>　　在短期，厂商的生产者剩余指厂商在提供一定数量的某种产品时实际接受的总支付和愿意接受的最小总支付之间的差额。它通常用市场价格线以下、SMC 曲线以上的面积来表示。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220429005253-zt50ri1.png" style="height:300px" alt="生产者剩余" />
+<p>　　令反供给函数 \(P^S=f(Q)\)，价格为 \(P_0\) 时厂商的供给量为 \(Q_0\)，则厂商的短期生产者剩余为：</p>
+\[\begin{align}
+PS=P_0 \cdot Q_0  -  \int^{Q_0} _0f(Q)dQ
+\end{align}
+\]
+<p>　　==厂商的生产者剩余为图中的矩形 ====\(EFGP_0\)====。==原因在于：只要总收益大于总可变成本，厂商进行生产就是有利的（有正利润或减少固定投入的亏损），就能得到生产者剩余。生产者剩余\(PS\)可以表示为经济利润\(\pi\)与固定总成本\(TFC\)之和，即：\(PS=\pi +TFC\)。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20230219233057-7saribr.png" style="height:250px" alt="生产者剩余构成" />
+<h4><a id="3-2%E5%B8%82%E5%9C%BA%E7%9A%84%E7%9F%AD%E6%9C%9F%E7%94%9F%E4%BA%A7%E8%80%85%E5%89%A9%E4%BD%99" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.2 市场的短期生产者剩余</h4>
+<p>　　市场的生产者剩余是市场上所有厂商的生产者剩余的加总，用市场价格线以下、行业的短期供给曲线以上的面积来表示。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220429005847-qzes5pp.png" style="height:300px" alt="市场的短期生产者剩余" />
+<h2><a id="%EF%BC%88%E4%BA%94%EF%BC%89%E9%95%BF%E6%9C%9F%E4%BE%9B%E7%BB%99%E4%B8%8E%E9%95%BF%E6%9C%9F%E5%9D%87%E8%A1%A1" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（五）长期供给与长期均衡</h2>
+<h3><a id="1%E5%AE%8C%E5%85%A8%E7%AB%9E%E4%BA%89%E5%8E%82%E5%95%86%E7%9A%84%E9%95%BF%E6%9C%9F%E5%9D%87%E8%A1%A1" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. 完全竞争厂商的长期均衡</h3>
+<p>　　在长期中，所有的生产要素投入量都是可变的，完全竞争厂商通过对全部生产要素投入量的调整来实现利润最大化。在完全竞争市场价格给定的条件下，厂商在长期生产中对全部生产要素的调整可以表现为两个方面，一方面表现为对最优的生产规模的选择，另一方面表现为进入或退出一个行业的决策。</p>
+<h4><a id="1-1%E5%8E%82%E5%95%86%E5%AF%B9%E6%9C%80%E4%BC%98%E7%94%9F%E4%BA%A7%E8%A7%84%E6%A8%A1%E7%9A%84%E9%80%89%E6%8B%A9" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1.1 厂商对最优生产规模的选择</h4>
+<p>　　在长期，厂商通过对最优生产规模的选择（调整资本\(K\)），使自己的状况得到改善，从而获得了比在短期内所能获得的更大的利润。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220429010216-0qd03f0.png" style="height:300px" alt="长期生产中厂商对最优生产规模的选择" />
+<h4><a id="1-2%E5%8E%82%E5%95%86%E8%BF%9B%E5%87%BA%E4%B8%80%E4%B8%AA%E8%A1%8C%E4%B8%9A" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1.2 厂商进出一个行业</h4>
+<p>　　完全竞争厂商的长期均衡出现在 LAC 曲线的最低点。完全竞争厂商的长期均衡条件为：</p>
+\[\begin {align}
+MR=LMC=SMC=LAC=SAC
+\end {align}
+\]
+<p>　　其中，\(MR=AR=P\)，此时，单个厂商的利润为零。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220429010315-qmhgizz.png" style="height:300px" alt="厂商进入或退出行业" />
+<ul>
+<li>当价格为\(P_1\)时，由于经济利润\(\pi &gt;0\)，会有新厂商加入，市场供给量提高，会导致价格下降；</li>
+<li>当价格为\(P_2\)时，由于经济利润\(\pi =0\)，此时加入与退出的厂商的生产能力保持一致，供给量稳定在\(Q_2\)，买个稳定在\(P_2\)，为均衡状态；</li>
+<li>当价格为\(P_3\)时，由于经济利润\(\pi &lt;0\)，此时，会有厂商选择退出，市场供给量下降导致价格升高。</li>
+</ul>
+<h3><a id="2%E5%AE%8C%E5%85%A8%E7%AB%9E%E4%BA%89%E8%A1%8C%E4%B8%9A%E7%9A%84%E9%95%BF%E6%9C%9F%E4%BE%9B%E7%BB%99%E6%9B%B2%E7%BA%BF" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. 完全竞争行业的长期供给曲线</h3>
+<p>　　前面分析假定要素价格不变，但这种假定在长期显然不合理。当厂商进入或退出行业时，可能对市场需求产生影响，从而影响要素价格。根据行业产量变化对生产要素价格所可能产生的影响，完全竞争行业可区分为成本不变行业、成本递增行业和成本递减行业。</p>
+<h4><a id="2-1%E6%88%90%E6%9C%AC%E4%B8%8D%E5%8F%98%E8%A1%8C%E4%B8%9A" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2.1 成本不变行业</h4>
+<p>　　成本不变行业是这样一种行业，该行业的产量变化所引起的生产要素需求的变化，不对生产要素的价格发生影响。成本不变行业的长期供给曲线是一条水平线，其原因在于成本不变行业的长期平均成本是不变的。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220429151021-8z3joh6.png" style="height:300px" alt="成本不变行业的长期供给曲线" />
+<h4><a id="2-2%E6%88%90%E6%9C%AC%E9%80%92%E5%A2%9E%E8%A1%8C%E4%B8%9A" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2.2 成本递增行业</h4>
+<p>　　成本递增行业是这样一种行业，该行业产量增加所引起的生产要素需求的增加，会导致生产要素价格的上升。成本递增行业的长期供给曲线是向右上方倾斜的，其原因在于成本递增行业的长期平均成本是递增的。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220429151138-gi2cxz6.png" style="height:300px" alt="成本递增行业的长期供给曲线" />
+<h4><a id="2-3%E6%88%90%E6%9C%AC%E9%80%92%E5%87%8F%E8%A1%8C%E4%B8%9A" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2.3 成本递减行业</h4>
+<p>　　成本递减行业是这样一种行业，该行业产量增加所引起的生产要素需求的增加，反而使生产要素的价格下降了。成本递减行业的长期供给曲线是向右下方倾斜的，其原因在于成本递减行业的长期平均成本是递减的。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220429151223-mjkpuew.png" style="height:300px" alt="成本递减行业的长期供给曲线" />
+<h3><a id="3%E9%95%BF%E6%9C%9F%E7%94%9F%E4%BA%A7%E8%80%85%E5%89%A9%E4%BD%99" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. 长期生产者剩余</h3>
+<p>　　市场的长期生产者剩余可以用市场价格线以下、行业长期供给曲线以上的部分来表示。只有在成本递增行业的长期供给曲线斜率为正的情况下，才会产生市场的长期生产者剩余。市场的长期生产者剩余也可以被理解为：要素投入者所获得的比在行业不生产时所能赚取的更高收益。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220429005847-qzes5pp.png" style="height:250px" alt="市场的长期生产者剩余" />
+<h1><a id="%E5%9B%9B%E3%80%81%E5%AE%8C%E5%85%A8%E7%AB%9E%E4%BA%89%E5%B8%82%E5%9C%BA%E7%9A%84%E7%A6%8F%E5%88%A9" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>四、完全竞争市场的福利</h1>
+<h2><a id="%EF%BC%88%E4%B8%80%EF%BC%89%E5%AE%8C%E5%85%A8%E7%AB%9E%E4%BA%89%E5%B8%82%E5%9C%BA%E7%9A%84%E7%A6%8F%E5%88%A9%E6%9C%80%E5%A4%A7%E5%8C%96" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（一）完全竞争市场的福利最大化</h2>
+<p>　　\(E\) 点是完全竞争市场的均衡点，均衡价格和均衡数量分别为 \(P^* \) 和 \(Q^* \)。如图所示，市场的消费者剩余为浅色的阴影部分面积，市场的生产者剩余为深色的阴影部分面积，市场的总剩余为消费者剩余和生产者剩余之和，实现了福利最大化。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220430020541-oafpo57.png" style="height:300px" alt="完全竞争市场的总剩余" />
+<h2><a id="%EF%BC%88%E4%BA%8C%EF%BC%89%E4%BB%B7%E6%A0%BC%E7%AE%A1%E5%88%B6" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（二）价格管制</h2>
+<h3><a id="1%E6%9C%80%E9%AB%98%E9%99%90%E4%BB%B7" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. 最高限价</h3>
+<p>　　假定政府规定最高限价为 \(P_0\)，由于最高限价低于均衡价格，会出现商品短缺 \(Q_2-Q_1\)。实行最高限价，市场上消费者剩余的变化量为 \(A-B\)，生产者剩余的变化量为 \(-A-C\)，市场总剩余损失为 \(-B -C\)，此即为最高限价造成的无谓损失。（联系[&quot;限制价格&quot;]）<br />
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220430020239-8wt3ong.png" style="height:300px" alt="最高限价" /></p>
+<h3><a id="2%E6%9C%80%E4%BD%8E%E9%99%90%E4%BB%B7" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. 最低限价</h3>
+<p>　　假定政府实行最低限价政策，将价格由均衡价格水平 \(P^* \) 提高到 \(P_0\)。实行最低限价，总的消费者剩余变化为 \(-A-B\)，总的生产者剩余变化为 \(A-C\)，因此市场总剩余的变化为 \((-A-B)+(A-C)=-B-C\)，此即为最低限价造成的无谓损失。（联系[&quot;支持价格/最低限价&quot;]）</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220430020300-mmfp0dq.png" style="height:300px" alt="最低限价" />
+<h3><a id="3%E9%94%80%E5%94%AE%E7%A8%8E" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. 销售税</h3>
+<h4><a id="3-1%E6%94%BF%E5%BA%9C%E5%BE%81%E7%A8%8E" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.1 政府征税</h4>
+<h5><a id="3-1-1%E5%AF%B9%E5%8E%82%E5%95%86%E5%BE%81%E7%A8%8E" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.1.1 对厂商征税</h5>
+<p>　　假设政府对厂商征收税额为 \(t\) 的税，将使得厂商的生产成本增加。生产成本增加会导致供给减少，供给曲线向左移动。征税后，供给曲线由 \(S\) 左移至 \(S'\)。均衡条件为供给价格 \(P_s(Q^*)\) 加上税收 \(t\) 等于需求价格 \(P_d(Q^*)\)，即：\(P_d(Q^*)=P_s(Q^*)+t\)</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220430020045-4yosiek.png" style="height:300px" alt="对厂商征税" />
+<h5><a id="3-1-2%E5%AF%B9%E6%B6%88%E8%B4%B9%E8%80%85%E5%BE%81%E7%A8%8E" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.1.2 对消费者征税</h5>
+<p>　　假设政府对消费者征收税额为 \(t\) 的税，将使得消费者的实际收入（或实际购买力）下降。消费者的实际购买力下降会导致需求减少，需求曲线向左移动。征税后，需求曲线由 \(D\) 左移至 \(D'\)。均衡条件为需求价格 \(P_d(Q^*)\) 减去税收 \(t\) 等于供给价格 \(P_s(Q^*)\)，即：\(P_d(Q^*)-t=P_s(Q^*)\)</p>
+<p>　　‍</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220430020105-qn58war.png" style="height:300px" alt="对消费者征税" />
+<h4><a id="3-2%E9%94%80%E5%94%AE%E7%A8%8E%E7%9A%84%E7%A6%8F%E5%88%A9%E6%95%88%E5%BA%94" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.2 销售税的福利效应</h4>
+<p>　　假设政府对消费者征收 t 元的从量税，在消费者的需求曲线和生产者的供给曲线之间打进了一个垂直的“楔子”，其高度为单位商品的从量税额 t 。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220430020346-alpp6ie.png" style="height:300px" alt="销售税的福利效应" />
+<p>　　由于销售税导致的价格上升，以及需求量及供给量的减少，使得消费者剩余和生产者剩余都减少：消费者剩余的损失为 \(P_dFEP^* \) 的面积，生产者剩余的损失为 \(P_sHEP^* \) 的面积，政府获得财政收入为 \(P_dFHP_s\) 的面积，总的福利损失为 \(\Delta EFH\)，此即为征税所带来的无谓损失。</p>
+<h4><a id="3-3%E9%94%80%E5%94%AE%E7%A8%8E%E7%9A%84%E7%A8%8E%E8%B4%B9%E8%B4%9F%E6%8B%85" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.3 销售税的税费负担</h4>
+<p>　　假设在完全竞争市场上，有 \(n\) 个相同的厂商与 \(m\) 个相同的消费者，且厂商生产函数与消费者需求函数均为线性函数，分别为 \(Q_s=a+bP\)，\(Q_d=c-dP\)。若政府对每件商品征收 \(t\) 元的销售税，计算消费者与生产者各自承担的税费金额、政府收到的税款金额，并计算此时的消费者剩余损失、生产者剩余损失与无谓损失。</p>
+<p><strong>解答</strong>：市场供给曲线：\(S=nQ_s=(a+bP)n\)，市场需求曲线：\(D=mQ_d=(c-dP)m\)，</p>
+<p>在征税前，市场达到均衡时 \(S=D\)，可以解得：\(P^*=\frac {cm-an} {bn+dm}\)</p>
+<p>在此价格下，厂商的产量为：\(Q_s^*= \frac {(ad+bc)m} {bn+dm}\)，消费者需求量为：\(Q_d^*= \frac {(ad+bc)n} {bn+dm}\)</p>
+<p>市场的供给量与需求量为：\(S^*=D^*=\frac {(ad+bc)nm} {bn+dm}\)</p>
+<p>在征税后，需求价格与供给价格有 \(P_d=P_s+t\) 的关系，因此：</p>
+\[\begin {cases}
+Q_s=a+bP_s  \\
+Q_d=c-dP_d  \\
+P_d=P_s+t   \\
+nQ_s=mQ_d   \\  \notag
+\end{cases}
+\]
+<p>解得：\(P_s^*=\frac {cm-dmt-an} {bn+dm}\)，\(P_d^*=\frac {cm+bnt-an} {bn+dm}\)</p>
+<p>此时，厂商的产量为：\({Q'}_s^*=\frac {(ad+bc-bdt)m} {bn+dm}\)，消费者需求量为：\({Q'}_d^*=\frac {(ad+bc-bdt)n} {bn+dm}\)</p>
+<p>市场的供给量与需求量为：\({S'}^*={D'}^*=\frac {(ad+bc-bdt)nm} {bn+dm}\)</p>
+<p>消费者的税费负担为：\(P_d^*-P^*=\frac {bnt} {bn+dm}\)</p>
+<p>生产者的税费负担为：\(P^*-P_s^*=\frac {dmt} {bn+dm}\)</p>
+<p>此时，消费者剩余损失、生产者剩余损失的几何形状为梯形：</p>
+<p>市场的消费者剩余损失为：\(\frac {({S'}^*+S^*) \times (P_d^*-P^*)} 2=\frac {(2ad+2bc-bdt)bn^2mt} {2(bn+dm)^2}\)</p>
+<p>市场的生产者剩余损失为：\(\frac {({S'}^*+S^*) \times (P^*-P_s^*)} 2=\frac {(2ad+2bc-bdt)dnm^2t} {2(bn+dm)^2}\)</p>
+<p>政府税收为：\((P_d-P_s){S'}^*=t \times {S'}^*=\frac {(ad+bc-bdt)nmt} {bn+dm}\)</p>
+<p>无谓损失为：\(\frac {t(S^*-{S'}^*)} 2=\frac {bdnmt^2} {2(bn+dm)}\)</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220429172523-toyh9n8.png" style="height:300px" alt="销售税、税费负担与福利损失" />
+<blockquote>
+<p><strong>思路补充：</strong></p>
+<ol>
+<li>绘制示意图</li>
+<li>计算未征税时的市场均衡价格\(P^* \)、商品量\(Q^* \)</li>
+<li>计算征收后的供给量\(Q_s\)、需求量\(Q_d\)、供给价格\(P_s\)、需求价格\(P_d\)</li>
+<li>基于示意图，计算生产者剩余与消费者剩余的损失，计算无谓损失。</li>
+</ol>
+</blockquote>
+<h4><a id="%E5%90%91%E6%B6%88%E8%B4%B9%E8%80%85%E5%BE%81%E6%94%B6%E6%B6%88%E8%B4%B9%E7%A8%8E%E4%B8%8E%E6%89%80%E5%BE%97%E7%A8%8E" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>向消费者征收消费税与所得税</h4>
+<p>向消费者征收相同的税收，征收所得税比征收消费税更优。</p>
+<p><strong>分析过程：</strong></p>
+<p>假设初始预算约束为：</p>
+\[\begin{align}
+p_1x_1+p_2x_2=m
+\end {align}
+\]
+<p>按照税率\(t\)对商品1进行征税，相当于商品1的价格上涨了\(t\)。此时新的预算约束为：</p>
+\[\begin{align}
+(p_1+t) x_1^*+p_2 x_2^*=m
+\end {align}
+\]
+<p>通过征税，政府收入增加\(R^* = t x_1^* \)</p>
+<p>如果政府征收相同的所得税，此时预算约束为：</p>
+\[\begin{align}
+p_1x_1+p_2x_2= m - R^* = m-t x_1^*
+\end {align}
+\]
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20230314164752-up36ny9.png" style="height:350px" alt="所得税与从量税" />
+<p>如上图所示，征收所得税的预算约束线斜率与不征税时的预算约束线斜率相同，且经过点\((x_1^*,x_2^*)\)，在该点处的边际替代率为\(-\frac {(p_1+t)} {p_2}\)。</p>
+<p>在征收所得税时，在该点处边际替代率为\(-\frac {p_1} {p_2}\)，预算约束线与无差异曲线相交于点\((x_1^*,x_2^*)\)，因此预算约束线上存在一些点比点\((x_1^*,x_2^*)\)处更受到消费者的偏好。</p>
+
+
+
+        <div class="read-more-link">
+            <a href="https://perhapslol.github.io/blog/">Back Home…</a>
+        </div>
