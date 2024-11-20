@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+    
+<script defer language="javascript" type="text/javascript" src="/js/bundle.min.444d89fe8d19b9e466eca93647da936356d2c582a54abec3037b88c2e785e61e.js"></script>
+
+<script defer data-domain="https://perhapslol.github.io/blog/" src="https://plausible.lukeorth.com/js/script.js"></script>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+   
+
+
+<!-- Open Graph image and Twitter Card metadata -->
+
+<title itemprop="name">Perhaps</title>
+<meta property="og:title" content=Perhaps />
+<meta name="twitter:title" content=perhapslol />
+<meta itemprop="name" content=Perhaps />
+<meta name="application-name" content=perhapslol />
+<meta property="og:site_name" content="perhapslol" />
+
+
+<meta name="description" content="A pragmatic Hugo theme for bloggers. Based on the classic &lt;a href=&#34;https://github.com/poole/hyde&#34; target=&#34;_blank&#34;&gt;Hyde&lt;/a&gt; design by &lt;a href=&#34;https://github.com/mdo&#34; target=&#34;_blank&#34;&gt;@mdo&lt;/a&gt;" />
+
+
+
+<base href="https://poison.lukeorth.com/" />
+<link rel="sitemap" type="application/xml" title="Sitemap" href='https://poison.lukeorth.com/sitemap.xml' />
+<meta name="robots" content="index,follow" />
+<meta name="googlebot" content="index,follow" />
+    <meta name="twitter:site" content="@" />
+    <meta name="twitter:creator" content="@" />
+
+<meta property="fb:admins" content="" />
+<meta name="apple-mobile-web-app-title" content="Poison" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="generator" content="Hugo 0.124.0">
+
+
+    
+    
+
+<link type="text/css" rel="stylesheet" href="/css/bundle.min.94a339836f89f0d25f31980cb6b0631da21e20af128308747ce44e0525eb16ef.css">
+
+
+    
+    <style>
+    body {
+        --sidebar-bg-color: #202020;
+        --sidebar-img-border-color: #515151;
+        --sidebar-p-color: #909090;
+        --sidebar-h1-color: #FFF;
+        --sidebar-a-color: #FFF;
+        --sidebar-socials-color: #FFF;
+        --text-color: #222;
+        --bkg-color: #FAF9F6;
+        --post-title-color: #303030;
+        --list-color: #5a5a5a;
+        --link-color: #268bd2;
+        --date-color: #515151;
+        --table-border-color: #E5E5E5;
+        --table-stripe-color: #F9F9F9;
+        --code-color: #000;
+        --code-background-color: #E5E5E5;
+        --code-block-color: #fff;
+        --code-block-background-color: #272822;
+        --moon-sun-color: #FFF;
+        --moon-sun-background-color: #515151;
+    }
+    body.dark-theme {
+        --text-color: #eee;
+        --bkg-color: #121212;
+        --post-title-color: #DBE2E9;
+        --list-color: #9d9d9d;
+        --link-color: #268bd2;
+        --date-color: #9a9a9a;
+        --table-border-color: #515151;
+        --table-stripe-color: #202020;
+        --code-color: #fff;
+        --code-background-color: #515151;
+        --code-block-color: #fff;
+        --code-block-background-color: #272822;
+    }
+    body {
+        background-color: var(--bkg-color);
+    }
+</style>
+
+</head>
+
+    <body class="light-theme">
+        <div class="wrapper">
+            <aside class="sidebar">
+    <div class="container sidebar-sticky">
+        <div class="light-dark" align="right">
+    <button class="btn-light-dark" title="Toggle light/dark mode">
+        <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+            <path fill="currentColor" d="M6 .278a.768.768 0 0 1 .08.858a7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277c.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316a.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71C0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+        </svg>
+        <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+            <path fill="currentColor" d="M8 12a4 4 0 1 0 0-8a4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+        </svg>
+    </button>
+</div>
+
+        <div class="sidebar-about">
+    <h1 class="brand">
+        
+            <a href="https://perhapslol.github.io/blog/">
+                <img src="https://avatars.githubusercontent.com/u/130022120?v=4" alt="brand image">
+            </a>
+        
+        
+                       <a href="https://perhapslol.github.io/blog/">
+                <h1>Perhaps</h1>
+            </a>
+        
+    </h1>
+    <p class="lead">
+    春华夕拾 <a href="https://github.com/poole/hyde" target="_blank"></a>  <a href="https://github.com/mdo" target="_blank"></a>
+    </p>
+</div>
+
+        <nav>
+    <ul class="sidebar-nav">
+
+                
+                    <li class="heading">
+                        <a href="https://perhapslol.github.io/blog/Post/">Posts</a>
+                    </li>
+                        <li class="sub-heading">
+                            Stocks
+                        </li>
+                        <li class="sub-heading">
+                            IPO
+                        </li>
+                        <li class="sub-heading">
+                            Listed Companies
+                        </li>
+                        
+                    <a href="https://perhapslol.github.io/blog/Economics/">Economics</a>
+                    </li>
+                        <li class="sub-heading">
+                            Macro
+                        </li>
+                        <li class="sub-heading">
+                            Micro
+                        </li>
+    </ul>
+</nav>
+
+
+        
+    <a target="_blank" class="social" title="GitHub" href="https://github.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="-2 -2 24 24">
+            <path fill="currentColor" d="M18.88 1.099C18.147.366 17.265 0 16.233 0H3.746C2.714 0 1.832.366 1.099 1.099C.366 1.832 0 2.714 0 3.746v12.487c0 1.032.366 1.914 1.099 2.647c.733.733 1.615 1.099 2.647 1.099H6.66c.19 0 .333-.007.429-.02a.504.504 0 0 0 .286-.169c.095-.1.143-.245.143-.435l-.007-.885c-.004-.564-.006-1.01-.006-1.34l-.3.052c-.19.035-.43.05-.721.046a5.555 5.555 0 0 1-.904-.091a2.026 2.026 0 0 1-.872-.39a1.651 1.651 0 0 1-.572-.8l-.13-.3a3.25 3.25 0 0 0-.41-.663c-.186-.243-.375-.407-.566-.494l-.09-.065a.956.956 0 0 1-.17-.156a.723.723 0 0 1-.117-.182c-.026-.061-.004-.111.065-.15c.07-.04.195-.059.378-.059l.26.04c.173.034.388.138.643.311a2.1 2.1 0 0 1 .631.677c.2.355.44.626.722.813c.282.186.566.28.852.28c.286 0 .533-.022.742-.065a2.59 2.59 0 0 0 .585-.196c.078-.58.29-1.028.637-1.34a8.907 8.907 0 0 1-1.333-.234a5.314 5.314 0 0 1-1.223-.507a3.5 3.5 0 0 1-1.047-.872c-.277-.347-.505-.802-.683-1.365c-.177-.564-.266-1.215-.266-1.952c0-1.049.342-1.942 1.027-2.68c-.32-.788-.29-1.673.091-2.652c.252-.079.625-.02 1.119.175c.494.195.856.362 1.086.5c.23.14.414.257.553.352a9.233 9.233 0 0 1 2.497-.338c.859 0 1.691.113 2.498.338l.494-.312a6.997 6.997 0 0 1 1.197-.572c.46-.174.81-.221 1.054-.143c.39.98.424 1.864.103 2.653c.685.737 1.028 1.63 1.028 2.68c0 .737-.089 1.39-.267 1.957c-.177.568-.407 1.023-.689 1.366a3.65 3.65 0 0 1-1.053.865c-.42.234-.828.403-1.223.507a8.9 8.9 0 0 1-1.333.235c.45.39.676 1.005.676 1.846v3.11c0 .147.021.266.065.357a.36.36 0 0 0 .208.189c.096.034.18.056.254.064c.074.01.18.013.318.013h2.914c1.032 0 1.914-.366 2.647-1.099c.732-.732 1.099-1.615 1.099-2.647V3.746c0-1.032-.367-1.914-1.1-2.647z"/>
+        </svg>
+    </a>
+
+
+
+    <a target="_blank" class="social" title="LinkedIn" href="https://linkedin.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1.2em" viewBox="0 0 448 512">
+            <path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5c0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7c-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5c67.2 0 79.7 44.3 79.7 101.9V416z"/>
+        </svg>
+    </a>
+
+
+    <a target="_blank" class="social" title="X" href="https://x.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.1em" height="1.1em" viewBox="0 0 512 472.799">
+            <path fill="currentColor" d="M403.229 0h78.506L310.219 196.04 512 462.799H354.002L230.261 301.007 88.669 462.799h-78.56l183.455-209.683L0 0h161.999l111.856 147.88L403.229 0zm-27.556 415.805h43.505L138.363 44.527h-46.68l283.99 371.278z"/>
+        </svg>
+    </a>
+
+
+    <a target="_blank" class="social" title="Discord" href="https://discord.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M19.27 5.33C17.94 4.71 16.5 4.26 15 4a.09.09 0 0 0-.07.03c-.18.33-.39.76-.53 1.09a16.09 16.09 0 0 0-4.8 0c-.14-.34-.35-.76-.54-1.09c-.01-.02-.04-.03-.07-.03c-1.5.26-2.93.71-4.27 1.33c-.01 0-.02.01-.03.02c-2.72 4.07-3.47 8.03-3.1 11.95c0 .02.01.04.03.05c1.8 1.32 3.53 2.12 5.24 2.65c.03.01.06 0 .07-.02c.4-.55.76-1.13 1.07-1.74c.02-.04 0-.08-.04-.09c-.57-.22-1.11-.48-1.64-.78c-.04-.02-.04-.08-.01-.11c.11-.08.22-.17.33-.25c.02-.02.05-.02.07-.01c3.44 1.57 7.15 1.57 10.55 0c.02-.01.05-.01.07.01c.11.09.22.17.33.26c.04.03.04.09-.01.11c-.52.31-1.07.56-1.64.78c-.04.01-.05.06-.04.09c.32.61.68 1.19 1.07 1.74c.03.01.06.02.09.01c1.72-.53 3.45-1.33 5.25-2.65c.02-.01.03-.03.03-.05c.44-4.53-.73-8.46-3.1-11.95c-.01-.01-.02-.02-.04-.02zM8.52 14.91c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.84 2.12-1.89 2.12zm6.97 0c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.83 2.12-1.89 2.12z"/>
+        </svg>
+    </a>
+
+
+    <a target="_blank" class="social" title="YouTube" href="https://youtube.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M12.006 19.012h-.02c-.062 0-6.265-.012-7.83-.437a2.5 2.5 0 0 1-1.764-1.765A26.494 26.494 0 0 1 1.986 12a26.646 26.646 0 0 1 .417-4.817A2.564 2.564 0 0 1 4.169 5.4c1.522-.4 7.554-.4 7.81-.4H12c.063 0 6.282.012 7.831.437c.859.233 1.53.904 1.762 1.763c.29 1.594.427 3.211.407 4.831a26.568 26.568 0 0 1-.418 4.811a2.51 2.51 0 0 1-1.767 1.763c-1.52.403-7.553.407-7.809.407Zm-2-10.007l-.005 6l5.212-3l-5.207-3Z"/>
+        </svg>
+    </a>
+
+
+    <a target="_blank" class="social" title="Email" href="mailto://user@domain">
+       <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1.2em" viewBox="0 0 485.211 485.211">
+            <path fill="currentColor" d="M301.393,241.631L464.866,424.56H20.332l163.474-182.928l58.801,51.443L301.393,241.631z M462.174,60.651H23.027 l219.579,192.142L462.174,60.651z M324.225,221.67l160.986,180.151V80.792L324.225,221.67z M0,80.792v321.029L160.972,221.64 L0,80.792z"/>
+       </svg>
+    </a>
+
+
+
+
+        <p class="footnote">
+powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a target="_blank" href="https://github.com/lukeorth/poison">poison</a>
+    <br>
+    &copy; 2024 Poison. All rights reserved.
+</p>
+        
+<!-- 标题  -->
+  </div>
+</aside>
+
+            <main class="content container">
+                <div class="posts">
+    
+    
+    <article class="post">
+        <div class="info">
+  <h1 class="post-title">
+    <a href="https://perhapslol.github.io/blog/">第5章：失业与通货膨胀</a>
+  </h1>
+
+  <div class="headline">
+    <div>
+      
+      
+      <time datetime=" 2023-4-1T13:43:53-0600" class="post-date">
+        Apr.1, 2023
+      </time>
+      
+      <span> - </span>
+      <span class="reading-time">
+
+
+        <span>20 mins read</span>
+      </span>
+    </div>
+
+    
+    <ul class="tags">
+      
+      <li class="tag-hugo">
+        <a href="https://github.com/perhapslol">Economics</a>
+      </li>
+            <li class="tag-hugo">
+        <a href="https://github.com/perhapslol">Macroeconomics</a>
+      </li>
+      
+    </ul>
+    
+  </div>
+  
+  <p class="seriesname">
+    Author: <a href="https://fgzfgz.github.io/">FGZ</a>
+  </p>
+  
+  
+</div>
+        
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+   </head>
+        
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LaTeX in Webpage</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</head>
+<body>
+
+  <script type="text/javascript">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['\\(','\\)']]
+    }
+  });
+  </script>
+</body>
+</html>
+        
+<!-- 正文  -->
+<h1><a id="%E4%B8%80%E3%80%81%E5%A4%B1%E4%B8%9A%E7%9A%84%E6%8F%8F%E8%BF%B0" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>一、失业的描述</h1>
+<h2><a id="%EF%BC%88%E4%B8%80%EF%BC%89%E5%A4%B1%E4%B8%9A%E7%9A%84%E5%AE%9A%E4%B9%89%E4%B8%8E%E8%A1%A1%E9%87%8F" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（一）失业的定义与衡量</h2>
+<p>　　（联系：第一章-失业的衡量）</p>
+<h3><a id="1%E5%A4%B1%E4%B8%9A%E7%9A%84%E5%AE%9A%E4%B9%89" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. 失业的定义</h3>
+<p>　　失业（unemployment）是指有劳动能力的人想工作而找不到工作的社会现象。就业者和失业者的总和就是劳动力，失业者占劳动力的百分比称为失业率。</p>
+<h3><a id="2%E5%A4%B1%E4%B8%9A%E7%8E%87%E7%9A%84%E6%B5%8B%E9%87%8F" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. 失业率的测量</h3>
+<p>　　不同的国家，测量失业率的方法和口径有所差异。其中，我国一直使用城镇登记失业率这一指标来测量。</p>
+<p>　　城镇登记失业率是指在报告期末城镇登记失业人数占期末城镇从业人员总数与期末实有城镇登记失业人数之和的比重。在城镇单位从业人员中，不包括使用的农村劳动力、聘用的离退休人员、港澳台及外方人员。</p>
+<p>　　我国政府决定，从 2011 年（十二五期间）开始，我国不再使用“城镇登记失业率”这一指标，而采用“城镇调查失业率”这一指标。</p>
+<h2><a id="%EF%BC%88%E4%BA%8C%EF%BC%89%E8%87%AA%E7%84%B6%E5%A4%B1%E4%B8%9A%E7%8E%87%E4%B8%8E%E8%87%AA%E7%84%B6%E5%B0%B1%E4%B8%9A%E7%8E%87" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（二）自然失业率与自然就业率</h2>
+<h3><a id="1%E8%87%AA%E7%84%B6%E5%A4%B1%E4%B8%9A%E7%8E%87%E7%9A%84%E6%A6%82%E5%BF%B5" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. 自然失业率的概念</h3>
+<p>　　**自然失业率：**劳动市场处于供求稳定状态时的失业率。</p>
+<ul>
+<li>自然失业率是经济社会在正常情况下的失业率；</li>
+<li>稳定状态：既不会造成通货膨胀也不会导致通货紧缩的状态。</li>
+</ul>
+<p>　　<strong>自然失业率是一个长期概念，只和劳动力市场本身的状况有关。</strong>（长期意味着供求均衡）</p>
+<h3><a id="2%E8%87%AA%E7%84%B6%E5%A4%B1%E4%B8%9A%E7%8E%87%E7%9A%84%E6%8E%A8%E5%AF%BC" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. 自然失业率的推导</h3>
+<p>　　设 \(N\) 代表劳动力，\(E\) 代表就业者人数，\(U\) 代表失业者人数。</p>
+<p>　　则有：</p>
+\[\begin {align}
+ N=E+U   
+\end {align}
+\]
+\[\begin {align}
+ \Longrightarrow 失业率=U/N
+\end {align}
+\]
+<p>　　假定劳动力总数 \(N\) 不变，并重点考察劳动力中的人数在就业与失业之间的转换。</p>
+<p>　　记 \(l\) 代表离职率，即每个月失去自己工作的就业者比例；\(f\) 代表就职率，即每个月找到工作的失业者的比例。</p>
+<p>　　劳动市场达到稳定状态的条件是：\(fU=lE\)</p>
+<p>　　又因为 \(E=N-U\)，则 \(fU=l(N-U)\)，因此可以解得：</p>
+\[\begin {align}
+\frac U N=\frac l {l+f}
+\end {align}
+\]
+<p>　　由此可以看出：稳定状态的失业率取决于离职率 \(l\) 和就职率 \(f\)：离职率越高，失业率越高；就职率越高，失业率越低。</p>
+<h3><a id="3%E8%87%AA%E7%84%B6%E5%B0%B1%E4%B8%9A%E7%8E%87" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. 自然就业率</h3>
+<p>　　自然就业率是与自然失业率相对应的就业率。</p>
+\[\begin {align}
+自然就业率=\frac {充分就业量} {劳动力总量}
+\end {align}
+\]
+<p>　　一个经济的自然失业率与自然就业率之和为 100%。</p>
+<h3><a id="4%E5%A4%B1%E4%B8%9A%E7%9A%84%E7%BB%8F%E6%B5%8E%E5%AD%A6%E8%A7%A3%E9%87%8A" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>4. 失业的经济学解释</h3>
+<h4><a id="4-1%E5%8F%A4%E5%85%B8%E5%A4%B1%E4%B8%9A%E7%90%86%E8%AE%BA" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>4.1 古典失业理论</h4>
+<p>　　古典经济学家始终认为，资本主义制度可以通过市场机制的自动调节解决各种矛盾，因此经济社会中不存在失业，充分就业是一个始终存在的倾向。针对自 1825 年第一次经济危机之后西方社会经常存在的大量失业现象，古典经济学家认为这些失业属于摩擦性失业和自愿失业的范畴，而不是真正的失业，只是生产过程中局部的、暂时的失调，而不是真正的对劳动力需求的不足，因而这些失业的存在并不能否认社会常态是充分就业。<strong>在竞争性、市场出清的均衡状态下，只存在自愿失业。</strong></p>
+<p>　　**自愿失业：**不愿意在现行的工资水平下工作导致的事业。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220514135716-zw4z6o3.png" style="height:250px" alt="古典的失业解释" />
+<h4><a id="4-2%E5%87%AF%E6%81%A9%E6%96%AF%E7%9A%84%E5%A4%B1%E4%B8%9A%E7%90%86%E8%AE%BA" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>4.2 凯恩斯的失业理论</h4>
+<p>　　凯恩斯认为除了摩擦性失业和自愿失业之外，社会还存在着大量的“非自愿失业”，其原因在于社会有效需求不足，故凯恩斯的失业理论也称之为有效需求不足失业论。凯恩斯经济学用有效需求不足理论来说明失业，并在此基础上提出解决失业问题的方法，即国家积极干预经济，以达到社会的“充分就业”。<strong>当工资具有刚性，劳动市场非出清时，存在非自愿失业。</strong></p>
+<p>　　**非自愿失业：**愿意接受现行的工资水平，由于劳动供给大于劳动需求，即 \(S&gt;D\)，而导致的失业。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220514135835-av08wzt.png" style="height:250px" alt="凯恩斯的失业解释" />
+<p>　　‍</p>
+<h1><a id="%E4%BA%8C%E3%80%81%E5%A4%B1%E4%B8%9A%E7%9A%84%E5%8E%9F%E5%9B%A0" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>二、失业的原因</h1>
+<h2><a id="%EF%BC%88%E4%B8%80%EF%BC%89%E6%91%A9%E6%93%A6%E6%80%A7%E5%A4%B1%E4%B8%9A%E7%9A%84%E5%8E%9F%E5%9B%A0" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（一）摩擦性失业的原因</h2>
+<p>　　工作岗位与劳动力的匹配要花费时间，由此形成的失业称为<strong>摩擦性失业</strong>。</p>
+<p>　　摩擦性失业是暂时的失业（信息不对称）。</p>
+<p>　　<strong>产生的原因：</strong></p>
+<ul>
+<li>**部门性变动。**不同行业和地区之间的需求构成不断在发生变动。随着产品需求的变动，对生产这些产品的劳动的需求也在变动；</li>
+<li><strong>企业间劳动供求的变动。</strong></li>
+</ul>
+<h2><a id="%EF%BC%88%E4%BA%8C%EF%BC%89%E7%BB%93%E6%9E%84%E6%80%A7%E5%A4%B1%E4%B8%9A%E7%9A%84%E5%8E%9F%E5%9B%A0" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（二）结构性失业的原因</h2>
+<p>　　结构性失业是指劳动力的供给和需求不匹配所造成的失业，其特点是既有失业，又有职位空缺，失业者或者没有合适的技能，或者居住地点不当，因此无法填补现有的职位空缺。</p>
+<p>　　**结构性失业的一个来源是工资刚性（工资能涨不能降），**即工资不能调整到使劳动市场的供给等于需求从而消除失业的水平。</p>
+<p>　　工资刚性的因素主要有以下三个方面：</p>
+<ul>
+<li>**最低工资法：**最低工资减少了企业的劳动需求量，从而对不熟练的工人和缺乏经验的工人产生了重大的影响，其中对青少年失业的影响最大。</li>
+<li>**效率工资：**效率工资理论认为在一定限度内，企业通过支付给工人比劳动力市场出清更高的工资，可以使劳动生产率提高，增加企业利润。</li>
+<li>**工会的垄断力量：**由于工会的垄断力量，工会工人的工资并不是由供求关系决定，而是由工会领导人与企业经理之间的集体议价决定的，通常是把工资提高到均衡水平以上并允许企业决定雇用多少工人，结果是雇用的工人数量减少，就业率下降，结构性失业上升。</li>
+</ul>
+<h1><a id="%E4%B8%89%E3%80%81%E5%A4%B1%E4%B8%9A%E7%9A%84%E5%BD%B1%E5%93%8D%E4%B8%8E%E5%A5%A5%E8%82%AF%E5%AE%9A%E5%BE%8B" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>三、失业的影响与奥肯定律</h1>
+<h2><a id="%EF%BC%88%E4%B8%80%EF%BC%89%E5%A4%B1%E4%B8%9A%E7%9A%84%E5%BD%B1%E5%93%8D" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（一）失业的影响</h2>
+<h3><a id="1%E5%A4%B1%E4%B8%9A%E7%9A%84%E7%A4%BE%E4%BC%9A%E5%BD%B1%E5%93%8D" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. 失业的社会影响</h3>
+<p>　　对失业者及其家庭来说，失业意味着经济拮据以及生活方式的改变；失业工人及其家庭的地位和声望也会因失业而下降，因而他们的身心健康也会受到摧残。在失业率很高时，社会秩序也会受到影响。</p>
+<h3><a id="2%E5%A4%B1%E4%B8%9A%E7%9A%84%E7%BB%8F%E6%B5%8E%E5%BD%B1%E5%93%8D" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. 失业的经济影响</h3>
+<p>　　对社会来说，失业表明一部分资源没有得到充分利用：愿意工作并且有能力工作的人没有被用于生产，结果总产出减少。</p>
+\[\begin {align}
+失业的损失=潜在的GDP-实际的GDP
+\end {align}
+\]
+<h2><a id="%EF%BC%88%E4%BA%8C%EF%BC%89%E5%A5%A5%E8%82%AF%E5%AE%9A%E5%BE%8B" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（二）奥肯定律</h2>
+<p>　　奥肯定律说明的是实际国内生产总值与失业率之间的关系。该定律是美国经济学家阿瑟·奥肯在研究上述两者之间的关系时发现的一种规律，奥肯利用美国 55 个季度（从 1947 年第二季度到 1960 年第四季度）中失业率变化和实际国内生产总值变化的资料，通过简单的回归方程，估算出反映两者变化之间关系的一个数值。</p>
+<p>　　<strong>奥肯定律的内容</strong>：失业率每高于自然失业率 1 个百分点，实际 \(GDP\) 将低于潜在 \(GDP\) 2 个百分点。</p>
+<p>　　奥肯定律可以用下面的公式来表示：</p>
+\[\begin {align}
+\frac {y-y_f} {y_f}=-\alpha (u-u^*)
+\end {align}
+\]
+<p>　　其中，\(y\) 为实际产出，\(y_f\) 为潜在产出，\(u\) 为实际失业率，\(u^* \) 为自然失业率，\(α\) 为大于零的参数。</p>
+<p>　　奥肯定律揭示了产品市场和劳动市场之间极为重要的联系，并描述了实际 \(GDP\) 的短期变动与失业率变动的联系。</p>
+<p>　　奥肯定律的应用：为防止失业率的上升，实际 \(GDP\) 必须保持与潜在 \(GDP\) 同样快的增长。如果政府想让失业率下降，那么，该经济社会的实际 \(GDP\) 的增长必须快于潜在 \(GDP\) 的增长。</p>
+<h1><a id="%E5%9B%9B%E3%80%81%E9%80%9A%E8%B4%A7%E8%86%A8%E8%83%80%E7%9A%84%E6%8F%8F%E8%BF%B0" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>四、通货膨胀的描述</h1>
+<p>　　（联系：第一章-物价水平的衡量）</p>
+<h2><a id="%EF%BC%88%E4%B8%80%EF%BC%89%E9%80%9A%E8%B4%A7%E8%86%A8%E8%83%80%E7%9A%84%E8%A1%A1%E9%87%8F" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（一）通货膨胀的衡量</h2>
+<p>　　当一个经济中的大多数商品和劳务的价格连续在一段时间内普遍上涨时，宏观经济学就称这个经济经历着通货膨胀。</p>
+<p>　　宏观经济学用价格指数来描述整个经济中的价格水平。宏观经济学中常涉及的价格指数主要有 \(GDP\) 折算指数、消费价格指数（简记为 \(CPI\)）和生产者价格指数（简记为 \(PPI\)）。</p>
+<p>　　通货膨胀的程度通常用通货膨胀率来衡量。通货膨胀率被定义为从一个时期到另一个时期价格水平变动的百分比。用公式表示为：</p>
+\[\begin {align}
+\pi_t=\frac {P_t - P_{t-1}} { P_{t-1}}
+\end {align}
+\]
+<p>　　其中，\(π_t\) 为 \(t\) 时期的通货膨胀率；\(P_t\) 和 \(P_{t-1}\) 分别为 \(t\) 时期和 \(t-1\) 时期的价格水平。</p>
+<h2><a id="%EF%BC%88%E4%BA%8C%EF%BC%89%E9%80%9A%E8%B4%A7%E8%86%A8%E8%83%80%E7%9A%84%E5%88%86%E7%B1%BB" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（二）通货膨胀的分类</h2>
+<h3><a id="1%E6%8C%89%E7%85%A7%E4%BB%B7%E6%A0%BC%E4%B8%8A%E5%8D%87%E7%9A%84%E9%80%9F%E5%BA%A6%E8%BF%9B%E8%A1%8C%E5%88%86%E7%B1%BB" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. 按照价格上升的速度进行分类</h3>
+<p>　　按照价格上升的速度，存在着以下三种通货膨胀类型：</p>
+<ul>
+<li>温和的通货膨胀，指每年物价上升的比例在 10% 以内。</li>
+<li>奔腾的通货膨胀，指年通货膨胀率在 10% 以上和 100% 以内。</li>
+<li>超级通货膨胀，指通货膨胀率在 100% 以上。</li>
+</ul>
+<h3><a id="2%E6%8C%89%E7%85%A7%E5%AF%B9%E4%BB%B7%E6%A0%BC%E5%BD%B1%E5%93%8D%E7%9A%84%E5%B7%AE%E5%88%AB%E5%88%86%E7%B1%BB" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. 按照对价格影响的差别分类</h3>
+<p>　　按照对不同商品的价格影响的大小加以区分，存在着以下两种通货膨胀的类型：</p>
+<ul>
+<li>平衡的通货膨胀，即每种商品的价格都按相同比例上升。</li>
+<li>非平衡的通货膨胀，即各种商品价格上升的比例并不完全相同。</li>
+</ul>
+<h3><a id="3%E6%8C%89%E7%85%A7%E4%BA%BA%E4%BB%AC%E7%9A%84%E9%A2%84%E6%9C%9F%E7%A8%8B%E5%BA%A6%E5%8A%A0%E4%BB%A5%E5%8C%BA%E5%88%86" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. 按照人们的预期程度加以区分</h3>
+<p>　　按照人们的预期程度区分，存在两种通货膨胀类型：</p>
+<ul>
+<li>未预期到的通货膨胀，即价格上升的速度超出人们的预料，或者人们根本没有想到价格会上涨。</li>
+<li>预期到的通货膨胀。</li>
+</ul>
+<p>　　在一个开放世界中，由于影响价格水平变动的因素多种多样，并且变化莫测，因此，在大多数情况下，通货膨胀都是不可预期的。</p>
+<h1><a id="%E4%BA%94%E3%80%81%E9%80%9A%E8%B4%A7%E8%86%A8%E8%83%80%E7%9A%84%E5%8E%9F%E5%9B%A0" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>五、通货膨胀的原因</h1>
+<p>　　关于通货膨胀的原因，经济学家提出了种种解释，可大致分为三个方面：</p>
+<ul>
+<li>一是传统货币数量论，这种解释强调货币在通货膨胀过程中的重要性；</li>
+<li>二是用总需求与总供给来解释，包括从需求的角度和供给的角度；</li>
+<li>三是从经济结构因素变动的角度来说明通货膨胀的原因，即所谓结构性通货膨胀。</li>
+</ul>
+<h2><a id="%EF%BC%88%E4%B8%80%EF%BC%89%E4%BD%9C%E4%B8%BA%E8%B4%A7%E5%B8%81%E7%8E%B0%E8%B1%A1%E7%9A%84%E9%80%9A%E8%B4%A7%E8%86%A8%E8%83%80" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（一）作为货币现象的通货膨胀</h2>
+<p>　　货币数量论认为每一次通货膨胀背后都有货币供给的迅速增长。货币供给的增加是通货膨胀的基本原因。这一理论的出发点是如下所示的交换方程（<strong>费雪方程</strong>）：</p>
+\[\begin {align}
+货币供给量×货币流通速度=物价水平×实际收入
+\end {align}
+\]
+<p>　　或者：</p>
+\[\begin {align}
+MV=Py
+\end {align}
+\]
+<p>　　对上式取自然对数：\(\ln M+\ln V=\ln P+\ln y\)</p>
+<p>　　关于时间 \(t\) 求微分：\(\frac {dM} M + \frac {dV} V  =   \frac {dP} P + \frac {dy} y\)</p>
+<p>　　进一步变形：\(\frac {dM} M   =   \frac {dP} P + \frac {dy} y -  \frac {dV} V\)</p>
+<p>　　即：\(通货膨胀率=货币增长率 + 货币流通速度变化率 - 产量增长率\)</p>
+<p>　　根据上式，通货膨胀来源于三个方面，即货币流通速度的变化、货币增长和产量增长。</p>
+<p>　　如果货币流通速度不变且收入处于其潜在的水平上，则显然可以得出，通货膨胀的产生主要是货币供给增加的结果。货币主义强调货币和货币政策的重要作用，认为通货膨胀只是一种货币现象，通货膨胀的最根本原因是货币供给量多于需求量，于是“通货膨胀是一定会到处发生的货币现象”。</p>
+<p>　　事实上，在长期中，通货膨胀是一种货币现象。</p>
+<h2><a id="%EF%BC%88%E4%BA%8C%EF%BC%89%E7%94%A8%E6%80%BB%E9%9C%80%E6%B1%82%E4%B8%8E%E6%80%BB%E4%BE%9B%E7%BB%99%E6%9D%A5%E8%A7%A3%E9%87%8A" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（二）用总需求与总供给来解释</h2>
+<h3><a id="1%E9%9C%80%E6%B1%82%E6%8B%89%E5%8A%A8%E7%9A%84%E9%80%9A%E8%B4%A7%E8%86%A8%E8%83%80" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. 需求拉动的通货膨胀</h3>
+<p>　　需求拉动的通货膨胀，又称超额需求通货膨胀，是指总需求超过总供给所引起的一般价格水平的持续显著的上涨。需求拉动的通货膨胀理论把通货膨胀解释为“过多的货币追求过少的商品”。总需求的过度增长可能来自消费需求、投资需求、政府需求、国外需求，也可能来自财政政策、货币政策、消费习惯的突然改变以及国际市场的需求变动等。如图所示，当需求曲线 AD 向上移动的过程中，供给保持不变时，价格水平逐渐上升。</p>
+<p>　　‍</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220514142046-x1rrpuz.png" style="height:250px" alt="需求拉动的通货膨胀" />
+<h3><a id="2%E6%88%90%E6%9C%AC%E6%8E%A8%E5%8A%A8%E7%9A%84%E9%80%9A%E8%B4%A7%E8%86%A8%E8%83%80" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. 成本推动的通货膨胀</h3>
+<p>　　成本推动的通货膨胀，又称成本通货膨胀或供给通货膨胀，是指在没有超额需求的情况下由于供给方面成本的提高所引起的一般价格水平持续和显著的上涨。</p>
+<p>　　引起这种通货膨胀的根源在于市场的不完全竞争，即特定集团在经济中行使市场权力，一是工会要求较高的工资导致工资推动通货膨胀，二是垄断和寡头企业牟取高利润导致的利润推动通货膨胀。另外，在开放经济中，进出口所引起的成本增加也会导致通货膨胀。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220514142029-7xi5m6j.png" style="height:250px" alt="成本推动的通货膨胀" />
+<p>　　如图所示，总需求是既定的，不发生变化，变动只出现在供给方面。当总供给曲线向左移动的时候，对应的价格水平不断上涨，而总产量不断下降。</p>
+<h4><a id="2-1%E5%B7%A5%E8%B5%84%E6%8E%A8%E5%8A%A8%E9%80%9A%E8%B4%A7%E8%86%A8%E8%83%80%E7%90%86%E8%AE%BA" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2.1 工资推动通货膨胀理论</h4>
+<p>　　工资推动通货膨胀是指不完全竞争的劳动市场造成的过高工资所导致的一般价格水平的上涨。</p>
+<p>　　工资—价格螺旋：工资提高引起价格上涨，价格上涨又引起工资提高。因此，工资提高和价格上涨形成了螺旋式的上升运动。</p>
+<h4><a id="2-2%E5%88%A9%E6%B6%A6%E6%8E%A8%E5%8A%A8%E9%80%9A%E8%B4%A7%E8%86%A8%E8%83%80%E7%90%86%E8%AE%BA" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2.2 利润推动通货膨胀理论</h4>
+<p>　　利润推动通货膨胀是指垄断企业和寡头企业利用市场势力谋取过高利润所导致的一般价格水平的上涨。</p>
+<h3><a id="3%E7%BB%93%E6%9E%84%E6%80%A7%E9%80%9A%E8%B4%A7%E8%86%A8%E8%83%80" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. 结构性通货膨胀</h3>
+<p>　　**结构性通货膨胀：**由于特定的经济制度、控制系统、信息系统和决策系统等结构性因素的变化，出现一般价格水平的持续上涨。</p>
+<p>　　从经济结构本身所具有的特点来看，国民经济中各个部门各具特点且千差万别，这是导致结构性通货膨胀的根源。在现代社会，由于资本和技术在不同的经济部门具有不同的特征，因此，现代社会的经济结构很难使资本和技术从一个部门流转到另一个部门。</p>
+<p>　　**具体表现：**经济中存在两大部门（需求扩大部门和需求衰减部门；生产率提高较快部门和生产率提高较慢部门；新兴部门和衰落部门；开放部门和非开放部门），前一个部门预示着较好的经济前景，因而工资、物价会较快上升，但劳动市场的特殊性要求两个部门的工资应以同一比例上升，因而后一个部门会向前一个部门看齐，结果引起通货膨胀。</p>
+<h2><a id="%EF%BC%88%E4%BA%94%EF%BC%89%E9%80%9A%E8%B4%A7%E8%86%A8%E8%83%80%E7%9A%84%E6%8C%81%E7%BB%AD" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（五）通货膨胀的持续</h2>
+<p>　　通货膨胀不是价格水平的一次性改变，而是价格水平的持续上升。事实上，无论通货膨胀的原因如何，只要通货膨胀开始，通货膨胀便可以自行持续下去。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220514142008-ir2c52a.png" style="width:600px" alt="通货膨胀螺旋" />
+<p>　　如图所示，经济初始时处于均衡点 \(E\)。假定出现总需求冲击，总需求曲线从 \(AD_0\) 移到 \(AD_1\)，结果价格上升到 \(P_1\)。价格上升会引起工资提高，较高的工资增加了生产成本，从而使总供给曲线向左移动，反映为总供给曲线由 \(AS_1\) 移动到 \(AS_2\)，更高的工资意味着更高的收入，使得总需求曲线由 \(AD_1\) 移动到 \(AD_2\)。在新的价格水平 \(P_1\) 下，新的总需求曲线 \(AD_2\) 与新的总供给曲线 \(AS_2\) 之间仍有差距。于是又存在一个对商品的超额需求，导致价格进一步上涨，又引发了另一轮的工资的上涨。</p>
+<h1><a id="%E5%85%AD%E3%80%81%E9%80%9A%E8%B4%A7%E8%86%A8%E8%83%80%E7%9A%84%E6%88%90%E6%9C%AC" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>六、通货膨胀的成本</h1>
+<h2><a id="1%EF%BC%8E%E9%A2%84%E6%9C%9F%E5%88%B0%E7%9A%84%E9%80%9A%E8%B4%A7%E8%86%A8%E8%83%80%E6%88%90%E6%9C%AC" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1．预期到的通货膨胀成本</h2>
+<ul>
+<li>**菜单成本：**是指价格调整的成本。高通货膨胀使得企业经常的更换自己的报价，从而产生了成本。</li>
+<li>**鞋底成本：**通货膨胀率高，使得名义利率提高，人们的实际货币余额需求量减少，需要更经常去银行，不方便程度提高，也即鞋底成本。</li>
+<li>**税收扭曲：**许多税规没有考虑通货膨胀的影响，从而改变了个人所得税负担。</li>
+<li>**相对价格变动导致的资源配置不当：**高的通货膨胀改变了相对价格，从而引起资源配置中的微观经济无效率。</li>
+<li>**混乱与不方便：**物价水平经常变动会引起生活不便。</li>
+</ul>
+<h2><a id="2%EF%BC%8E%E6%9C%AA%E9%A2%84%E6%9C%9F%E5%88%B0%E7%9A%84%E9%80%9A%E8%B4%A7%E8%86%A8%E8%83%80%E6%88%90%E6%9C%AC" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2．未预期到的通货膨胀成本</h2>
+<p>　　未预期到的通货膨胀的影响比稳定的、可预期的通货膨胀的任何一种成本都更有害。具体地说，未预期到的通货膨胀成本有以下几种：</p>
+<ul>
+<li>
+<p>**不确定性的增加。**未预期到的通货膨胀增加了经济中的不确定性，从而影响个体储蓄、投资以及就业的劳动量等决策，这会导致经济效率降低。</p>
+</li>
+<li>
+<p><strong>不合意的财富的再分配。</strong></p>
+<ul>
+<li>通货膨胀不利于靠固定的货币收入维持生活的人，那些靠变动收入维持生活的人，则会从通货膨胀中得益；</li>
+<li>通货膨胀对储蓄者不利；</li>
+<li>通货膨胀导致债务人和债权人之间发生收入再分配。</li>
+</ul>
+</li>
+<li>
+<p>**相对价格变动性的增加。**未预期到的通货膨胀有可能急剧增加相对价格的变动性。带来经济的低效率和资源的不当配置。</p>
+</li>
+</ul>
+<h1><a id="%E4%B8%83%E3%80%81%E5%A4%B1%E4%B8%9A%E4%B8%8E%E9%80%9A%E8%B4%A7%E8%86%A8%E8%83%80%E7%9A%84%E5%85%B3%E7%B3%BB" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>七、失业与通货膨胀的关系</h1>
+<p>　　菲利普斯曲线表示了失业和通货膨胀之间的关系。</p>
+<h2><a id="%EF%BC%88%E4%B8%80%EF%BC%89%E8%8F%B2%E5%88%A9%E6%99%AE%E6%96%AF%E6%9B%B2%E7%BA%BF%E7%9A%84%E6%8F%90%E5%87%BA" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（一）菲利普斯曲线的提出</h2>
+<h3><a id="1%E5%8E%9F%E5%A7%8B%E7%9A%84%E8%8F%B2%E5%88%A9%E6%99%AE%E6%96%AF%E6%9B%B2%E7%BA%BF" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. 原始的菲利普斯曲线</h3>
+<p>　　经济学家菲利普斯于 1958 年在《经济学》杂志发表论文《1861-1957 年间英国货币工资变化与失业之间的关系》，论文中详细说明一种基本关系：货币工资增长率与失业率之间存在反比例关系，失业率提高时，货币工资增长率较小；失业率降低时，货币工资增长率较大。这就是当年意义上的菲利普斯曲线，或原始的菲利普斯曲线。</p>
+<p>　　菲利普斯所提出的这种关系尽管从经验统计中得到了证实，但却缺乏一种理论来解释这种关系。1960 年，加拿大经济学家利普西（R.Lipsey）提出了过度需求模型，该模型为菲利普斯曲线提供了理论解释。该模型的基本思想是：工资的增长可以用劳动市场上存在的过度需求来解释，而失业率则是衡量过度需求的一个指标。</p>
+<p>　　以萨缪尔森为代表的新古典综合派利用美国的经济资料进行类似的研究，但用物价上涨率（即通货膨胀率）代替货币工资上涨率，以表示物价上涨率与失业率之间也有对应关系：物价上涨率增加时，失业率下降；物价上涨率下降时，失业率上升。这就是新古典综合派提出的菲利普斯曲线。</p>
+<h3><a id="2%E6%96%B0%E5%8F%A4%E5%85%B8%E7%BB%BC%E5%90%88%E6%B4%BE%E7%9A%84%E8%8F%B2%E5%88%A9%E6%99%AE%E6%96%AF%E6%9B%B2%E7%BA%BF" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. 新古典综合派的菲利普斯曲线</h3>
+<p>　　（联系：<u>奥肯定律</u>）</p>
+<p>　　新古典综合派把原始的菲利普斯曲线改造后得到如下图所示的曲线，横轴代表失业率 \(u\)，纵轴代表通货膨胀率 \(π\)，向右下方倾斜的曲线 \(PC\) 即为菲利普斯曲线，它表明失业率与通货膨胀率之间的替换关系，即失业率高，则通货膨胀率低；失业率低，则通货膨胀率高。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220514145117-jkbxuu0.png" style="height:230px" alt="菲利普斯曲线" />
+<p>　　若设 \(u^* \) 表示自然失业率，参数 \(a\) 衡量价格对于失业率的反应程度，则菲利普斯曲线可表示为：</p>
+\[\begin {align}
+\pi=- a (u-u^*)
+\end {align}
+\]
+<p>　　当失业率超过自然失业率，价格水平就下降；当失业率低于自然失业率时，价格水平就上升。</p>
+<h3><a id="3%E8%8F%B2%E5%88%A9%E6%99%AE%E6%96%AF%E6%9B%B2%E7%BA%BF%E7%9A%84%E6%8E%A8%E5%AF%BC" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. 菲利普斯曲线的推导</h3>
+<p>　　菲利普斯曲线可以从总需求—总供给模型中推导出来。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220514145516-ermifuu.png" style="width:600px" alt="菲利普斯曲线的推导" />
+<p>　　‍</p>
+<h3><a id="4%E8%8F%B2%E5%88%A9%E6%99%AE%E6%96%AF%E6%9B%B2%E7%BA%BF%E7%9A%84%E6%94%BF%E7%AD%96%E5%90%AB%E4%B9%89" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>4. 菲利普斯曲线的政策含义</h3>
+<p>　　菲利普斯曲线反映的失业率与通货膨胀率之间的关系为实施政府干预、进行总需求管理提供了一份可供选择的菜单。它意味着可以用较高的通货膨胀率为代价，来降低失业率或实现充分就业；而要降低通货膨胀率和稳定物价，就要以较高的失业率为代价。</p>
+<p>　　在一定的时点上，政府可设置一个经济能够最大限度承受的通货膨胀与失业的界限，通过总需求管理政策把通货膨胀和失业都控制在此界限之内。当通货膨胀率过高时，可通过紧缩性的经济政策使失业率提高，以换取低通货膨胀率；当失业率过高时，采取扩张性的经济政策使通货膨胀率提高，以获得较低的失业率。这就是经济学中经常运用的**“相机抉择”**的宏观经济政策。</p>
+<p>　　相机抉择（如图所示）：</p>
+<ul>
+<li>阴影部分即为可接受的通胀与失业的组合范围；</li>
+<li>B 点：通胀率超过了可接受的范围，可以用紧缩性政策，降低通胀水平，失业率会相应上升；</li>
+<li>C 点：失业率超过了可接受的范围，可以用扩张性政策，降低失业率，通胀率会相应上升。</li>
+</ul>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220514151356-pn1ie43.png" style="width:400px" alt="菲利普斯曲线与政策运用" />
+<h3><a id="5%E7%89%BA%E7%89%B2%E7%8E%87%E5%92%8C%E7%97%9B%E8%8B%A6%E6%8C%87%E6%95%B0" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>5. 牺牲率和痛苦指数</h3>
+<p>　　牺牲率是指为了使通货膨胀率降低一个百分点而必须放弃的一年实际 GDP 的百分点数。</p>
+<p>　　\(痛苦指数=失业率+通货膨胀率\)</p>
+<h2><a id="%EF%BC%88%E4%BA%8C%EF%BC%89%E9%99%84%E5%8A%A0%E9%A2%84%E6%9C%9F%E7%9A%84%E8%8F%B2%E5%88%A9%E6%99%AE%E6%96%AF%E6%9B%B2%E7%BA%BF%E7%9F%AD%E6%9C%9F%E8%8F%B2%E5%88%A9%E6%99%AE%E6%96%AF%E6%9B%B2%E7%BA%BF" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（二）附加预期的菲利普斯曲线/短期菲利普斯曲线</h2>
+<p>　　**附加预期的菲利普斯曲线/短期菲利普斯曲线：**在短期内通货膨胀预期来不及调整（保持不变）时，通货膨胀率与失业率之间的交替关系。</p>
+<p>　　（传送门：<a href="https://fgzfgz.github.io/posts/35486/">第十章-&quot;四种预期的比较&quot;</a>）</p>
+<p>　　使用 \(π^e\) 表示预期通货膨胀率，菲利普斯曲线可以表示为：</p>
+\[\begin {align}
+\pi=\pi^e - a (u-u^*)
+\end {align}
+\]
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220514145859-4u0i758.png" style="height:250px" alt="附加预期的菲利普斯曲线" />
+<p>　　附加预期的菲利普斯曲线的性质：</p>
+<ul>
+<li>当实际通货膨胀等于预期通货膨胀时，失业处于自然失业率水平。</li>
+<li>在预期的通货膨胀率不等于实际的通货膨胀率的短期中，失业率与通货膨胀率之间仍存在着替换关系。</li>
+<li>不同预期的通货膨胀率有着不同的菲利普斯曲线，即预期通货膨胀率的变化将引起菲利普斯曲线的移动。</li>
+</ul>
+<p>　　政策含义：在短期中，引起通货膨胀率上升的扩张性财政与货币政策是可以起到减少失业的作用的。换句话说，调节总需求的宏观经济政策在短期是有效的。</p>
+<h2><a id="%EF%BC%88%E4%B8%89%EF%BC%89%E9%95%BF%E6%9C%9F%E8%8F%B2%E5%88%A9%E6%99%AE%E6%96%AF%E6%9B%B2%E7%BA%BF" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（三）长期菲利普斯曲线</h2>
+<p>　　与弗里德曼提出的<u>适应性预期</u>不同，以卢卡斯为代表的<u>理性预期</u>学派认为，失业率并不取决于通货膨胀，而是取决于经济中的随机冲击，实际失业率围绕着自然失业率的波动并不是由通货膨胀系统地引起的，而是由随机冲击所引起的。无论短期还是长期中，失业率与通货膨胀率之间都不存在稳定的交替关系。</p>
+<p>　　在通货膨胀率完全可以预期时，失业率为自然失业率情况下，失业率与通货膨胀率之间不存在替换关系。在以失业率为横坐标，通货膨胀率为纵坐标的坐标系中，长期当中的菲利普斯曲线，即长期菲利普斯曲线是一条垂直线（如下图）。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220514150616-atdd3ye.png" style="width:350px" alt="长期菲利普斯曲线" />
+<p>　　长期菲利普斯曲线的政策含义：从长期来看，政府运用扩张性政策不但不能降低失业率，还会使通货膨胀率不断上升。</p>
+<h2><a id="%EF%BC%88%E5%9B%9B%EF%BC%89%E7%9F%AD%E6%9C%9F%E4%B8%8E%E9%95%BF%E6%9C%9F%E7%9A%84%E8%8F%B2%E5%88%A9%E6%99%AE%E6%96%AF%E6%9B%B2%E7%BA%BF" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（四）短期与长期的菲利普斯曲线</h2>
+<p>　　在短期内，当实际通胀率与预期通胀率相等，即 \(\pi = \pi^e\) 时，\(失业率=自然失业率\)，此时可定义为“非加速通过膨胀的失业率”。</p>
+<p>　　<strong>（短期分析）</strong>：利用过去预期与过去实际间的差距来矫正对未来的预期。</p>
+<p>　　<strong>（长期分析）</strong>：充分利用所得到的信息指标来做出判断（理性人假设）。</p>
+<p>　　在短期，菲利普斯曲线表现的是在一定的通货膨胀率预期水平下，通货膨胀率与失业率之间的关系。货币主义者认为，在工资谈判中，工人们关心的是实际工资而不是货币工资。当通货膨胀率不太高，工人还没有形成新的通货膨胀预期的时候，失业与通货膨胀之间存在的替代关系就被称为短期菲利普斯曲线。</p>
+<p>　　在长期，工人们发觉他们的实际工资随着物价的上涨而下降，就会要求雇主相应地增加货币工资，以补偿通货膨胀给自己造成的损失。由于工人不断地形成新的通货膨胀预期，使换取一定失业率的通货膨胀率越来越高，一条条菲利普斯曲线不断向右上方移动，最终演变成为一条垂直的菲利普斯曲线，这就是长期菲利普斯曲线。在以失业率为横坐标，通货膨胀率为纵坐标的坐标系中，长期当中的菲利普斯曲线，即长期菲利普斯曲线是一条垂直线，表明失业率与通货膨胀率之间不存在替换关系。而且，在长期中，经济社会能够实现充分就业，经济社会的失业率将处在自然失业率的水平。</p>
+<p>　　如下图所示，短期菲利普斯曲线不断移动，进而形成长期菲利普斯曲线。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220514153853-luu2rhr.png" style="height:250px" alt="长期菲利普斯曲线的形成" />
+<p>　　图中，假定某一经济处于自然失业率 \(u^* \)，通货膨胀率为 \(π_1\) 的 \(A\) 点。若这时政府采取扩张性政策，以使失业率降低到 \(u_1\)。由于扩张性政策的实施，总需求增加，导致价格水平上升，使通货膨胀率上升为 \(π_2\)。由于在 \(A\) 点处，工人预期的通货膨胀率为 \(π_1\)，而现在实际的通货膨胀率为 \(π_2\)，高于预期的通货膨胀率使实际工资下降，从而增加生产，增加就业，失业率减少为 \(u_1\)。于是就会发生图中短期菲利普斯曲线 \(PC_1\)（\(π^e=π_1\)）所示的情况，失业率由 \(u^* \) 下降为 \(u_1\)，而通货膨胀率则从 \(π_1\) 上升到 \(π_2\)。</p>
+<p>　　但这种情况只能是短期的。经过一段时间，工人们会发现价格水平的上升和实际工资的下降，这时他们便要求提高货币工资。与此同时，工人们会相应地调整其预期，即从原来的 \(π_1\) 调整到现在的 \(π_2\)。伴随着这种调整，实际工资回到了原有的水平。相应地，企业生产和就业也都回到了原有的水平。失业率又回到原来的 \(u^* \)，但此时经济已处于具有较高通货膨胀率预期（即 \(π_2\)）的 \(B\) 点。</p>
+<p>　　将以上过程重复下去，可以想象，在短期，由于工人不能及时改变预期，存在着失业与通货膨胀之间的替换关系，表现在图形上，便有诸如 \(PC1\)，\(PC_2\)…等各条短期菲利普斯曲线。随着工人预期通货膨胀率的上升，短期菲利普斯曲线不断上升。</p>
+<p>　　从长期来看，工人预期的通货膨胀与实际通货膨胀是一致的。因此，企业不会增加生产和就业，失业率也就不会下降，从而便形成了一条与自然失业率重合的长期菲利普斯曲线 \(LPC\)。垂直于自然失业率水平的长期菲利普斯曲线表明，在长期中，不存在失业与通货膨胀的替换关系。</p>
+<p>　　长期菲利普斯曲线是由短期菲利普斯曲线不断运动形成的，可以得出，<strong>在通货膨胀率完全可以预期时，失业率为自然失业率情况下，失业率与通货膨胀率之间不存在替换关系。</strong></p>
+
+
+        <div class="read-more-link">
+            <a href="https://perhapslol.github.io/blog/">Back Home…</a>
+        </div>
