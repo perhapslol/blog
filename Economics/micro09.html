@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+    
+<script defer language="javascript" type="text/javascript" src="/js/bundle.min.444d89fe8d19b9e466eca93647da936356d2c582a54abec3037b88c2e785e61e.js"></script>
+
+<script defer data-domain="https://perhapslol.github.io/blog/" src="https://plausible.lukeorth.com/js/script.js"></script>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+   
+
+
+<!-- Open Graph image and Twitter Card metadata -->
+
+<title itemprop="name">Perhaps</title>
+<meta property="og:title" content=Perhaps />
+<meta name="twitter:title" content=perhapslol />
+<meta itemprop="name" content=Perhaps />
+<meta name="application-name" content=perhapslol />
+<meta property="og:site_name" content="perhapslol" />
+
+
+<meta name="description" content="A pragmatic Hugo theme for bloggers. Based on the classic &lt;a href=&#34;https://github.com/poole/hyde&#34; target=&#34;_blank&#34;&gt;Hyde&lt;/a&gt; design by &lt;a href=&#34;https://github.com/mdo&#34; target=&#34;_blank&#34;&gt;@mdo&lt;/a&gt;" />
+
+
+
+<base href="https://poison.lukeorth.com/" />
+<link rel="sitemap" type="application/xml" title="Sitemap" href='https://poison.lukeorth.com/sitemap.xml' />
+<meta name="robots" content="index,follow" />
+<meta name="googlebot" content="index,follow" />
+    <meta name="twitter:site" content="@" />
+    <meta name="twitter:creator" content="@" />
+
+<meta property="fb:admins" content="" />
+<meta name="apple-mobile-web-app-title" content="Poison" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="generator" content="Hugo 0.124.0">
+
+
+    
+    
+
+<link type="text/css" rel="stylesheet" href="/css/bundle.min.94a339836f89f0d25f31980cb6b0631da21e20af128308747ce44e0525eb16ef.css">
+
+
+    
+    <style>
+    body {
+        --sidebar-bg-color: #202020;
+        --sidebar-img-border-color: #515151;
+        --sidebar-p-color: #909090;
+        --sidebar-h1-color: #FFF;
+        --sidebar-a-color: #FFF;
+        --sidebar-socials-color: #FFF;
+        --text-color: #222;
+        --bkg-color: #FAF9F6;
+        --post-title-color: #303030;
+        --list-color: #5a5a5a;
+        --link-color: #268bd2;
+        --date-color: #515151;
+        --table-border-color: #E5E5E5;
+        --table-stripe-color: #F9F9F9;
+        --code-color: #000;
+        --code-background-color: #E5E5E5;
+        --code-block-color: #fff;
+        --code-block-background-color: #272822;
+        --moon-sun-color: #FFF;
+        --moon-sun-background-color: #515151;
+    }
+    body.dark-theme {
+        --text-color: #eee;
+        --bkg-color: #121212;
+        --post-title-color: #DBE2E9;
+        --list-color: #9d9d9d;
+        --link-color: #268bd2;
+        --date-color: #9a9a9a;
+        --table-border-color: #515151;
+        --table-stripe-color: #202020;
+        --code-color: #fff;
+        --code-background-color: #515151;
+        --code-block-color: #fff;
+        --code-block-background-color: #272822;
+    }
+    body {
+        background-color: var(--bkg-color);
+    }
+</style>
+
+</head>
+
+    <body class="light-theme">
+        <div class="wrapper">
+            <aside class="sidebar">
+    <div class="container sidebar-sticky">
+        <div class="light-dark" align="right">
+    <button class="btn-light-dark" title="Toggle light/dark mode">
+        <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+            <path fill="currentColor" d="M6 .278a.768.768 0 0 1 .08.858a7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277c.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316a.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71C0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+        </svg>
+        <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+            <path fill="currentColor" d="M8 12a4 4 0 1 0 0-8a4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+        </svg>
+    </button>
+</div>
+
+        <div class="sidebar-about">
+    <h1 class="brand">
+        
+            <a href="https://perhapslol.github.io/blog/">
+                <img src="https://avatars.githubusercontent.com/u/130022120?v=4" alt="brand image">
+            </a>
+        
+        
+                       <a href="https://perhapslol.github.io/blog/">
+                <h1>Perhaps</h1>
+            </a>
+        
+    </h1>
+    <p class="lead">
+    春华夕拾 <a href="https://github.com/poole/hyde" target="_blank"></a>  <a href="https://github.com/mdo" target="_blank"></a>
+    </p>
+</div>
+
+        <nav>
+    <ul class="sidebar-nav">
+
+                
+                    <li class="heading">
+                        <a href="https://perhapslol.github.io/blog/Post/">Posts</a>
+                    </li>
+                        <li class="sub-heading">
+                            Stocks
+                        </li>
+                        <li class="sub-heading">
+                            IPO
+                        </li>
+                        <li class="sub-heading">
+                            Listed Companies
+                        </li>
+                        
+                    <a href="https://perhapslol.github.io/blog/Economics/">Economics</a>
+                    </li>
+                        <li class="sub-heading">
+                            Macro
+                        </li>
+                        <li class="sub-heading">
+                            Micro
+                        </li>
+    </ul>
+</nav>
+
+
+        
+    <a target="_blank" class="social" title="GitHub" href="https://github.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="-2 -2 24 24">
+            <path fill="currentColor" d="M18.88 1.099C18.147.366 17.265 0 16.233 0H3.746C2.714 0 1.832.366 1.099 1.099C.366 1.832 0 2.714 0 3.746v12.487c0 1.032.366 1.914 1.099 2.647c.733.733 1.615 1.099 2.647 1.099H6.66c.19 0 .333-.007.429-.02a.504.504 0 0 0 .286-.169c.095-.1.143-.245.143-.435l-.007-.885c-.004-.564-.006-1.01-.006-1.34l-.3.052c-.19.035-.43.05-.721.046a5.555 5.555 0 0 1-.904-.091a2.026 2.026 0 0 1-.872-.39a1.651 1.651 0 0 1-.572-.8l-.13-.3a3.25 3.25 0 0 0-.41-.663c-.186-.243-.375-.407-.566-.494l-.09-.065a.956.956 0 0 1-.17-.156a.723.723 0 0 1-.117-.182c-.026-.061-.004-.111.065-.15c.07-.04.195-.059.378-.059l.26.04c.173.034.388.138.643.311a2.1 2.1 0 0 1 .631.677c.2.355.44.626.722.813c.282.186.566.28.852.28c.286 0 .533-.022.742-.065a2.59 2.59 0 0 0 .585-.196c.078-.58.29-1.028.637-1.34a8.907 8.907 0 0 1-1.333-.234a5.314 5.314 0 0 1-1.223-.507a3.5 3.5 0 0 1-1.047-.872c-.277-.347-.505-.802-.683-1.365c-.177-.564-.266-1.215-.266-1.952c0-1.049.342-1.942 1.027-2.68c-.32-.788-.29-1.673.091-2.652c.252-.079.625-.02 1.119.175c.494.195.856.362 1.086.5c.23.14.414.257.553.352a9.233 9.233 0 0 1 2.497-.338c.859 0 1.691.113 2.498.338l.494-.312a6.997 6.997 0 0 1 1.197-.572c.46-.174.81-.221 1.054-.143c.39.98.424 1.864.103 2.653c.685.737 1.028 1.63 1.028 2.68c0 .737-.089 1.39-.267 1.957c-.177.568-.407 1.023-.689 1.366a3.65 3.65 0 0 1-1.053.865c-.42.234-.828.403-1.223.507a8.9 8.9 0 0 1-1.333.235c.45.39.676 1.005.676 1.846v3.11c0 .147.021.266.065.357a.36.36 0 0 0 .208.189c.096.034.18.056.254.064c.074.01.18.013.318.013h2.914c1.032 0 1.914-.366 2.647-1.099c.732-.732 1.099-1.615 1.099-2.647V3.746c0-1.032-.367-1.914-1.1-2.647z"/>
+        </svg>
+    </a>
+
+
+
+    <a target="_blank" class="social" title="LinkedIn" href="https://linkedin.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1.2em" viewBox="0 0 448 512">
+            <path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5c0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7c-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5c67.2 0 79.7 44.3 79.7 101.9V416z"/>
+        </svg>
+    </a>
+
+
+    <a target="_blank" class="social" title="X" href="https://x.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.1em" height="1.1em" viewBox="0 0 512 472.799">
+            <path fill="currentColor" d="M403.229 0h78.506L310.219 196.04 512 462.799H354.002L230.261 301.007 88.669 462.799h-78.56l183.455-209.683L0 0h161.999l111.856 147.88L403.229 0zm-27.556 415.805h43.505L138.363 44.527h-46.68l283.99 371.278z"/>
+        </svg>
+    </a>
+
+
+    <a target="_blank" class="social" title="Discord" href="https://discord.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M19.27 5.33C17.94 4.71 16.5 4.26 15 4a.09.09 0 0 0-.07.03c-.18.33-.39.76-.53 1.09a16.09 16.09 0 0 0-4.8 0c-.14-.34-.35-.76-.54-1.09c-.01-.02-.04-.03-.07-.03c-1.5.26-2.93.71-4.27 1.33c-.01 0-.02.01-.03.02c-2.72 4.07-3.47 8.03-3.1 11.95c0 .02.01.04.03.05c1.8 1.32 3.53 2.12 5.24 2.65c.03.01.06 0 .07-.02c.4-.55.76-1.13 1.07-1.74c.02-.04 0-.08-.04-.09c-.57-.22-1.11-.48-1.64-.78c-.04-.02-.04-.08-.01-.11c.11-.08.22-.17.33-.25c.02-.02.05-.02.07-.01c3.44 1.57 7.15 1.57 10.55 0c.02-.01.05-.01.07.01c.11.09.22.17.33.26c.04.03.04.09-.01.11c-.52.31-1.07.56-1.64.78c-.04.01-.05.06-.04.09c.32.61.68 1.19 1.07 1.74c.03.01.06.02.09.01c1.72-.53 3.45-1.33 5.25-2.65c.02-.01.03-.03.03-.05c.44-4.53-.73-8.46-3.1-11.95c-.01-.01-.02-.02-.04-.02zM8.52 14.91c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.84 2.12-1.89 2.12zm6.97 0c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.83 2.12-1.89 2.12z"/>
+        </svg>
+    </a>
+
+
+    <a target="_blank" class="social" title="YouTube" href="https://youtube.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M12.006 19.012h-.02c-.062 0-6.265-.012-7.83-.437a2.5 2.5 0 0 1-1.764-1.765A26.494 26.494 0 0 1 1.986 12a26.646 26.646 0 0 1 .417-4.817A2.564 2.564 0 0 1 4.169 5.4c1.522-.4 7.554-.4 7.81-.4H12c.063 0 6.282.012 7.831.437c.859.233 1.53.904 1.762 1.763c.29 1.594.427 3.211.407 4.831a26.568 26.568 0 0 1-.418 4.811a2.51 2.51 0 0 1-1.767 1.763c-1.52.403-7.553.407-7.809.407Zm-2-10.007l-.005 6l5.212-3l-5.207-3Z"/>
+        </svg>
+    </a>
+
+
+    <a target="_blank" class="social" title="Email" href="mailto://user@domain">
+       <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1.2em" viewBox="0 0 485.211 485.211">
+            <path fill="currentColor" d="M301.393,241.631L464.866,424.56H20.332l163.474-182.928l58.801,51.443L301.393,241.631z M462.174,60.651H23.027 l219.579,192.142L462.174,60.651z M324.225,221.67l160.986,180.151V80.792L324.225,221.67z M0,80.792v321.029L160.972,221.64 L0,80.792z"/>
+       </svg>
+    </a>
+
+
+
+
+        <p class="footnote">
+powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a target="_blank" href="https://github.com/lukeorth/poison">poison</a>
+    <br>
+    &copy; 2024 Poison. All rights reserved.
+</p>
+        
+<!-- 标题  -->
+  </div>
+</aside>
+
+            <main class="content container">
+                <div class="posts">
+    
+    
+    <article class="post">
+        <div class="info">
+  <h1 class="post-title">
+    <a href="https://perhapslol.github.io/blog/">第9章：一般均衡论与福利经济学</a>
+  </h1>
+
+  <div class="headline">
+    <div>
+      
+      
+      <time datetime=" 2023-4-1T13:43:53-0600" class="post-date">
+        Apr.1, 2023
+      </time>
+      
+      <span> - </span>
+      <span class="reading-time">
+
+
+        <span>20 mins read</span>
+      </span>
+    </div>
+
+    
+    <ul class="tags">
+      
+      <li class="tag-hugo">
+        <a href="https://github.com/perhapslol">Economics</a>
+      </li>
+            <li class="tag-hugo">
+        <a href="https://github.com/perhapslol">Microeconomics</a>
+      </li>
+      
+    </ul>
+    
+  </div>
+  
+  <p class="seriesname">
+    Author: <a href="https://fgzfgz.github.io/">FGZ</a>
+  </p>
+  
+  
+</div>
+        
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+   </head>
+        
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LaTeX in Webpage</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</head>
+<body>
+
+  <script type="text/javascript">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['\\(','\\)']]
+    }
+  });
+  </script>
+</body>
+</html>
+        
+<!-- 正文  -->
+<h1><a id="%E4%B8%80%E3%80%81%E4%B8%80%E8%88%AC%E5%9D%87%E8%A1%A1%E8%AE%BA" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>一、一般均衡论</h1>
+<h2><a id="%EF%BC%88%E4%B8%80%EF%BC%89%E5%B1%80%E9%83%A8%E5%9D%87%E8%A1%A1%E5%92%8C%E4%B8%80%E8%88%AC%E5%9D%87%E8%A1%A1" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（一）局部均衡和一般均衡</h2>
+<h3><a id="1%E5%B1%80%E9%83%A8%E5%9D%87%E8%A1%A1" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. 局部均衡</h3>
+<p>　　局部均衡是指在假设其他市场不变的情况下，某一特定产品或要素的市场均衡。局部均衡分析研究的是单个（产品或要素）市场，其研究方法是把所考虑的某个市场从相互联系的整个经济体系的市场全体中“取出”来单独加以研究。</p>
+<h3><a id="2%E4%B8%80%E8%88%AC%E5%9D%87%E8%A1%A1" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. 一般均衡</h3>
+<p>　　一般均衡是指在一个经济体系中，所有市场的供给和需求同时达到均衡的状态。一般均衡论所考察的问题是：在社会上各种产品的交易市场是相互联系、相互影响的背景下，最后各种自发的经济活动是否趋于供求均衡？</p>
+<h2><a id="%EF%BC%88%E4%BA%8C%EF%BC%89%E4%B8%80%E8%88%AC%E5%9D%87%E8%A1%A1%E7%9A%84%E5%AD%98%E5%9C%A8%E6%80%A7" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（二）一般均衡的存在性</h2>
+<p>　　研究证明，在一定的假设条件全部得到满足时，一般均衡体系就有均衡解存在。</p>
+<h2><a id="%EF%BC%88%E4%B8%89%EF%BC%89%E4%B8%80%E8%88%AC%E5%9D%87%E8%A1%A1%E7%9A%84%E5%AE%9E%E7%8E%B0%E2%80%9C%E8%AF%95%E6%8E%A2%E8%BF%87%E7%A8%8B%E2%80%9D" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（三）一般均衡的实现“试探过程”</h2>
+<p>　　关于论证一般均衡的实现，瓦尔拉斯假设采用的是“试错法”，即在市场中存在一个自由拍卖人，其任务就是寻找并确定能与市场供求一致的均衡价格。</p>
+<h1><a id="%E4%BA%8C%E3%80%81%E7%BB%8F%E6%B5%8E%E6%95%88%E7%8E%87" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>二、经济效率</h1>
+<h2><a id="%EF%BC%88%E4%B8%80%EF%BC%89%E5%AE%9E%E8%AF%81%E7%BB%8F%E6%B5%8E%E5%AD%A6%E5%92%8C%E8%A7%84%E8%8C%83%E7%BB%8F%E6%B5%8E%E5%AD%A6" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（一）实证经济学和规范经济学</h2>
+<p>　　实证经济学（Positive Economics）回答“是什么”、“为什么”和“会如何”的问题，研究实际经济体系是怎样运行的。它对经济行为作出有关的假设，根据假设分析和陈述经济行为及其后果，并试图对结论进行检验。</p>
+<p>　　规范经济学（Normative Economics）回答“应当是什么”的问题， 根据一定的社会价值判断标准，对一个经济体系的运行进行评价，并进一步说明一个经济体系应当怎样运行，以及为此提出相应的经济政策。</p>
+<p>　　比如，尽管知道存在一般均衡，但这种一般均衡状态是否对整个社会是“最优”的呢？</p>
+<p>　　[&quot;规范分析和实证分析&quot;]</p>
+<h2><a id="%EF%BC%88%E4%BA%8C%EF%BC%89%E7%A6%8F%E5%88%A9%E7%BB%8F%E6%B5%8E%E5%AD%A6" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（二）福利经济学</h2>
+<p>　　福利经济学是在一定的社会价值判断标准条件下，研究整个经济的资源配置与个人福利的关系，特别是市场经济体系的资源配置与福利的关系，以及与此有关的各种政策问题。</p>
+<h2><a id="%EF%BC%88%E4%B8%89%EF%BC%89%E5%B8%95%E7%B4%AF%E6%89%98%E6%9C%80%E4%BC%98%E7%8A%B6%E6%80%81%EF%BC%9A%E7%BB%8F%E6%B5%8E%E6%95%88%E7%8E%87" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（三）帕累托最优状态：经济效率</h2>
+<p>　　福利经济学采用帕累托最优标准来衡量资源配置的最优配置。</p>
+<p>　　帕累托最优状态（Pareto efficiency）是这样一种状态：任何改变都不可能使一个人的境况变好，而又不使别人的境况变坏。当经济系统达到帕累托最优状态时，经济运行是有效率的；反之，不满足帕累托最优状态的经济运行结果就是缺乏效率的。</p>
+<p>　　如果对既定资源配置的状态予以改变，而这种改变使得至少有一个人的境况变好，同时其他人的境况没有因此变坏，则认为这种变化增加了社会福利，或称帕累托改进。</p>
+<h1><a id="%E4%B8%89%E3%80%81%E5%B8%95%E7%B4%AF%E6%89%98%E6%9C%80%E4%BC%98%E6%9D%A1%E4%BB%B6" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>三、帕累托最优条件</h1>
+<h2><a id="%EF%BC%88%E4%B8%80%EF%BC%89%E4%BA%A4%E6%8D%A2%E7%9A%84%E5%B8%95%E7%B4%AF%E6%89%98%E6%9C%80%E4%BC%98%E6%9D%A1%E4%BB%B6" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（一）交换的帕累托最优条件</h2>
+<p>　　交换的一般均衡（general equilibrium of exchange）是指在社会生产产量状况和收入分配状况既定条件下，通过产品的交换使得交换者达到效用之和最大化的均衡状态，此时实现交换的帕累托最优。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220511205954-fqm9pb6.png" style="width:400px" alt="交换的帕累托最优" />
+<p>　　如图所示，任何一点，如 \(a\) 点，对应于消费者 \(A\) 的消费量 \((X_A ,Y_A)\) 和消费者 \(B\) 的消费量 \((X_B , Y_B )\)，都有下式成立：</p>
+\[\begin {align}
+X_A+X_B=\overline X     \\
+Y_A+Y_B=\overline Y
+\end {align}
+\]
+<p>　　即埃奇渥斯盒状图中的任意一点都表示两种商品在消费者 \(A\) 和 \(B\) 之间的分配。</p>
+<ul>
+<li>埃奇渥斯盒状图中的任意一点要么处于 \(A\) 和 \(B\) 的无差异曲线的交点上，要么处于他们的切点上。</li>
+<li>上图中， \(a\) 点不能代表帕累托最优状态，因为存在帕累托改进。当然，这种改进的途径不是唯一的。</li>
+<li>\(e\) 点、\(c\) 点和 \(b\) 点等类似的点都是帕累托最优状态的点。</li>
+<li>把代表帕累托最优状态的点连接起来，就成了交换的契约曲线，在图中用 \(VV'\) 表示。当然， \(VV'\) 曲线上任一点，比如 \(b\) 点和 \(c\) 点，无法按照帕 累托标准予以比较，只能根据社会分配的偏好选择其中的某些状态。</li>
+<li>由此可得[&quot;商品交换的帕累托最优条件&quot;]：两种商品的边际替代率相等，即 \(MRS_{XY}^A = MRS_{XY}^B\)</li>
+</ul>
+<h2><a id="%EF%BC%88%E4%BA%8C%EF%BC%89%E7%94%9F%E4%BA%A7%E7%9A%84%E5%B8%95%E7%B4%AF%E6%89%98%E6%9C%80%E4%BC%98%E6%9D%A1%E4%BB%B6" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（二）生产的帕累托最优条件</h2>
+<p>　　生产的一般均衡（general equilibrium of production）是指在技术与社会生产资源总量既定的情况下，社会对于资源的配置使得产品产量达到最大的均衡状况，即实现生产的帕累托最优。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220511211102-dzsirle.png" style="width:400px" alt="生产的帕累托最优" />
+<ul>
+<li>类似交换中的分析，这里仍采用埃奇渥斯盒状图，只是这里不用无差异曲线，而是引用等产量曲线；作为分配的商品，这里改为生产要素。</li>
+<li>诸如 \(e'\)、 \(c'\) 和 \(b'\) 等满足帕累托最优的点组成的轨迹，称为“生产的契约曲线（或效率曲线）”，在图中用 \(qq'\) 表示。</li>
+<li>[&quot;生产(要素配置)的帕累托最优条件&quot;]的公式：\(MRTS_{LK}^C  =  MRTS_{LK}^D\)，即任何两种生产要素之间的边际技术替代率对任何使用这两种生产要素的两个生产者来说都必须相等。</li>
+</ul>
+<h2><a id="%EF%BC%88%E4%B8%89%EF%BC%89%E4%BA%A4%E6%8D%A2%E5%92%8C%E7%94%9F%E4%BA%A7%E7%9A%84%E5%B8%95%E7%B4%AF%E6%89%98%E6%9C%80%E4%BC%98%E6%9D%A1%E4%BB%B6" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（三）交换和生产的帕累托最优条件</h2>
+<h3><a id="1%E4%BB%8E%E7%94%9F%E4%BA%A7%E5%A5%91%E7%BA%A6%E6%9B%B2%E7%BA%BF%E5%88%B0%E7%94%9F%E4%BA%A7%E5%8F%AF%E8%83%BD%E6%80%A7%E6%9B%B2%E7%BA%BF" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. 从生产契约曲线到生产可能性曲线</h3>
+<p>　　生产契约曲线上的每一点表示了一定量投入要素在最优配置时所能生产的一对最优的产出，从而代表了两种产品的产量。因而，生产契约曲线上的每一点便与生产可能性边界上的每一点对应。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220511211829-uh2a0qn.png" style="width:600px" alt="生产契约曲线与生产可能性曲线" />
+<h3><a id="2%E7%94%9F%E4%BA%A7%E5%8F%AF%E8%83%BD%E6%80%A7%E6%9B%B2%E7%BA%BF" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. 生产可能性曲线</h3>
+<p>　　生产可能性曲线又称之为生产可能性边界（production-possibility frontier），也称之为产品转换曲线，是指在其他条件（如技术、要素供给等）不变情况下，一个社会用其全部资源所能生产的各种产品的最大数量的组合。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220511211905-dqrtz0v.png" style="width:400px" alt="生产可能性曲线" />
+<h4><a id="2-1%E7%94%9F%E4%BA%A7%E5%8F%AF%E8%83%BD%E6%80%A7%E6%9B%B2%E7%BA%BF%E7%9A%84%E7%89%B9%E7%82%B9" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2.1 生产可能性曲线的特点</h4>
+<p>　　第一，生产可能性曲线的斜率为负，向右下方倾斜。生产可能性曲线斜率的极限可定义为 X 商品对 Y 商品的边际转换率（marginal rate of transformation），即生产可能性边界上每一点斜率的量值，故有：</p>
+\[\begin {align}
+MRT_{XY} = \lim_{\Delta X \to 0}  \left | \frac {\Delta Y} {\Delta X}  \right| = \left|  \frac {dX}  {dY}  \right| 
+\end{align}
+\]
+<p>　　第二，生产可能性曲线凹向原点，凸向右上方，即边际转换率 MRT 是递增的。 MRT 递增的原因是要素的边际报酬递减规律。这一原因，可从如下公式看出：</p>
+\[\begin {align}
+MRT_{XY} = \left|  \frac {dY}  {dX}  \right| = \left | \frac {d Y} {d(L+K)}  \cdot   \frac {d(L+K)} {dX} \right| = \left | \frac { {d Y} /{d(L+K)} }  { {dX} /{d(L+K)}} \right| 
+\end{align}
+\]
+<p>　　第三，边际转换率 \(MRT_{XY}\) 等于两种产品的边际成本之比，即有：</p>
+\[\begin {align}
+MRT_{XY} =  \left|  \frac {dY}  {dX}  \right|  = \frac {MC_X}  {MC_Y} 
+\end {align}
+\]
+<blockquote>
+<p><strong>补充：</strong></p>
+<p>上面计算中跳过了一个步骤，商品供给量\(Y\)与要素供给量\((L+K)\)不能直接构建联系：</p>
+<p>\(\begin{align} \frac {dY} {d(L+K)} = \frac {dY} {d TC } \cdot \frac {d TC } {d(L+K)}= \frac 1 {MC_Y} \cdot  \frac {d TC } {d(L+K)} \end{align}\)</p>
+<p>同理，商品供给量\(X\)于要素供给量\((L+K)\)也不能直接构建起联系。多出的\(\frac {d TC } {d(L+K)}\)在计算过程中被消除了。</p>
+</blockquote>
+<h4><a id="2-2%E7%94%9F%E4%BA%A7%E5%8F%AF%E8%83%BD%E6%80%A7%E6%9B%B2%E7%BA%BF%E7%9A%84%E5%8F%98%E5%8A%A8" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2.2 生产可能性曲线的变动</h4>
+<p>　　如果投入要素数量或者技术状况发生了改变，则生产可能性曲线的位置就可能发生变化。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220511212710-f3y9znj.png" style="width:350px" alt="生产可能性曲线的变动" />
+<h3><a id="3%E7%94%9F%E4%BA%A7%E5%92%8C%E4%BA%A4%E6%8D%A2%E7%9A%84%E5%B8%95%E7%B4%AF%E6%89%98%E6%9C%80%E4%BC%98%E6%9D%A1%E4%BB%B6" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. 生产和交换的帕累托最优条件</h3>
+<p>　　交换和生产的一般均衡（general equilibrium of exchange and production）是指社会生产和交换同时达到均衡的状况，即实现了交换和生产的帕累托最优状况。</p>
+<p>　　生产达到均衡并不能保证交换同时达到均衡；交换达到均衡也不能保证生产同时达到均衡。要使交换和生产同时达到均衡必须具备的条件：任意两种商品的边际替代率必须等于它们的边际转换率。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220511212759-vi52i3q.png" style="width:450px" alt="生产和交换的最优" />
+<p>　　因此，[&quot;生产与交换的帕累托最优条件&quot;]为：\(MRS_{XY}=MRS_{XY}^A = MRS_{XY}^B\) ，此时达到了生产与交换的一般均衡。</p>
+<p>　　原因：只有符合这一条件，才能使生产满足消费者的需要，又使资源达到有效配置。</p>
+<h1><a id="%E5%9B%9B%E3%80%81%E5%AE%8C%E5%85%A8%E7%AB%9E%E4%BA%89%E5%92%8C%E5%B8%95%E7%B4%AF%E6%89%98%E6%9C%80%E4%BC%98%E7%8A%B6%E6%80%81" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>四、完全竞争和帕累托最优状态</h1>
+<h2><a id="%EF%BC%88%E4%B8%80%EF%BC%89%E4%BA%A4%E6%8D%A2%E7%9A%84%E6%9C%80%E4%BC%98%E6%9D%A1%E4%BB%B6" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（一）交换的最优条件</h2>
+<p>　　从交换的最优条件来看，在完全竞争市场条件下，单个消费者都是价格的接受者，每个消费者都会调整对商品的需求以满足 \(MRS_{XY} =\frac {P_X } {P_Y}\)，从而实现效用最大化。既然各消费者都是价格的接受者，那么各消费者购买任意两种商品的数量必使其边际替代率等于全体消费者所面对的共同的价格比率。因此，任何两种商品的边际替代率对所有的消费者都相等。</p>
+<h2><a id="%EF%BC%88%E4%BA%8C%EF%BC%89%E7%94%9F%E4%BA%A7%E7%9A%84%E6%9C%80%E4%BC%98%E6%9D%A1%E4%BB%B6" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（二）生产的最优条件</h2>
+<p>　　从生产的最优条件来看，在完全竞争市场条件下，单个生产者都是要素价格的接受者，每个生产者都会调整要素的需求以满足 \(MRTS_{LK} = \frac {P_L} {P_K}\)，从而实现利润最大化。既然各生产者都是要素价格的接受者，那么各生产者购买并使用的任意两种要素的数量必使其边际技术替代率等于全体生产者所面对的共同的要素价格比。因此，任何两种要素的边际技术替代率对所有生产者都相等。</p>
+<h2><a id="%EF%BC%88%E4%B8%89%EF%BC%89%E7%94%9F%E4%BA%A7%E5%92%8C%E4%BA%A4%E6%8D%A2%E7%9A%84%E6%9C%80%E4%BC%98%E6%9D%A1%E4%BB%B6" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（三）生产和交换的最优条件</h2>
+<p>　　ƒ从生产和交换的最优条件来看，任何两种产品生产的边际转换率即为两种商品的边际成本之比，每一消费者对任何两种商品的边际替代率等于其价格比。在完全竞争条件下，任何产品的价格等于边际成本，因此，任何两种产品的边际替代率等于它们的边际转换率。</p>
+<h1><a id="%E4%BA%94%E3%80%81%E7%A4%BE%E4%BC%9A%E7%A6%8F%E5%88%A9%E5%87%BD%E6%95%B0" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>五、社会福利函数</h1>
+<h2><a id="%EF%BC%88%E4%B8%80%EF%BC%89%E6%95%88%E7%94%A8%E5%8F%AF%E8%83%BD%E6%80%A7%E6%9B%B2%E7%BA%BF" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（一）效用可能性曲线</h2>
+<p>　　双方的无差异曲线的切点代表所能得到的最高效用水平。如果把这些点在横轴表示消费者 A 的效用水平，纵轴表示消费者 B 的效用水平的坐标系中表现出来，就可以得到下图中的效用可能性曲线。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220511213336-2s0hppp.png" style="height:300px" alt="效用可能性曲线" />
+<p>　　由于在最优效用水平组合中，两个消费者的效用水平反方向变化，故对应的效用可能性曲线向右下方倾斜。但是，由于效用水平的高低本来就是一个序数概念，效用可能性曲线的位置及凹凸性等无法得知。</p>
+<h2><a id="%EF%BC%88%E4%BA%8C%EF%BC%89%E7%A4%BE%E4%BC%9A%E7%A6%8F%E5%88%A9%E5%87%BD%E6%95%B0" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（二）社会福利函数</h2>
+<p>　　假定存在某种社会福利函数（social welfare function）， 该社会福利函数是个人效用函数的函数，即：</p>
+\[\begin {align}
+W=W \big(U_1,U_2,\dots,U_n \big)
+\end {align}
+\]
+<p>　　该社会福利函数是个人效用函数的增函数，即满足：</p>
+\[\begin {align}
+\frac {\partial W} {\partial U_i }\gt 0
+\end {align}
+\]
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220511213704-k9mevlf.png" style="height:300px" alt="最大社会福利" />
+<p>　　如图所示，有三条社会无差异曲线：\(W_1\)、\(W_2\)、\(W_3\)，这种曲线不计算社会福利的大小，但能比较社会福利的高低，位置越高的社会无差异曲线代表的社会福利越大。 \(UU'\) 是总效用可能曲线，它类似于消费者行为理论中的收入约束线。同样的道理，最大的社会福利只会出现在总效用可能线 \(UU'\) 和社会无差异线 \(W_2\) 的切点上，这一点称为“限制社会下的最大满足点”。这是能导致最大社会福利的生产、交换和分配的唯一一点。</p>
+<p>　　按照这种分析方法，只要给定个人效用函数，在个人效用函数基础之上的社会福利函数以及转换函数，通过求个人效用最大化可以导出帕累托最优状态。由此可见，彻底解决资源配置问题的关键在于社会福利函数。</p>
+<h2><a id="%EF%BC%88%E4%B8%89%EF%BC%89%E9%98%BF%E7%BD%97%E4%B8%8D%E5%8F%AF%E8%83%BD%E5%AE%9A%E7%90%86" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（三）阿罗不可能定理</h2>
+<p>　　社会福利函数的形成，就是在已知社会所有成员的个人偏好次序的情况下通过一定的程序，把各种各样的个人偏好次序归结为单一的社会偏好次序。偏好的“加总”是指在所有经济行为人的偏好给定的情况下，通过一定的方法用这些信息来描述社会对各种配置的偏好顺序即社会偏好。显然，这种排列还依赖于将众多消费者的偏好进行“加总”的方法。多数人投票的方法得到的社会偏好并不是形状良好的，因为这些偏好具有不传递性。</p>
+<table>
+  <tbody>
+    <tr>
+      <td>行为人1</td>
+      <td>行为人2</td>
+      <td>行为人3</td>
+    </tr>
+    <tr>
+      <td>x</td>
+      <td>y</td>
+      <td>z</td>
+    </tr>
+    <tr>
+      <td>y</td>
+      <td>x</td>
+      <td>z</td>
+    </tr>
+    <tr>
+      <td>z</td>
+      <td>z</td>
+      <td>y</td>
+    </tr>
+  </tbody>
+  <colgroup>
+    <col>
+    <col>
+    <col>
+  </colgroup>
+</table>
+<p>　　如上表所示，改变投票表决顺序，将得出完全不同的选择结果，即可以通 过改变投票表决顺序来操纵投票结果。</p>
+<p>　　**阿罗不可能定理：**用投票的方式不可能把个人的偏好集中起来，形成合乎理性的社会偏好。即在非独裁（即社会偏好不能以一个人或少数人的偏好决定）的情况下，不可能存在有适用于所有个人偏好类型的社会福利函数。</p>
+<h2><a id="%EF%BC%88%E5%9B%9B%EF%BC%89%E4%B8%8D%E5%90%8C%E7%9A%84%E7%A4%BE%E4%BC%9A%E7%A6%8F%E5%88%A9%E5%87%BD%E6%95%B0%E4%B8%8E%E5%9D%87%E8%A1%A1%E7%9A%84%E5%A4%9A%E6%A0%B7%E6%80%A7" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（四）不同的社会福利函数与均衡的多样性</h2>
+<p>　　不同的经济学家从不同的角度，采用不同的社会福利函数，从而得出对社会福利的不同观点。</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220511214456-22sroo2.png" style="width:700px" alt="各种社会福利函数和社会无差异曲线" />
+<h3><a id="1%E5%8A%A0%E6%B3%95%E5%9E%8B%E7%A4%BE%E4%BC%9A%E7%A6%8F%E5%88%A9%E5%87%BD%E6%95%B0%EF%BC%88%E5%8A%9F%E5%88%A9%E4%B8%BB%E4%B9%89%E7%A4%BE%E4%BC%9A%E7%A6%8F%E5%88%A9%E5%87%BD%E6%95%B0%EF%BC%89" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. 加法型社会福利函数（功利主义社会福利函数）</h3>
+<p>　　如果一个社会强调的是所有成员的效用总和（而非其分配），则它的社会福利函数就可以写成如下的加法形式：</p>
+\[\begin {align}
+ W(x)= U_A(x)+U_B(x) 
+\end {align}
+\]
+<p>　　功利主义社会福利函数赋予每个人的效用同样的权数，并随之将社会所有成员的总效用最大化。</p>
+<p>　　加法型社会福利函数或直线型社会无差异曲线意味着，社会福利的大小只取决于社会成员的效用总和，而与其分配无关。换句话说，无论是穷人还是富人，其效用的增加对社会福利的贡献都是一样的。</p>
+<h3><a id="2%E4%B9%98%E6%B3%95%E5%9E%8B%E7%A4%BE%E4%BC%9A%E7%A6%8F%E5%88%A9%E5%87%BD%E6%95%B0" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. 乘法型社会福利函数</h3>
+<p>　　如果一个社会比功利主义更加重视收入的分配和平等问题，则它的社会福利函数就可能具有如下的乘法形式：</p>
+\[\begin {align}
+ W(x)= U_A(x) \cdot U_B(x) 
+\end {align}
+\]
+<p>　　乘法型社会福利函数或双曲线型社会无差异曲线意味着，当社会成员的效用总量给定时，分配越是平等，社会福利就越大，反之，分配越不平等，社会福利就越小。</p>
+<h3><a id="3%E7%BD%97%E5%B0%94%E6%96%AF%E7%A4%BE%E4%BC%9A%E7%A6%8F%E5%88%A9%E5%87%BD%E6%95%B0" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. 罗尔斯社会福利函数</h3>
+<p>　　罗尔斯社会福利函数更加重视提高社会上状况最差的那些人的生活水平。它可以写成：</p>
+\[\begin {align}
+ W(x)=\min \left \{ U_A(x), U_B(x) \right \}
+\end {align}
+\]
+<h3><a id="4%E7%A4%BE%E4%BC%9A%E5%85%AC%E5%B9%B3" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>4. 社会公平</h3>
+<p>　　从最平均到最不平均：</p>
+<img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20230314194449-qk9em3o.png" style="width:600px" />
+<h1><a id="%E5%85%AD%E3%80%81%E6%95%88%E7%8E%87%E4%B8%8E%E5%85%AC%E5%B9%B3" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>六、效率与公平</h1>
+<h2><a id="%EF%BC%88%E4%B8%80%EF%BC%89%E6%95%88%E7%8E%87%E4%B8%8E%E5%85%AC%E5%B9%B3%E7%9A%84%E7%9F%9B%E7%9B%BE" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（一）效率与公平的矛盾</h2>
+<p>　　缺乏公平的效率提高；缺乏效率的公平增进。</p>
+<h2><a id="%EF%BC%88%E4%BA%8C%EF%BC%89%E2%80%9C%E6%95%88%E7%8E%87%E4%BC%98%E5%85%88%E2%80%9D%E5%92%8C%E2%80%9C%E5%85%BC%E9%A1%BE%E5%85%AC%E5%B9%B3%E2%80%9D" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>（二）“效率优先”和“兼顾公平”</h2>
+<p>　　所谓效率优先就是在决定收入分配的问题上，首先考虑效率，把效率当作决定收入分配的第一位因素。经济效率高，所得到的收入也高；反之情况相反。只有在保证效率的基础上，再考虑兼顾公平的问题。</p>
+<p>　　兼顾公平不是必须要平等。可以从以下几个方面做到效率优先、兼顾公平：</p>
+<ul>
+<li>减少和消除不合理的收入；</li>
+<li>促进机会均等；</li>
+<li>限制某些行业、某些个人的垄断性收入；</li>
+<li>实现生存权利和消灭贫穷。</li>
+</ul>
+
+
+        <div class="read-more-link">
+            <a href="https://perhapslol.github.io/blog/">Back Home…</a>
+        </div>
