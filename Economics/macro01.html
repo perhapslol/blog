@@ -208,7 +208,7 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
     &copy; 2024 Poison. All rights reserved.
 </p>
         
-<!-- post 1  -->
+<!-- 标题  -->
   </div>
 </aside>
 
@@ -219,7 +219,7 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
     <article class="post">
         <div class="info">
   <h1 class="post-title">
-    <a href="https://perhapslol.github.io/blog/">一、宏观经济学的特点</a>
+    <a href="https://perhapslol.github.io/blog/">第1章：宏观经济的基本指标及其衡量</a>
   </h1>
 
   <div class="headline">
@@ -267,7 +267,28 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
         
 </html>
 
-<!-- 正文 -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LaTeX in Webpage</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</head>
+<body>
+
+  <script type="text/javascript">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['\\(','\\)']]
+    }
+  });
+  </script>
+</body>
+</html>
+        
+<!-- 正文  -->
+        
+<h1 id="一宏观经济学的特点">一、宏观经济学的特点</h1>
 <h2 id="一宏观经济学的研究对象">（一）宏观经济学的研究对象</h2>
 <p>　　宏观经济学研究的是社会总体的经济行为及其后果，即对经济运行的整体，包括整个社会的产量、收入、价格水平和就业水平进行分析。</p>
 <p>　　测量宏观经济运行情况的最重要指标有国民收入及其增长率、失业率、物价水平及其变动即通货膨胀率。其他比较重要的指标还有政府财政预算赤字及贸易赤字的变动、利率等。</p>
@@ -316,61 +337,17 @@ Domestic Product）。</p>
 <p>　　<strong>国民生产总值（GNP）</strong>是指某国国民所拥有的全部生产要素在一定时期内所生产的最终产品的市场价值。</p>
 <p>　　国内生产总值和国民生产总值这两个统计指标的统计原则是不同的。国内生产总值的统计原则是国土原则，而国民生产总值的统计原则是国民原则。按国土原则统计，凡是在本国领土上创造的收入，不管是不是本国国民创造的都要统计；按国民原则统计，凡是本国国民所创造的收入，不管是否在本国领土上都要统计。</p>
 <p>　　<strong>国外要素净支付（NFP）</strong>为本国生产要素在其他国家获得的收入减去本国付给外国生产要素在本国获得的收入。那么：</p>
-  <math display="block" class="tml-display" style="display:block math;">
-  <mtable displaystyle="true" columnalign="left right right" style="width:100%;">
-    <mtr>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 0em;width:50%;"></mtd>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 1em;">
-        <mrow>
-          <mi>G</mi>
-          <mi>D</mi>
-          <mi>P</mi>
-          <mo>=</mo>
-          <mi>G</mi>
-          <mi>N</mi>
-          <mi>P</mi>
-          <mo>−</mo>
-          <mi>N</mi>
-          <mi>F</mi>
-          <mi>P</mi>
-        </mrow>
-      </mtd>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 0em;width:50%;">
-        <mtext>
-          <span class="tml-eqn"></span>
-        </mtext>
-      </mtd>
-    </mtr>
-  </mtable>
-</math>
+<p><span class="math display">\[
+\begin {align}
+GDP=GNP-NFP
+\end{align}
+\]</span></p>
 <p>　　或者：</p>
-<math display="block" class="tml-display" style="display:block math;">
-  <mtable displaystyle="true" columnalign="left right right" style="width:100%;">
-    <mtr>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 0em;width:50%;"></mtd>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 1em;">
-        <mrow>
-          <mi>G</mi>
-          <mi>N</mi>
-          <mi>P</mi>
-          <mo>=</mo>
-          <mi>G</mi>
-          <mi>D</mi>
-          <mi>P</mi>
-          <mo>+</mo>
-          <mi>N</mi>
-          <mi>F</mi>
-          <mi>P</mi>
-        </mrow>
-      </mtd>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 0em;width:50%;">
-        <mtext>
-          <span class="tml-eqn"></span>
-        </mtext>
-      </mtd>
-    </mtr>
-  </mtable>
-</math>
+<p><span class="math display">\[
+\begin {align}
+GNP=GDP+NFP
+\end {align}
+\]</span></p>
 <h3 id="名义国内生产总值和实际国内生产总值">3.
 名义国内生产总值和实际国内生产总值</h3>
 <p>　　<strong>名义 GDP（或货币 GDP）</strong>
@@ -378,100 +355,19 @@ Domestic Product）。</p>
 <p>　　<strong>实际 GDP</strong>
 是用从前某一年作为基期的价格计算出来的全部最终产品的市场价值。</p>
 <p>　　GDP 折算指数是名义 GDP 和实际 GDP 的比率。使用 GDP
-折算指数，可以将名义 GDP 折算为实际 GDP，其公式为：
-<math display="block" class="tml-display" style="display:block math;">
-  <mtable displaystyle="true" columnalign="left right right" style="width:100%;">
-    <mtr>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 0em;width:50%;"></mtd>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 1em;">
-        <mrow>
-          <mtext>实</mtext>
-          <mtext>际</mtext>
-          <mi>G</mi>
-          <mi>D</mi>
-          <mi>P</mi>
-          <mo>=</mo>
-          <mfrac>
-            <mrow>
-              <mtext>名</mtext>
-              <mtext>义</mtext>
-              <mi>G</mi>
-              <mi>D</mi>
-              <mi>P</mi>
-            </mrow>
-            <mrow>
-              <mi>G</mi>
-              <mi>D</mi>
-              <mi>P</mi>
-              <mtext>折</mtext>
-              <mtext>算</mtext>
-              <mtext>指</mtext>
-              <mtext>数</mtext>
-            </mrow>
-          </mfrac>
-        </mrow>
-      </mtd>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 0em;width:50%;">
-        <mtext>
-          <span class="tml-eqn"></span>
-        </mtext>
-      </mtd>
-    </mtr>
-  </mtable>
-</math>
-<p>　　在 (t)时间，以(t-1)时间为基期的 GDP 折算指数为：</p>
-<math display="block" class="tml-display" style="display:block math;">
-  <mtable displaystyle="true" columnalign="left right right" style="width:100%;">
-    <mtr>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 0em;width:50%;"></mtd>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 1em;">
-        <mrow>
-          <mi>G</mi>
-          <mi>D</mi>
-          <mi>P</mi>
-          <mtext>折</mtext>
-          <mtext>算</mtext>
-          <mtext>指</mtext>
-          <mtext>数</mtext>
-          <mo>=</mo>
-          <mfrac>
-            <mrow>
-              <mo stretchy="true" lspace="0em" rspace="0em">∑</mo>
-              <msub>
-                <mi>P</mi>
-                <mi>t</mi>
-              </msub>
-              <msub>
-                <mi>Q</mi>
-                <mi>t</mi>
-              </msub>
-            </mrow>
-            <mrow>
-              <mo stretchy="true" lspace="0em" rspace="0em">∑</mo>
-              <msub>
-                <mi>P</mi>
-                <mrow>
-                  <mi>t</mi>
-                  <mo>−</mo>
-                  <mn>1</mn>
-                </mrow>
-              </msub>
-              <msub>
-                <mi>Q</mi>
-                <mi>t</mi>
-              </msub>
-            </mrow>
-          </mfrac>
-        </mrow>
-      </mtd>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 0em;width:50%;">
-        <mtext>
-          <span class="tml-eqn"></span>
-        </mtext>
-      </mtd>
-    </mtr>
-  </mtable>
-</math>
+折算指数，可以将名义 GDP 折算为实际 GDP，其公式为：</p>
+<p><span class="math display">\[
+\begin {align}
+实际GDP=\frac {名义GDP} {GDP折算指数}
+\end {align}
+\]</span></p>
+<p>　　在 <span class="math inline">\(t\)</span> 时间，以 <span
+class="math inline">\(t-1\)</span> 时间为基期的 GDP 折算指数为：</p>
+<p><span class="math display">\[
+\begin {align}
+GDP折算指数=\frac {\sum P_tQ_t} {\sum P_{t-1}Q_t}
+\end {align}
+\]</span></p>
 <h3 id="流量与存量">4. 流量与存量</h3>
 <p>　　流量是一定时期内发生的变量。</p>
 <p>　　存量是一定时点上存在的变量。</p>
@@ -529,39 +425,11 @@ id="一国内生产总值的构成与核算方法">（一）国内生产总值�
 <p>　　支出法是指通过核算在一定时期内整个社会购买最终产品的总支出（即最终产品的总卖价）来计量
 GDP 的一种方法。</p>
 <h4 id="构成">1.2 构成</h4>
-
-<math display="block" class="tml-display" style="display:block math;">
-  <mtable displaystyle="true" columnalign="left right right" style="width:100%;">
-    <mtr>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 0em;width:50%;"></mtd>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 1em;">
-        <mrow>
-          <mi>G</mi>
-          <mi>D</mi>
-          <mi>P</mi>
-          <mo>=</mo>
-          <mi>C</mi>
-          <mo>+</mo>
-          <mi>I</mi>
-          <mo>+</mo>
-          <mi>G</mi>
-          <mo>+</mo>
-          <mo form="prefix" stretchy="false">(</mo>
-          <mi>X</mi>
-          <mo>−</mo>
-          <mi>M</mi>
-          <mo form="postfix" stretchy="false">)</mo>
-        </mrow>
-      </mtd>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 0em;width:50%;">
-        <mtext>
-          <span class="tml-eqn"></span>
-        </mtext>
-      </mtd>
-    </mtr>
-  </mtable>
-</math>
-
+<p><span class="math display">\[
+\begin {align}
+GDP=C+I+G+(X-M)
+\end {align}
+\]</span></p>
 <p>　　<strong>个人消费支出总额（C）</strong>：<strong>除购买新住房之外用于物品与劳务的支出</strong>，包括<strong>耐用品消费支出</strong>、<strong>非耐用品消费支出</strong>和<strong>服务支出</strong>三个方面。</p>
 <p>　　<strong>国内总投资支出（I）</strong>：增加或更换资本资产的支出，包括<strong>固定资产投资</strong>与<strong>存货投资</strong>，还包括<strong>商业存货的变化</strong>，<u>不包括购买债券或上市公司的股票</u>等。<strong>购买新住房属于总投资</strong>。</p>
 <p>　　其中：<span
@@ -596,78 +464,12 @@ GDP 和收入法计得的 GDP
 <p>　　收入法即用要素收入亦即企业生产成本核算
 GDP。由于要素的收入从企业角度看即是产品的成本（包括企业利润），因而这种方法又称要素成本法。</p>
 <h4 id="构成-1">2.2 构成</h4>
-
-<math display="block" class="tml-display" style="display:block math;">
-  <mtable displaystyle="true" columnalign="left right left right" style="width:100%;">
-    <mtr>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 0em;width:50%;"></mtd>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 1em;">
-        <mrow>
-          <mtext>国</mtext>
-          <mtext>民</mtext>
-          <mtext>总</mtext>
-          <mtext>收</mtext>
-          <mtext>入</mtext>
-          <mo>=</mo>
-        </mrow>
-      </mtd>
-      <mtd class="tml-left" style="padding:0.7ex 0em 0.7ex 0em;">
-        <mrow>
-          <mtext>工</mtext>
-          <mtext>资</mtext>
-          <mo>+</mo>
-          <mtext>利</mtext>
-          <mtext>息</mtext>
-          <mo>+</mo>
-          <mtext>利</mtext>
-          <mtext>润</mtext>
-          <mo>+</mo>
-          <mtext>租</mtext>
-          <mtext>金</mtext>
-          <mo>+</mo>
-          <mtext>间</mtext>
-          <mtext>接</mtext>
-          <mtext>税</mtext>
-          <mtext>和</mtext>
-          <mtext>企</mtext>
-          <mtext>业</mtext>
-          <mtext>转</mtext>
-          <mtext>移</mtext>
-          <mtext>支</mtext>
-          <mtext>付</mtext>
-          <mrow></mrow>
-        </mrow>
-      </mtd>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 1em;width:50%;">
-        <mtext></mtext>
-      </mtd>
-    </mtr>
-    <mtr>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 0em;width:50%;"></mtd>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 1em;">
-        <mrow></mrow>
-      </mtd>
-      <mtd class="tml-left" style="padding:0.7ex 0em 0.7ex 0em;">
-        <mrow>
-          <mo>+</mo>
-          <mtext>折</mtext>
-          <mtext>旧</mtext>
-          <mo>+</mo>
-          <mtext>统</mtext>
-          <mtext>计</mtext>
-          <mtext>误</mtext>
-          <mtext>差</mtext>
-        </mrow>
-      </mtd>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 1em;width:50%;">
-        <mtext>
-          <span class="tml-eqn"></span>
-        </mtext>
-      </mtd>
-    </mtr>
-  </mtable>
-</math>
-
+<p><span class="math display">\[
+\begin {align}
+国民总收入= &amp; 工资+利息+利润+租金+间接税和企业转移支付     \notag \\
+&amp; +折旧+统计误差
+\end {align}
+\]</span></p>
 <p>　　<strong>工资、利息和租金等生产要素的报酬。</strong></p>
 <p>　　<strong>非公司企业主收入，</strong>如医生、律师、农民和小店铺主的收入。</p>
 <p>　　<strong>公司税前利润，</strong>包括公司所得税、社会保险税、股东红利及公司未分配利润等。</p>
@@ -689,250 +491,39 @@ GDP 的一种方法。</p>
 <h3 id="国内生产总值gdp">1．国内生产总值（GDP）</h3>
 <p>　　国内生产总值（GDP）计量一定时期内一个国家的所有生产活动的价值。国内生产总值中的“总”字意指在计算各个生产单位的产出时，未扣除当期的资本耗费。如果扣除资本耗费，那就是国内生产净值。</p>
 <h3 id="国内生产净值ndp">2．国内生产净值（NDP）</h3>
-<p>　　国内生产净值（NDP）是一国在一定时期内以货币表现的最终产品和劳务价值扣除固定资产折旧后的余额。
-
-<math display="block" class="tml-display" style="display:block math;">
-  <mtable displaystyle="true" columnalign="left right right" style="width:100%;">
-    <mtr>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 0em;width:50%;"></mtd>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 1em;">
-        <mrow>
-          <mi>N</mi>
-          <mi>D</mi>
-          <mi>P</mi>
-          <mo>=</mo>
-          <mi>G</mi>
-          <mi>D</mi>
-          <mi>P</mi>
-          <mo>−</mo>
-          <mtext>折</mtext>
-          <mtext>旧</mtext>
-        </mrow>
-      </mtd>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 0em;width:50%;">
-        <mtext>
-          <span class="tml-eqn"></span>
-        </mtext>
-      </mtd>
-    </mtr>
-  </mtable>
-</math>
-
-<p>　　其中：<math display="block" class="tml-display" style="display:block math;">
-  <mrow>
-    <mtext>折</mtext>
-    <mtext>旧</mtext>
-    <mo>=</mo>
-    <mtext>总</mtext>
-    <mtext>投</mtext>
-    <mtext>资</mtext>
-    <mo>−</mo>
-    <mtext>净</mtext>
-    <mtext>投</mtext>
-    <mtext>资</mtext>
-  </mrow>
-</math>
+<p>　　国内生产净值（NDP）是一国在一定时期内以货币表现的最终产品和劳务价值扣除固定资产折旧后的余额。</p>
+<p><span class="math display">\[
+\begin{align}
+NDP=GDP-折旧
+\end {align}
+\]</span></p>
+<p>　　其中：<span class="math inline">\(折旧=总投资-净投资\)</span></p>
 <h3 id="国民收入ni">3．国民收入（NI）</h3>
 <p>　　国民收入（NI）表示狭义的国民收入（广义的国民收入即
 GDP、GNP），是指一个国家在一定时期内（通常为一年）用于生产产品和提供劳务的各项生产要素所获得的报酬（收入）的总和，是劳动、资本和土地等生产要素所获得的全部收入，NI
 可由 GDP 减去折旧和间接税而得到。</p>
 <p>　　这里的国民收入，实际上是按要素费用计算的国民净收入。</p>
-
-<math display="block" class="tml-display" style="display:block math;">
-  <mtable displaystyle="true" columnalign="left right left right" style="width:100%;">
-    <mtr>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 0em;width:50%;"></mtd>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 1em;">
-        <mrow>
-          <mi>N</mi>
-          <mi>I</mi>
-        </mrow>
-      </mtd>
-      <mtd class="tml-left" style="padding:0.7ex 0em 0.7ex 0em;">
-        <mrow>
-          <mo>=</mo>
-          <mi>N</mi>
-          <mi>D</mi>
-          <mi>P</mi>
-          <mo>−</mo>
-          <mtext>间</mtext>
-          <mtext>接</mtext>
-          <mtext>税</mtext>
-          <mo>−</mo>
-          <mtext>企</mtext>
-          <mtext>业</mtext>
-          <mtext>转</mtext>
-          <mtext>移</mtext>
-          <mtext>支</mtext>
-          <mtext>付</mtext>
-          <mo>+</mo>
-          <mtext>政</mtext>
-          <mtext>府</mtext>
-          <mtext>补</mtext>
-          <mtext>助</mtext>
-          <mtext>金</mtext>
-          <mrow></mrow>
-        </mrow>
-      </mtd>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 1em;width:50%;">
-        <mtext></mtext>
-      </mtd>
-    </mtr>
-    <mtr>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 0em;width:50%;"></mtd>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 1em;">
-        <mrow></mrow>
-      </mtd>
-      <mtd class="tml-left" style="padding:0.7ex 0em 0.7ex 0em;">
-        <mrow>
-          <mo>=</mo>
-          <mtext>工</mtext>
-          <mtext>资</mtext>
-          <mo>+</mo>
-          <mtext>租</mtext>
-          <mtext>金</mtext>
-          <mo>+</mo>
-          <mtext>利</mtext>
-          <mtext>息</mtext>
-          <mo>+</mo>
-          <mtext>业</mtext>
-          <mtext>主</mtext>
-          <mtext>收</mtext>
-          <mtext>入</mtext>
-          <mo>+</mo>
-          <mtext>企</mtext>
-          <mtext>业</mtext>
-          <mtext>利</mtext>
-          <mtext>润</mtext>
-        </mrow>
-      </mtd>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 1em;width:50%;">
-        <mtext>
-          <span class="tml-eqn"></span>
-        </mtext>
-      </mtd>
-    </mtr>
-  </mtable>
-</math>
-
+<p><span class="math display">\[
+\begin {align}
+NI &amp; =NDP-间接税-企业转移支付+政府补助金   \notag \\
+     &amp;=工资+租金+利息+业主收入+企业利润
+\end {align}
+\]</span></p>
 <h3 id="个人收入pi">4．个人收入（PI）</h3>
 <p>　　个人收入（PI）指一个国家所有个人在一定时期内（通常为一年）从各种来源所取得的收入总和。</p>
-
-<math display="block" class="tml-display" style="display:block math;">
-  <mtable displaystyle="true" columnalign="left right left right" style="width:100%;">
-    <mtr>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 0em;width:50%;"></mtd>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 1em;">
-        <mrow>
-          <mi>P</mi>
-          <mi>I</mi>
-          <mo>=</mo>
-        </mrow>
-      </mtd>
-      <mtd class="tml-left" style="padding:0.7ex 0em 0.7ex 0em;">
-        <mrow>
-          <mi>N</mi>
-          <mi>I</mi>
-          <mo>−</mo>
-          <mo form="prefix" stretchy="false">(</mo>
-          <mtext>公</mtext>
-          <mtext>司</mtext>
-          <mtext>所</mtext>
-          <mtext>得</mtext>
-          <mtext>税</mtext>
-          <mo>+</mo>
-          <mtext>社</mtext>
-          <mtext>会</mtext>
-          <mtext>保</mtext>
-          <mtext>险</mtext>
-          <mtext>税</mtext>
-          <mo>+</mo>
-          <mtext>公</mtext>
-          <mtext>司</mtext>
-          <mtext>未</mtext>
-          <mtext>分</mtext>
-          <mtext>配</mtext>
-          <mtext>利</mtext>
-          <mtext>润</mtext>
-          <mo form="postfix" stretchy="false">)</mo>
-          <mrow></mrow>
-        </mrow>
-      </mtd>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 1em;width:50%;">
-        <mtext></mtext>
-      </mtd>
-    </mtr>
-    <mtr>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 0em;width:50%;"></mtd>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 1em;">
-        <mrow></mrow>
-      </mtd>
-      <mtd class="tml-left" style="padding:0.7ex 0em 0.7ex 0em;">
-        <mrow>
-          <mo>+</mo>
-          <mtext>政</mtext>
-          <mtext>府</mtext>
-          <mtext>或</mtext>
-          <mtext>企</mtext>
-          <mtext>业</mtext>
-          <mtext>给</mtext>
-          <mtext>个</mtext>
-          <mtext>人</mtext>
-          <mtext>的</mtext>
-          <mtext>转</mtext>
-          <mtext>移</mtext>
-          <mtext>支</mtext>
-          <mtext>付</mtext>
-          <mo>+</mo>
-          <mtext>利</mtext>
-          <mtext>息</mtext>
-          <mtext>调</mtext>
-          <mtext>整</mtext>
-        </mrow>
-      </mtd>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 1em;width:50%;">
-        <mtext>
-          <span class="tml-eqn"></span>
-        </mtext>
-      </mtd>
-    </mtr>
-  </mtable>
-</math>
-
-
+<p><span class="math display">\[
+\begin {align}
+PI= &amp; NI-(公司所得税+社会保险税+公司未分配利润)    \notag \\
+&amp;+政府或企业给个人的转移支付+利息调整
+\end {align}
+\]</span></p>
 <h3 id="个人可支配收入dpi">5．个人可支配收入（DPI）</h3>
 <p>　　从个人收入（PI）中扣除个人向政府缴纳的税金，即得个人可支配收入（DPI）。</p>
-
-
-<math display="block" class="tml-display" style="display:block math;">
-  <mtable displaystyle="true" columnalign="left right right" style="width:100%;">
-    <mtr>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 0em;width:50%;"></mtd>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 1em;">
-        <mrow>
-          <mi>D</mi>
-          <mi>P</mi>
-          <mi>I</mi>
-          <mo>=</mo>
-          <mi>P</mi>
-          <mi>I</mi>
-          <mo>−</mo>
-          <mtext>个</mtext>
-          <mtext>人</mtext>
-          <mtext>所</mtext>
-          <mtext>得</mtext>
-          <mtext>税</mtext>
-        </mrow>
-      </mtd>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 0em;width:50%;">
-        <mtext>
-          <span class="tml-eqn"></span>
-        </mtext>
-      </mtd>
-    </mtr>
-  </mtable>
-</math>
-
+<p><span class="math display">\[
+\begin {align}
+DPI= PI-个人所得税
+\end {align}
+\]</span></p>
 <p>　　从个人收入中减去个人税收和非税支付，就可以得到个人可支配收入。个人税收包括个人收入税、个人财产税、遗产税和赠与税等。非税支付包括罚金和馈赠等。个人可支配收入也被称作税后的个人收入。</p>
 <h1 id="四投资储蓄恒等式">四、投资—储蓄恒等式</h1>
 <p>　　<strong>“事后的恒等”“定义的恒等”</strong></p>
@@ -941,88 +532,25 @@ GDP、GNP），是指一个国家在一定时期内（通常为一年）用于�
 <p>　　假设：没有政府与对外贸易，假定经济是均衡的。</p>
 <p>　　原理：在 GDP 意义上，总支出=总收入</p>
 <p>　　<strong>从总支出来看：</strong>售出的产量可以被看作以消费支出与投资支出之和来表示的需求的组成部分。可以将其写成：</p>
-
-<math display="block" class="tml-display" style="display:block math;">
-  <mtable displaystyle="true" columnalign="left right right" style="width:100%;">
-    <mtr>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 0em;width:50%;"></mtd>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 1em;">
-        <mrow>
-          <mi>Y</mi>
-          <mo>≡</mo>
-          <mi>C</mi>
-          <mo>+</mo>
-          <mi>I</mi>
-        </mrow>
-      </mtd>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 0em;width:50%;">
-        <mtext>
-          <span class="tml-eqn"></span>
-        </mtext>
-      </mtd>
-    </mtr>
-  </mtable>
-</math>
-
-<p>　　<strong>从总支出来看：</strong>
-
-<math display="block" class="tml-display" style="display:block math;">
-  <mtable displaystyle="true" columnalign="left right right" style="width:100%;">
-    <mtr>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 0em;width:50%;"></mtd>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 1em;">
-        <mrow>
-          <mi>Y</mi>
-          <mo>≡</mo>
-          <mi>C</mi>
-          <mo>+</mo>
-          <mi>S</mi>
-        </mrow>
-      </mtd>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 0em;width:50%;">
-        <mtext>
-          <span class="tml-eqn"></span>
-        </mtext>
-      </mtd>
-    </mtr>
-  </mtable>
-</math>
-
+<p><span class="math display">\[
+\begin {align}
+Y \equiv C+I
+\end {align}
+\]</span></p>
+<p>　　<strong>从总收入来看：</strong></p>
+<p><span class="math display">\[
+\begin {align}
+Y \equiv C+S
+\end {align}
+\]</span></p>
 <p>　　因此：</p>
-
-<math display="block" class="tml-display" style="display:block math;">
-  <mtable displaystyle="true" columnalign="left right right" style="width:100%;">
-    <mtr>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 0em;width:50%;"></mtd>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 1em;">
-        <mrow>
-          <mi>C</mi>
-          <mo>+</mo>
-          <mi>I</mi>
-          <mo>≡</mo>
-          <mi>Y</mi>
-          <mo>≡</mo>
-          <mi>C</mi>
-          <mo>+</mo>
-          <mi>S</mi>
-        </mrow>
-      </mtd>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 0em;width:50%;">
-        <mtext>
-          <span class="tml-eqn"></span>
-        </mtext>
-      </mtd>
-    </mtr>
-  </mtable>
-</math>
-
-<p>　　即有恒等关系：<math display="block" class="tml-display" style="display:block math;">
-  <mrow>
-    <mi>I</mi>
-    <mo>≡</mo>
-    <mi>S</mi>
-  </mrow>
-</math>
+<p><span class="math display">\[
+\begin {align}
+C+I \equiv Y \equiv  C+S
+\end {align}
+\]</span></p>
+<p>　　即有恒等关系：<span class="math inline">\(I\equiv
+S\)</span>。</p>
 <p>　　这反映了在两部门经济中总供给和总需求恒等关系之下，储蓄和投资一定恒相等，此时不管经济是否处于充分就业、通货膨胀或均衡状态。</p>
 <blockquote>
 <p><strong>补充：</strong></p>
@@ -1035,273 +563,66 @@ GDP、GNP），是指一个国家在一定时期内（通常为一年）用于�
 <h2 id="二三部门经济">（二）三部门经济</h2>
 <p>　　<strong>三部门：家庭部门、企业部门、政府部门</strong></p>
 <p>　　<strong>从总支出来看：</strong></p>
-
-<math display="block" class="tml-display" style="display:block math;">
-  <mtable displaystyle="true" columnalign="left right right" style="width:100%;">
-    <mtr>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 0em;width:50%;"></mtd>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 1em;">
-        <mrow>
-          <mi>Y</mi>
-          <mo>≡</mo>
-          <mi>C</mi>
-          <mo>+</mo>
-          <mi>I</mi>
-          <mo>+</mo>
-          <mi>G</mi>
-        </mrow>
-      </mtd>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 0em;width:50%;">
-        <mtext>
-          <span class="tml-eqn"></span>
-        </mtext>
-      </mtd>
-    </mtr>
-  </mtable>
-</math>
-
+<p><span class="math display">\[
+\begin {align}
+Y \equiv C+I+G
+\end {align}
+\]</span></p>
 <p>　　<strong>从总收入来看：</strong></p>
-
-<math display="block" class="tml-display" style="display:block math;">
-  <mtable displaystyle="true" columnalign="left right right" style="width:100%;">
-    <mtr>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 0em;width:50%;"></mtd>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 1em;">
-        <mrow>
-          <mi>Y</mi>
-          <mo>≡</mo>
-          <mi>C</mi>
-          <mo>+</mo>
-          <mi>S</mi>
-          <mo>+</mo>
-          <mi>T</mi>
-        </mrow>
-      </mtd>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 0em;width:50%;">
-        <mtext>
-          <span class="tml-eqn"></span>
-        </mtext>
-      </mtd>
-    </mtr>
-  </mtable>
-</math>
-
+<p><span class="math display">\[
+\begin {align}
+Y \equiv C+S+T
+\end {align}
+\]</span></p>
 <p>　　因此：</p>
-
-<math display="block" class="tml-display" style="display:block math;">
-  <mtable displaystyle="true" columnalign="left right right" style="width:100%;">
-    <mtr>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 0em;width:50%;"></mtd>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 1em;">
-        <mrow>
-          <mi>C</mi>
-          <mo>+</mo>
-          <mi>I</mi>
-          <mo>+</mo>
-          <mi>G</mi>
-          <mo>≡</mo>
-          <mi>C</mi>
-          <mo>+</mo>
-          <mi>S</mi>
-          <mo>+</mo>
-          <mi>T</mi>
-        </mrow>
-      </mtd>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 0em;width:50%;">
-        <mtext>
-          <span class="tml-eqn"></span>
-        </mtext>
-      </mtd>
-    </mtr>
-  </mtable>
-</math>
-
-<p>　　即有恒等式：<math display="block" class="tml-display" style="display:block math;">
-  <mrow>
-    <mi>I</mi>
-    <mo>≡</mo>
-    <mi>S</mi>
-    <mo>+</mo>
-    <mo form="prefix" stretchy="false">(</mo>
-    <mi>T</mi>
-    <mo>−</mo>
-    <mi>G</mi>
-    <mo form="postfix" stretchy="false">)</mo>
-  </mrow>
-</math>
-<p>　　其中，(T−G)是政府储蓄。T小于G时，差额为预算盈余；T大于G时，差额为预算赤字。<p>
-
-<math display="block" class="tml-display" style="display:block math;">
-  <mrow>
-    <mi>S</mi>
-    <mo>+</mo>
-    <mo form="prefix" stretchy="false">(</mo>
-    <mi>T</mi>
-    <mo>−</mo>
-    <mi>G</mi>
-    <mo form="postfix" stretchy="false">)</mo>
-  </mrow>
-</math>
-
-<p>　　表示私人储蓄与政府储蓄之和。<p>
-
-<p>　　由<u>三部门总收入方程</u>可以得到可支配收入：<p>
-
-<math display="block" class="tml-display" style="display:block math;">
-  <mrow>
-    <mi>Y</mi>
-    <mo>−</mo>
-    <mi>T</mi>
-    <mo>=</mo>
-    <msub>
-      <mi>Y</mi>
-      <mi>D</mi>
-    </msub>
-    <mo>=</mo>
-    <mi>C</mi>
-    <mo>+</mo>
-    <mi>S</mi>
-  </mrow>
-</math>
-
+<p><span class="math display">\[
+\begin {align}
+C+I+G \equiv C+S+T
+\end {align}
+\]</span></p>
+<p>　　即有恒等式：<span class="math inline">\(I \equiv S +
+(T-G)\)</span></p>
+<p>　　其中，<span class="math inline">\(T-G\)</span> 是政府储蓄。<span
+class="math inline">\(T＞G\)</span> 时，差额为预算盈余；<span
+class="math inline">\(T＜G\)</span> 时，差额为预算赤字。</p>
+<p>　　<span class="math inline">\(S + (T-G)\)</span>
+表示私人储蓄与政府储蓄之和。</p>
+<p>　　由<u>三部门总收入方程</u>可以得到可支配收入：<span
+class="math inline">\(Y-T=Y_D=C+S\)</span></p>
 <h2 id="三四部门经济">（三）四部门经济</h2>
 <p>　　<strong>四部门：家庭部门、企业部门、政府部门、国外部门</strong></p>
 <p>　　<strong>从总支出来看：</strong></p>
-
-<math display="block" class="tml-display" style="display:block math;">
-  <mtable displaystyle="true" columnalign="left right right" style="width:100%;">
-    <mtr>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 0em;width:50%;"></mtd>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 1em;">
-        <mrow>
-          <mi>Y</mi>
-          <mo>≡</mo>
-          <mi>C</mi>
-          <mo>+</mo>
-          <mi>I</mi>
-          <mo>+</mo>
-          <mi>G</mi>
-          <mo>+</mo>
-          <mo form="prefix" stretchy="false">(</mo>
-          <mi>X</mi>
-          <mo>−</mo>
-          <mi>M</mi>
-          <mo form="postfix" stretchy="false">)</mo>
-        </mrow>
-      </mtd>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 0em;width:50%;">
-        <mtext>
-          <span class="tml-eqn"></span>
-        </mtext>
-      </mtd>
-    </mtr>
-  </mtable>
-</math>
-
+<p><span class="math display">\[
+\begin {align}
+Y \equiv C+I+G+(X-M)
+\end {align}
+\]</span></p>
 <p>　　<strong>从总收入来看：</strong></p>
-
-<math display="block" class="tml-display" style="display:block math;">
-  <mtable displaystyle="true" columnalign="left right right" style="width:100%;">
-    <mtr>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 0em;width:50%;"></mtd>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 1em;">
-        <mrow>
-          <mi>Y</mi>
-          <mo>≡</mo>
-          <mi>C</mi>
-          <mo>+</mo>
-          <mi>S</mi>
-          <mo>+</mo>
-          <mi>T</mi>
-        </mrow>
-      </mtd>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 0em;width:50%;">
-        <mtext>
-          <span class="tml-eqn"></span>
-        </mtext>
-      </mtd>
-    </mtr>
-  </mtable>
-</math>
-
+<p><span class="math display">\[
+\begin {align}
+Y \equiv C+S+T
+\end {align}
+\]</span></p>
 <p>　　因此：</p>
-
-<math display="block" class="tml-display" style="display:block math;">
-  <mtable displaystyle="true" columnalign="left right right" style="width:100%;">
-    <mtr>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 0em;width:50%;"></mtd>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 1em;">
-        <mrow>
-          <mi>C</mi>
-          <mo>+</mo>
-          <mi>I</mi>
-          <mo>+</mo>
-          <mi>G</mi>
-          <mo>+</mo>
-          <mo form="prefix" stretchy="false">(</mo>
-          <mi>X</mi>
-          <mo>−</mo>
-          <mi>M</mi>
-          <mo form="postfix" stretchy="false">)</mo>
-          <mo>≡</mo>
-          <mi>C</mi>
-          <mo>+</mo>
-          <mi>S</mi>
-          <mo>+</mo>
-          <mi>T</mi>
-        </mrow>
-      </mtd>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 0em;width:50%;">
-        <mtext>
-          <span class="tml-eqn"></span>
-        </mtext>
-      </mtd>
-    </mtr>
-  </mtable>
-</math>
-
-<p>　　即有恒等式：<math display="block" class="tml-display" style="display:block math;">
-  <mrow>
-    <mi>I</mi>
-    <mo>≡</mo>
-    <mi>S</mi>
-    <mo>+</mo>
-    <mo form="prefix" stretchy="false">(</mo>
-    <mi>T</mi>
-    <mo>−</mo>
-    <mi>G</mi>
-    <mo form="postfix" stretchy="false">)</mo>
-    <mo>+</mo>
-    <mo form="prefix" stretchy="false">(</mo>
-    <mi>M</mi>
-    <mo>−</mo>
-    <mi>X</mi>
-    <mo form="postfix" stretchy="false">)</mo>
-  </mrow>
-</math>
-
-<p>　　S是私人储蓄，(T−G)是政府储蓄（M−X）是从世界其他国家的借款。
-<p>　　如果净税收超过政府支出，即T大于G，则政府预算盈余就可以用来为投资提供资金。但是，如果净税收少于政府支出，本来可以用来为投资融资的资金就必须首先用来填补政府预算赤字。
-<p>　　需要注意的是，储蓄—投资恒等是从国民收入会计的角度，就整个经济而言，事后的储蓄和事后的投资总量相等，而以后分析宏观经济均衡时投资等于储蓄，是指计划投资（事前投资）等于计划储蓄（事前储蓄）所形成的经济均衡状态。
-
-　　<math display="block" class="tml-display" style="display:block math;">
-  <mrow>
-    <mi>S</mi>
-    <mo>+</mo>
-    <mo form="prefix" stretchy="false">(</mo>
-    <mi>T</mi>
-    <mo>−</mo>
-    <mi>G</mi>
-    <mo form="postfix" stretchy="false">)</mo>
-    <mo>+</mo>
-    <mo form="prefix" stretchy="false">(</mo>
-    <mi>M</mi>
-    <mo>−</mo>
-    <mi>X</mi>
-    <mo form="postfix" stretchy="false">)</mo>
-  </mrow>
-</math>
-</p>　　表示私人储蓄与政府储蓄之和。</p>
+<p><span class="math display">\[
+\begin {align}
+C+I+G+(X-M)\equiv C+S+T
+\end {align}
+\]</span></p>
+<p>　　即有恒等式：<span class="math inline">\(I \equiv S +
+(T-G)+(M-X)\)</span></p>
+<ul>
+<li><span class="math inline">\(S\)</span> 是私人储蓄</li>
+<li><span class="math inline">\((T-G)\)</span> 是政府储蓄</li>
+<li><span class="math inline">\((M-X)\)</span>
+是从世界其他国家的借款</li>
+</ul>
+<p>　　如果净税收超过政府支出，即 <span class="math inline">\(T \gt
+G\)</span>
+，则政府预算盈余就可以用来为投资提供资金。但是，如果净税收少于政府支出，本来可以用来为投资融资的资金就必须首先用来填补政府预算赤字。</p>
+<p>　　需要注意的是，储蓄—投资恒等是从国民收入会计的角度，就整个经济而言，事后的储蓄和事后的投资总量相等，而以后分析宏观经济均衡时投资等于储蓄，是指计划投资（事前投资）等于计划储蓄（事前储蓄）所形成的经济均衡状态。</p>
+<p>　　<span class="math inline">\(S + (T-G)+(M-X)\)</span>
+表示私人储蓄与政府储蓄之和。</p>
 <blockquote>
 <p><strong>补充：</strong></p>
 <p>在三部门和四部门经济中，储蓄 <span class="math inline">\(S\)</span>
@@ -1324,139 +645,29 @@ class="math inline">\(T\)</span>
 <p><img src="https://assets.b3logfile.com/siyuan/1634272634187/assets/image-20220513163620-q3u2rf7.png" style="width:700px" alt="三种类型的人" /></p>
 <h3 id="二失业率">（二）失业率</h3>
 <p>　　失业率是指失业人数占劳动力总数的百分比，它是衡量经济中失业状况的最基本指标。计算公式为：</p>
-
-<math display="block" class="tml-display" style="display:block math;">
-  <mtable displaystyle="true" columnalign="left right right" style="width:100%;">
-    <mtr>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 0em;width:50%;"></mtd>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 1em;">
-        <mrow>
-          <mtext>失</mtext>
-          <mtext>业</mtext>
-          <mtext>率</mtext>
-          <mo>=</mo>
-          <mfrac>
-            <mrow>
-              <mtext>失</mtext>
-              <mtext>业</mtext>
-              <mtext>人</mtext>
-              <mtext>数</mtext>
-            </mrow>
-            <mrow>
-              <mtext>劳</mtext>
-              <mtext>动</mtext>
-              <mtext>力</mtext>
-              <mtext>数</mtext>
-              <mtext>量</mtext>
-            </mrow>
-          </mfrac>
-          <mo>×</mo>
-          <mn>100</mn>
-        </mrow>
-      </mtd>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 0em;width:50%;">
-        <mtext>
-          <span class="tml-eqn"></span>
-        </mtext>
-      </mtd>
-    </mtr>
-  </mtable>
-</math>
-
+<p><span class="math display">\[
+\begin {align}
+失业率=\frac{失业人数} {劳动力数量} \times 100%
+\end {align}
+\]</span></p>
 <h3 id="三劳动力参与率">（三）劳动力参与率</h3>
 <p>　　劳动力参与率为成年人口中属于劳动力的人数的百分比。计算公式为：</p>
-
-<math display="block" class="tml-display" style="display:block math;">
-  <mtable displaystyle="true" columnalign="left right right" style="width:100%;">
-    <mtr>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 0em;width:50%;"></mtd>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 1em;">
-        <mrow>
-          <mtext>劳</mtext>
-          <mtext>动</mtext>
-          <mtext>力</mtext>
-          <mtext>参</mtext>
-          <mtext>与</mtext>
-          <mtext>率</mtext>
-          <mo>=</mo>
-          <mfrac>
-            <mrow>
-              <mtext>劳</mtext>
-              <mtext>动</mtext>
-              <mtext>力</mtext>
-              <mtext>数</mtext>
-              <mtext>量</mtext>
-            </mrow>
-            <mrow>
-              <mtext>成</mtext>
-              <mtext>年</mtext>
-              <mtext>人</mtext>
-              <mtext>口</mtext>
-              <mtext>数</mtext>
-              <mtext>量</mtext>
-            </mrow>
-          </mfrac>
-          <mo>×</mo>
-          <mn>100</mn>
-        </mrow>
-      </mtd>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 0em;width:50%;">
-        <mtext>
-          <span class="tml-eqn"></span>
-        </mtext>
-      </mtd>
-    </mtr>
-  </mtable>
-</math>
-
+<p><span class="math display">\[
+\begin {align}
+劳动力参与率=\frac{劳动力数量} {成年人口数量} \times 100%
+\end {align}
+\]</span></p>
 <h2 id="二物价水平的衡量">（二）物价水平的衡量</h2>
 <p>　　通货膨胀是指物价总水平的上升。物价总水平或者说一般物价水平是指所有商品和劳务交易价格总额的加权平均数值，这个加权平均值就是价格指数。宏观经济学用价格指数来描述整个经济中的价格水平。宏观经济学中常涉及的价格指数主要有
 GDP 折算指数、消费价格指数（简记为 CPI）和生产者价格指数（简记为
 PPI）。</p>
 <h3 id="消费价格指数">1．消费价格指数</h3>
 <p>　　消费价格指数（CPI）又称生活费用价格指数，指通过计算城市居民日常消费的生活用品和劳务的价格水平变动而得到的指数，计算公式为：</p>
-
-<math display="block" class="tml-display" style="display:block math;">
-  <mtable displaystyle="true" columnalign="left right right" style="width:100%;">
-    <mtr>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 0em;width:50%;"></mtd>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 1em;">
-        <mrow>
-          <mi>C</mi>
-          <mi>P</mi>
-          <mi>I</mi>
-          <mo>=</mo>
-          <mfrac>
-            <mrow>
-              <mtext>现</mtext>
-              <mtext>期</mtext>
-              <mtext>价</mtext>
-              <mtext>格</mtext>
-              <mtext>指</mtext>
-              <mtext>数</mtext>
-            </mrow>
-            <mrow>
-              <mtext>基</mtext>
-              <mtext>期</mtext>
-              <mtext>价</mtext>
-              <mtext>格</mtext>
-              <mtext>指</mtext>
-              <mtext>数</mtext>
-            </mrow>
-          </mfrac>
-          <mo>×</mo>
-          <mn>100</mn>
-        </mrow>
-      </mtd>
-      <mtd class="tml-right" style="padding:0.7ex 0em 0.7ex 0em;width:50%;">
-        <mtext>
-          <span class="tml-eqn"></span>
-        </mtext>
-      </mtd>
-    </mtr>
-  </mtable>
-</math>
-
+<p><span class="math display">\[
+\begin {align}
+CPI=\frac{现期价格指数} {基期价格指数} \times 100%
+\end {align}
+\]</span></p>
 <h3 id="生产者价格指数">2．生产者价格指数</h3>
 <p>　　生产者价格指数（PPI）指通过计算生产者在生产过程中所有阶段上所获得的产品的价格水平变动而得到的指数。</p>
 <h3 id="cpi-与-gdp-折算指数之间的区别">3．CPI 与 GDP
@@ -1474,7 +685,8 @@ PPI）。</p>
 GDP 折算指数允许一篮子物品随 GDP 组成部分的变动而一直变动。</li>
 </ul>
 
+
+
         <div class="read-more-link">
             <a href="https://perhapslol.github.io/blog/">Back Home…</a>
         </div>
-  
