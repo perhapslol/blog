@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>笔记刑法总则</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        body {
+            font-family: 'PingFang SC', 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+            line-height: 1.6;
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            user-select: none;
+        }
+        
+        .container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            max-width: 800px;
+            margin: 0 auto;
+            width: 100%;
+            background-color: #f0f0f0;
+            position: relative;
+        }
+        
+        /* 顶部状态栏 */
+        .status-bar {
+            height: 20px;
+            background-color: #000;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 10px;
+            font-size: 12px;
+        }
+        
+        /* 头部导航 */
+        .header {
+            height: 44px;
+            background-color: #ededed;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 15px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .back-btn, .menu-btn {
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #576b95;
+            cursor: pointer;
+        }
+        
+        .title {
+            font-size: 17px;
+            font-weight: 500;
+            color: #333;
+        }
+        
+        /* 阅读区域 */
+        .reader-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .page-container {
+            width: 100%;
+            max-width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        
+        #pdf-canvas {
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            cursor: pointer;
+        }
+        
+        /* 页面导航区域（左右点击区域） */
+        .nav-area {
+            position: absolute;
+            top: 0;
+            height: 100%;
+            width: 30%;
+            z-index: 10;
+        }
+        
+        .nav-left {
+            left: 0;
+        }
+        
+        .nav-right {
+            right: 0;
+        }
+        
+        /* 底部控制栏 */
+        .footer {
+            height: 50px;
+            background-color: #ededed;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            border-top: 1px solid #ddd;
+        }
+        
+        .page-info {
+            font-size: 15px;
+            color: #666;
+        }
+        
+        .controls {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .control-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            color: #576b95;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .control-btn:hover {
+            transform: scale(1.1);
+            background-color: #f0f0f0;
+        }
+        
+        /* 进度条 */
+        .progress-container {
+            padding: 10px 15px;
+            background-color: #ededed;
+            border-top: 1px solid #ddd;
+        }
+        
+        .progress-bar {
+            height: 4px;
+            background-color: #e0e0e0;
+            border-radius: 2px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background-color: #576b95;
+            width: 30%;
+            border-radius: 2px;
+            transition: width 0.3s ease;
+        }
+        
+        /* 加载指示器 */
+        .loading {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.9);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+        }
+        
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #576b95;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 15px;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* 夜间模式 */
+        .night-mode {
+            background-color: #1a1a1a;
+            color: #a6a6a6;
+        }
+        
+        .night-mode .header,
+        .night-mode .footer,
+        .night-mode .progress-container {
+            background-color: #2a2a2a;
+            border-color: #333;
+        }
+        
+        .night-mode .title {
+            color: #a6a6a6;
+        }
+        
+        .night-mode #pdf-canvas {
+            filter: invert(1) hue-rotate(180deg);
+        }
+        
+        /* 缩放控制 */
+        .zoom-controls {
+            position: absolute;
+            bottom: 70px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 20;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 10px;
+            border-radius: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .zoom-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            color: #576b95;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .zoom-btn:hover {
+            transform: scale(1.1);
+            background-color: #f0f0f0;
+        }
+        
+        /* 移动设备适配 */
+        @media (max-width: 768px) {
+            .container {
+                max-width: 100%;
+            }
+            
+            .reader-container {
+                padding: 10px;
+            }
+            
+            .footer {
+                padding: 0 15px;
+            }
+            
+            .controls {
+                gap: 10px;
+            }
+            
+            .zoom-controls {
+                bottom: 60px;
+                right: 10px;
+            }
+        }
+        
+        /* 横屏优化 */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .status-bar, .header, .footer, .progress-container {
+                display: none;
+            }
+            
+            .reader-container {
+                height: 100vh;
+                padding: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="status-bar">
+            <span id="time">12:00</span>
+        </div>
+        
+        <div class="header">
+            <div class="back-btn" id="back-btn">
+                <i class="fas fa-chevron-left"></i>
+            </div>
+            <div class="title">笔记：刑法总则</div>
+            <div class="menu-btn" id="menu-btn">
+                <i class="fas fa-ellipsis-h"></i>
+            </div>
+        </div>
+        
+        <div class="reader-container">
+            <!-- 左右导航区域 -->
+            <div class="nav-area nav-left" id="prev-area"></div>
+            <div class="nav-area nav-right" id="next-area"></div>
+            
+            <div class="page-container">
+                <canvas id="pdf-canvas"></canvas>
+            </div>
+            
+            <!-- 缩放控制 -->
+            <div class="zoom-controls">
+                <div class="zoom-btn" id="zoom-in">
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div class="zoom-btn" id="zoom-out">
+                    <i class="fas fa-minus"></i>
+                </div>
+                <div class="zoom-btn" id="zoom-reset">
+                    <i class="fas fa-sync-alt"></i>
+                </div>
+            </div>
+            
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <div>加载中...</div>
+            </div>
+        </div>
+        
+        <div class="progress-container">
+            <div class="progress-bar" id="progress-bar">
+                <div class="progress-fill" id="progress-fill"></div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <div class="page-info">
+                第 <span id="current-page">1</span> / <span id="total-pages">0</span> 页
+            </div>
+            <div class="controls">
+                <div class="control-btn" id="prev-btn">
+                    <i class="fas fa-chevron-left"></i>
+                </div>
+                <div class="control-btn" id="next-btn">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="control-btn" id="theme-btn">
+                    <i class="fas fa-moon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 引入PDF.js库 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+    <script>
+        // 设置PDF.js worker
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.worker.min.js';
+        
+        // 全局变量
+        let pdfDoc = null;
+        let pageNum = 1;
+        let scale = 1.5;
+        let canvas = document.getElementById('pdf-canvas');
+        let ctx = canvas.getContext('2d');
+        let isNightMode = false;
+        
+        // 更新时间显示
+        function updateTime() {
+            const now = new Date();
+            const timeStr = now.getHours().toString().padStart(2, '0') + ':' + 
+                            now.getMinutes().toString().padStart(2, '0');
+            document.getElementById('time').textContent = timeStr;
+        }
+        
+        // 初始化
+        function init() {
+            // 更新时间并设置定时器
+            updateTime();
+            setInterval(updateTime, 60000);
+            
+            // 绑定事件
+            document.getElementById('prev-btn').addEventListener('click', onPrevPage);
+            document.getElementById('next-btn').addEventListener('click', onNextPage);
+            document.getElementById('theme-btn').addEventListener('click', toggleTheme);
+            document.getElementById('prev-area').addEventListener('click', onPrevPage);
+            document.getElementById('next-area').addEventListener('click', onNextPage);
+            document.getElementById('zoom-in').addEventListener('click', zoomIn);
+            document.getElementById('zoom-out').addEventListener('click', zoomOut);
+            document.getElementById('zoom-reset').addEventListener('click', zoomReset);
+            document.getElementById('progress-bar').addEventListener('click', onProgressClick);
+            
+            // 添加鼠标滚轮事件
+            document.addEventListener('wheel', onMouseWheel, { passive: false });
+            
+            // 初始加载PDF
+            loadPDF('https://perhapslol.github.io/blog/English/%E5%88%91%E6%B3%95%E6%80%BB%E5%88%99%E5%85%A8%E8%AE%B0%E4%BD%8F.pdf');
+            
+            // 添加触摸事件支持
+            addTouchEvents();
+        }
+        
+        // 加载PDF文件
+        function loadPDF(url) {
+            document.getElementById('loading').style.display = 'flex';
+            
+            pdfjsLib.getDocument({
+                url: url,
+                progress: function(progress) {
+                    const percent = (progress.loaded / progress.total) * 100;
+                    document.getElementById('progress-fill').style.width = percent + '%';
+                }
+            }).promise.then(function(pdf) {
+                pdfDoc = pdf;
+                document.getElementById('total-pages').textContent = pdf.numPages;
+                document.getElementById('loading').style.display = 'none';
+                renderPage(pageNum);
+            }).catch(function(error) {
+                console.error('加载PDF时出错:', error);
+                document.getElementById('loading').innerHTML = '<div>无法加载PDF文件</div>';
+            });
+        }
+        
+        // 渲染页面
+        function renderPage(num) {
+            if (!pdfDoc) return;
+            
+            pdfDoc.getPage(num).then(function(page) {
+                const viewport = page.getViewport({ scale: scale });
+                canvas.height = viewport.height;
+                canvas.width = viewport.width;
+                
+                const renderContext = {
+                    canvasContext: ctx,
+                    viewport: viewport
+                };
+                
+                page.render(renderContext).promise.then(function() {
+                    document.getElementById('current-page').textContent = num;
+                    
+                    // 更新进度条
+                    const progress = (num / pdfDoc.numPages) * 100;
+                    document.getElementById('progress-fill').style.width = progress + '%';
+                });
+            });
+        }
+        
+        // 翻页功能
+        function onPrevPage() {
+            if (pageNum <= 1) return;
+            pageNum--;
+            renderPage(pageNum);
+        }
+        
+        function onNextPage() {
+            if (!pdfDoc || pageNum >= pdfDoc.numPages) return;
+            pageNum++;
+            renderPage(pageNum);
+        }
+        
+        // 主题切换
+        function toggleTheme() {
+            isNightMode = !isNightMode;
+            const container = document.getElementById('container');
+            const themeIcon = document.getElementById('theme-btn').querySelector('i');
+            
+            if (isNightMode) {
+                container.classList.add('night-mode');
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+            } else {
+                container.classList.remove('night-mode');
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+            }
+        }
+        
+        // 缩放功能
+        function zoomIn() {
+            scale += 0.25;
+            renderPage(pageNum);
+        }
+        
+        function zoomOut() {
+            if (scale > 0.5) {
+                scale -= 0.25;
+                renderPage(pageNum);
+            }
+        }
+        
+        function zoomReset() {
+            scale = 1.5;
+            renderPage(pageNum);
+        }
+        
+        // 进度条点击跳转
+        function onProgressClick(e) {
+            if (!pdfDoc) return;
+            
+            const progressBar = document.getElementById('progress-bar');
+            const rect = progressBar.getBoundingClientRect();
+            const clickPosition = (e.clientX - rect.left) / rect.width;
+            const page = Math.max(1, Math.min(pdfDoc.numPages, Math.round(clickPosition * pdfDoc.numPages)));
+            
+            pageNum = page;
+            renderPage(pageNum);
+        }
+        
+        // 鼠标滚轮事件
+        function onMouseWheel(e) {
+            // 阻止默认滚动行为
+            e.preventDefault();
+            
+            if (e.deltaY < 0) {
+                // 向上滚动 - 上一页
+                onPrevPage();
+            } else {
+                // 向下滚动 - 下一页
+                onNextPage();
+            }
+        }
+        
+        // 添加触摸事件支持
+        function addTouchEvents() {
+            let startX = 0;
+            let startY = 0;
+            
+            canvas.addEventListener('touchstart', function(e) {
+                startX = e.touches[0].clientX;
+                startY = e.touches[0].clientY;
+            }, { passive: true });
+            
+            canvas.addEventListener('touchend', function(e) {
+                const endX = e.changedTouches[0].clientX;
+                const endY = e.changedTouches[0].clientY;
+                
+                const diffX = endX - startX;
+                const diffY = endY - startY;
+                
+                // 只有水平滑动距离大于垂直滑动距离且大于50px才触发翻页
+                if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 50) {
+                    if (diffX > 0) {
+                        onPrevPage();
+                    } else {
+                        onNextPage();
+                    }
+                }
+            }, { passive: true });
+        }
+        
+        // 初始化应用
+        window.onload = init;
+    </script>
+</body>
+</html>
