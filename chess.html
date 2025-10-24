@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>国际象棋 - 完整实现</title>
+    <title>复古国际象棋</title>
     <style>
         * {
             margin: 0;
@@ -12,13 +12,13 @@
         }
         
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Times New Roman', serif;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
-            color: #333;
+            background: #8B7355 url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%237a6347"/><path d="M0 0 L100 100 M100 0 L0 100" stroke="%236a5537" stroke-width="1"/></svg>');
+            color: #d4c4a8;
             padding: 20px;
         }
         
@@ -33,19 +33,22 @@
         
         header {
             text-align: center;
-            color: white;
+            color: #f5e8c8;
             margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
         
         h1 {
-            font-size: 2.8rem;
+            font-size: 3rem;
             margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            letter-spacing: 3px;
+            font-weight: normal;
         }
         
         .subtitle {
             font-size: 1.2rem;
             opacity: 0.9;
+            font-style: italic;
         }
         
         .game-area {
@@ -60,40 +63,52 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            position: relative;
+            background: #5d4c35;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 0 20px rgba(0, 0, 0, 0.3);
+            border: 8px solid #4a3a27;
         }
         
         .board {
             display: grid;
             grid-template-columns: repeat(8, 1fr);
             grid-template-rows: repeat(8, 1fr);
-            width: min(80vw, 600px);
-            height: min(80vw, 600px);
-            border: 8px solid #8B4513;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-            border-radius: 4px;
+            width: min(80vw, 550px);
+            height: min(80vw, 550px);
+            border: 12px solid #7a6347;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+            border-radius: 2px;
+            position: relative;
+            background: #7a6347;
         }
         
         .square {
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: min(8vw, 50px);
+            font-size: min(8vw, 45px);
             cursor: pointer;
             transition: background-color 0.2s;
             user-select: none;
             position: relative;
+            border: 1px solid rgba(0, 0, 0, 0.1);
         }
         
         .white {
-            background-color: #f0d9b5;
+            background-color: #e9d7b8;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23e9d7b8"/><path d="M0 0 L100 100 M100 0 L0 100" stroke="%23d4c4a8" stroke-width="1"/></svg>');
         }
         
         .black {
-            background-color: #b58863;
+            background-color: #8b5a2b;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%238b5a2b"/><path d="M0 0 L100 100 M100 0 L0 100" stroke="%237a4a1b" stroke-width="1"/></svg>');
         }
         
         .selected {
-            background-color: #aec6cf !important;
+            background-color: #b8860b !important;
+            box-shadow: inset 0 0 10px rgba(184, 134, 11, 0.5);
         }
         
         .valid-move {
@@ -107,6 +122,7 @@
             height: 20%;
             border-radius: 50%;
             background-color: rgba(0, 128, 0, 0.5);
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
         }
         
         .capture-move::after {
@@ -115,56 +131,40 @@
             width: 85%;
             height: 85%;
             border-radius: 50%;
-            border: 4px solid rgba(255, 0, 0, 0.5);
+            border: 4px solid rgba(205, 92, 92, 0.7);
             background-color: transparent;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
         }
         
         .last-move {
-            background-color: rgba(255, 255, 0, 0.3) !important;
+            background-color: rgba(184, 134, 11, 0.4) !important;
         }
         
         .in-check {
-            background-color: rgba(255, 0, 0, 0.5) !important;
-        }
-        
-        .coordinates {
-            display: flex;
-            width: min(80vw, 600px);
-            padding: 5px 0;
-            color: white;
-            font-weight: bold;
-        }
-        
-        .file-coordinates {
-            display: flex;
-            justify-content: space-around;
-            width: 100%;
-        }
-        
-        .rank-coordinates {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            height: min(80vw, 600px);
-            padding: 0 5px;
+            background-color: rgba(205, 92, 92, 0.7) !important;
+            box-shadow: inset 0 0 15px rgba(205, 92, 92, 0.8);
         }
         
         .game-info {
-            background-color: rgba(255, 255, 255, 0.9);
+            background-color: rgba(90, 70, 50, 0.9);
             border-radius: 10px;
             padding: 20px;
             width: min(90vw, 300px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            border: 2px solid #7a6347;
+            color: #f5e8c8;
         }
         
         .status {
             margin-bottom: 20px;
             padding: 15px;
-            background-color: #2c3e50;
-            color: white;
+            background-color: #4a3a27;
+            color: #f5e8c8;
             border-radius: 8px;
             text-align: center;
             font-size: 1.2rem;
+            border: 1px solid #5d4c35;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
         }
         
         .timers {
@@ -175,13 +175,15 @@
         
         .timer {
             padding: 10px;
-            background-color: #34495e;
-            color: white;
+            background-color: #5d4c35;
+            color: #f5e8c8;
             border-radius: 5px;
             text-align: center;
             width: 48%;
             font-family: monospace;
             font-size: 1.2rem;
+            border: 1px solid #7a6347;
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
         }
         
         .controls {
@@ -195,19 +197,22 @@
             padding: 12px;
             border: none;
             border-radius: 5px;
-            background-color: #3498db;
-            color: white;
+            background-color: #8b5a2b;
+            color: #f5e8c8;
             font-size: 1rem;
             cursor: pointer;
             transition: background-color 0.3s;
+            border: 1px solid #7a4a1b;
+            font-family: 'Times New Roman', serif;
+            letter-spacing: 1px;
         }
         
         button:hover {
-            background-color: #2980b9;
+            background-color: #9b6a3b;
         }
         
         button:disabled {
-            background-color: #95a5a6;
+            background-color: #5d4c35;
             cursor: not-allowed;
         }
         
@@ -215,36 +220,39 @@
             margin-top: 20px;
             max-height: 200px;
             overflow-y: auto;
-            border: 1px solid #ddd;
+            border: 1px solid #7a6347;
             border-radius: 5px;
             padding: 10px;
-            background-color: #f9f9f9;
+            background-color: rgba(90, 70, 50, 0.7);
         }
         
         .history-title {
             font-weight: bold;
             margin-bottom: 10px;
             text-align: center;
-            color: #2c3e50;
+            color: #f5e8c8;
+            font-size: 1.1rem;
         }
         
         .history-item {
             padding: 5px;
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid #7a6347;
             font-family: monospace;
+            color: #e9d7b8;
         }
         
         .instructions {
             margin-top: 20px;
             padding: 15px;
-            background-color: #f8f9fa;
+            background-color: rgba(90, 70, 50, 0.7);
             border-radius: 8px;
-            border-left: 4px solid #3498db;
+            border-left: 4px solid #8b5a2b;
+            color: #e9d7b8;
         }
         
         .instructions h3 {
             margin-bottom: 10px;
-            color: #2c3e50;
+            color: #f5e8c8;
         }
         
         .instructions ul {
@@ -270,10 +278,12 @@
         
         .promotion-choices {
             display: flex;
-            background-color: white;
+            background-color: #5d4c35;
             border-radius: 8px;
             padding: 20px;
             gap: 15px;
+            border: 2px solid #7a6347;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
         }
         
         .promotion-piece {
@@ -282,16 +292,23 @@
             padding: 10px;
             border-radius: 5px;
             transition: background-color 0.2s;
+            background-color: #7a6347;
+            color: #f5e8c8;
         }
         
         .promotion-piece:hover {
-            background-color: #eee;
+            background-color: #8b5a2b;
         }
         
         .ai-controls {
             display: flex;
             gap: 10px;
             margin-top: 10px;
+        }
+        
+        .piece {
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+            filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
         }
         
         @media (max-width: 768px) {
@@ -301,7 +318,7 @@
             }
             
             .game-info {
-                width: min(90vw, 600px);
+                width: min(90vw, 550px);
             }
             
             .timers {
@@ -319,19 +336,13 @@
     <div class="container">
         <header>
             <h1>国际象棋</h1>
-            <p class="subtitle">完整实现 - 包含AI对手和所有规则</p>
+            <p class="subtitle">复古风格 - 经典策略游戏</p>
         </header>
         
         <div class="game-area">
             <div class="board-container">
-                <div class="coordinates rank-coordinates">
-                    <span>8</span><span>7</span><span>6</span><span>5</span><span>4</span><span>3</span><span>2</span><span>1</span>
-                </div>
                 <div class="board" id="chessboard">
                     <!-- 棋盘将通过JavaScript生成 -->
-                </div>
-                <div class="coordinates file-coordinates">
-                    <span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span>
                 </div>
             </div>
             
@@ -517,7 +528,7 @@
                     'pawn': { 'white': '♙', 'black': '♟' }
                 };
                 
-                square.textContent = pieceSymbols[type][color];
+                square.innerHTML = `<span class="piece">${pieceSymbols[type][color]}</span>`;
                 board[row][col] = { type, color, hasMoved: false };
             }
             
@@ -825,7 +836,7 @@
                     const capturedSquare = document.querySelector(
                         `.square[data-row="${capturedPawnRow}"][data-col="${capturedPawnCol}"]`
                     );
-                    capturedSquare.textContent = '';
+                    capturedSquare.innerHTML = '';
                 }
                 
                 // 处理王车易位
@@ -842,8 +853,8 @@
                             `.square[data-row="${toRow}"][data-col="5"]`
                         );
                         
-                        rookToSquare.textContent = rookFromSquare.textContent;
-                        rookFromSquare.textContent = '';
+                        rookToSquare.innerHTML = rookFromSquare.innerHTML;
+                        rookFromSquare.innerHTML = '';
                         
                         move.castling = 'kingSide';
                     } else if (validMove.isCastling === 'queenSide') {
@@ -858,8 +869,8 @@
                             `.square[data-row="${toRow}"][data-col="3"]`
                         );
                         
-                        rookToSquare.textContent = rookFromSquare.textContent;
-                        rookFromSquare.textContent = '';
+                        rookToSquare.innerHTML = rookFromSquare.innerHTML;
+                        rookFromSquare.innerHTML = '';
                         
                         move.castling = 'queenSide';
                     }
@@ -883,8 +894,8 @@
                 const fromSquare = document.querySelector(`.square[data-row="${fromRow}"][data-col="${fromCol}"]`);
                 const toSquare = document.querySelector(`.square[data-row="${toRow}"][data-col="${toCol}"]`);
                 
-                toSquare.textContent = fromSquare.textContent;
-                fromSquare.textContent = '';
+                toSquare.innerHTML = fromSquare.innerHTML;
+                fromSquare.innerHTML = '';
                 
                 board[toRow][toCol] = piece;
                 board[fromRow][fromCol] = null;
@@ -1291,12 +1302,12 @@
                         'pawn': { 'white': '♙', 'black': '♟' }
                     };
                     
-                    fromSquare.textContent = pieceSymbols[lastMove.piece.type][lastMove.piece.color];
+                    fromSquare.innerHTML = `<span class="piece">${pieceSymbols[lastMove.piece.type][lastMove.piece.color]}</span>`;
                     
                     if (lastMove.captured) {
-                        toSquare.textContent = pieceSymbols[lastMove.captured.type][lastMove.captured.color];
+                        toSquare.innerHTML = `<span class="piece">${pieceSymbols[lastMove.captured.type][lastMove.captured.color]}</span>`;
                     } else {
-                        toSquare.textContent = '';
+                        toSquare.innerHTML = '';
                     }
                     
                     // 处理王车易位
@@ -1310,8 +1321,8 @@
                                 `.square[data-row="${lastMove.to.row}"][data-col="7"]`
                             );
                             
-                            rookToSquare.textContent = rookFromSquare.textContent;
-                            rookFromSquare.textContent = '';
+                            rookToSquare.innerHTML = rookFromSquare.innerHTML;
+                            rookFromSquare.innerHTML = '';
                             
                             board[lastMove.to.row][7] = board[lastMove.to.row][5];
                             board[lastMove.to.row][5] = null;
@@ -1324,8 +1335,8 @@
                                 `.square[data-row="${lastMove.to.row}"][data-col="0"]`
                             );
                             
-                            rookToSquare.textContent = rookFromSquare.textContent;
-                            rookFromSquare.textContent = '';
+                            rookToSquare.innerHTML = rookFromSquare.innerHTML;
+                            rookFromSquare.innerHTML = '';
                             
                             board[lastMove.to.row][0] = board[lastMove.to.row][3];
                             board[lastMove.to.row][3] = null;
