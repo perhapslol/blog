@@ -1,268 +1,398 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>复古风格国际象棋</title>
+    <title>CHESS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
         body {
-            font-family: 'Georgia', serif;
-            background: #2c1810 url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%233a2116' fill-opacity='0.2' fill-rule='evenodd'/%3E%3C/svg%3E");
+            background: linear-gradient(135deg, #1a2a3a, #0d1b2a);
+            color: #e0e1dd;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
             padding: 20px;
-            color: #e8d0b3;
-            margin: 0;
-            min-height: 100vh;
         }
-        
+
         .container {
+            max-width: 1200px;
+            width: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 20px;
-            max-width: 800px;
-            width: 100%;
+            gap: 25px;
         }
-        
-        .game-header {
+
+        header {
             text-align: center;
-            margin-bottom: 10px;
-            padding: 15px;
-            background: rgba(90, 50, 30, 0.7);
-            border-radius: 10px;
-            border: 2px solid #b08d57;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            margin-bottom: 15px;
             width: 100%;
         }
-        
-        .game-header h1 {
+
+        header h1 {
             font-size: 2.8rem;
-            margin: 0;
-            color: #e8d0b3;
-            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
-            letter-spacing: 2px;
-            font-weight: normal;
+            margin-bottom: 8px;
+            background: linear-gradient(to right, #e9c46a, #f4a261);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         }
-        
-        .game-header p {
-            font-style: italic;
-            margin: 10px 0 0;
+
+        header p {
             font-size: 1.2rem;
-            color: #d4b896;
+            opacity: 0.8;
+            max-width: 600px;
+            margin: 0 auto;
         }
-        
+
         .game-area {
             display: flex;
-            gap: 30px;
-            align-items: flex-start;
             flex-wrap: wrap;
             justify-content: center;
+            gap: 30px;
+            width: 100%;
         }
-        
-        #chessboard {
-            border: 20px solid #5a321e;
-            border-radius: 5px;
-            box-shadow: 
-                0 10px 20px rgba(0, 0, 0, 0.7),
-                inset 0 0 30px rgba(0, 0, 0, 0.5);
-            background: #5a321e;
+
+        .board-container {
             position: relative;
+            flex: 0 0 auto;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border-radius: 8px;
+            overflow: hidden;
         }
-        
-        #chessboard::before {
-            content: "";
+
+        #chessboard {
+            display: block;
+            background: #1a2a3a;
+        }
+
+        .coordinates {
             position: absolute;
-            top: -10px;
-            left: -10px;
-            right: -10px;
-            bottom: -10px;
-            border: 5px solid #b08d57;
-            border-radius: 10px;
+            color: #e0e1dd;
+            font-size: 14px;
+            font-weight: 500;
             pointer-events: none;
-            z-index: -1;
+            z-index: 10;
         }
-        
-        .controls {
+
+        .file-coordinates {
+            bottom: 4px;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .rank-coordinates {
+            top: 0;
+            left: 4px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .panel {
+            flex: 1;
+            min-width: 300px;
+            max-width: 400px;
             display: flex;
             flex-direction: column;
             gap: 20px;
-            width: 250px;
         }
-        
-        .status {
-            background: rgba(90, 50, 30, 0.8);
+
+        .status-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
             padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-            text-align: center;
-            font-size: 1.3rem;
-            border: 2px solid #b08d57;
-            color: #e8d0b3;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
-        
-        .buttons {
+
+        .status-card h2 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: #e9c46a;
             display: flex;
-            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .status-card h2 i {
+            font-size: 1.2rem;
+        }
+
+        #game-status {
+            font-size: 1.3rem;
+            font-weight: 600;
+            text-align: center;
+            padding: 12px;
+            border-radius: 8px;
+            background: rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .controls {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             gap: 12px;
         }
-        
-        button {
-            padding: 14px;
-            background: linear-gradient(to bottom, #8b5a2b, #6b4f37);
-            color: #f5e8c8;
+
+        .btn {
+            padding: 14px 18px;
             border: none;
-            border-radius: 5px;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
             cursor: pointer;
-            font-size: 1.1rem;
-            font-family: 'Georgia', serif;
-            transition: all 0.3s;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-            border: 1px solid #b08d57;
-            position: relative;
-            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.1);
+            color: #e0e1dd;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        
-        button:hover {
-            background: linear-gradient(to bottom, #9b6a3b, #7b5f47);
+
+        .btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            background: rgba(255, 255, 255, 0.15);
         }
-        
-        button:active {
-            transform: translateY(1px);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+
+        .btn:active {
+            transform: translateY(0);
         }
-        
-        .game-info {
-            background: rgba(90, 50, 30, 0.8);
-            padding: 20px;
+
+        .btn-primary {
+            background: linear-gradient(135deg, #e9c46a, #f4a261);
+            color: #1a2a3a;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #f4a261, #e76f51);
+        }
+
+        .btn-toggle.active {
+            background: linear-gradient(135deg, #2a9d8f, #21867a);
+            color: white;
+        }
+
+        .history-card {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .history-content {
+            flex: 1;
+            background: rgba(0, 0, 0, 0.2);
             border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-            width: 100%;
-            margin-top: 10px;
-            border: 2px solid #b08d57;
-        }
-        
-        .game-info h3 {
-            margin-top: 0;
-            border-bottom: 2px solid #b08d57;
-            padding-bottom: 10px;
-            color: #e8d0b3;
-            font-size: 1.4rem;
-            text-align: center;
-        }
-        
-        .move-history {
-            max-height: 150px;
-            overflow-y: auto;
             padding: 15px;
-            background: rgba(60, 30, 15, 0.6);
-            border-radius: 5px;
-            font-family: 'Georgia', serif;
-            border: 1px solid #b08d57;
+            overflow-y: auto;
+            max-height: 200px;
         }
-        
-        .move-history div {
-            padding: 5px 10px;
-            border-bottom: 1px solid #b08d57;
-            color: #e8d0b3;
+
+        .move-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
         }
-        
-        .move-history div:last-child {
-            border-bottom: none;
+
+        .move {
+            padding: 8px 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 6px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
         }
-        
-        .rules {
-            background: rgba(90, 50, 30, 0.8);
+
+        .move.white {
+            border-left: 3px solid #e9c46a;
+        }
+
+        .move.black {
+            border-left: 3px solid #2a9d8f;
+        }
+
+        .rules-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
             padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-            border: 2px solid #b08d57;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
-        
-        .rules ul {
-            padding-left: 20px;
-            color: #e8d0b3;
+
+        .rules-card h2 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: #e9c46a;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
-        
-        .rules li {
-            margin-bottom: 8px;
-            line-height: 1.4;
+
+        .rules-list {
+            list-style-type: none;
         }
-        
-        /* 滚动条样式 */
-        .move-history::-webkit-scrollbar {
-            width: 8px;
+
+        .rules-list li {
+            margin-bottom: 12px;
+            padding-left: 10px;
+            border-left: 2px solid #2a9d8f;
         }
-        
-        .move-history::-webkit-scrollbar-track {
-            background: rgba(60, 30, 15, 0.6);
+
+        .captured-pieces {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+            justify-content: center;
+        }
+
+        .captured-piece {
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.3);
             border-radius: 4px;
+            font-size: 18px;
         }
-        
-        .move-history::-webkit-scrollbar-thumb {
-            background: #b08d57;
-            border-radius: 4px;
+
+        .captured-piece.white {
+            color: #e0e1dd;
         }
-        
-        .move-history::-webkit-scrollbar-thumb:hover {
-            background: #d4b896;
+
+        .captured-piece.black {
+            color: #1a2a3a;
+            background: rgba(255, 255, 255, 0.7);
         }
-        
-        @media (max-width: 768px) {
+
+        /* 响应式设计 */
+        @media (max-width: 900px) {
             .game-area {
                 flex-direction: column;
                 align-items: center;
             }
             
-            #chessboard {
-                width: 90vw;
-                height: 90vw;
+            .panel {
+                max-width: 100%;
+            }
+            
+            .board-container {
+                order: -1;
+            }
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2.2rem;
             }
             
             .controls {
-                width: 90%;
+                grid-template-columns: 1fr;
             }
+            
+            .move-list {
+                grid-template-columns: 1fr;
+            }
+            
+            #chessboard {
+                width: 95vw;
+                height: 95vw;
+            }
+        }
+
+        /* 棋盘坐标样式 */
+        .file-coordinates span, .rank-coordinates span {
+            width: 30px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="game-header">
-            <h1>复古国际象棋</h1>
-            <p>体验经典的国际象棋对局</p>
-        </div>
+        <header>
+            <h1>CHESS</h1>
+            <p>国际象棋</p>
+        </header>
         
         <div class="game-area">
-            <canvas id="chessboard" width="560" height="560"></canvas>
+            <div class="board-container">
+                <canvas id="chessboard" width="560" height="560"></canvas>
+                <div class="coordinates file-coordinates">
+                    <span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span>
+                </div>
+                <div class="coordinates rank-coordinates">
+                    <span>8</span><span>7</span><span>6</span><span>5</span><span>4</span><span>3</span><span>2</span><span>1</span>
+                </div>
+            </div>
             
-            <div class="controls">
-                <div class="status" id="game-status">
-                    轮到白方走棋
+            <div class="panel">
+                <div class="status-card">
+                    <h2><i class="fas fa-chess-board"></i> 游戏状态</h2>
+                    <div id="game-status">轮到白方走棋</div>
+                    
+                    <div class="captured-pieces">
+                        <div class="captured-piece white">♙</div>
+                        <div class="captured-piece black">♟</div>
+                    </div>
                 </div>
                 
-                <div class="buttons">
-                    <button id="undo-btn">悔棋</button>
-                    <button id="new-game-btn">新游戏</button>
-                    <button id="ai-move-btn">AI走棋</button>
+                <div class="status-card">
+                    <h2><i class="fas fa-gamepad"></i> 游戏控制</h2>
+                    <div class="controls">
+                        <button class="btn btn-primary" id="undo-btn">
+                            <i class="fas fa-undo"></i> 悔棋
+                        </button>
+                        <button class="btn btn-primary" id="new-game-btn">
+                            <i class="fas fa-plus-circle"></i> 新游戏
+                        </button>
+                        <button class="btn" id="ai-move-btn">
+                            <i class="fas fa-robot"></i> AI走棋
+                        </button>
+                        <button class="btn btn-toggle" id="ai-mode-btn">
+                            <i class="fas fa-cog"></i> 开启AI模式
+                        </button>
+                    </div>
                 </div>
                 
-                <div class="rules">
-                    <h3>特殊规则</h3>
-                    <ul>
-                        <li><strong>王车易位：</strong>王向车移动两格，车越过王</li>
-                        <li><strong>吃过路兵：</strong>兵可以斜吃敌方刚移动两格的兵</li>
-                        <li><strong>兵升变：</strong>兵到达底线可升变为后、车、马或象</li>
-                    </ul>
+                <div class="status-card history-card">
+                    <h2><i class="fas fa-history"></i> 走子记录</h2>
+                    <div class="history-content">
+                        <div class="move-list" id="move-history">
+                            <!-- 走子记录将通过JavaScript动态添加 -->
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         
-        <div class="game-info">
-            <h3>走子记录</h3>
-            <div class="move-history" id="move-history"></div>
+        <div class="rules-card">
+            <h2><i class="fas fa-book"></i> 特殊规则</h2>
+            <ul class="rules-list">
+                <li><strong>王车易位：</strong>王向车移动两格，车越过王放在相邻格</li>
+                <li><strong>吃过路兵：</strong>兵可以斜吃敌方刚移动两格的兵</li>
+                <li><strong>兵升变：</strong>兵到达底线可升变为后、车、马或象</li>
+            </ul>
         </div>
     </div>
 
@@ -301,25 +431,23 @@
         let enPassantTarget = null; // 吃过路兵目标位置
         let castlingRights = { 'w': { kingside: true, queenside: true }, 'b': { kingside: true, queenside: true } };
         let gameOver = false;
+        let aiMode = false; // AI模式状态
+        let aiMoveTimeout = null; // AI移动计时器
         
         // 绘制棋盘
         function drawBoard() {
-            // 绘制棋盘底色 - 深棕色
-            ctx.fillStyle = '#5a321e';
+            // 绘制棋盘底色 - 深色背景
+            ctx.fillStyle = '#1a2a3a';
             ctx.fillRect(0, 0, canvas.width, canvas.height);
             
-            // 绘制棋盘格子 - 复古米色和深棕色
+            // 绘制棋盘格子 - 浅色和深色格子
             for (let row = 0; row < boardSize; row++) {
                 for (let col = 0; col < boardSize; col++) {
                     if ((row + col) % 2 === 1) {
-                        ctx.fillStyle = '#d4b896'; // 米色格子
+                        ctx.fillStyle = '#e9edc9'; // 浅色格子
                     } else {
-                        ctx.fillStyle = '#8b5a2b'; // 深棕色格子
+                        ctx.fillStyle = '#ccd5ae'; // 深色格子
                     }
-                    ctx.fillRect(col * squareSize, row * squareSize, squareSize, squareSize);
-                    
-                    // 为格子添加纹理效果
-                    ctx.fillStyle = 'rgba(255, 255, 255, 0.05)';
                     ctx.fillRect(col * squareSize, row * squareSize, squareSize, squareSize);
                 }
             }
@@ -327,16 +455,16 @@
             // 绘制选中格子和有效移动
             if (selectedPiece) {
                 const [row, col] = selectedPiece;
-                ctx.fillStyle = 'rgba(255, 215, 0, 0.4)';
+                ctx.fillStyle = 'rgba(233, 196, 106, 0.5)';
                 ctx.fillRect(col * squareSize, row * squareSize, squareSize, squareSize);
                 
                 // 绘制有效移动
                 validMoves.forEach(([r, c]) => {
-                    ctx.fillStyle = 'rgba(50, 205, 50, 0.4)';
+                    ctx.fillStyle = 'rgba(42, 157, 143, 0.4)';
                     ctx.fillRect(c * squareSize, r * squareSize, squareSize, squareSize);
                     
                     // 绘制移动指示点
-                    ctx.fillStyle = 'rgba(50, 205, 50, 0.7)';
+                    ctx.fillStyle = 'rgba(42, 157, 143, 0.7)';
                     ctx.beginPath();
                     ctx.arc(
                         c * squareSize + squareSize / 2,
@@ -350,7 +478,7 @@
             }
             
             // 绘制棋子
-            ctx.font = `bold ${squareSize * 0.7}px Georgia`;
+            ctx.font = `bold ${squareSize * 0.7}px Arial, sans-serif`;
             ctx.textAlign = 'center';
             ctx.textBaseline = 'middle';
             
@@ -364,7 +492,7 @@
                         ctx.shadowOffsetX = 2;
                         ctx.shadowOffsetY = 2;
                         
-                        ctx.fillStyle = piece[0] === 'w' ? '#f8f8f8' : '#2c1810';
+                        ctx.fillStyle = piece[0] === 'w' ? '#f8f9fa' : '#343a40';
                         ctx.fillText(
                             pieces[piece],
                             col * squareSize + squareSize / 2,
@@ -380,25 +508,10 @@
                 }
             }
             
-            // 绘制棋盘边框装饰
-            ctx.strokeStyle = '#b08d57';
-            ctx.lineWidth = 2;
+            // 绘制棋盘边框
+            ctx.strokeStyle = '#495057';
+            ctx.lineWidth = 3;
             ctx.strokeRect(0, 0, canvas.width, canvas.height);
-            
-            // 绘制内部装饰线
-            ctx.strokeStyle = 'rgba(176, 141, 87, 0.3)';
-            ctx.lineWidth = 1;
-            for (let i = 1; i < boardSize; i++) {
-                ctx.beginPath();
-                ctx.moveTo(i * squareSize, 0);
-                ctx.lineTo(i * squareSize, canvas.height);
-                ctx.stroke();
-                
-                ctx.beginPath();
-                ctx.moveTo(0, i * squareSize);
-                ctx.lineTo(canvas.width, i * squareSize);
-                ctx.stroke();
-            }
         }
         
         // 获取鼠标点击的棋盘位置
@@ -728,7 +841,13 @@
             // 记录走子
             const fromSquare = String.fromCharCode(97 + fromCol) + (8 - fromRow);
             const toSquare = String.fromCharCode(97 + toCol) + (8 - toRow);
-            moveHistory.push(`${currentPlayer === 'w' ? '白方' : '黑方'}: ${fromSquare} → ${toSquare}`);
+            const moveNumber = Math.ceil(moveHistory.length / 2) + 1;
+            const moveText = `${currentPlayer === 'w' ? moveNumber + '.' : ''} ${fromSquare}-${toSquare}`;
+            
+            moveHistory.push({
+                player: currentPlayer,
+                text: moveText
+            });
             updateMoveHistory();
             
             // 切换玩家
@@ -736,6 +855,19 @@
             
             // 检查游戏状态
             checkGameState();
+            
+            // 如果AI模式开启且轮到黑方且游戏未结束，则自动走棋
+            if (aiMode && currentPlayer === 'b' && !gameOver) {
+                // 清除之前的计时器（如果有）
+                if (aiMoveTimeout) {
+                    clearTimeout(aiMoveTimeout);
+                }
+                
+                // 设置延迟，让玩家有时间看到走棋
+                aiMoveTimeout = setTimeout(() => {
+                    makeAIMove();
+                }, 800);
+            }
         }
         
         // 检查游戏状态（将军、将死等）
@@ -765,19 +897,19 @@
             if (!hasLegalMoves) {
                 if (inCheck) {
                     statusElement.textContent = `${currentPlayer === 'w' ? '黑方' : '白方'} 将死！游戏结束`;
-                    statusElement.style.color = '#ff6b6b';
+                    statusElement.style.background = 'rgba(231, 111, 81, 0.3)';
                     gameOver = true;
                 } else {
                     statusElement.textContent = "僵局！游戏结束";
-                    statusElement.style.color = '#ffa500';
+                    statusElement.style.background = 'rgba(244, 162, 97, 0.3)';
                     gameOver = true;
                 }
             } else if (inCheck) {
                 statusElement.textContent = `${currentPlayer === 'w' ? '白方' : '黑方'} 被将军`;
-                statusElement.style.color = '#ffa500';
+                statusElement.style.background = 'rgba(244, 162, 97, 0.3)';
             } else {
                 statusElement.textContent = `轮到${currentPlayer === 'w' ? '白方' : '黑方'}走棋`;
-                statusElement.style.color = '#e8d0b3';
+                statusElement.style.background = 'rgba(0, 0, 0, 0.3)';
             }
         }
         
@@ -786,10 +918,25 @@
             const historyElement = document.getElementById('move-history');
             historyElement.innerHTML = '';
             
-            moveHistory.forEach(move => {
-                const moveElement = document.createElement('div');
-                moveElement.textContent = move;
-                historyElement.appendChild(moveElement);
+            let movePairs = [];
+            for (let i = 0; i < moveHistory.length; i += 2) {
+                const whiteMove = moveHistory[i];
+                const blackMove = moveHistory[i+1] || null;
+                movePairs.push({white: whiteMove, black: blackMove});
+            }
+            
+            movePairs.forEach(pair => {
+                const whiteMoveElement = document.createElement('div');
+                whiteMoveElement.className = 'move white';
+                whiteMoveElement.textContent = pair.white.text;
+                historyElement.appendChild(whiteMoveElement);
+                
+                if (pair.black) {
+                    const blackMoveElement = document.createElement('div');
+                    blackMoveElement.className = 'move black';
+                    blackMoveElement.textContent = pair.black.text;
+                    historyElement.appendChild(blackMoveElement);
+                }
             });
             
             historyElement.scrollTop = historyElement.scrollHeight;
@@ -813,9 +960,15 @@
             validMoves = [];
             gameOver = false;
             
+            // 清除AI移动计时器
+            if (aiMoveTimeout) {
+                clearTimeout(aiMoveTimeout);
+                aiMoveTimeout = null;
+            }
+            
             const statusElement = document.getElementById('game-status');
             statusElement.textContent = `轮到${currentPlayer === 'w' ? '白方' : '黑方'}走棋`;
-            statusElement.style.color = '#e8d0b3';
+            statusElement.style.background = 'rgba(0, 0, 0, 0.3)';
             
             drawBoard();
         }
@@ -846,6 +999,39 @@
             }
         }
         
+        // 切换AI模式
+        function toggleAIMode() {
+            aiMode = !aiMode;
+            const aiModeBtn = document.getElementById('ai-mode-btn');
+            
+            if (aiMode) {
+                aiModeBtn.textContent = "关闭AI模式";
+                aiModeBtn.classList.add('active');
+                
+                // 如果当前轮到黑方且游戏未结束，立即让AI走棋
+                if (currentPlayer === 'b' && !gameOver) {
+                    // 清除之前的计时器（如果有）
+                    if (aiMoveTimeout) {
+                        clearTimeout(aiMoveTimeout);
+                    }
+                    
+                    // 设置延迟，让玩家有时间看到走棋
+                    aiMoveTimeout = setTimeout(() => {
+                        makeAIMove();
+                    }, 500);
+                }
+            } else {
+                aiModeBtn.textContent = "开启AI模式";
+                aiModeBtn.classList.remove('active');
+                
+                // 清除AI移动计时器
+                if (aiMoveTimeout) {
+                    clearTimeout(aiMoveTimeout);
+                    aiMoveTimeout = null;
+                }
+            }
+        }
+        
         // 新游戏
         function newGame() {
             board = [
@@ -868,10 +1054,22 @@
             enPassantTarget = null;
             castlingRights = { 'w': { kingside: true, queenside: true }, 'b': { kingside: true, queenside: true } };
             gameOver = false;
+            aiMode = false;
+            
+            // 清除AI移动计时器
+            if (aiMoveTimeout) {
+                clearTimeout(aiMoveTimeout);
+                aiMoveTimeout = null;
+            }
+            
+            // 重置AI模式按钮
+            const aiModeBtn = document.getElementById('ai-mode-btn');
+            aiModeBtn.textContent = "开启AI模式";
+            aiModeBtn.classList.remove('active');
             
             const statusElement = document.getElementById('game-status');
             statusElement.textContent = "轮到白方走棋";
-            statusElement.style.color = '#e8d0b3';
+            statusElement.style.background = 'rgba(0, 0, 0, 0.3)';
             
             updateMoveHistory();
             drawBoard();
@@ -923,6 +1121,7 @@
             document.getElementById('undo-btn').addEventListener('click', undoMove);
             document.getElementById('new-game-btn').addEventListener('click', newGame);
             document.getElementById('ai-move-btn').addEventListener('click', makeAIMove);
+            document.getElementById('ai-mode-btn').addEventListener('click', toggleAIMode);
         }
         
         // 启动游戏
