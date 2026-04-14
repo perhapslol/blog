@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ .Title }} - {{ .Site.Title }}</title>
+  <meta name="description" content="{{ .Site.Params.description }}">
+  <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+  <link rel="stylesheet" href="{{ "css/search.css" | relURL }}">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="sidebar-about">
+        <h1><a href="{{ .Site.BaseURL }}" style="color: inherit; text-decoration: none;">{{ .Site.Title }}</a></h1>
+        <p class="lead">{{ .Site.Params.description }}</p>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="{{ .Site.BaseURL }}" class="sidebar-nav-item{{ if .IsHome }} active{{ end }}">首页</a>
+        
+        <div class="nav-section">
+          <span class="nav-section-title">Posts</span>
+          <a href="{{ "/posts/stocks/" | relURL }}" class="sidebar-nav-item">Stocks/ListedCompanies</a>
+          <a href="{{ "/posts/ipo/" | relURL }}" class="sidebar-nav-item">IPO/RulesandRegulations</a>
+        </div>
+        
+        <div class="nav-section">
+          <span class="nav-section-title">Economics</span>
+          <a href="{{ "/posts/economics/" | relURL }}" class="sidebar-nav-item">Macro/Micro</a>
+        </div>
+        
+        <div class="nav-section">
+          <span class="nav-section-title">Math</span>
+          <a href="{{ "/posts/math/" | relURL }}" class="sidebar-nav-item">Basic mathematics</a>
+        </div>
+        
+        <div class="nav-section">
+          <span class="nav-section-title">Law</span>
+          <a href="{{ "/posts/law/" | relURL }}" class="sidebar-nav-item">Qualification Examination</a>
+        </div>
+        
+        <div class="nav-section">
+          <span class="nav-section-title">Logic</span>
+          <a href="{{ "/posts/logic/" | relURL }}" class="sidebar-nav-item"></a>
+        </div>
+        
+        <a href="{{ "pages/about/" | relURL }}" class="sidebar-nav-item{{ if eq .Title "关于我" }} active{{ end }}">关于</a>
+        <a href="{{ "pages/guestbook/" | relURL }}" class="sidebar-nav-item{{ if eq .Title "留言板" }} active{{ end }}">留言板</a>
+      </nav>
+      <div class="search-box">
+        <input type="text" id="search-input" placeholder="搜索...">
+        <div id="search-results"></div>
+      </div>
+      <div class="sidebar-links">
+        <a href="https://www.bilibili.com" target="_blank">Bilibili</a>
+      </div>
+      <p class="sidebar-footer">powered by Hugo | themed with poison {{ .Site.Params.copyright }}</p>
+    </aside>
+    <main class="content">
+      {{ block "main" . }}{{ end }}
+    </main>
+  </div>
+  <script src="{{ "js/search.js" | relURL }}"></script>
+  {{ if eq .Title "留言板" }}
+  <script src="{{ "js/guestbook.js" | relURL }}"></script>
+  {{ end }}
+</body>
+</html>
