@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>搜索 - Perhaps Blog</title>
+    <base href="https://perhapslol.github.io/blog/" />
+    <link type="text/css" rel="stylesheet" href="/css/bundle.min.94a339836f89f0d25f31980cb6b0631da21e20af128308747ce44e0525eb16ef.css">
+    <style>
+        body {
+            --sidebar-bg-color: #202020;
+            --sidebar-img-border-color: #515151;
+            --sidebar-p-color: #909090;
+            --sidebar-h1-color: #FFF;
+            --sidebar-a-color: #FFF;
+            --sidebar-socials-color: #FFF;
+            --text-color: #222;
+            --bkg-color: #FAF9F6;
+            --post-title-color: #303030;
+            --list-color: #5a5a5a;
+            --link-color: #268bd2;
+            --date-color: #515151;
+        }
+        body {
+            background-color: var(--bkg-color);
+            color: var(--text-color);
+        }
+        .search-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        .search-box {
+            width: 100%;
+            padding: 12px 20px;
+            font-size: 16px;
+            border: 2px solid #ddd;
+            border-radius: 25px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        .search-box:focus {
+            border-color: #268bd2;
+        }
+        .search-results {
+            margin-top: 30px;
+        }
+        .search-result {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .search-result:last-child {
+            border-bottom: none;
+        }
+        .search-result h3 {
+            margin: 0 0 10px 0;
+        }
+        .search-result h3 a {
+            color: var(--link-color);
+            text-decoration: none;
+        }
+        .search-result h3 a:hover {
+            text-decoration: underline;
+        }
+        .search-result .date {
+            color: var(--date-color);
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .search-result .summary {
+            color: var(--list-color);
+            line-height: 1.6;
+        }
+        .search-result .tags {
+            margin-top: 10px;
+        }
+        .search-result .tag {
+            display: inline-block;
+            background-color: #eee;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-size: 12px;
+            margin-right: 5px;
+        }
+        .no-results {
+            text-align: center;
+            padding: 40px;
+            color: var(--list-color);
+        }
+        .search-stats {
+            margin-bottom: 20px;
+            color: var(--date-color);
+            font-size: 14px;
+        }
+        .highlight {
+            background-color: #ffff00;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="search-container">
+        <h1 style="text-align: center; margin-bottom: 30px;">搜索博客</h1>
+        <input type="text" id="searchInput" class="search-box" placeholder="输入关键词搜索..." onkeyup="performSearch()">
+        <div class="search-stats" id="searchStats"></div>
+        <div class="search-results" id="searchResults"></div>
+    </div>
+
+    <script>
+        let postsData = [];
+
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('/search/index.json')
+                .then(response => response.json())
+                .then(data => {
+                    postsData = data.posts;
+                    const urlParams = new URLSearchParams(window.location.search);
+                    const query = urlParams.get('q');
+                    if (query) {
+                        document.getElementById('searchInput').value = query;
+                        performSearch();
+                    }
+                })
+                .catch(error => {
+                    console.error('Error loading search index:', error);
+                });
+        });
+
+        function performSearch() {
+            const query = document.getElementById('searchInput').value.toLowerCase().trim();
+            const resultsDiv = document.getElementById('searchResults');
+            const statsDiv = document.getElementById('searchStats');
+
+            if (!query) {
+                resultsDiv.innerHTML = '<div class="no-results">请输入关键词进行搜索</div>';
+                statsDiv.innerHTML = '';
+                return;
+            }
+
+            const matchedPosts = postsData.filter(post => {
+                const titleMatch = post.title.toLowerCase().includes(query);
+                const summaryMatch = post.summary.toLowerCase().includes(query);
+                const tagsMatch = post.tags.some(tag => tag.toLowerCase().includes(query));
+                return titleMatch || summaryMatch || tagsMatch;
+            });
+
+            statsDiv.innerHTML = `找到 ${matchedPosts.length} 篇相关文章`;
+
+            if (matchedPosts.length === 0) {
+                resultsDiv.innerHTML = '<div class="no-results">没有找到匹配的文章</div>';
+                return;
+            }
+
+            resultsDiv.innerHTML = matchedPosts.map(post => {
+                let highlightedTitle = highlightText(post.title, query);
+                let highlightedSummary = highlightText(post.summary, query);
+                
+                return `
+                    <div class="search-result">
+                        <h3><a href="${post.url}">${highlightedTitle}</a></h3>
+                        <div class="date">${post.date}</div>
+                        <div class="summary">${highlightedSummary}</div>
+                        <div class="tags">
+                            ${post.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function highlightText(text, query) {
+            if (!query) return text;
+            const regex = new RegExp(`(${query})`, 'gi');
+            return text.replace(regex, '<span class="highlight">$1</span>');
+        }
+    </script>
+</body>
+</html>

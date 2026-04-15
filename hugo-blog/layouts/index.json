@@ -1,5 +1,0 @@
-{{- $.Scratch.Set "pages" slice -}}
-{{- range .Site.RegularPages -}}
-{{- $.Scratch.Add "pages" (dict "title" .Title "url" .Permalink "content" .Plain) -}}
-{{- end -}}
-{{- $.Scratch.Get "pages" | jsonify -}}
