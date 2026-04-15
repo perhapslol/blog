@@ -1,0 +1,15 @@
+{
+  "name": "poison-blog",
+  "version": "1.0.0",
+  "description": "A poison.lukeorth.com style blog with VuePress Vdoing theme",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "deploy": "bash deploy.sh"
+  },
+  "dependencies": {
+    "vuepress": "^1.9.10",
+    "vuepress-theme-vdoing": "^1.12.2"
+  },
+  "devDependencies": {}
+}
