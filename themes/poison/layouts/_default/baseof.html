@@ -15,13 +15,13 @@
   <div class="container">
     <aside class="sidebar">
       <header>
-        <h1><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
+        <h1><a href="{{ "/" | relURL }}">{{ .Site.Title }}</a></h1>
         <p>{{ .Site.Params.description }}</p>
       </header>
       <nav>
         <ul>
           {{ range .Site.Menus.main }}
-          <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+          <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
           {{ end }}
         </ul>
       </nav>
@@ -47,7 +47,7 @@
       
       let searchIndex = [];
       
-      fetch('/index.json')
+      fetch('{{ "index.json" | relURL }}')
         .then(response => response.json())
         .then(data => {
           searchIndex = data;

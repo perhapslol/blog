@@ -13,23 +13,23 @@ theme = "poison"
   [[menu.main]]
     name = "Home"
     weight = 1
-    url = "/blog/"
+    url = "/"
   [[menu.main]]
     name = "Posts"
     weight = 2
-    url = "/blog/posts/"
+    url = "/posts/"
   [[menu.main]]
     name = "Notes"
     weight = 3
-    url = "/blog/notes/"
+    url = "/notes/"
   [[menu.main]]
     name = "About"
     weight = 4
-    url = "/blog/pages/about/"
+    url = "/pages/about/"
   [[menu.main]]
     name = "Guestbook"
     weight = 5
-    url = "/blog/pages/guestbook/"
+    url = "/pages/guestbook/"
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
