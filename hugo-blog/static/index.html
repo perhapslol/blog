@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>春华夕拾 - 个人博客</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background-color: #1a1a2e;
+      color: #e0e0e0;
+      line-height: 1.6;
+    }
+    .container {
+      display: flex;
+      min-height: 100vh;
+    }
+    .sidebar {
+      width: 280px;
+      background-color: #16213e;
+      padding: 2rem;
+      position: fixed;
+      height: 100vh;
+      overflow-y: auto;
+    }
+    .sidebar header h1 a {
+      color: #e94560;
+      text-decoration: none;
+      font-size: 1.5rem;
+    }
+    .sidebar header p {
+      color: #888;
+      font-size: 0.9rem;
+    }
+    .sidebar nav {
+      margin-top: 2rem;
+    }
+    .sidebar nav ul {
+      list-style: none;
+    }
+    .sidebar nav ul li {
+      margin-bottom: 0.5rem;
+    }
+    .sidebar nav ul li a {
+      color: #b0b0b0;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .sidebar nav ul li a:hover {
+      color: #e94560;
+    }
+    .sidebar .search-box {
+      margin-top: 2rem;
+    }
+    .sidebar .search-box input {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #333;
+      border-radius: 4px;
+      background-color: #0f0f1a;
+      color: #e0e0e0;
+      font-size: 0.9rem;
+    }
+    #search-results {
+      list-style: none;
+      margin-top: 0.5rem;
+      max-height: 200px;
+      overflow-y: auto;
+    }
+    #search-results li {
+      padding: 0.3rem;
+      border-bottom: 1px solid #333;
+    }
+    #search-results li a {
+      color: #b0b0b0;
+      text-decoration: none;
+    }
+    .sidebar footer {
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid #333;
+      color: #666;
+      font-size: 0.8rem;
+    }
+    .sidebar footer a {
+      color: #e94560;
+      text-decoration: none;
+    }
+    .content {
+      margin-left: 280px;
+      padding: 2rem;
+      max-width: 800px;
+    }
+    article {
+      background-color: #16213e;
+      padding: 2rem;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+    }
+    article header h1 {
+      color: #e0e0e0;
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+    article .content h2 {
+      color: #e94560;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+    article .content code {
+      background-color: #2a2a4a;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      font-family: 'Fira Code', monospace;
+    }
+    article .content pre {
+      background-color: #0f0f1a;
+      padding: 1rem;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    article .content a {
+      color: #e94560;
+      text-decoration: none;
+    }
+    .category-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .category-card {
+      background-color: #16213e;
+      padding: 1rem;
+      border-radius: 8px;
+      min-width: 150px;
+    }
+    .category-card h3 {
+      color: #e94560;
+      margin-bottom: 0.5rem;
+    }
+    .category-card ul {
+      list-style: none;
+      font-size: 0.9rem;
+    }
+    .category-card ul li a {
+      color: #b0b0b0;
+      text-decoration: none;
+    }
+    form {
+      margin-top: 2rem;
+    }
+    form div {
+      margin-bottom: 1rem;
+    }
+    form label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #b0b0b0;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 0.7rem;
+      border: 1px solid #333;
+      border-radius: 4px;
+      background-color: #0f0f1a;
+      color: #e0e0e0;
+      font-size: 1rem;
+    }
+    form button {
+      background-color: #e94560;
+      color: white;
+      padding: 0.7rem 1.5rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    #comments-list {
+      margin-top: 2rem;
+    }
+    .comment {
+      background-color: #0f0f1a;
+      padding: 1rem;
+      border-radius: 4px;
+      margin-bottom: 1rem;
+    }
+    .comment .author {
+      color: #e94560;
+      font-weight: bold;
+    }
+    .comment .date {
+      color: #666;
+      font-size: 0.8rem;
+      margin-left: 1rem;
+    }
+    .comment .content {
+      margin-top: 0.5rem;
+      color: #b0b0b0;
+    }
+    @media (max-width: 768px) {
+      .container { flex-direction: column; }
+      .sidebar { position: static; width: 100%; height: auto; }
+      .content { margin-left: 0; padding: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <header>
+        <h1><a href="/">春华夕拾</a></h1>
+        <p>个人博客</p>
+      </header>
+      <nav>
+        <ul>
+          <li><a href="#home">首页</a></li>
+          <li><a href="#posts">文章</a></li>
+          <li><a href="#notes">笔记</a></li>
+          <li><a href="#about">关于</a></li>
+          <li><a href="#guestbook">留言板</a></li>
+        </ul>
+      </nav>
+      <div class="search-box">
+        <input type="text" id="search-input" placeholder="搜索...">
+        <ul id="search-results"></ul>
+      </div>
+      <footer>
+        <p><a href="https://space.bilibili.com/" target="_blank">Bilibili</a></p>
+        <p>powered by Hugo | themed with poison</p>
+      </footer>
+    </aside>
+    <main class="content">
+      <section id="home">
+        <article>
+          <header>
+            <h1>春华夕拾</h1>
+          </header>
+          <div class="content">
+            <p>欢迎来到我的个人博客。这里记录着我的学习笔记、技术分享和生活感悟。</p>
+            <h2>分类导航</h2>
+            <div class="category-list">
+              <div class="category-card">
+                <h3>Stocks</h3>
+                <ul>
+                  <li><a href="#company-analysis">上市公司分析</a></li>
+                </ul>
+              </div>
+              <div class="category-card">
+                <h3>IPO</h3>
+                <ul>
+                  <li><a href="#ipo-rules">上市规则详解</a></li>
+                </ul>
+              </div>
+              <div class="category-card">
+                <h3>Economics</h3>
+                <ul>
+                  <li><a href="#macro-analysis">宏观经济分析</a></li>
+                  <li><a href="#micro-theory">微观经济学基础</a></li>
+                </ul>
+              </div>
+              <div class="category-card">
+                <h3>Math</h3>
+                <ul>
+                  <li><a href="#calculus">微积分基础</a></li>
+                </ul>
+              </div>
+              <div class="category-card">
+                <h3>Law</h3>
+                <ul>
+                  <li><a href="#exam-prep">法律备考指南</a></li>
+                </ul>
+              </div>
+              <div class="category-card">
+                <h3>Logic</h3>
+                <ul>
+                  <li><a href="#critical-thinking">批判性思维</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section id="posts">
+        <article>
+          <header>
+            <h1>文章列表</h1>
+          </header>
+          <div class="content">
+            <ul>
+              <li><a href="#company-analysis">上市公司分析方法</a> - 2024-01-15</li>
+              <li><a href="#ipo-rules">IPO 上市规则详解</a> - 2024-01-20</li>
+              <li><a href="#macro-analysis">宏观经济分析框架</a> - 2024-02-01</li>
+              <li><a href="#micro-theory">微观经济学基础</a> - 2024-02-10</li>
+              <li><a href="#calculus">微积分基础</a> - 2024-02-15</li>
+              <li><a href="#exam-prep">法律资格考试备考指南</a> - 2024-03-01</li>
+              <li><a href="#critical-thinking">批判性思维训练</a> - 2024-03-10</li>
+            </ul>
+          </div>
+        </article>
+      </section>
+
+      <section id="notes">
+        <article>
+          <header>
+            <h1>学习笔记</h1>
+          </header>
+          <div class="content">
+            <p>个人学习笔记汇总，包含编程、数学、经济学等领域的学习心得。</p>
+          </div>
+        </article>
+      </section>
+
+      <section id="about">
+        <article>
+          <header>
+            <h1>关于我</h1>
+          </header>
+          <div class="content">
+            <p>大家好，我是 Perhaps。这是我的个人博客，记录学习和思考。</p>
+            <h2>联系方式</h2>
+            <ul>
+              <li><strong>GitHub</strong>: <a href="https://github.com/perhapslol" target="_blank">@perhapslol</a></li>
+              <li><strong>Bilibili</strong>: 欢迎关注我的 B 站频道</li>
+            </ul>
+            <h2>博客内容</h2>
+            <ul>
+              <li>股票分析</li>
+              <li>经济研究</li>
+              <li>数学学习</li>
+              <li>法律备考</li>
+              <li>逻辑思考</li>
+            </ul>
+          </div>
+        </article>
+      </section>
+
+      <section id="guestbook">
+        <article>
+          <header>
+            <h1>留言板</h1>
+          </header>
+          <div class="content">
+            <form id="guestbook-form">
+              <div>
+                <label>昵称</label>
+                <input type="text" id="nickname" placeholder="请输入昵称" required>
+              </div>
+              <div>
+                <label>邮箱</label>
+                <input type="email" id="email" placeholder="选填">
+              </div>
+              <div>
+                <label>留言内容</label>
+                <textarea id="content" rows="4" placeholder="请输入留言内容" required></textarea>
+              </div>
+              <button type="submit">提交留言</button>
+            </form>
+            <div id="comments-list"></div>
+          </div>
+        </article>
+      </section>
+
+      <section id="company-analysis">
+        <article>
+          <header>
+            <h1>上市公司分析方法</h1>
+            <time>2024-01-15</time>
+            <div class="tags"><span>Stocks</span><span>Analysis</span></div>
+          </header>
+          <div class="content">
+            <h2>基本面分析</h2>
+            <p>基本面分析是评估公司内在价值的方法，主要关注：</p>
+            <ol>
+              <li><strong>财务报表分析</strong> - 利润表、资产负债表、现金流量表</li>
+              <li><strong>行业分析</strong> - 市场份额、竞争格局、行业趋势</li>
+              <li><strong>管理层评估</strong> - 战略规划、执行能力、诚信记录</li>
+            </ol>
+            <h2>估值方法</h2>
+            <ul>
+              <li>市盈率法</li>
+              <li>市净率法</li>
+              <li>现金流折现法</li>
+            </ul>
+          </div>
+        </article>
+      </section>
+
+      <section id="ipo-rules">
+        <article>
+          <header>
+            <h1>IPO 上市规则详解</h1>
+            <time>2024-01-20</time>
+            <div class="tags"><span>IPO</span><span>Rules</span></div>
+          </header>
+          <div class="content">
+            <h2>IPO 基本流程</h2>
+            <ol>
+              <li><strong>筹备阶段</strong> - 确定承销商、尽职调查、准备招股说明书</li>
+              <li><strong>申报阶段</strong> - 向证监会提交申请、反馈与回复、发审会审核</li>
+              <li><strong>发行阶段</strong> - 路演推介、询价定价、网上申购</li>
+            </ol>
+          </div>
+        </article>
+      </section>
+
+      <section id="macro-analysis">
+        <article>
+          <header>
+            <h1>宏观经济分析框架</h1>
+            <time>2024-02-01</time>
+            <div class="tags"><span>Economics</span><span>Macro</span></div>
+          </header>
+          <div class="content">
+            <h2>GDP 分析</h2>
+            <p>国内生产总值是衡量经济活动的核心指标。</p>
+            <h3>支出法</h3>
+            <pre>GDP = C + I + G + (X - M)</pre>
+            <p>其中：C: 消费支出, I: 投资支出, G: 政府支出, X: 出口, M: 进口</p>
+          </div>
+        </article>
+      </section>
+
+      <section id="micro-theory">
+        <article>
+          <header>
+            <h1>微观经济学基础</h1>
+            <time>2024-02-10</time>
+            <div class="tags"><span>Economics</span><span>Micro</span></div>
+          </header>
+          <div class="content">
+            <h2>供需理论</h2>
+            <p><strong>需求定律</strong>: 在其他条件不变的情况下，价格上升，需求量下降。</p>
+            <p><strong>供给定律</strong>: 在其他条件不变的情况下，价格上升，供给量增加。</p>
+          </div>
+        </article>
+      </section>
+
+      <section id="calculus">
+        <article>
+          <header>
+            <h1>微积分基础</h1>
+            <time>2024-02-15</time>
+            <div class="tags"><span>Math</span><span>Calculus</span></div>
+          </header>
+          <div class="content">
+            <h2>导数</h2>
+            <p>导数表示函数的变化率。</p>
+            <pre>f'(x) = lim(h→0) [f(x+h) - f(x)] / h</pre>
+          </div>
+        </article>
+      </section>
+
+      <section id="exam-prep">
+        <article>
+          <header>
+            <h1>法律资格考试备考指南</h1>
+            <time>2024-03-01</time>
+            <div class="tags"><span>Law</span><span>Exam</span></div>
+          </header>
+          <div class="content">
+            <h2>考试科目</h2>
+            <ol>
+              <li><strong>民法</strong> - 物权法、合同法、侵权责任法</li>
+              <li><strong>刑法</strong> - 犯罪构成、刑罚体系</li>
+              <li><strong>行政法</strong> - 行政许可、行政处罚、行政诉讼</li>
+              <li><strong>诉讼法</strong> - 民事诉讼、刑事诉讼、行政诉讼</li>
+            </ol>
+          </div>
+        </article>
+      </section>
+
+      <section id="critical-thinking">
+        <article>
+          <header>
+            <h1>批判性思维训练</h1>
+            <time>2024-03-10</time>
+            <div class="tags"><span>Logic</span><span>Thinking</span></div>
+          </header>
+          <div class="content">
+            <h2>什么是批判性思维</h2>
+            <p>批判性思维是一种理性、客观的思考方式，包括：</p>
+            <ol>
+              <li><strong>分析能力</strong> - 拆解问题结构</li>
+              <li><strong>评估能力</strong> - 判断信息可靠性</li>
+              <li><strong>推理能力</strong> - 推导合理结论</li>
+            </ol>
+            <h2>常见逻辑谬误</h2>
+            <ul>
+              <li>人身攻击</li>
+              <li>稻草人谬误</li>
+              <li>循环论证</li>
+              <li>诉诸权威</li>
+              <li>虚假两难</li>
+            </ul>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const searchIndex = [
+      { title: '上市公司分析方法', url: '#company-analysis', content: '基本面分析 财务报表 估值方法' },
+      { title: 'IPO 上市规则详解', url: '#ipo-rules', content: '上市流程 监管要求' },
+      { title: '宏观经济分析框架', url: '#macro-analysis', content: 'GDP 货币政策' },
+      { title: '微观经济学基础', url: '#micro-theory', content: '供需理论 市场结构' },
+      { title: '微积分基础', url: '#calculus', content: '导数 积分' },
+      { title: '法律资格考试备考指南', url: '#exam-prep', content: '民法 刑法 行政法' },
+      { title: '批判性思维训练', url: '#critical-thinking', content: '逻辑分析 推理' }
+    ];
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const searchInput = document.getElementById('search-input');
+      const searchResults = document.getElementById('search-results');
+
+      searchInput.addEventListener('input', function() {
+        const query = this.value.toLowerCase().trim();
+        if (!query) {
+          searchResults.innerHTML = '';
+          return;
+        }
+        const results = searchIndex.filter(item =>
+          item.title.toLowerCase().includes(query) ||
+          item.content.toLowerCase().includes(query)
+        );
+        searchResults.innerHTML = results.length ?
+          results.slice(0, 10).map(item => `<li><a href="${item.url}">${item.title}</a></li>`).join('') :
+          '<li>没有找到匹配的内容</li>';
+      });
+
+      const form = document.getElementById('guestbook-form');
+      const commentsList = document.getElementById('comments-list');
+
+      function loadComments() {
+        fetch('/api/comments')
+          .then(response => response.json())
+          .then(data => {
+            commentsList.innerHTML = data.map(comment => `
+              <div class="comment">
+                <span class="author">${comment.nickname}</span>
+                <span class="date">${comment.createdAt}</span>
+                <div class="content">${comment.content}</div>
+              </div>
+            `).join('');
+          })
+          .catch(() => {
+            commentsList.innerHTML = '<p>暂时无法加载留言</p>';
+          });
+      }
+
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const data = {
+          nickname: document.getElementById('nickname').value,
+          email: document.getElementById('email').value,
+          content: document.getElementById('content').value
+        };
+        fetch('/api/comments', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        })
+        .then(() => {
+          form.reset();
+          loadComments();
+        });
+      });
+
+      loadComments();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+#search-input:focus {
+  outline: none;
+  border-color: #e94560;
+}
+
+#search-results:empty {
+  display: none;
+}
+
+#search-results li {
+  cursor: pointer;
+}
