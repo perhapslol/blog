@@ -1,15 +1,13 @@
 {
   "name": "poison-blog",
   "version": "1.0.0",
-  "description": "A poison.lukeorth.com style blog with VuePress Vdoing theme",
+  "description": "Poison style blog with Hugo",
   "scripts": {
-    "dev": "vuepress dev docs",
-    "build": "vuepress build docs",
+    "dev": "hugo server",
+    "build": "hugo",
     "deploy": "bash deploy.sh"
   },
-  "dependencies": {
-    "vuepress": "^1.9.10",
-    "vuepress-theme-vdoing": "^1.12.2"
-  },
-  "devDependencies": {}
+  "keywords": ["blog", "hugo", "poison"],
+  "author": "",
+  "license": "MIT"
 }

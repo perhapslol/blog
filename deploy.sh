@@ -2,14 +2,13 @@
 
 set -e
 
-npm run build
+echo "Building Hugo site..."
+hugo
 
-cd docs/.vuepress/dist
-
+echo "Deploying to GitHub Pages..."
+cd public
 git init
 git add -A
-git commit -m 'deploy'
-
-git push -f git@github.com:your-username/your-repo.git master:gh-pages
-
-cd -
+git commit -m "Deploy to GitHub Pages"
+git push -f git@github.com:perhapslol/blog.git master:gh-pages
+cd ..
