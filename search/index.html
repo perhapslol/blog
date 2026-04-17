@@ -110,19 +110,26 @@
         let postsData = [];
 
         document.addEventListener('DOMContentLoaded', function() {
-            fetch('/search/index.json')
-                .then(response => response.json())
+            const jsonPath = window.location.pathname.startsWith('/search/') ? './index.json' : '/search/index.json';
+            fetch(jsonPath)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
                 .then(data => {
-                    postsData = data.posts;
+                    postsData = data.posts || [];
                     const urlParams = new URLSearchParams(window.location.search);
                     const query = urlParams.get('q');
                     if (query) {
-                        document.getElementById('searchInput').value = query;
+                        document.getElementById('searchInput').value = decodeURIComponent(query);
                         performSearch();
                     }
                 })
                 .catch(error => {
                     console.error('Error loading search index:', error);
+                    document.getElementById('searchResults').innerHTML = '<div class="no-results">搜索功能暂时不可用，请稍后重试</div>';
                 });
         });
 
