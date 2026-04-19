@@ -1271,7 +1271,10 @@ a>b>0、c>d>0，ac>bd<p>
       function goSearch() {
           var query = document.getElementById('sidebarSearch').value;
           if (query.trim()) {
-              window.location.href = '/search/?q=' + encodeURIComponent(query);
+              var baseUrl = window.location.protocol + '//' + window.location.host;
+              var path = window.location.pathname;
+              var blogPath = path.substring(0, path.indexOf('/', 1) + 1);
+              window.location.href = baseUrl + blogPath + 'search/?q=' + encodeURIComponent(query);
           }
       }
   </script>
@@ -1341,7 +1344,10 @@ a>b>0、c>d>0，ac>bd<p>
         function goSearch() {
             var query = document.getElementById('sidebarSearch').value;
             if (query.trim()) {
-                window.location.href = '/search/?q=' + encodeURIComponent(query);
+                var baseUrl = window.location.protocol + '//' + window.location.host;
+                var path = window.location.pathname;
+                var blogPath = path.substring(0, path.indexOf('/', 1) + 1);
+                window.location.href = baseUrl + blogPath + 'search/?q=' + encodeURIComponent(query);
             }
         }
     </script>

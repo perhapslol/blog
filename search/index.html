@@ -110,7 +110,9 @@
         let postsData = [];
 
         document.addEventListener('DOMContentLoaded', function() {
-            const jsonPath = window.location.pathname.startsWith('/search/') ? './index.json' : '/search/index.json';
+            const currentPath = window.location.pathname;
+            const searchDir = currentPath.substring(0, currentPath.lastIndexOf('/') + 1);
+            const jsonPath = searchDir + 'index.json';
             fetch(jsonPath)
                 .then(response => {
                     if (!response.ok) {

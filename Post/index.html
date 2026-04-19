@@ -991,7 +991,10 @@
             var searchTerm = document.getElementById('sidebarSearch').value;
             if (searchTerm.trim()) {
                 var encodedTerm = encodeURIComponent(searchTerm);
-                window.location.href = '/search/?q=' + encodedTerm;
+                var baseUrl = window.location.protocol + '//' + window.location.host;
+                var path = window.location.pathname;
+                var blogPath = path.substring(0, path.indexOf('/', 1) + 1);
+                window.location.href = baseUrl + blogPath + 'search/?q=' + encodedTerm;
             }
         }
     </script>
