@@ -1,141 +1,844 @@
 <!DOCTYPE html>
-    <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
-    <head>
-    <script defer language="javascript" type="text/javascript" src="/js/bundle.min.444d89fe8d19b9e466eca93647da936356d2c582a54abec3037b88c2e785e61e.js"></script>
-    <script defer data-domain="https://perhapslol.github.io/blog/" src="https://plausible.lukeorth.com/js/script.js"></script>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- Open Graph image and Twitter Card metadata -->
-    <title itemprop="name">Perhaps</title>
-    <meta property="og:title" content=Perhaps/>
-    <meta name="twitter:title" content=perhapslol/>
-    <meta itemprop="name" content=Perhaps />
-    <meta name="application-name" content=perhapslol/>
-    <meta property="og:site_name" content="perhapslol"/>
+    
     <meta name="description" content="perhaps's blog" />
-    <base href="https://poison.lukeorth.com/" />
-    <link rel="sitemap" type="application/xml" title="Sitemap" href='https://poison.lukeorth.com/sitemap.xml' />
-    <meta name="robots" content="index,follow" />
-    <meta name="googlebot" content="index,follow" />
-    <meta name="twitter:site" content="perhapslolperhapslol" />
-    <meta name="twitter:creator" content="perhapslol" />
-    <meta property="fb:admins" content="" />
-    <meta name="apple-mobile-web-app-title" content="Perhaps" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <meta name="generator" content="Hugo 0.124.0">
-
-<!-- 分栏框架及颜色 -->
-    <link type="text/css" rel="stylesheet" href="/css/bundle.min.94a339836f89f0d25f31980cb6b0631da21e20af128308747ce44e0525eb16ef.css"><style>
-    body {
-        --sidebar-bg-color: #202020;
-        --sidebar-img-border-color: #515151;
-        --sidebar-p-color: #909090;
-        --sidebar-h1-color: #FFF;
-        --sidebar-a-color: #FFF;
-        --sidebar-socials-color: #FFF;
-        --text-color: #222;
-        --bkg-color: #FAF9F6;
-        --post-title-color: #303030;
-        --list-color: #5a5a5a;
-        --link-color: #268bd2;
-        --date-color: #515151;
-        --table-border-color: #E5E5E5;
-        --table-stripe-color: #F9F9F9;
-        --code-color: #000;
-        --code-background-color: #E5E5E5;
-        --code-block-color: #fff;
-        --code-block-background-color: #272822;
-        --moon-sun-color: #FFF;
-        --moon-sun-background-color: #515151;
-    }
-    body.dark-theme {
-        --text-color: #eee;
-        --bkg-color: #121212;
-        --post-title-color: #DBE2E9;
-        --list-color: #9d9d9d;
-        --link-color: #268bd2;
-        --date-color: #9a9a9a;
-        --table-border-color: #515151;
-        --table-stripe-color: #202020;
-        --code-color: #fff;
-        --code-background-color: #515151;
-        --code-block-color: #fff;
-        --code-block-background-color: #272822;
-    }
-    body {
-        background-color: var(--bkg-color);
-    }
+    <meta name="application-name" content="perhapslol">
+    <meta name="theme-color" content="#202020">
+    
+    <!-- Open Graph metadata -->
+    <meta property="og:title" content="Perhaps">
+    <meta property="og:site_name" content="perhapslol">
+    <meta property="og:description" content="perhaps's blog">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card metadata -->
+    <meta name="twitter:title" content="perhapslol">
+    <meta name="twitter:site" content="perhapslol">
+    <meta name="twitter:creator" content="perhapslol">
+    
+    <!-- Link tags -->
+    <link rel="canonical" href="https://perhapslol.github.io/blog/">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://perhapslol.github.io/blog/sitemap.xml">
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    
+    <!-- Apple touch icons -->
+    <meta name="apple-mobile-web-app-title" content="Perhaps">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <!-- Stylesheets -->
+    <link type="text/css" rel="stylesheet" href="/css/bundle.min.94a339836f89f0d25f31980cb6b0631da21e20af128308747ce44e0525eb16ef.css">
+    
+    <!-- Modern CSS with comprehensive fallbacks for cross-browser compatibility -->
+    <style>
+        /* Base styles for all browsers */
+        html {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans SC', 'Microsoft YaHei', sans-serif;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-kerning: auto;
+            -webkit-font-feature-settings: "kern", "liga", "calt";
+            font-feature-settings: "kern", "liga", "calt";
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #FAF9F6;
+            color: #222;
+            line-height: 1.6;
+            -webkit-tap-highlight-color: rgba(38, 139, 210, 0.3);
+        }
+        
+        /* CSS Variables for modern browsers */
+        :root {
+            --sidebar-bg-color: #202020;
+            --sidebar-text-color: #909090;
+            --sidebar-link-color: #fff;
+            --content-bg-color: #FAF9F6;
+            --content-text-color: #222;
+            --post-title-color: #303030;
+            --link-color: #268bd2;
+            --date-color: #515151;
+            --border-color: #eee;
+            --shadow-color: rgba(0, 0, 0, 0.1);
+            --transition-fast: 0.15s ease;
+            --transition-normal: 0.25s ease;
+            --transition-slow: 0.35s ease;
+        }
+        
+        /* Dark theme */
+        body.dark-theme {
+            background-color: #121212;
+            color: #eee;
+        }
+        
+        body.dark-theme {
+            --content-bg-color: #121212;
+            --content-text-color: #eee;
+            --post-title-color: #DBE2E9;
+            --date-color: #9a9a9a;
+            --border-color: #333;
+            --shadow-color: rgba(255, 255, 255, 0.05);
+        }
+        
+        /* Wrapper layout */
+        .wrapper {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            min-height: 100vh;
+            min-height: -webkit-fill-available;
+        }
+        
+        /* Sidebar styles */
+        .sidebar {
+            width: 250px;
+            min-width: 250px;
+            background-color: #202020;
+            background-color: var(--sidebar-bg-color);
+            color: #909090;
+            color: var(--sidebar-text-color);
+            padding: 2rem 1rem;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            height: 100vh;
+            min-height: 100vh;
+            height: -webkit-fill-available;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+            -ms-overflow-style: -ms-autohiding-scrollbar;
+            border-right: 1px solid #333;
+            box-sizing: border-box;
+        }
+        
+        .sidebar-about {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        
+        .sidebar-about h1 {
+            margin: 0.5rem 0;
+            font-size: 1.5rem;
+            color: #fff;
+            color: var(--sidebar-link-color);
+            font-weight: 600;
+            letter-spacing: -0.02em;
+        }
+        
+        .sidebar-about .lead {
+            font-size: 0.9rem;
+            color: #909090;
+            color: var(--sidebar-text-color);
+            font-weight: 400;
+            opacity: 0.9;
+        }
+        
+        .sidebar-about img {
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            border: 2px solid #515151;
+            -webkit-transition: -webkit-transform var(--transition-normal);
+            transition: transform var(--transition-normal);
+            display: block;
+            margin: 0 auto;
+        }
+        
+        .sidebar-about img:hover {
+            -webkit-transform: scale(1.05);
+            -ms-transform: scale(1.05);
+            transform: scale(1.05);
+        }
+        
+        /* Navigation */
+        .sidebar-nav {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 1.5rem 0;
+            counter-reset: nav-counter;
+        }
+        
+        .sidebar-nav li {
+            margin-bottom: 0.35rem;
+            position: relative;
+        }
+        
+        .sidebar-nav a {
+            color: #fff;
+            color: var(--sidebar-link-color);
+            text-decoration: none;
+            display: block;
+            padding: 0.45rem 0.5rem;
+            -webkit-transition: color var(--transition-fast), background-color var(--transition-fast);
+            transition: color var(--transition-fast), background-color var(--transition-fast);
+            border-radius: 4px;
+            font-weight: 400;
+        }
+        
+        .sidebar-nav a:hover {
+            color: #268bd2;
+            color: var(--link-color);
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+        
+        .sidebar-nav a:focus {
+            outline: 2px solid #268bd2;
+            outline: 2px solid var(--link-color);
+            outline-offset: 2px;
+        }
+        
+        .sidebar-nav .heading a {
+            font-weight: 600;
+            font-size: 1.1rem;
+            letter-spacing: -0.01em;
+        }
+        
+        .sidebar-nav .sub-heading {
+            font-size: 0.85rem;
+            color: #666;
+            padding-left: 1rem;
+            opacity: 0.8;
+        }
+        
+        /* Search box */
+        .search-wrapper {
+            margin-bottom: 1.5rem;
+        }
+        
+        .search-wrapper input {
+            width: 100%;
+            padding: 0.55rem 0.85rem;
+            border: 1px solid #444;
+            border-radius: 6px;
+            font-size: 0.875rem;
+            background-color: #333;
+            color: #fff;
+            box-sizing: border-box;
+            -webkit-transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+            transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+        }
+        
+        .search-wrapper input:focus {
+            outline: none;
+            border-color: #268bd2;
+            border-color: var(--link-color);
+            box-shadow: 0 0 0 3px rgba(38, 139, 210, 0.15);
+        }
+        
+        .search-wrapper input::placeholder {
+            color: #666;
+            opacity: 1;
+        }
+        
+        .search-wrapper input::-webkit-input-placeholder {
+            color: #666;
+        }
+        
+        .search-wrapper input::-moz-placeholder {
+            color: #666;
+            opacity: 1;
+        }
+        
+        /* Social links */
+        .social-links {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            gap: 0.35rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .social-links a {
+            color: #fff;
+            color: var(--sidebar-link-color);
+            font-size: 0.9rem;
+            -webkit-transition: color var(--transition-fast), -webkit-transform var(--transition-fast);
+            transition: color var(--transition-fast), transform var(--transition-fast);
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            width: 1.6rem;
+            height: 1.6rem;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+        
+        .social-links a:hover {
+            color: #268bd2;
+            color: var(--link-color);
+            background-color: rgba(255, 255, 255, 0.1);
+            -webkit-transform: translateY(-2px);
+            -ms-transform: translateY(-2px);
+            transform: translateY(-2px);
+        }
+        
+        .social-links a:focus {
+            outline: 2px solid #268bd2;
+            outline-offset: 2px;
+        }
+        
+        .social-links svg {
+            width: 1.2em;
+            height: 1.2em;
+            fill: currentColor;
+        }
+        
+        /* Footer */
+        .sidebar .footnote {
+            font-size: 0.7rem;
+            color: #666;
+            text-align: center;
+            margin-top: 0.5rem;
+            line-height: 1.3;
+        }
+        
+        .sidebar .footnote a {
+            color: #666;
+            text-decoration: none;
+            -webkit-transition: color var(--transition-fast);
+            transition: color var(--transition-fast);
+        }
+        
+        .sidebar .footnote a:hover {
+            color: #268bd2;
+            color: var(--link-color);
+            text-decoration: underline;
+        }
+        
+        /* Content area */
+        .content {
+            margin-left: 250px;
+            padding: 2.5rem 2rem;
+            max-width: 850px;
+            min-height: 100vh;
+            min-height: -webkit-fill-available;
+            box-sizing: border-box;
+            background-color: #FAF9F6;
+            background-color: var(--content-bg-color);
+            color: #222;
+            color: var(--content-text-color);
+        }
+        
+        /* Posts */
+        .posts {
+            margin-bottom: 3rem;
+        }
+        
+        .post {
+            margin-bottom: 2.5rem;
+            padding-bottom: 2.5rem;
+            border-bottom: 1px solid #eee;
+            border-bottom-color: var(--border-color);
+            -webkit-transition: -webkit-transform var(--transition-normal), box-shadow var(--transition-normal);
+            transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+        }
+        
+        .post:hover {
+            -webkit-transform: translateX(4px);
+            -ms-transform: translateX(4px);
+            transform: translateX(4px);
+        }
+        
+        .post:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .post-title {
+            font-size: 1.6rem;
+            margin: 0 0 0.75rem 0;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            line-height: 1.35;
+        }
+        
+        .post-title a {
+            color: #303030;
+            color: var(--post-title-color);
+            text-decoration: none;
+            -webkit-transition: color var(--transition-fast);
+            transition: color var(--transition-fast);
+        }
+        
+        .post-title a:hover {
+            color: #268bd2;
+            color: var(--link-color);
+            text-decoration: underline;
+        }
+        
+        .headline {
+            font-size: 0.9rem;
+            color: #515151;
+            color: var(--date-color);
+            margin-bottom: 0.75rem;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .post-date {
+            font-style: italic;
+            font-weight: 400;
+        }
+        
+        .reading-time {
+            color: #888;
+            font-size: 0.85rem;
+            opacity: 0.8;
+        }
+        
+        .tags {
+            list-style: none;
+            padding: 0;
+            margin: 0.75rem 0;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        
+        .tags li {
+            display: inline-block;
+        }
+        
+        .tags a {
+            color: #268bd2;
+            color: var(--link-color);
+            text-decoration: none;
+            font-size: 0.825rem;
+            padding: 0.25rem 0.65rem;
+            background-color: #f0f4f8;
+            border-radius: 20px;
+            font-weight: 500;
+            -webkit-transition: background-color var(--transition-fast), color var(--transition-fast);
+            transition: background-color var(--transition-fast), color var(--transition-fast);
+        }
+        
+        body.dark-theme .tags a {
+            background-color: #2a2a2a;
+        }
+        
+        .tags a:hover {
+            background-color: #e1e8f0;
+            color: #1a6bb9;
+        }
+        
+        body.dark-theme .tags a:hover {
+            background-color: #3a3a3a;
+            color: #4aa3df;
+        }
+        
+        .seriesname {
+            font-size: 0.85rem;
+            color: #666;
+            margin: 0;
+            opacity: 0.8;
+        }
+        
+        .seriesname a {
+            color: #268bd2;
+            color: var(--link-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .seriesname a:hover {
+            text-decoration: underline;
+        }
+        
+        .post em {
+            font-style: normal;
+            color: #5a5a5a;
+            display: block;
+            margin: 1.25rem 0;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            opacity: 0.9;
+        }
+        
+        body.dark-theme .post em {
+            color: #9d9d9d;
+        }
+        
+        .read-more-link {
+            margin-top: 1.25rem;
+        }
+        
+        .read-more-link a {
+            color: #268bd2;
+            color: var(--link-color);
+            text-decoration: none;
+            font-weight: 500;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            gap: 0.35rem;
+            -webkit-transition: color var(--transition-fast);
+            transition: color var(--transition-fast);
+        }
+        
+        .read-more-link a:hover {
+            color: #1a6bb9;
+            text-decoration: underline;
+        }
+        
+        .read-more-link a::after {
+            content: '\203A';
+            font-size: 1.2rem;
+            -webkit-transition: -webkit-transform var(--transition-fast);
+            transition: transform var(--transition-fast);
+        }
+        
+        .read-more-link a:hover::after {
+            -webkit-transform: translateX(4px);
+            -ms-transform: translateX(4px);
+            transform: translateX(4px);
+        }
+        
+        /* TOC sidebar */
+        .article-toc {
+            position: fixed;
+            right: 2rem;
+            top: 2rem;
+            width: 220px;
+            padding: 1.25rem;
+            background-color: #f5f5f5;
+            background-color: var(--border-color);
+            border-radius: 8px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+            -webkit-transition: opacity var(--transition-normal), -webkit-transform var(--transition-normal);
+            transition: opacity var(--transition-normal), transform var(--transition-normal);
+        }
+        
+        body.dark-theme .article-toc {
+            background-color: #1a1a1a;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+        }
+        
+        .article-toc h4 {
+            margin: 0 0 1rem 0;
+            font-size: 0.9rem;
+            color: #333;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+        }
+        
+        body.dark-theme .article-toc h4 {
+            color: #ccc;
+        }
+        
+        .article-toc ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .article-toc li {
+            margin-bottom: 0.4rem;
+        }
+        
+        .article-toc a {
+            color: #666;
+            text-decoration: none;
+            font-size: 0.825rem;
+            display: block;
+            padding: 0.25rem 0;
+            -webkit-transition: color var(--transition-fast), padding-left var(--transition-fast);
+            transition: color var(--transition-fast), padding-left var(--transition-fast);
+        }
+        
+        body.dark-theme .article-toc a {
+            color: #888;
+        }
+        
+        .article-toc a:hover {
+            color: #268bd2;
+            color: var(--link-color);
+            padding-left: 0.5rem;
+        }
+        
+        .article-toc b {
+            display: block;
+            margin-top: 0.85rem;
+            color: #333;
+            font-size: 0.825rem;
+            font-weight: 600;
+            padding-bottom: 0.3rem;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        body.dark-theme .article-toc b {
+            color: #ccc;
+            border-bottom-color: #333;
+        }
+        
+        /* Light/dark toggle */
+        .light-dark {
+            text-align: right;
+            margin-bottom: 1rem;
+        }
+        
+        /* Focus styles for accessibility */
+        *:focus {
+            outline: 2px solid #268bd2;
+            outline-offset: 2px;
+        }
+        
+        *:focus:not(:focus-visible) {
+            outline: none;
+        }
+        
+        /* Loading animation */
+        .content {
+            -webkit-animation: fadeIn 0.4s ease-out;
+            animation: fadeIn 0.4s ease-out;
+        }
+        
+        @-webkit-keyframes fadeIn {
+            from {
+                opacity: 0;
+                -webkit-transform: translateY(10px);
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                -webkit-transform: translateY(0);
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                -webkit-transform: translateY(10px);
+                -ms-transform: translateY(10px);
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                -webkit-transform: translateY(0);
+                -ms-transform: translateY(0);
+                transform: translateY(0);
+            }
+        }
+        
+        /* Responsive design */
+        @media screen and (max-width: 1300px) {
+            .article-toc {
+                opacity: 0;
+                pointer-events: none;
+                -webkit-transform: translateX(20px);
+                -ms-transform: translateX(20px);
+                transform: translateX(20px);
+            }
+        }
+        
+        @media screen and (max-width: 768px) {
+            .wrapper {
+                display: block;
+            }
+            
+            .sidebar {
+                position: relative;
+                width: 100%;
+                min-width: 100%;
+                height: auto;
+                padding: 1.5rem;
+                border-right: none;
+                border-bottom: 1px solid #333;
+            }
+            
+            .content {
+                margin-left: 0;
+                padding: 1.5rem;
+            }
+            
+            .social-links {
+                -webkit-box-pack: flex-start;
+                -ms-flex-pack: flex-start;
+                justify-content: flex-start;
+            }
+            
+            .post-title {
+                font-size: 1.4rem;
+            }
+            
+            .sidebar-about img {
+                width: 65px;
+                height: 65px;
+            }
+        }
+        
+        @media screen and (max-width: 480px) {
+            .sidebar {
+                padding: 1rem;
+            }
+            
+            .content {
+                padding: 1rem;
+            }
+            
+            .post {
+                margin-bottom: 2rem;
+                padding-bottom: 2rem;
+            }
+            
+            .tags a {
+                padding: 0.2rem 0.5rem;
+                font-size: 0.775rem;
+            }
+        }
+        
+        /* Print styles */
+        @media print {
+            .sidebar {
+                display: none;
+            }
+            
+            .content {
+                margin-left: 0;
+                padding: 1rem;
+                max-width: none;
+            }
+            
+            .article-toc {
+                display: none;
+            }
+            
+            a[href]:after {
+                content: " (" attr(href) ")";
+                font-size: 0.8em;
+            }
+        }
+        
+        /* IE11 and older browser fallbacks */
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+            .wrapper {
+                display: -webkit-box;
+                display: block\9;
+            }
+            
+            .sidebar {
+                position: relative\9;
+                width: 100%\9;
+                min-width: 100%\9;
+                height: auto\9;
+            }
+            
+            .content {
+                margin-left: 0\9;
+            }
+        }
     </style>
-    </head>
-        <div class="wrapper">
-            <aside class="sidebar">
-    <div class="container sidebar-sticky">
-        <div class="light-dark" align="right"></div>
-
-    <div class="sidebar-about">
-    <h1 class="brand">
-    <a href="https://perhapslol.github.io/blog/">
-    <img src="https://avatars.githubusercontent.com/u/130022120?v=4" alt="brand image">
-    </a><a href="https://perhapslol.github.io/blog/"><h1>Perhaps</h1></a></h1>
-    <p class="lead">
-    春华夕拾 <a href="https://github.com/poole/hyde" target="_blank"></a>  <a href="https://github.com/mdo" target="_blank"></a>
-    </p></div><nav>
-    <ul class="sidebar-nav">
-      <li class="heading">
-      <a href="https://perhapslol.github.io/blog/Post/">Posts</a>
-       </li>
-        <li class="sub-heading">Stocks/ListedCompanies</li>
-        <li class="sub-heading">IPO/RulesandRegulations</li>
-      <a href="https://perhapslol.github.io/blog/Economics/">Economics</a>
-       </li>
-       <li class="sub-heading">Macro/Micro</li>
-
-      <a href="https://perhapslol.github.io/blog/Math/">Math</a></li>
-         <li class="sub-heading">Basic mathematics</li>
-      <a href="https://perhapslol.github.io/blog/Law/">Law</a></li>
-          <li class="sub-heading">Qualification Examination</li>
-      <a href="https://perhapslol.github.io/blog/Logic/">Logic</a>
-       </li>
-    </ul></nav>
-
-<!-- 社交图标 -->     
-    <a target="_blank" class="social" title="GitHub" href="https://github.com">
-    <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="-2 -2 24 24">
-    <path fill="currentColor" d="M18.88 1.099C18.147.366 17.265 0 16.233 0H3.746C2.714 0 1.832.366 1.099 1.099C.366 1.832 0 2.714 0 3.746v12.487c0 1.032.366 1.914 1.099 2.647c.733.733 1.615 1.099 2.647 1.099H6.66c.19 0 .333-.007.429-.02a.504.504 0 0 0 .286-.169c.095-.1.143-.245.143-.435l-.007-.885c-.004-.564-.006-1.01-.006-1.34l-.3.052c-.19.035-.43.05-.721.046a5.555 5.555 0 0 1-.904-.091a2.026 2.026 0 0 1-.872-.39a1.651 1.651 0 0 1-.572-.8l-.13-.3a3.25 3.25 0 0 0-.41-.663c-.186-.243-.375-.407-.566-.494l-.09-.065a.956.956 0 0 1-.17-.156a.723.723 0 01-.117-.182c-.026-.061-.004-.111.065-.15c.07-.04.195-.059.378-.059l.26.04c.173.034.388.138.643.311a2.1 2.1 0 0 1 .631.677c.2.355.44.626.722.813c.282.186.566.28.852.28c.286 0 .533-.022.742-.065a2.59 2.59 0 0 0 .585-.196c.078-.58.29-1.028.637-1.34a8.907 8.907 0 0 1-1.333-.234a5.314 5.314 0 0 1-1.223-.507a3.5 3.5 0 0 1-1.047-.872c-.277-.347-.505-.802-.683-1.365c-.177-.564-.266-1.215-.266-1.952c0-1.049.342-1.942 1.027-2.68c-.32-.788-.29-1.673.091-2.652c.252-.079.625-.02 1.119.175c.494.195.856.362 1.086.5c.23.14.414.257.553.352a9.233 9.233 0 0 1 2.497-.338c.859 0 1.691.113 2.498.338l.494-.312a6.997 6.997 0 0 1 1.197-.572c.46-.174.81-.221 1.054-.143c.39.98.424 1.864.103 2.653c.685.737 1.028 1.63 1.028 2.68c0 .737-.089 1.39-.267 1.957c-.177.568-.407 1.023-.689 1.366a3.65 3.65 0 0 1-1.053.865c-.42.234-.828.403-1.223.507a8.9 8.9 0 0 1-1.333.235c.45.39.676 1.005.676 1.846v3.11c0 .147.021.266.065.357a.36.36 0 0 0 .208.189c.096.034.18.056.254.064c.074.01.18.013.318.013h2.914c1.032 0 1.914-.366 2.647-1.099c.732-.732 1.099-1.615 1.099-2.647V3.746c0-1.032-.367-1.914-1.1-2.647z"/></svg></a>
-
-    <a target="_blank" class="social" title="LinkedIn" href="https://linkedin.com">
-<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1.2em" viewBox="0 0 448 512">
-<path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5c0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7c-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5c67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></a>
-
-    <a target="_blank" class="social" title="X" href="https://x.com">
-<svg xmlns="http://www.w3.org/2000/svg" width="1.1em" height="1.1em" viewBox="0 0 512 472.799">
-<path fill="currentColor" d="M403.229 0h78.506L310.219 196.04 512 462.799H354.002L230.261 301.007 88.669 462.799h-78.56l183.455-209.683L0 0h161.999l111.856 147.88L403.229 0zm-27.556 415.805h43.505L138.363 44.527h-46.68l283.99 371.278z"/></svg></a>
-
-    <a target="_blank" class="social" title="Discord" href="https://discord.com">
-<svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
-<path fill="currentColor" d="M19.27 5.33C17.94 4.71 16.5 4.26 15 4a.09.09 0 0 0-.07.03c-.18.33-.39.76-.53 1.09a16.09 16.09 0 0 0-4.8 0c-.14-.34-.35-.76-.54-1.09c-.01-.02-.04-.03-.07-.03c-1.5.26-2.93.71-4.27 1.33c-.01 0-.02.01-.03.02c-2.72 4.07-3.47 8.03-3.1 11.95c0 .02.01.04.03.05c1.8 1.32 3.53 2.12 5.24 2.65c.03.01.06 0 .07-.02c.4-.55.76-1.13 1.07-1.74c.02-.04 0-.08-.04-.09c-.57-.22-1.11-.48-1.64-.78c-.04-.02-.04-.08-.01-.11c.11-.08.22-.17.33-.25c.02-.02.05-.02.07-.01c3.44 1.57 7.15 1.57 10.55 0c.02-.01.05-.01.07.01c.11.09.22.17.33.26c.04.03.04.09-.01.11c-.52.31-1.07.56-1.64.78c-.04.01-.05.06-.04.09c.32.61.68 1.19 1.07 1.74c.03.01.06.02.09.01c1.72-.53 3.45-1.33 5.25-2.65c.02-.01.03-.03.03-.05c.44-4.53-.73-8.46-3.1-11.95c-.01-.01-.02-.02-.04-.02zM8.52 14.91c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.84 2.12-1.89 2.12zm6.97 0c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.83 2.12-1.89 2.12z"/></svg></a>
-
-
-    <a target="_blank" class="social" title="YouTube" href="https://youtube.com">
-<svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
-<path fill="currentColor" d="M12.006 19.012h-.02c-.062 0-6.265-.012-7.83-.437a2.5 2.5 0 0 1-1.764-1.765A26.494 26.494 0 0 1 1.986 12a26.646 26.646 0 0 1 .417-4.817A2.564 2.564 0 0 1 4.169 5.4c1.522-.4 7.554-.4 7.81-.4H12c.063 0 6.282.012 7.831.437c.859.233 1.53.904 1.762 1.763c.29 1.594.427 3.211.407 4.831a26.568 26.568 0 0 1-.418 4.811a2.51 2.51 0 0 1-1.767 1.763c-1.52.403-7.553.407-7.809.407Zm-2-10.007l-.005 6l5.212-3l-5.207-3Z"/></svg></a>
-
-    <a target="_blank" class="social" title="Bilibili" href="https://bilibili.com">
-<svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
-<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Bilibili</title><path fill="white" d="M17.813 4.653h.854c1.51.054 2.769.578 3.773 1.574 1.004.995 1.524 2.249 1.56 3.76v7.36c-.036 1.51-.556 2.769-1.56 3.773s-2.262 1.524-3.773 1.56H5.333c-1.51-.036-2.769-.556-3.773-1.56S.036 18.858 0 17.347v-7.36c.036-1.511.556-2.765 1.56-3.76 1.004-.996 2.262-1.52 3.773-1.574h.774l-1.174-1.12a1.234 1.234 0 0 1-.373-.906c0-.356.124-.658.373-.907l.027-.027c.267-.249.573-.373.92-.373.347 0 .653.124.92.373L9.653 4.44c.071.071.134.142.187.213h4.267a.836.836 0 0 1 .16-.213l2.853-2.747c.267-.249.573-.373.92-.373.347 0 .662.151.929.4.267.249.391.551.391.907 0 .355-.124.657-.373.906zM5.333 7.24c-.746.018-1.373.276-1.88.773-.506.498-.769 1.13-.786 1.894v7.52c.017.764.28 1.395.786 1.893.507.498 1.134.756 1.88.773h13.334c.746-.017 1.373-.275 1.88-.773.506-.498.769-1.129.786-1.893v-7.52c-.017-.765-.28-1.396-.786-1.894-.507-.497-1.134-.755-1.88-.773zM8 11.107c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c0-.373.129-.689.386-.947.258-.257.574-.386.947-.386zm8 0c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c.017-.391.15-.711.4-.96.249-.249.56-.373.933-.373Z"/></svg></a>
-
-    <a target="_blank" class="social" title="Email" href="mailto://user@domain">
-<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1.2em" viewBox="0 0 485.211 485.211">
-<path fill="currentColor" d="M301.393,241.631L464.866,424.56H20.332l163.474-182.928l58.801,51.443L301.393,241.631z M462.174,60.651H23.027 l219.579,192.142L462.174,60.651z M324.225,221.67l160.986,180.151V80.792L324.225,221.67z M0,80.792v321.029L160.972,221.64 L0,80.792z"/></svg></a>
-
-    <p class="footnote">
-powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a target="_blank" href="https://github.com/lukeorth/poison">poison</a><br>&copy; 2024 Poison. All rights reserved.</p>
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="container sidebar-sticky">
+                <div class="light-dark" align="right"></div>
+                
+                <div class="sidebar-about">
+                    <a href="https://perhapslol.github.io/blog/" class="brand">
+                        <img src="https://avatars.githubusercontent.com/u/130022120?v=4" alt="brand image">
+                    </a>
+                    <h1><a href="https://perhapslol.github.io/blog/" style="color: #fff; text-decoration: none;">Perhaps</a></h1>
+                    <p class="lead">春华夕拾</p>
+                </div>
+                
+                <nav>
+                    <ul class="sidebar-nav">
+                        <li class="heading"><a href="https://perhapslol.github.io/blog/Post/">Posts</a></li>
+                        <li class="sub-heading">Stocks/ListedCompanies</li>
+                        <li class="sub-heading">IPO/RulesandRegulations</li>
+                        <li><a href="https://perhapslol.github.io/blog/Economics/">Economics</a></li>
+                        <li class="sub-heading">Macro/Micro</li>
+                        <li><a href="https://perhapslol.github.io/blog/Math/">Math</a></li>
+                        <li class="sub-heading">Basic mathematics</li>
+                        <li><a href="https://perhapslol.github.io/blog/Law/">Law</a></li>
+                        <li class="sub-heading">Qualification Examination</li>
+                        <li><a href="https://perhapslol.github.io/blog/Logic/">Logic</a></li>
+                    </ul>
+                </nav>
+                
+                <!-- Social links -->
+                <div class="social-links" style="display: flex; justify-content: center; gap: 0.3rem; margin-bottom: 0.75rem;">
+                    <a target="_blank" href="https://github.com" title="GitHub" style="color: #fff; font-size: 0.8rem; width: 1.4rem; height: 1.4rem; display: flex; align-items: center; justify-content: center; border-radius: 50%; background-color: rgba(255,255,255,0.05); transition: all 0.2s;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="-2 -2 24 24">
+                            <path fill="currentColor" d="M18.88 1.099C18.147.366 17.265 0 16.233 0H3.746C2.714 0 1.832.366 1.099 1.099C.366 1.832 0 2.714 0 3.746v12.487c0 1.032.366 1.914 1.099 2.647c.733.733 1.615 1.099 2.647 1.099H6.66c.19 0 .333-.007.429-.02a.504.504 0 0 0 .286-.169c.095-.1.143-.245.143-.435l-.007-.885c-.004-.564-.006-1.01-.006-1.34l-.3.052c-.19.035-.43.05-.721.046a5.555 5.555 0 0 1-.904-.091a2.026 2.026 0 0 1-.872-.39a1.651 1.651 0 0 1-.572-.8l-.13-.3a3.25 3.25 0 0 0-.41-.663c-.186-.243-.375-.407-.566-.494l-.09-.065a.956.956 0 0 1-.17-.156a.723.723 0 01-.117-.182c-.026-.061-.004-.111.065-.15c.07-.04.195-.059.378-.059l.26.04c.173.034.388.138.643.311a2.1 2.1 0 0 1 .631.677c.2.355.44.626.722.813c.282.186.566.28.852.28c.286 0 .533-.022.742-.065a2.59 2.59 0 0 0 .585-.196c.078-.58.29-1.028.637-1.34a8.907 8.907 0 0 1-1.333-.234a5.314 5.314 0 0 1-1.223-.507a3.5 3.5 0 0 1-1.047-.872c-.277-.347-.505-.802-.683-1.365c-.177-.564-.266-1.215-.266-1.952c0-1.049.342-1.942 1.027-2.68c-.32-.788-.29-1.673.091-2.652c.252-.079.625-.02 1.119.175c.494.195.856.362 1.086.5c.23.14.414.257.553.352a9.233 9.233 0 0 1 2.497-.338c.859 0 1.691.113 2.498.338l.494-.312a6.997 6.997 0 0 1 1.197-.572c.46-.174.81-.221 1.054-.143c.39.98.424 1.864.103 2.653c.685.737 1.028 1.63 1.028 2.68c0 .737-.089 1.39-.267 1.957c-.177.568-.407 1.023-.689 1.366a3.65 3.65 0 0 1-1.053.865c-.42.234-.828.403-1.223.507a8.9 8.9 0 0 1-1.333.235c.45.39.676 1.005.676 1.846v3.11c0 .147.021.266.065.357a.36.36 0 0 0 .208.189c.096.034.18.056.254.064c.074.01.18.013.318.013h2.914c1.032 0 1.914-.366 2.647-1.099c.732-.732 1.099-1.615 1.099-2.647V3.746c0-1.032-.367-1.914-1.1-2.647z"/>
+                        </svg>
+                    </a>
+                    <a target="_blank" href="https://linkedin.com" title="LinkedIn" style="color: #fff; font-size: 0.8rem; width: 1.4rem; height: 1.4rem; display: flex; align-items: center; justify-content: center; border-radius: 50%; background-color: rgba(255,255,255,0.05); transition: all 0.2s;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="0.9em" height="1em" viewBox="0 0 448 512">
+                            <path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5c0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7c-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5c67.2 0 79.7 44.3 79.7 101.9V416z"/>
+                        </svg>
+                    </a>
+                    <a target="_blank" href="https://x.com" title="X" style="color: #fff; font-size: 0.8rem; width: 1.4rem; height: 1.4rem; display: flex; align-items: center; justify-content: center; border-radius: 50%; background-color: rgba(255,255,255,0.05); transition: all 0.2s;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="0.9em" height="0.9em" viewBox="0 0 512 472.799">
+                            <path fill="currentColor" d="M403.229 0h78.506L310.219 196.04 512 462.799H354.002L230.261 301.007 88.669 462.799h-78.56l183.455-209.683L0 0h161.999l111.856 147.88L403.229 0zm-27.556 415.805h43.505L138.363 44.527h-46.68l283.99 371.278z"/>
+                        </svg>
+                    </a>
+                    <a target="_blank" href="https://discord.com" title="Discord" style="color: #fff; font-size: 0.8rem; width: 1.4rem; height: 1.4rem; display: flex; align-items: center; justify-content: center; border-radius: 50%; background-color: rgba(255,255,255,0.05); transition: all 0.2s;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M19.27 5.33C17.94 4.71 16.5 4.26 15 4a.09.09 0 0 0-.07.03c-.18.33-.39.76-.53 1.09a16.09 16.09 0 0 0-4.8 0c-.14-.34-.35-.76-.54-1.09c-.01-.02-.04-.03-.07-.03c-1.5.26-2.93.71-4.27 1.33c-.01 0-.02.01-.03.02c-2.72 4.07-3.47 8.03-3.1 11.95c0 .02.01.04.03.05c1.8 1.32 3.53 2.12 5.24 2.65c.03.01.06 0 .07-.02c.4-.55.76-1.13 1.07-1.74c.02-.04 0-.08-.04-.09c-.57-.22-1.11-.48-1.64-.78c-.04-.02-.04-.08-.01-.11c.11-.08.22-.17.33-.25c.02-.02.05-.02.07-.01c3.44 1.57 7.15 1.57 10.55 0c.02-.01.05-.01.07.01c.11.09.22.17.33.26c.04.03.04.09-.01.11c-.52.31-1.07.56-1.64.78c-.04.01-.05.06-.04.09c.32.61.68 1.19 1.07 1.74c.03.01.06.02.09.01c1.72-.53 3.45-1.33 5.25-2.65c.02-.01.03-.03.03-.05c.44-4.53-.73-8.46-3.1-11.95c-.01-.01-.02-.02-.04-.02zM8.52 14.91c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.84 2.12-1.89 2.12zm6.97 0c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.83 2.12-1.89 2.12z"/>
+                        </svg>
+                    </a>
+                    <a target="_blank" href="https://youtube.com" title="YouTube" style="color: #fff; font-size: 0.8rem; width: 1.4rem; height: 1.4rem; display: flex; align-items: center; justify-content: center; border-radius: 50%; background-color: rgba(255,255,255,0.05); transition: all 0.2s;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M12.006 19.012h-.02c-.062 0-6.265-.012-7.83-.437a2.5 2.5 0 0 1-1.764-1.765A26.494 26.494 0 0 1 1.986 12a26.646 26.646 0 0 1 .417-4.817A2.564 2.564 0 0 1 4.169 5.4c1.522-.4 7.554-.4 7.81-.4H12c.063 0 6.282.012 7.831.437c.859.233 1.53.904 1.762 1.763c.29 1.594.427 3.211.407 4.831a26.568 26.568 0 0 1-.418 4.811a2.51 2.51 0 0 1-1.767 1.763c-1.52.403-7.553.407-7.809.407Zm-2-10.007l-.005 6l5.212-3l-5.207-3Z"/>
+                        </svg>
+                    </a>
+                    <a target="_blank" href="https://bilibili.com" title="Bilibili" style="color: #fff; font-size: 0.8rem; width: 1.4rem; height: 1.4rem; display: flex; align-items: center; justify-content: center; border-radius: 50%; background-color: rgba(255,255,255,0.05); transition: all 0.2s;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                            <path fill="white" d="M17.813 4.653h.854c1.51.054 2.769.578 3.773 1.574 1.004.995 1.524 2.249 1.56 3.76v7.36c-.036 1.51-.556 2.769-1.56 3.773s-2.262 1.524-3.773 1.56H5.333c-1.51-.036-2.769-.556-3.773-1.56S.036 18.858 0 17.347v-7.36c.036-1.511.556-2.765 1.56-3.76 1.004-.996 2.262-1.52 3.773-1.574h.774l-1.174-1.12a1.234 1.234 0 0 1-.373-.906c0-.356.124-.658.373-.907l.027-.027c.267-.249.573-.373.92-.373.347 0 .653.124.92.373L9.653 4.44c.071.071.134.142.187.213h4.267a.836.836 0 0 1 .16-.213l2.853-2.747c.267-.249.573-.373.92-.373.347 0 .662.151.929.4.267.249.391.551.391.907 0 .355-.124.657-.373.906zM5.333 7.24c-.746.018-1.373.276-1.88.773-.506.498-.769 1.13-.786 1.894v7.52c.017.764.28 1.395.786 1.893.507.498 1.134.756 1.88.773h13.334c.746-.017 1.373-.275 1.88-.773.506-.498.769-1.129.786-1.893v-7.52c-.017-.765-.28-1.396-.786-1.894-.507-.497-1.134-.755-1.88-.773zM8 11.107c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c0-.373.129-.689.386-.947.258-.257.574-.386.947-.386zm8 0c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c.017-.391.15-.711.4-.96.249-.249.56-.373.933-.373Z"/>
+                        </svg>
+                    </a>
+                    <a target="_blank" href="mailto:user@domain" title="Email" style="color: #fff; font-size: 0.8rem; width: 1.4rem; height: 1.4rem; display: flex; align-items: center; justify-content: center; border-radius: 50%; background-color: rgba(255,255,255,0.05); transition: all 0.2s;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="0.9em" height="1em" viewBox="0 0 485.211 485.211">
+                            <path fill="currentColor" d="M301.393,241.631L464.866,424.56H20.332l163.474-182.928l58.801,51.443L301.393,241.631z M462.174,60.651H23.027 l219.579,192.142L462.174,60.651z M324.225,221.67l160.986,180.151V80.792L324.225,221.67z M0,80.792v321.029L160.972,221.64 L0,80.792z"/>
+                        </svg>
+                    </a>
+                </div>
+                
+                <p class="footnote">
+                    powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a target="_blank" href="https://github.com/lukeorth/poison">poison</a><br>&copy; 2024 Poison. All rights reserved.
+                </p>
+            </div>
+        </aside>
 
         
 <!-- 正文  -->
-    </div>
+
     </aside>
      <main class="content container">
     <div class="posts">
@@ -659,6 +1362,248 @@ c 理科的女生多于文科的男生。
 
         
         
-        <div class="read-more-link">
-            <a href="https://perhapslol.github.io/blog/">Back Home…</a>
-        </div>
+<div class="read-more-link">
+    <a href="https://perhapslol.github.io/blog/">Back Home…</a>
+</div>
+</div>
+</article>
+</div>
+</main>
+        
+        <!-- TOC sidebar -->
+        <aside class="article-toc">
+            <div class="toc-wrapper">
+                <!-- Search box -->
+                <div style="margin-bottom: 1rem;">
+                    <input type="text" id="sidebarSearch" placeholder="搜索..." onkeyup="handleSearchKeyup(event)" 
+                           style="width: 100%; padding: 0.4rem 0.6rem; border: 1px solid #ddd; border-radius: 4px; font-size: 0.8rem; background-color: #fff; color: #333; box-sizing: border-box;">
+                </div>
+                <button onclick="goSearch()" style="width: 100%; background-color: #268bd2; color: white; border: none; border-radius: 4px; padding: 0.4rem 0.6rem; cursor: pointer; font-size: 0.8rem; margin-bottom: 1.25rem; transition: background-color 0.2s;">
+                    搜索
+                </button>
+                <h4 id="contents">Updates:</h4>
+                <nav id="TableOfContents">
+                    <b>Law</b>
+                    <ul>
+                        <li><a href="https://perhapslol.github.io/blog/Law/">Qualification Examination</a></li>
+                    </ul>
+                    <b>Posts</b>
+                    <ul>
+                        <li><a href="https://perhapslol.github.io/blog/Post/20241122.html">2024/11/22</a></li>
+                        <li><a href="https://perhapslol.github.io/blog/Post/20241121.html">2024/11/21</a></li>
+                        <li><a href="https://perhapslol.github.io/blog/Post/20241030.html">2024/10/30</a></li>
+                        <li><a href="https://perhapslol.github.io/blog/Post/20240924.html">2024/09/24</a></li>
+                        <li><a href="https://perhapslol.github.io/blog/Post/20230719.html">2023/07/19</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+    </div>
+    
+    <!-- Scripts -->
+    <script defer src="/js/bundle.min.444d89fe8d19b9e466eca93647da936356d2c582a54abec3037b88c2e785e61e.js"></script>
+    <script defer data-domain="https://perhapslol.github.io/blog/" src="https://plausible.lukeorth.com/js/script.js"></script>
+    
+    <!-- Search functionality -->
+    <script>
+        function handleSearchKeyup(event) {
+            if (event.key === 'Enter' || event.keyCode === 13) {
+                goSearch();
+            }
+        }
+        
+        function goSearch() {
+            var input = document.getElementById('sidebarSearch');
+            if (input) {
+                var query = input.value.trim();
+                if (query) {
+                    var baseUrl = window.location.protocol + '//' + window.location.host;
+                    var path = window.location.pathname;
+                    var blogPath = path.substring(0, path.indexOf('/', 1) + 1);
+                    window.location.href = baseUrl + blogPath + 'search/?q=' + encodeURIComponent(query);
+                }
+            }
+        }
+    </script>
+    
+    <!-- CSS Variables polyfill for IE11 and older browsers -->
+    <script>
+        (function() {
+            if (typeof window.CSS !== 'undefined' && CSS.supports && CSS.supports('color', 'var(--foo)')) {
+                return;
+            }
+            
+            var cssVarElements = document.querySelectorAll('[style*="var(--"]');
+            var root = document.documentElement;
+            var computedStyle = window.getComputedStyle ? getComputedStyle(root) : root.currentStyle;
+            
+            var cssVars = {
+                '--sidebar-bg-color': '#202020',
+                '--sidebar-text-color': '#909090',
+                '--sidebar-link-color': '#fff',
+                '--content-bg-color': '#FAF9F6',
+                '--content-text-color': '#222',
+                '--post-title-color': '#303030',
+                '--link-color': '#268bd2',
+                '--date-color': '#515151',
+                '--border-color': '#eee'
+            };
+            
+            for (var key in cssVars) {
+                if (cssVars.hasOwnProperty(key)) {
+                    var value = computedStyle ? computedStyle.getPropertyValue(key) : null;
+                    if (value && value !== '') {
+                        cssVars[key] = value;
+                    }
+                    root.style.setProperty(key, cssVars[key]);
+                }
+            }
+            
+            cssVarElements.forEach(function(el) {
+                var style = el.getAttribute('style');
+                for (var key in cssVars) {
+                    if (cssVars.hasOwnProperty(key)) {
+                        style = style.replace(new RegExp(key, 'g'), cssVars[key]);
+                    }
+                }
+                el.setAttribute('style', style);
+            });
+        })();
+    </script>
+    
+    <!-- Smooth scroll polyfill for older browsers -->
+    <script>
+        if (!('scrollBehavior' in document.documentElement.style)) {
+            (function() {
+                var easeInOutCubic = function(t) {
+                    return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+                };
+                
+                var scrollTo = function(element, to, duration) {
+                    var start = element.scrollTop;
+                    var change = to - start;
+                    var startTime = performance ? performance.now() : Date.now();
+                    
+                    var animateScroll = function() {
+                        var currentTime = performance ? performance.now() : Date.now();
+                        var elapsed = currentTime - startTime;
+                        var progress = Math.min(elapsed / duration, 1);
+                        var easeProgress = easeInOutCubic(progress);
+                        
+                        element.scrollTop = start + change * easeProgress;
+                        
+                        if (progress < 1) {
+                            requestAnimationFrame(animateScroll);
+                        }
+                    };
+                    
+                    animateScroll();
+                };
+                
+                document.addEventListener('click', function(e) {
+                    var target = e.target;
+                    while (target && target.tagName !== 'A') {
+                        target = target.parentElement;
+                    }
+                    
+                    if (target && target.getAttribute('href') && target.getAttribute('href').startsWith('#')) {
+                        e.preventDefault();
+                        var hash = target.getAttribute('href').substring(1);
+                        var element = document.getElementById(hash);
+                        
+                        if (element) {
+                            var body = document.body;
+                            var html = document.documentElement;
+                            var scrollTop = element.getBoundingClientRect().top + (window.pageYOffset || html.scrollTop || body.scrollTop);
+                            
+                            scrollTo(body, scrollTop, 400);
+                            history.pushState(null, null, '#' + hash);
+                        }
+                    }
+                });
+            })();
+        }
+    </script>
+    
+    <!-- Touch device support -->
+    <script>
+        (function() {
+            var isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+            
+            if (isTouch) {
+                document.documentElement.classList.add('touch-device');
+                
+                var links = document.querySelectorAll('a');
+                links.forEach(function(link) {
+                    link.addEventListener('touchend', function(e) {
+                        e.preventDefault();
+                        window.location.href = this.getAttribute('href');
+                    });
+                });
+            }
+        })();
+    </script>
+    
+    <!-- Dark mode toggle functionality -->
+    <script>
+        (function() {
+            var toggleButton = document.createElement('button');
+            toggleButton.innerHTML = '🌙';
+            toggleButton.style.cssText = 'background: none; border: none; color: #fff; font-size: 1.2rem; cursor: pointer; padding: 0.25rem; border-radius: 4px; transition: background-color 0.2s;';
+            toggleButton.title = 'Toggle dark mode';
+            
+            toggleButton.addEventListener('click', function() {
+                document.body.classList.toggle('dark-theme');
+                
+                if (document.body.classList.contains('dark-theme')) {
+                    this.innerHTML = '☀️';
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    this.innerHTML = '🌙';
+                    localStorage.setItem('theme', 'light');
+                }
+            });
+            
+            toggleButton.addEventListener('mouseenter', function() {
+                this.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+            });
+            
+            toggleButton.addEventListener('mouseleave', function() {
+                this.style.backgroundColor = 'transparent';
+            });
+            
+            var lightDarkDiv = document.querySelector('.light-dark');
+            if (lightDarkDiv) {
+                lightDarkDiv.appendChild(toggleButton);
+            }
+            
+            var savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.body.classList.add('dark-theme');
+                toggleButton.innerHTML = '☀️';
+            }
+        })();
+    </script>
+    
+    <!-- IE11 flexbox fallback -->
+    <script>
+        (function() {
+            if (!window.addEventListener) {
+                document.querySelectorAll('.wrapper').forEach(function(el) {
+                    el.style.display = 'block';
+                });
+                
+                document.querySelectorAll('.sidebar').forEach(function(el) {
+                    el.style.position = 'relative';
+                    el.style.width = '100%';
+                    el.style.height = 'auto';
+                });
+                
+                document.querySelectorAll('.content').forEach(function(el) {
+                    el.style.marginLeft = '0';
+                });
+            }
+        })();
+    </script>
+</body>
+</html>
