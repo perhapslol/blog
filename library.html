@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Perhaps - 电子书库</title>
+    
+    <meta name="description" content="perhaps's ebook library" />
+    <meta name="theme-color" content="#202020">
+    
+    <style>
+        html {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans SC', 'Microsoft YaHei', sans-serif;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #FAF9F6;
+            color: #222;
+            line-height: 1.6;
+        }
+        
+        :root {
+            --sidebar-bg-color: #202020;
+            --sidebar-text-color: #909090;
+            --sidebar-link-color: #fff;
+            --content-bg-color: #FAF9F6;
+            --content-text-color: #222;
+            --link-color: #268bd2;
+            --border-color: #eee;
+            --shadow-color: rgba(0, 0, 0, 0.1);
+        }
+        
+        body.dark-theme {
+            background-color: #121212;
+            color: #eee;
+            --content-bg-color: #121212;
+            --content-text-color: #eee;
+            --border-color: #333;
+        }
+        
+        .wrapper {
+            display: flex;
+            min-height: 100vh;
+        }
+        
+        .sidebar {
+            width: 250px;
+            min-width: 250px;
+            background-color: var(--sidebar-bg-color);
+            color: var(--sidebar-text-color);
+            padding: 2rem 1rem;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            height: 100vh;
+            overflow-y: auto;
+            border-right: 1px solid #333;
+            box-sizing: border-box;
+        }
+        
+        .sidebar-about {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        
+        .sidebar-about h1 {
+            margin: 0.5rem 0;
+            font-size: 1.5rem;
+            color: #fff;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+        }
+        
+        .sidebar-about .lead {
+            font-size: 0.9rem;
+            color: #909090;
+            opacity: 0.9;
+        }
+        
+        .sidebar-about img {
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            border: 2px solid #515151;
+            display: block;
+            margin: 0 auto;
+        }
+        
+        .sidebar-nav {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 1.5rem 0;
+        }
+        
+        .sidebar-nav li {
+            margin-bottom: 0.35rem;
+        }
+        
+        .sidebar-nav a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            padding: 0.45rem 0.5rem;
+            border-radius: 4px;
+            font-weight: 400;
+            transition: color 0.15s ease, background-color 0.15s ease;
+        }
+        
+        .sidebar-nav a:hover {
+            color: #268bd2;
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+        
+        .sidebar-nav .heading a {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .sidebar-nav .sub-heading {
+            font-size: 0.85rem;
+            color: #666;
+            padding-left: 1rem;
+            opacity: 0.8;
+        }
+        
+        .search-wrapper {
+            margin-bottom: 1.5rem;
+        }
+        
+        .search-wrapper input {
+            width: 100%;
+            padding: 0.55rem 0.85rem;
+            border: 1px solid #444;
+            border-radius: 6px;
+            font-size: 0.875rem;
+            background-color: #333;
+            color: #fff;
+            box-sizing: border-box;
+        }
+        
+        .search-wrapper input:focus {
+            outline: none;
+            border-color: #268bd2;
+        }
+        
+        .sidebar .footnote {
+            font-size: 0.7rem;
+            color: #666;
+            text-align: center;
+            margin-top: 0.5rem;
+        }
+        
+        .sidebar .footnote a {
+            color: #666;
+            text-decoration: none;
+        }
+        
+        .sidebar .footnote a:hover {
+            color: #268bd2;
+        }
+        
+        .content {
+            margin-left: 250px;
+            padding: 2.5rem 2rem;
+            max-width: 900px;
+            min-height: 100vh;
+            background-color: var(--content-bg-color);
+            color: var(--content-text-color);
+        }
+        
+        .page-title {
+            font-size: 2rem;
+            margin: 0 0 2rem 0;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: #303030;
+        }
+        
+        body.dark-theme .page-title {
+            color: #DBE2E9;
+        }
+        
+        .books-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .book-card {
+            background-color: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            cursor: pointer;
+            border: 1px solid #eee;
+        }
+        
+        body.dark-theme .book-card {
+            background-color: #1a1a1a;
+            border-color: #333;
+        }
+        
+        .book-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        }
+        
+        .book-cover {
+            width: 100%;
+            height: 280px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .book-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .book-cover .placeholder-icon {
+            font-size: 4rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .book-info {
+            padding: 1rem;
+        }
+        
+        .book-title {
+            font-size: 1rem;
+            font-weight: 600;
+            margin: 0 0 0.5rem 0;
+            color: #303030;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        
+        body.dark-theme .book-title {
+            color: #DBE2E9;
+        }
+        
+        .book-author {
+            font-size: 0.85rem;
+            color: #666;
+            margin: 0 0 0.75rem 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        
+        body.dark-theme .book-author {
+            color: #9a9a9a;
+        }
+        
+        .book-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.75rem;
+            color: #888;
+        }
+        
+        body.dark-theme .book-meta {
+            color: #666;
+        }
+        
+        .book-meta .format {
+            background-color: #f0f4f8;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+        }
+        
+        body.dark-theme .book-meta .format {
+            background-color: #2a2a2a;
+        }
+        
+        .book-meta .size {
+            opacity: 0.8;
+        }
+        
+        .no-books {
+            text-align: center;
+            padding: 3rem;
+            color: #888;
+        }
+        
+        body.dark-theme .no-books {
+            color: #666;
+        }
+        
+        .no-books .icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            opacity: 0.5;
+        }
+        
+        .no-books p {
+            margin: 0;
+        }
+        
+        .category-tabs {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .category-tab {
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            background-color: #f0f4f8;
+            color: #666;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: none;
+            outline: none;
+        }
+        
+        body.dark-theme .category-tab {
+            background-color: #2a2a2a;
+            color: #9a9a9a;
+        }
+        
+        .category-tab.active {
+            background-color: #268bd2;
+            color: #fff;
+        }
+        
+        body.dark-theme .category-tab.active {
+            background-color: #268bd2;
+        }
+        
+        .category-tab:hover {
+            background-color: #e1e8f0;
+        }
+        
+        body.dark-theme .category-tab:hover {
+            background-color: #3a3a3a;
+        }
+        
+        .category-tab.active:hover {
+            background-color: #1a6bb9;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .wrapper {
+                display: block;
+            }
+            
+            .sidebar {
+                position: relative;
+                width: 100%;
+                min-width: 100%;
+                height: auto;
+                padding: 1.5rem;
+                border-right: none;
+                border-bottom: 1px solid #333;
+            }
+            
+            .content {
+                margin-left: 0;
+                padding: 1.5rem;
+            }
+            
+            .books-grid {
+                grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+                gap: 1rem;
+            }
+            
+            .book-cover {
+                height: 220px;
+            }
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .content {
+            animation: fadeIn 0.4s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <aside class="sidebar">
+            <div class="container sidebar-sticky">
+                <div class="sidebar-about">
+                    <a href="https://perhapslol.github.io/blog/" class="brand">
+                        <img src="https://avatars.githubusercontent.com/u/130022120?v=4" alt="brand image">
+                    </a>
+                    <h1><a href="https://perhapslol.github.io/blog/" style="color: #fff; text-decoration: none;">Perhaps</a></h1>
+                    <p class="lead">春华夕拾</p>
+                </div>
+                
+                <nav>
+                    <ul class="sidebar-nav">
+                        <li class="heading"><a href="https://perhapslol.github.io/blog/">Home</a></li>
+                        <li class="heading"><a href="https://perhapslol.github.io/blog/Post/">Posts</a></li>
+                        <li><a href="https://perhapslol.github.io/blog/Economics/">Economics</a></li>
+                        <li><a href="https://perhapslol.github.io/blog/Math/">Math</a></li>
+                        <li><a href="https://perhapslol.github.io/blog/Law/">Law</a></li>
+                        <li><a href="https://perhapslol.github.io/blog/Logic/">Logic</a></li>
+                        <li><a href="https://perhapslol.github.io/blog/library.html">Library</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="search-wrapper">
+                    <input type="text" id="search-input" placeholder="搜索书籍..." onkeyup="searchBooks()">
+                </div>
+                
+                <p class="footnote">
+                    powered by <a target="_blank" href="https://gohugo.io">Hugo</a><br>&copy; 2024 Perhaps. All rights reserved.
+                </p>
+            </div>
+        </aside>
+        
+        <main class="content">
+            <h1 class="page-title">我的电子书库</h1>
+            
+            <div class="category-tabs">
+                <button class="category-tab active" onclick="filterBooks('all')">全部</button>
+                <button class="category-tab" onclick="filterBooks('epub')">EPUB</button>
+                <button class="category-tab" onclick="filterBooks('pdf')">PDF</button>
+                <button class="category-tab" onclick="filterBooks('mobi')">MOBI</button>
+                <button class="category-tab" onclick="filterBooks('txt')">TXT</button>
+            </div>
+            
+            <div class="books-grid" id="books-grid">
+                <div class="book-card" onclick="openReader('books/%E6%80%81%E5%BA%A6%E6%94%B9%E5%8F%98%E4%B8%8E%E7%A4%BE%E4%BC%9A%E5%BD%B1%E5%93%8D%20%3D%20The%20Psychology%20of%20Attitude%20Change%20and%20Social%20Influence%20%28%5B%E7%BE%8E%5D%20%E8%8F%B2%E5%88%A9%E6%99%AE%20%C2%B7%20%E6%B4%A5%E5%B7%B4%E5%A4%9A%20%28Philip%20G.%20Zimbardo%29%20etc.%29%20%28z-library.sk%2C%201lib.sk%2C%20z-lib.sk%29.epub')">
+                    <div class="book-cover">
+                        <img src="https://via.placeholder.com/200x300/667eea/ffffff?text=EPUB" alt="Book Cover">
+                    </div>
+                    <div class="book-info">
+                        <h3 class="book-title">态度改变与社会影响</h3>
+                        <p class="book-author">菲利普·津巴多</p>
+                        <div class="book-meta">
+                            <span class="format">EPUB</span>
+                            <span class="size">4.2 MB</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="book-card" onclick="openReader('books/%E7%8E%B0%E4%BB%A3%E5%8A%B3%E5%8A%A8%E7%BB%8F%E6%B5%8E%E5%AD%A6%20%E7%90%86%E8%AE%BA%E4%B8%8E%E5%85%AC%E5%85%B1%E6%94%BF%E7%AD%96%20%EF%BC%88%E7%AC%AC%E5%85%AB%E7%89%88%EF%BC%89%20%28%5B%E7%BE%8E%5D%E7%BD%97%E7%BA%B3%E5%BE%B7%C2%B7G%C2%B7%E4%BC%8A%E5%85%B0%E6%9C%A8%E6%A0%BC%EF%BC%8C%E7%BD%97%E4%BC%AF%E7%89%B9%C2%B7S%C2%B7%E5%B8%83%E5%B0%BC%E5%A3%AB%E8%91%97%29%20%28z-library.sk%2C%201lib.sk%2C%20z-lib.sk%29.pdf')">
+                    <div class="book-cover">
+                        <img src="https://via.placeholder.com/200x300/764ba2/ffffff?text=PDF" alt="Book Cover">
+                    </div>
+                    <div class="book-info">
+                        <h3 class="book-title">现代劳动经济学</h3>
+                        <p class="book-author">伊兰伯格、史密斯</p>
+                        <div class="book-meta">
+                            <span class="format">PDF</span>
+                            <span class="size">35.6 MB</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="book-card" onclick="openReader('books/%E7%A7%91%E5%AD%A6%EF%BC%9A%E6%97%A0%E5%B0%BD%E7%9A%84%E5%89%8D%E6%B2%BF%20%28%5B%E7%BE%8E%5D%E8%8C%83%E5%86%85%E7%93%A6%E3%80%A2%E5%B8%83%E5%A3%AB%2C%20%5B%E7%BE%8E%5D%E6%8B%89%E4%BB%80%C2%B7D.%E9%9C%8D%E5%B0%94%20%5B%5B%E7%BE%8E%5D%E8%8C%83%E5%86%85%E7%93%A6%E3%80%A2%E5%B8%83%E5%A3%AB%20etc.%29%20%28z-library.sk%2C%201lib.sk%2C%20z-lib.sk%29.epub')">
+                    <div class="book-cover">
+                        <img src="https://via.placeholder.com/200x300/f5576c/ffffff?text=EPUB" alt="Book Cover">
+                    </div>
+                    <div class="book-info">
+                        <h3 class="book-title">科学：无尽的前沿</h3>
+                        <p class="book-author">范内瓦·布什</p>
+                        <div class="book-meta">
+                            <span class="format">EPUB</span>
+                            <span class="size">2.1 MB</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        function openReader(filePath) {
+            const format = filePath.split('.').pop().toLowerCase();
+            
+            if (format === 'pdf') {
+                window.open(filePath, '_blank');
+            } else if (format === 'epub') {
+                window.open(`reader.html?book=${encodeURIComponent(filePath)}`, '_blank');
+            } else if (format === 'txt') {
+                window.open(filePath, '_blank');
+            } else {
+                window.open(filePath, '_blank');
+            }
+        }
+        
+        function searchBooks() {
+            const input = document.getElementById('search-input');
+            const filter = input.value.toLowerCase();
+            const cards = document.getElementsByClassName('book-card');
+            
+            for (let i = 0; i < cards.length; i++) {
+                const title = cards[i].querySelector('.book-title').textContent.toLowerCase();
+                const author = cards[i].querySelector('.book-author').textContent.toLowerCase();
+                
+                if (title.includes(filter) || author.includes(filter)) {
+                    cards[i].style.display = '';
+                } else {
+                    cards[i].style.display = 'none';
+                }
+            }
+        }
+        
+        function filterBooks(format) {
+            const tabs = document.getElementsByClassName('category-tab');
+            for (let i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove('active');
+            }
+            event.target.classList.add('active');
+            
+            const cards = document.getElementsByClassName('book-card');
+            
+            for (let i = 0; i < cards.length; i++) {
+                const cardFormat = cards[i].querySelector('.format').textContent.toLowerCase();
+                
+                if (format === 'all' || cardFormat === format) {
+                    cards[i].style.display = '';
+                } else {
+                    cards[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
+</body>
+</html>
