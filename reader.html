@@ -19,9 +19,7 @@
         }
         
         :root {
-            --primary-color: #268bd2;
             --sidebar-bg: #202020;
-            --sidebar-text: #909090;
         }
         
         body.dark-theme {
@@ -37,7 +35,7 @@
         .reader-sidebar {
             width: 280px;
             background-color: var(--sidebar-bg);
-            color: var(--sidebar-text);
+            color: #909090;
             display: flex;
             flex-direction: column;
             border-right: 1px solid #333;
@@ -74,7 +72,7 @@
         }
         
         .toc-item {
-            margin-bottom: 0.25rem;
+            margin-bottom: 0.5rem;
         }
         
         .toc-link {
@@ -91,15 +89,6 @@
             background-color: rgba(255, 255, 255, 0.05);
             color: #268bd2;
         }
-        
-        .toc-link.active {
-            background-color: rgba(38, 139, 210, 0.2);
-            color: #268bd2;
-        }
-        
-        .toc-item.level-1 .toc-link { padding-left: 0.6rem; }
-        .toc-item.level-2 .toc-link { padding-left: 1.2rem; }
-        .toc-item.level-3 .toc-link { padding-left: 1.8rem; }
         
         .sidebar-footer {
             padding: 1rem;
@@ -162,12 +151,6 @@
             color: #DBE2E9;
         }
         
-        .toolbar-center {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-        
         .toolbar-right {
             display: flex;
             align-items: center;
@@ -215,40 +198,36 @@
             fill: currentColor;
         }
         
-        .progress-container {
+        .font-size-controls {
             display: flex;
             align-items: center;
-            gap: 0.75rem;
+            gap: 0.5rem;
         }
         
-        .progress-bar {
-            width: 150px;
-            height: 6px;
-            background-color: #ddd;
-            border-radius: 3px;
+        .font-size-btn {
+            width: 28px;
+            height: 28px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            background: none;
             cursor: pointer;
-            overflow: hidden;
-        }
-        
-        body.dark-theme .progress-bar {
-            background-color: #333;
-        }
-        
-        .progress-fill {
-            height: 100%;
-            background-color: #268bd2;
-            border-radius: 3px;
-            transition: width 0.3s ease;
-        }
-        
-        .progress-text {
-            font-size: 0.75rem;
-            color: #888;
-            min-width: 50px;
-        }
-        
-        body.dark-theme .progress-text {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
             color: #666;
+        }
+        
+        body.dark-theme .font-size-btn {
+            border-color: #444;
+            color: #9a9a9a;
+        }
+        
+        .font-size-value {
+            font-size: 0.8rem;
+            color: #888;
+            min-width: 30px;
+            text-align: center;
         }
         
         .reader-content {
@@ -298,10 +277,6 @@
             text-decoration: none;
         }
         
-        .reader-content a:hover {
-            text-decoration: underline;
-        }
-        
         .reader-content blockquote {
             border-left: 3px solid #268bd2;
             padding-left: 1rem;
@@ -314,47 +289,7 @@
             color: #9a9a9a;
         }
         
-        .font-size-controls {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        
-        .font-size-btn {
-            width: 28px;
-            height: 28px;
-            border-radius: 4px;
-            border: 1px solid #ddd;
-            background: none;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.8rem;
-            color: #666;
-        }
-        
-        body.dark-theme .font-size-btn {
-            border-color: #444;
-            color: #9a9a9a;
-        }
-        
-        .font-size-btn:hover {
-            background-color: #f0f0f0;
-        }
-        
-        body.dark-theme .font-size-btn:hover {
-            background-color: #333;
-        }
-        
-        .font-size-value {
-            font-size: 0.8rem;
-            color: #888;
-            min-width: 30px;
-            text-align: center;
-        }
-        
-        .loading-container, .error-container {
+        .loading-container, .error-container, .unsupported-container {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -364,7 +299,8 @@
         }
         
         body.dark-theme .loading-container, 
-        body.dark-theme .error-container {
+        body.dark-theme .error-container,
+        body.dark-theme .unsupported-container {
             color: #666;
         }
         
@@ -387,16 +323,16 @@
             to { transform: rotate(360deg); }
         }
         
-        .error-container {
-            text-align: center;
-        }
-        
-        .error-container h2 {
+        .error-container h2, .unsupported-container h2 {
             color: #e74c3c;
             margin-bottom: 1rem;
         }
         
-        .error-container button {
+        .unsupported-container h2 {
+            color: #f39c12;
+        }
+        
+        .error-container button, .unsupported-container button {
             margin-top: 1rem;
             padding: 0.5rem 1rem;
             background-color: #268bd2;
@@ -406,8 +342,28 @@
             cursor: pointer;
         }
         
-        .error-container button:hover {
+        .error-container button:hover, .unsupported-container button:hover {
             background-color: #1a6bb9;
+        }
+        
+        .download-link {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            background-color: #27ae60;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        
+        .download-link:hover {
+            background-color: #2ecc71;
+        }
+        
+        .pdf-container {
+            width: 100%;
+            height: 100%;
+            border: none;
         }
         
         @media screen and (max-width: 768px) {
@@ -417,9 +373,13 @@
             
             .reader-sidebar {
                 width: 100%;
-                height: 200px;
+                height: auto;
                 border-right: none;
                 border-bottom: 1px solid #333;
+            }
+            
+            .toc-container {
+                max-height: 200px;
             }
             
             .reader-content {
@@ -429,14 +389,6 @@
             
             .reader-toolbar {
                 padding: 0.75rem 1rem;
-            }
-            
-            .toolbar-center {
-                display: none;
-            }
-            
-            .progress-bar {
-                width: 100px;
             }
         }
     </style>
@@ -451,7 +403,7 @@
             
             <div class="toc-container" id="toc-container">
                 <ul class="toc-list" id="toc-list">
-                    <li class="toc-item level-1">
+                    <li class="toc-item">
                         <span class="toc-link">目录加载中...</span>
                     </li>
                 </ul>
@@ -474,25 +426,6 @@
                     <h1 id="current-title">阅读器</h1>
                 </div>
                 
-                <div class="toolbar-center">
-                    <div class="progress-container">
-                        <button class="btn btn-icon" onclick="goPrev()">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/>
-                            </svg>
-                        </button>
-                        <div class="progress-bar" onclick="handleProgressClick(event)">
-                            <div class="progress-fill" id="progress-fill"></div>
-                        </div>
-                        <span class="progress-text" id="progress-text">0%</span>
-                        <button class="btn btn-icon" onclick="goNext()">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <path d="M18 6h-2v12h2zm-3.5-6l-8.5 6v6l8.5 6V0z"/>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-                
                 <div class="toolbar-right">
                     <div class="font-size-controls">
                         <button class="font-size-btn" onclick="decreaseFont()">A-</button>
@@ -512,10 +445,7 @@
     </div>
     
     <script>
-        let book = null;
-        let rendition = null;
         let currentFontSize = 18;
-        let loadedToc = [];
         
         function getURLParameter(name) {
             const urlParams = new URLSearchParams(window.location.search);
@@ -532,83 +462,52 @@
             `;
         }
         
-        function loadEpubJS(callback) {
-            const script = document.createElement('script');
-            script.src = 'https://cdnjs.cloudflare.com/ajax/libs/epub.js/0.3.93/epub.min.js';
-            script.onload = callback;
-            script.onerror = function() {
-                showError('无法加载 EPUB 阅读器库，请检查网络连接');
-            };
-            document.head.appendChild(script);
+        function showUnsupported(format) {
+            const bookPath = getURLParameter('book');
+            const fileName = decodeURIComponent(bookPath).split('/').pop();
+            
+            document.getElementById('reader-content').innerHTML = `
+                <div class="unsupported-container">
+                    <h2>${format.toUpperCase()} 格式</h2>
+                    <p>当前格式需要外部阅读器支持</p>
+                    <p>文件名: ${fileName}</p>
+                    <a href="${bookPath}" download class="download-link">下载电子书</a>
+                    <button onclick="window.history.back()" style="margin-top: 0.5rem;">返回书库</button>
+                </div>
+            `;
         }
         
-        function renderTOC(toc) {
-            const tocList = document.getElementById('toc-list');
-            tocList.innerHTML = '';
-            loadedToc = toc;
-            
-            function renderItem(item, level = 1) {
-                const li = document.createElement('li');
-                li.className = `toc-item level-${level}`;
-                
-                const link = document.createElement('a');
-                link.className = 'toc-link';
-                link.textContent = item.label;
-                link.href = '#';
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    if (rendition) {
-                        rendition.display(item.href);
-                        document.querySelectorAll('.toc-link').forEach(l => l.classList.remove('active'));
-                        link.classList.add('active');
-                    }
+        function loadTextFile(filePath) {
+            fetch(filePath)
+                .then(response => response.text())
+                .then(text => {
+                    const readerContent = document.getElementById('reader-content');
+                    readerContent.innerHTML = '';
+                    
+                    const paragraphs = text.split('\n\n');
+                    paragraphs.forEach(para => {
+                        if (para.trim()) {
+                            const p = document.createElement('p');
+                            p.textContent = para.trim();
+                            readerContent.appendChild(p);
+                        }
+                    });
+                    
+                    document.getElementById('current-title').textContent = '阅读中';
+                })
+                .catch(err => {
+                    showError('加载 TXT 文件失败');
                 });
-                
-                li.appendChild(link);
-                tocList.appendChild(li);
-                
-                if (item.subitems && item.subitems.length > 0) {
-                    item.subitems.forEach(subitem => renderItem(subitem, level + 1));
-                }
-            }
-            
-            toc.forEach(item => renderItem(item));
         }
         
-        function updateProgress() {
-            if (!rendition || !book) return;
-            
-            try {
-                const location = rendition.currentLocation();
-                const progress = book.locations.percentageFromLocation(location.start);
-                document.getElementById('progress-fill').style.width = `${progress}%`;
-                document.getElementById('progress-text').textContent = `${Math.round(progress)}%`;
-            } catch (e) {
-                console.log('Progress update error:', e);
-            }
+        function loadPDF(filePath) {
+            const readerContent = document.getElementById('reader-content');
+            readerContent.innerHTML = `<iframe src="${filePath}" class="pdf-container"></iframe>`;
+            document.getElementById('current-title').textContent = 'PDF 阅读器';
         }
         
-        function updateCurrentTitle() {
-            if (!rendition || !book) return;
-            
-            const location = rendition.currentLocation();
-            book.loaded.navigation.then(function(toc) {
-                let currentTitle = '阅读中';
-                const findTitle = function(items) {
-                    for (let item of items) {
-                        if (location.start.href.indexOf(item.href) !== -1) {
-                            currentTitle = item.label;
-                            return true;
-                        }
-                        if (item.subitems && findTitle(item.subitems)) {
-                            return true;
-                        }
-                    }
-                    return false;
-                };
-                findTitle(toc);
-                document.getElementById('current-title').textContent = currentTitle;
-            });
+        function loadEPUB(filePath) {
+            showUnsupported('epub');
         }
         
         function loadBook() {
@@ -619,115 +518,33 @@
                 return;
             }
             
-            try {
-                book = ePub(bookPath);
-                
-                book.loaded.metadata.then(function(meta) {
-                    document.getElementById('book-title').textContent = meta.title || '未知标题';
-                    document.getElementById('book-author').textContent = meta.creator || '未知作者';
-                }).catch(function(e) {
-                    console.log('Metadata load error:', e);
-                });
-                
-                book.loaded.navigation.then(function(toc) {
-                    renderTOC(toc);
-                }).catch(function(e) {
-                    console.log('Navigation load error:', e);
-                    const tocList = document.getElementById('toc-list');
-                    tocList.innerHTML = '<li class="toc-item level-1"><span class="toc-link">无法加载目录</span></li>';
-                });
-                
-                book.ready.then(function() {
-                    const readerContent = document.getElementById('reader-content');
-                    readerContent.innerHTML = '';
-                    
-                    rendition = book.renderTo(readerContent, {
-                        width: '100%',
-                        height: '100%',
-                        flow: 'paginated'
-                    });
-                    
-                    rendition.display();
-                    
-                    rendition.on('rendered', function() {
-                        updateProgress();
-                        updateCurrentTitle();
-                    });
-                    
-                    rendition.on('locationChanged', function() {
-                        updateProgress();
-                        updateCurrentTitle();
-                        
-                        const location = rendition.currentLocation();
-                        document.querySelectorAll('.toc-link').forEach(link => link.classList.remove('active'));
-                        const findActive = function(items) {
-                            for (let item of items) {
-                                if (location.start.href.indexOf(item.href) !== -1) {
-                                    const links = document.querySelectorAll('.toc-link');
-                                    links.forEach(l => {
-                                        if (l.textContent === item.label) {
-                                            l.classList.add('active');
-                                        }
-                                    });
-                                    return true;
-                                }
-                                if (item.subitems && findActive(item.subitems)) {
-                                    return true;
-                                }
-                            }
-                            return false;
-                        };
-                        if (loadedToc.length > 0) {
-                            findActive(loadedToc);
-                        }
-                    });
-                }).catch(function(err) {
-                    console.error('Book ready error:', err);
-                    showError('加载电子书失败，请检查文件格式是否正确');
-                });
-                
-            } catch (err) {
-                console.error('Load book error:', err);
-                showError('加载电子书时发生错误');
-            }
-        }
-        
-        function goPrev() {
-            if (rendition) {
-                try {
-                    rendition.prev();
-                } catch (e) {
-                    console.log('Prev page error:', e);
-                }
-            }
-        }
-        
-        function goNext() {
-            if (rendition) {
-                try {
-                    rendition.next();
-                } catch (e) {
-                    console.log('Next page error:', e);
-                }
+            const format = bookPath.split('.').pop().toLowerCase();
+            const fileName = decodeURIComponent(bookPath).split('/').pop();
+            const title = fileName.replace(/\.[^/.]+$/, '');
+            
+            document.getElementById('book-title').textContent = title;
+            document.getElementById('book-author').textContent = '本地文件';
+            
+            const tocList = document.getElementById('toc-list');
+            tocList.innerHTML = `<li class="toc-item"><a href="#" class="toc-link" onclick="window.scrollTo(0,0)">返回顶部</a></li>`;
+            
+            switch (format) {
+                case 'pdf':
+                    loadPDF(bookPath);
+                    break;
+                case 'txt':
+                    loadTextFile(bookPath);
+                    break;
+                case 'epub':
+                    loadEPUB(bookPath);
+                    break;
+                default:
+                    showUnsupported(format);
             }
         }
         
         function goBack() {
             window.history.back();
-        }
-        
-        function handleProgressClick(event) {
-            if (!rendition || !book) return;
-            
-            const rect = event.currentTarget.getBoundingClientRect();
-            const percent = (event.clientX - rect.left) / rect.width;
-            
-            try {
-                const location = book.locations.locationFromPercentage(percent);
-                rendition.display(location);
-            } catch (e) {
-                console.log('Progress click error:', e);
-            }
         }
         
         function increaseFont() {
@@ -765,16 +582,7 @@
             }
             
             updateFontSize();
-            
-            loadEpubJS(loadBook);
-        });
-        
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'ArrowLeft') {
-                goPrev();
-            } else if (e.key === 'ArrowRight') {
-                goNext();
-            }
+            loadBook();
         });
     </script>
 </body>
